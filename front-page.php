@@ -9,6 +9,12 @@ get_header();
 
 <?php get_search_form(); ?>
 
+<h2><a href="<?php echo home_url('/eat') ?>">食べる一覧へ</a></h2>
+<h2><a href="<?php echo home_url('/tour') ?>">観光一覧へ</a></h2>
+<h2><a href="<?php echo home_url('/eat') ?>">食べる一覧へ</a></h2>
+<h2><a href="<?php echo home_url('/column') ?>">コラム一覧へ</a></h2>
+<h2><a href="<?php echo get_permalink(239) ?>">マイページへ</a></h2>
+
 
 <div class="row">
     <?php if (have_posts()) : ?>
@@ -27,7 +33,7 @@ $news_link = get_term_link($news, 'category');
 ?>
 <a href="<?php echo $news_link; ?>" class="btn btn-default" ?>一覧へ</a>
 
-<h2><a href="<?php echo get_permalink(239) ?>">マイページへ</a></h2>
+
 
 <h2>コラム記事</h2>
 <!-- カスタム投稿タイプの指定と、表示件数の指定=3件 -->
@@ -64,7 +70,7 @@ $news_link = get_term_link($news, 'category');
 
 
 </div>
-<h2><a href="<?php echo home_url('/column') ?>">コラム一覧へ</a></h2>
+
 
 <div class="instagram-article">
     <?php echo do_shortcode('[]'); ?>
