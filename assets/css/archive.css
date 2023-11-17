@@ -1,0 +1,109 @@
+/* 中見出し */
+
+.middle_title {
+    text-align: center;
+    padding: 50px;
+}
+
+/* トップメニュー横並び */
+.menu_wrap {
+    display: flex;
+}
+
+.map_content {
+    border: 3px solid #000;
+}
+
+/* 上部サイドバー非表示 */
+.aside_top {
+    display: none;
+}
+
+/* セクション幅 */
+section {
+    padding: 10px;
+}
+
+.archive_col {
+    padding: 50px;
+}
+
+.archive_col>h3 {
+    padding: 50px 5%;
+}
+
+.card_3col {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+/* カード設計 */
+.card_wrap1 {
+    width: 350px;
+    height: 500px;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 #000;
+}
+
+/* カード内幅揃え */
+.card_wrap2 {
+    padding: 30px;
+}
+
+/* サムネイル画像真ん中並び */
+.thumbnail_img {
+    text-align: center;
+}
+
+/* サムネイル画像設定 */
+.thumbnail_img img {
+    border: 1px solid #000;
+    width: 300px;
+    height: 230px;
+    object-fit: cover;
+}
+
+/* 小見出し幅 */
+.card_wrap2>h4 {
+    padding: 20px 0;
+}
+
+/* カード説明幅 */
+.card_text {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+/* アイコン欄 */
+.card_icon {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+/* アイコンサイズ */
+.card_icon img {
+    width: 40px;
+}
+
+.more_btn {
+    margin: 50px auto;
+}
+
+/* ~~~~~~~~~~~~sp表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+
+    /* 下部サイドバー非表示 */
+    .aside_bottom {
+        display: none;
+    }
+
+    /* 上部サイドバー表示 */
+    .aside_top {
+        display: block;
+    }
+
+}
