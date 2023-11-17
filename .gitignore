@@ -11,7 +11,7 @@
 /wp-content/plugins/index.php
 /wp-content/themes/index.php
 /wp-includes/
-/index.php
+#index.php
 /license.txt
 /readme.html
 /wp-*.php
@@ -46,3 +46,8 @@ wp-config.php
 # Note: If you wish to whitelist themes,
 # uncomment the next line
 #/wp-content/themes
+
+# DS_Store files
+.DS_Store
+
+Thumbs.db

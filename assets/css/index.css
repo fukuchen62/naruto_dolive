@@ -1,0 +1,94 @@
+/* ------------------------------------------------------------------------
+    TOP内共通
+------------------------------------------------------------------------  */
+.teloparea {
+  height: 100px;
+  background-color: #fff;
+}
+
+/* ------------------------------------------------------------------------
+    section_kv
+------------------------------------------------------------------------  */
+.section_kv {
+  background-color: #fff6e2;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  width: 300px;
+  height: auto;
+}
+
+.kv_img_wrap {
+  position: relative;
+}
+
+.kv_img2 {
+  text-align: center;
+}
+
+.kv_img_wrap img {
+  width: 610px;
+  height: 430px;
+  margin-top: 2rem;
+  object-fit: cover;
+}
+
+.purpose {
+  padding: 38px 0;
+}
+
+.button-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-container2{
+  display: flex;
+}
+
+.course-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #555555;
+  font-size: 18px;
+  border-radius: 20px;
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  border: 2px solid #555555;
+  transition: 0.3s;
+  box-shadow: 0px 6px 0px -2px rgba(67, 145, 209, 1);
+  background-color: #90caf9;
+}
+
+.course-button:hover {
+  box-shadow: 0 0 #fff;
+  transform: translateY(1px);
+}
+
+.course1{
+  margin-left: 30%;
+}
+
+.course2{
+  margin-right: 30%;
+}
+
+.course3{
+  margin-left: 15%;
+}
+
+.course4{
+  margin: auto;
+}
+
+.course5{
+  margin-right:15%;
+}

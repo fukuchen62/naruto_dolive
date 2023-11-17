@@ -55,15 +55,12 @@ $news_link = get_term_link($news, 'category');
                     <?php endif; ?>
                 </figure>
             </a>
-            <!-- 日付の取得 -->
-            <?php echo get_the_date(); ?>
-            <?php echo the_field('column_type'); ?>
 
             <!-- タイトルの取得 -->
             <p><span><?php echo get_the_title(); ?></span></p>
 
             <div class="news_desc">
-                <p><?php the_excerpt(); ?></p>
+                <p><?php echo wp_trim_words(get_the_content(), 20); ?></p>
                 <p><a href="<?php the_permalink(); ?>">[続きを読む]</a></p>
             </div>
         </div>
