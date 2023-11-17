@@ -5,27 +5,50 @@
 
 
 <main>
+    <h1>【食べる】</h1>
 
+    <!-- タクソノミーを指定して配列のターム情報を取得する -->
+    <!-- タクソノミーのタイトルの取得 -->
     <?php
-    $kinds = get_terms(array('taxonomy' => 'kind'));
-    if (!empty($kinds)) :
+    $eat_types = get_terms(array('taxonomy' => 'eat_type'));
+    if (!empty($eat_types)) :
     ?>
-        <?php foreach ($kinds as $kind) : ?>
+        <?php foreach ($eat_types as $eat_type) : ?>
+
+            <h2><?php echo $eat_type->name ?></h2>
+
+
 
             <section>
                 <div class="container">
-                    <div class="sec_header">
+                    <div class="map_sideber">
                         <!-- ここに地図とボタンが入る -->
-                    </div>
-                    <div>
+                    </div><!-- map_sideber -->
+                    <div class="contents">
                         <!-- ここに一覧が入る -->
-                        <!-- 記事があればある分だけループさせる -->
-                        <?php if (have_posts()) : ?>
-                            <?php while (have_posts()) : the_post(); ?>
 
 
+                        <?php
+                        //食べるの投稿タイプ
+                        $args = array(
+                            'post_type' => 'eat',
+                            'post_per_page' => 3,
+                        );
+                        //料理の種類で絞り込む
+                        $eattax = array('relation' => 'AND');
+                        $eattax[] = array(
+                            'taxonomy' => 'eat_type',
+                            'terms' => $eat_type->slug,
+                            'field' => 'slug',
+                        );
+                        $args['tax_query'] = $eattax;
 
+                        $the_query = new WP_Query($args);
 
+                        //記事があればある分だけループさせる
+                        if ($the_query->have_posts()) :
+                        ?>
+                            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
                                 <div>
                                     <!-- ここに内容を表示させる -->
@@ -33,7 +56,7 @@
                                 </div>
                             <?php endwhile; ?>
                         <?php endif ?>
-                    </div><!-- sec_header -->
+                    </div><!-- contents -->
                 </div><!-- container -->
             </section>
 
