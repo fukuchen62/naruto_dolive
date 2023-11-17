@@ -41,17 +41,41 @@ h3 {
     font-size: 1.8rem;
 }
 
-.pc_none {
-    display: none;
-    /* ※sp表示時のみ(PCでは表示させない) */
+main:not(.section_kv) {
+    width: 100%;
 }
 
-/* ~~~~~~~~~~~~sp表示~~~~~~~~~~~~ */
+@media only screen and (max-width: 767px) {
+    .sp_none {
+        display: none;
+        display: block;
+        /* ※モバイル表示時のみ(PCでは表示させない) */
+    }
+}
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
 
-    /* ------------------------------------------------------------------------
+    main:not(.section_kv) {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .pc_none {
+        display: none;
+        display: block;
+        /* ※sp表示時のみ(PCでは表示させない) */
+    }
+
+}
+
+/* ------------------------------------------------------------------------
     header
 ------------------------------------------------------------------------  */
+
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
     nav {
         display: flex;
         align-items: center;
@@ -95,19 +119,6 @@ h3 {
     }
 }
 
-main:not(.section_kv) {
-    width: 100%;
-}
-
-.sp_none {
-    display: block;
-    /* ※PC表示時のみ(spでは表示させない) */
-}
-
-
-
-/* ~~~~~~~~~~~~sp表示~~~~~~~~~~~~ */
-
 /* ------------------------------------------------------------------------
     footer
 ------------------------------------------------------------------------  */
@@ -136,69 +147,3 @@ footer p:first-child {
     margin-top: 3rem;
     padding-bottom: 0;
 }
-
-
-/* ------------------------------------------------------------------------
-    西野
-------------------------------------------------------------------------  */
-
-/* moreボタン */
-
-/* 外側・中央揃え・整形 */
-.more_btn {
-    margin: 0 auto;
-    background-color: #fffCAA;
-    border: 3px solid #000;
-    width: 280px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 0 #000;
-
-}
-
-/* ボタンいっぱいにリンクを広げる */
-.more_link {
-    /* border: 1px solid red; */
-    padding: 5px 106px 0;
-    border-radius: 20px;
-}
-
-/* 文字設定 */
-.more {
-    font-size: 1.5rem;
-    font-family: Dela Gothic One;
-}
-
-/* トップエリア */
-
-#toparea {
-    height: 300px;
-    background-color: #d13a2b;
-    text-align: center;
-}
-
-#toparea>h2 {
-    color: #F8A59B;
-    line-height: calc(300px - 5px);
-}
-
-/* 記事背景 */
-.main_wrap {
-    background-color: #fff;
-    max-width: 90%;
-    margin: 5% auto 15%;
-}
-
-/* 画像横幅100％ */
-img {
-    max-width: 100%;
-}
-
-/* 小見出しフォント */
-h4 {
-    font-weight: bolder;
-    font-size: 1.4rem;
-}
-
-/* ------------------------------------------------------------------------
-    西野終わり
-------------------------------------------------------------------------  */
