@@ -99,7 +99,7 @@ main:not(.section_kv) {
 }
 
 .sp_none {
-    display: none;
+    display: block;
     /* ※PC表示時のみ(spでは表示させない) */
 }
 
