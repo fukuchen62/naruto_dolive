@@ -2,9 +2,9 @@
 
 // ▼TOP-kvのフラッシュ画像表示▼
 var pics_src = new Array(
-    "./assets/img/sample2.jpg",
-    "./assets/img/sample3.jpg",
-    "./assets/img/sample6.jpg"
+    "../assets/img/sample2.jpg",
+    "../assets/img/sample3.jpg",
+    "../assets/img/sample6.jpg"
 );
 var num = 0;
 
