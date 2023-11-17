@@ -7,7 +7,6 @@ get_header();
 
 <a href="<?php echo get_permalink(1); ?>">hello world</a>
 
-<?php get_search_form(); ?>
 
 <h2><a href="<?php echo home_url('/eat') ?>">食べる一覧へ</a></h2>
 <h2><a href="<?php echo home_url('/tour') ?>">観光一覧へ</a></h2>
@@ -16,7 +15,7 @@ get_header();
 <h2><a href="<?php echo home_url('/column') ?>">コラム一覧へ</a></h2>
 <h2><a href="<?php echo get_permalink(239) ?>">マイページへ</a></h2>
 
-
+<?php get_search_form(); ?>
 
 <div class="row">
     <?php if (have_posts()) : ?>
@@ -48,19 +47,21 @@ $news_link = get_term_link($news, 'category');
             <!-- 投稿の個別のページのURLを表示する -->
             <a href="<?php the_permalink(); ?>">
                 <!-- サムネイルの表示 -->
-                <figure class="column-pic">
-                    <!-- サムネイルがあれば、ある分だけ中サイズでループして表示する -->
-                    <?php if (has_post_thumbnail()) : ?>
+
+                <!-- サムネイルがあれば、ある分だけ中サイズでループして表示する -->
+                <?php if (has_post_thumbnail()) : ?>
+                    <figure class="column-pic">
                         <?php the_post_thumbnail('medium'); ?>
-                    <?php endif; ?>
-                </figure>
+
+                    </figure>
+                <?php endif; ?>
             </a>
 
             <!-- タイトルの取得 -->
             <p><span><?php echo get_the_title(); ?></span></p>
 
             <div class="news_desc">
-                <p><?php echo wp_trim_words(get_the_content(), 20); ?></p>
+                <p><?php echo mb_substr(get_the_excerpt(), 0, 25) . '…'; ?></p>
                 <p><a href="<?php the_permalink(); ?>">[続きを読む]</a></p>
             </div>
         </div>

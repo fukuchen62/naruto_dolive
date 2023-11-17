@@ -18,11 +18,13 @@ get_header();
                         <?php while (have_posts()) : the_post(); ?>
                             <div class="col-md-4">
                                 <?php get_template_part('template-parts/loop', 'news'); ?>
-                                <a href="<?php the_permalink(); ?>"><?php if (has_post_thumbnail()) : ?>
-                                        <?php the_post_thumbnail('medium'); ?>
-                                    <?php else : ?>
-                                        <img src="<?php echo esc_url(home_url('/')); ?>img/ファイル名" alt="<?php the_title(); ?>"></a>
-                            <?php endif; ?>
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <a href="<?php the_permalink(); ?>"></a>
+
+                                <?php else : ?>
+                                    <img src="<?php echo esc_url(home_url('/')); ?>img/ファイル名" alt="<?php the_title(); ?>">
+
+                                <?php endif; ?>
                             </div>
                         <?php endwhile; ?>
                     <?php endif; ?>
