@@ -53,9 +53,6 @@ $news_link = get_term_link($news, 'category');
                     <?php endif; ?>
                 </figure>
             </a>
-            <!-- 日付の取得 -->
-            <?php echo get_the_date(); ?>
-            <?php echo the_field('column_type'); ?>
 
             <!-- タイトルの取得 -->
             <p><span><?php echo get_the_title(); ?></span></p>
