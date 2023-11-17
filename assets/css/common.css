@@ -47,17 +47,7 @@ h3 {
 }
 
 /* ~~~~~~~~~~~~sp表示~~~~~~~~~~~~ */
-@media only screen and (min-width:768px) {}
-
-main:not(.section_kv) {
-    width: 100%;
-}
-
-.sp_none {
-    display: none;
-    /* ※PC表示時のみ(spでは表示させない) */
-}
-
+@media only screen and (min-width:768px) {
 /* ------------------------------------------------------------------------
     header
 ------------------------------------------------------------------------  */
@@ -102,6 +92,18 @@ ul.navmenu {
 .search_box button {
     padding: 5px 10px;
 }
+}
+
+main:not(.section_kv) {
+    width: 100%;
+}
+
+.sp_none {
+    display: none;
+    /* ※PC表示時のみ(spでは表示させない) */
+}
+
+
 
 /* ~~~~~~~~~~~~sp表示~~~~~~~~~~~~ */
 
