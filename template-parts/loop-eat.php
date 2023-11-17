@@ -1,8 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('news'); ?>>
     <div class="news_meta">
         <?php the_category();  ?>
-
-        <time class="news_time" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y年m月d日'); ?></time>
     </div>
 
 
@@ -17,15 +15,17 @@
                 <?php the_post_thumbnail('medium'); ?>
             <?php endif; ?>
         </figure>
-
-        <!-- タイトルの表示 -->
-        <h2 class="title"><?php the_title(); ?></h2>
     </a>
+    <!-- タイトルの表示 -->
+    <h3 class="title"><?php the_title(); ?></h3>
 
     <!-- 抜粋の表示 -->
-    <div class="desc">
-        <p><?php the_excerpt(); ?></p>
-    </div>
+    <span><?php the_field('excerpt'); ?></span>
+
+
+
+    <!-- ここにアイコンが入ります -->
+
 
 
 </article>
