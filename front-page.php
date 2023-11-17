@@ -11,9 +11,11 @@ get_header();
 
 <h2><a href="<?php echo home_url('/eat') ?>">食べる一覧へ</a></h2>
 <h2><a href="<?php echo home_url('/tour') ?>">観光一覧へ</a></h2>
-<h2><a href="<?php echo home_url('/eat') ?>">食べる一覧へ</a></h2>
+<h2><a href="<?php echo home_url('/stay') ?>">宿泊一覧へ</a></h2>
+<h2><a href="<?php echo home_url('/enjoy') ?>">アクティビティ一覧へ</a></h2>
 <h2><a href="<?php echo home_url('/column') ?>">コラム一覧へ</a></h2>
 <h2><a href="<?php echo get_permalink(239) ?>">マイページへ</a></h2>
+
 
 
 <div class="row">
