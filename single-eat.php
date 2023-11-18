@@ -23,6 +23,11 @@
 
                     <!-- 記事のタイトルの表示 -->
                     <h2 class="article_pic"><?php the_title(); ?></h2>
+
+
+                    <!-- いいねボタン表示 -->
+                    <?php echo get_favorites_button(get_the_ID()); ?>
+
                     <!-- 記事の本文の表示 -->
                     <div class="content">
                         <?php the_content(); ?>
