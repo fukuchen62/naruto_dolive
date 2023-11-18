@@ -5,27 +5,51 @@
 
 
 <main>
+    <h1>【観光】</h1>
 
+    <!-- タクソノミーを指定して配列のターム情報を取得する -->
+    <!-- タクソノミーのタイトルの取得 -->
     <?php
-    $kinds = get_terms(array('taxonomy' => 'kind'));
-    if (!empty($kinds)) :
+
+    $tour_types = get_terms(array('taxonomy' => 'tour_type'));
+    if ($tour_types) :
     ?>
-        <?php foreach ($kinds as $kind) : ?>
+        <?php foreach ($tour_types as $tour_type) : ?>
+
+            <h2><?php echo $tour_type->name ?></h2>
+
+
 
             <section>
                 <div class="container">
-                    <div class="sec_header">
+                    <div class="map_sideber">
                         <!-- ここに地図とボタンが入る -->
-                    </div>
-                    <div>
+                    </div><!-- map_sideber -->
+                    <div class="contents">
                         <!-- ここに一覧が入る -->
-                        <!-- 記事があればある分だけループさせる -->
-                        <?php if (have_posts()) : ?>
-                            <?php while (have_posts()) : the_post(); ?>
 
 
+                        <?php
+                        //観光の投稿タイプ
+                        $args = array(
+                            'post_type' => 'tour',
+                            'post_per_page' => 3,
+                        );
+                        //観光の種類で絞り込む
+                        $tourtax = array('relation' => 'AND');
+                        $tourtax[] = array(
+                            'taxonomy' => 'tour_type',
+                            'terms' => $tour_type->slug,
+                            'field' => 'slug',
+                        );
+                        $args['tax_query'] = $tourtax;
 
+                        $the_query = new WP_Query($args);
 
+                        //記事があればある分だけループさせる
+                        if ($the_query->have_posts()) :
+                        ?>
+                            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
                                 <div>
                                     <!-- ここに内容を表示させる -->
@@ -33,12 +57,36 @@
                                 </div>
                             <?php endwhile; ?>
                         <?php endif ?>
-                    </div><!-- sec_header -->
+                    </div><!-- contents -->
                 </div><!-- container -->
             </section>
 
         <?php endforeach; ?>
     <?php endif; ?>
+
+    <!-- サイドバー -->
+    <h2>以下サイドバーです</h2>
+    <aside id="sidebar" class="sidebar">
+        <div class="widget widget_categories">
+            <h3 class="widget-title">カテゴリー一覧</h3>
+            <ul>
+                <?php
+                $categories = get_categories(array(
+                    'taxonomy' => 'tour_type',
+                    'orderby' => 'name',
+                    'order' => 'ASC',
+                    'hide_empty' => false,
+                ));
+
+                foreach ($categories as $category) {
+                    echo '<li><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
+                }
+                ?>
+            </ul>
+        </div>
+
+
+    </aside>
 
 </main>
 
