@@ -11,18 +11,21 @@ get_header();
 <h2><a href="<?php echo home_url('/eat') ?>">食べる一覧へ</a></h2>
 <h2><a href="<?php echo home_url('/tour') ?>">観光一覧へ</a></h2>
 <h2><a href="<?php echo home_url('/stay') ?>">宿泊一覧へ</a></h2>
-<h2><a href="<?php echo home_url('/enjoy') ?>">アクティビティ一覧へ</a></h2>
+<h2><a href="<?php echo home_url('/enjoy') ?>">遊ぶ一覧へ</a></h2>
 <h2><a href="<?php echo home_url('/column') ?>">コラム一覧へ</a></h2>
 <h2><a href="<?php echo get_permalink(239) ?>">マイページへ</a></h2>
 
 <?php get_search_form(); ?>
+<hr>
 
-<div class="row">
+<!-- 新着情報のループ -->
+<div>
     <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
-            <div class="col-md-4">
+            <div>
                 <?php get_template_part('template-parts/loop', 'news'); ?>
             </div>
+            <hr>
         <?php endwhile; ?>
     <?php endif; ?>
 </div>
