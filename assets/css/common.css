@@ -223,21 +223,40 @@ main:not(.section_kv):not(.teloparea) {
         justify-content: space-around;
         gap: 10px;
         flex-grow: 1;
+        align-items: center;
     }
 
     .pc_nav .search_box_li {
-        margin: 0 2rem;
-        padding: 0 1rem;
-        background-color: #fff;
-        border-radius: 5px;
+        display: flex;
+        width: 100%;
+        flex-basis: 70px;
     }
 
     .pc_nav .search_box_li input[type="text"] {
+        flex-grow: 1;
+        padding: 0 0.5rem;
+        border: 1px solid #333947;
+        border-radius: 1.5rem 0 0 1.5rem;
         width: 150px;
     }
 
     .pc_nav .search_box_li button {
-        padding: 5px 10px;
+        cursor: pointer;
+        padding: 0 0.25rem;
+        border-radius: 0 1.5rem 1.5rem 0;
+        border: none;
+        background-color: #333947;
+        color: #fff;
+        font-size: .75rem;
+    }
+
+    .pc_nav .search_box_li input:focus {
+        outline: 0;
+        border: 1px solid #FF9900;
+    }
+
+    .pc_nav .search_box_li button:hover {
+        color: #FF9900;
     }
 }
 
