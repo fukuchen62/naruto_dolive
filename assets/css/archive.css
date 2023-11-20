@@ -60,6 +60,7 @@
     /* 地図画像 */
     .map_content img {
         width: 100%;
+        height: 100%;
     }
 }
 
