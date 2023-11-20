@@ -17,7 +17,7 @@ get_header();
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
                             <div>
-                                <?php get_template_part('template-parts/loop', 'news'); ?>
+                                <?php get_template_part('template-parts/loop', 'content'); ?>
                                 <?php if (has_post_thumbnail()) : ?>
                                     <a href="<?php the_permalink(); ?>"></a>
 
@@ -35,6 +35,10 @@ get_header();
                 } ?>
             </div>
 
+            <!-- ページナビゲーションの設定 -->
+            <?php if (function_exists('wp_pagenavi')) {
+                wp_pagenavi();
+            } ?>
 
             <!-- サイドバー -->
             <h2>以下サイドバーです</h2>
