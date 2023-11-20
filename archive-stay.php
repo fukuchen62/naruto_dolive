@@ -3,9 +3,10 @@
     <h1>========『目的別一覧』========</h1>
     <!-- パンくずリスト -->
     <?php get_template_part('template-parts/breadcrumb'); ?>
-    <h1>【宿泊】</h1>
+    <h1>【泊まる】</h1>
 
     <p>[ここに地図が入ります]</p>
+    <div id="map"></div>
     <p>カテゴリ別</p>
     <h3>
         <a href="<?php echo home_url('/eat') ?>">
@@ -49,28 +50,95 @@
 
 
 
+    <!-- タクソノミーを指定して配列のターム情報を取得する -->
+    <!-- タクソノミーのタイトルの取得 -->
+
+
     <section>
         <div class="container">
-            <div class="sec_header">
+            <div class="map_sideber">
                 <!-- ここに地図とボタンが入る -->
-            </div>
-            <div>
+
+            </div><!-- map_sideber -->
+            <div class="contents">
                 <!-- ここに一覧が入る -->
-                <!-- 記事があればある分だけループさせる -->
-                <?php if (have_posts()) : ?>
+
+                <!-- //記事があればある分だけループさせる -->
+                <?php if (have_posts()) :
+                ?>
                     <?php while (have_posts()) : the_post(); ?>
+                        <?php
+
+                        // 緯度と経度の値を取得する
+                        $latitude = get_post_meta(get_the_ID(), 'latitude', true);
+                        $longitude = get_post_meta(get_the_ID(), 'longitude', true);
+                        $facilityName = get_the_title();
+
+                        $place[] = array(
+                            'lat' => $latitude,
+                            'lng' => $longitude,
+                            'facilityName' => $facilityName
+                        );
+                        ?>
 
                         <div>
                             <!-- ここに内容を表示させる -->
-                            <?php get_template_part('template-parts/loop', 'news'); ?>
+                            <?php get_template_part('template-parts/loop', 'content'); ?>
                         </div>
                     <?php endwhile; ?>
                 <?php endif ?>
-            </div><!-- sec_header -->
+            </div><!-- contents -->
         </div><!-- container -->
     </section>
 
 
 </main>
+
+<!-- 以下地図 -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpvX7RaM_ofrk2WWXrnydT9156PzLJBuA&callback=initMap" async defer></script>
+<script>
+    // Google Maps JavaScript APIの地図を初期化するための関数 initMap
+    function initMap() {
+        let map = new google.maps.Map(document.getElementById("map"), {
+            // 地図表示のスーむレベル
+            zoom: 12,
+            // 地図の初期値 これは緯度と経度を中心にしている。本番は鳴門を中心にする予定
+            center: {
+                lat: <?php echo $latitude; ?>,
+                lng: <?php echo $longitude; ?>
+            }
+        });
+
+        // 普通に変数に入れるとjsに適しておらず代入できない。そのためJSON形式にして配列を渡している
+        let place = <?php echo json_encode($place); ?>;
+
+        // マーカーを表示するループ
+        for (let i = 0; i < place.length; i++) {
+            let location = place[i];
+
+            // Google Maps APIの Marker クラスを使用(マーカーを表示させるために使用される)
+            let marker = new google.maps.Marker({
+                // positionはマーカーを表示させる位置を指定。locationの緯度経度で生成
+                position: {
+                    lat: parseFloat(location.lat),
+                    lng: parseFloat(location.lng)
+                },
+                // マーカーを表示するオブジェクトの指定
+                map: map,
+                // ホバーした時に表示されるもの
+            });
+
+            // Google Maps APIの InfoWindow クラス
+            // インフォウィンドウを作成してマーカーに設定
+            let infowindow = new google.maps.InfoWindow({
+                content: location.facilityName
+            });
+
+            // マーカー上でインフォウィンドウを開く、第一引数に表示させるオブジェクト、第二引数に情報ウィンドウを表示するマーカーオブジェクト
+            // これがないと店名がでない
+            infowindow.open(map, marker);
+        }
+    }
+</script>
 
 <?php get_footer(); ?>

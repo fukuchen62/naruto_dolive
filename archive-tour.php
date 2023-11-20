@@ -6,6 +6,7 @@
     <h1>【観光】</h1>
 
     <p>[ここに地図が入ります]</p>
+    <div id="map"></div>
     <p>カテゴリ別</p>
     <h3>
         <a href="<?php echo home_url('/eat') ?>">
@@ -49,20 +50,15 @@
 
 
 
-
-
     <!-- タクソノミーを指定して配列のターム情報を取得する -->
     <!-- タクソノミーのタイトルの取得 -->
     <?php
-
     $tour_types = get_terms(array('taxonomy' => 'tour_type'));
-    if ($tour_types) :
+    if (!empty($tour_types)) :
     ?>
         <?php foreach ($tour_types as $tour_type) : ?>
 
-            <h2><?php echo $tour_type->name ?></h2>
-
-
+            <h2>[[[<?php echo $tour_type->name ?>]]]</h2>
 
             <section>
                 <div class="container">
@@ -74,12 +70,12 @@
 
 
                         <?php
-                        //観光の投稿タイプ
+                        //食べるの投稿タイプ
                         $args = array(
                             'post_type' => 'tour',
                             'post_per_page' => 3,
                         );
-                        //観光の種類で絞り込む
+                        //料理の種類で絞り込む
                         $tourtax = array('relation' => 'AND');
                         $tourtax[] = array(
                             'taxonomy' => 'tour_type',
@@ -94,10 +90,23 @@
                         if ($the_query->have_posts()) :
                         ?>
                             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                                <?php
+
+                                // 緯度と経度の値を取得する
+                                $latitude = get_post_meta(get_the_ID(), 'latitude', true);
+                                $longitude = get_post_meta(get_the_ID(), 'longitude', true);
+                                $facilityName = get_the_title();
+
+                                $place[] = array(
+                                    'lat' => $latitude,
+                                    'lng' => $longitude,
+                                    'facilityName' => $facilityName
+                                );
+                                ?>
 
                                 <div>
                                     <!-- ここに内容を表示させる -->
-                                    <?php get_template_part('template-parts/loop', 'eat'); ?>
+                                    <?php get_template_part('template-parts/loop', 'content'); ?>
                                 </div>
                             <?php endwhile; ?>
                         <?php endif ?>
@@ -108,30 +117,53 @@
         <?php endforeach; ?>
     <?php endif; ?>
 
-    <!-- サイドバー -->
-    <h2>以下サイドバーです</h2>
-    <aside>
-        <div>
-            <h3>カテゴリー一覧</h3>
-            <ul>
-                <?php
-                $categories = get_categories(array(
-                    'taxonomy' => 'tour_type',
-                    'orderby' => 'name',
-                    'order' => 'ASC',
-                    'hide_empty' => false,
-                ));
-
-                foreach ($categories as $category) {
-                    echo '<li><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
-                }
-                ?>
-            </ul>
-        </div>
-
-
-    </aside>
-
 </main>
+
+<!-- 以下地図 -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpvX7RaM_ofrk2WWXrnydT9156PzLJBuA&callback=initMap" async defer></script>
+<script>
+    // Google Maps JavaScript APIの地図を初期化するための関数 initMap
+    function initMap() {
+        let map = new google.maps.Map(document.getElementById("map"), {
+            // 地図表示のスーむレベル
+            zoom: 12,
+            // 地図の初期値 これは緯度と経度を中心にしている。本番は鳴門を中心にする予定
+            center: {
+                lat: <?php echo $latitude; ?>,
+                lng: <?php echo $longitude; ?>
+            }
+        });
+
+        // 普通に変数に入れるとjsに適しておらず代入できない。そのためJSON形式にして配列を渡している
+        let place = <?php echo json_encode($place); ?>;
+
+        // マーカーを表示するループ
+        for (let i = 0; i < place.length; i++) {
+            let location = place[i];
+
+            // Google Maps APIの Marker クラスを使用(マーカーを表示させるために使用される)
+            let marker = new google.maps.Marker({
+                // positionはマーカーを表示させる位置を指定。locationの緯度経度で生成
+                position: {
+                    lat: parseFloat(location.lat),
+                    lng: parseFloat(location.lng)
+                },
+                // マーカーを表示するオブジェクトの指定
+                map: map,
+                // ホバーした時に表示されるもの
+            });
+
+            // Google Maps APIの InfoWindow クラス
+            // インフォウィンドウを作成してマーカーに設定
+            let infowindow = new google.maps.InfoWindow({
+                content: location.facilityName
+            });
+
+            // マーカー上でインフォウィンドウを開く、第一引数に表示させるオブジェクト、第二引数に情報ウィンドウを表示するマーカーオブジェクト
+            // これがないと店名がでない
+            infowindow.open(map, marker);
+        }
+    }
+</script>
 
 <?php get_footer(); ?>
