@@ -3,8 +3,8 @@ get_header();
 
 ?>
 
-<h2>コラム記事タイトル</h2>
-<p>コラム記事の説明コラム記事の説明コラム記事の説明</p>
+<h2>コラム一覧</h2>
+<p></p>
 <?php get_template_part('template-parts/breadcrumb'); ?>
 <main>
     <div>
