@@ -233,11 +233,23 @@ main:not(.section_kv):not(.teloparea) {
     }
 
     .pc_nav .search_box_li input[type="text"] {
-        width: 150px;
+        flex-grow: 1;
+        padding: 0.7rem 0 0.7rem 0.8rem;
+        border: 1px solid #333;
+        border-radius: 1.5rem;
     }
 
     .pc_nav .search_box_li button {
-        padding: 5px 10px;
+        position: absolute;
+        top: -0.05rem;
+        right: 0;
+        cursor: pointer;
+        padding: .8rem .9rem .8rem .8rem;
+        border: none;
+        background: none;
+        color: #333;
+        font-size: 1rem;
+        transition: 0.5s;
     }
 }
 
