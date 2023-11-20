@@ -97,7 +97,7 @@
 
                                 <div>
                                     <!-- ここに内容を表示させる -->
-                                    <?php get_template_part('template-parts/loop', 'eat'); ?>
+                                    <?php get_template_part('template-parts/loop', 'content'); ?>
                                 </div>
                             <?php endwhile; ?>
                         <?php endif ?>
