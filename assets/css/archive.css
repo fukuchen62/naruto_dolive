@@ -25,8 +25,36 @@
     display: flex;
 }
 
+/* 地図外枠 */
 .map_content {
     border: 3px solid #000;
+    margin: 0 auto;
+}
+
+/* 地図画像 */
+.map_content img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+
+    .menu_wrap {
+        border: 1px solid blue;
+        margin: 0 auto;
+    }
+
+    /* 地図外枠 */
+    .map_content {
+        width: 50%;
+    }
+
+    /* 地図画像 */
+    .map_content img {
+        width: 100%;
+    }
 }
 
 /* 上部サイドバー非表示 */
