@@ -36,9 +36,7 @@ get_header();
             </div>
 
             <!-- ページナビゲーションの設定 -->
-            <?php if (function_exists('wp_pagenavi')) {
-                wp_pagenavi();
-            } ?>
+
 
             <!-- サイドバー -->
             <h2>以下サイドバーです</h2>

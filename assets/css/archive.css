@@ -23,7 +23,8 @@
 
 /* 中見出し幅 */
 .middle_title {
-    padding: 50px;
+    padding: 100px 50px 10px;
+    margin: 40px;
 }
 
 /* トップメニュー横並び */
@@ -59,8 +60,8 @@
 
     /* 地図画像 */
     .map_content img {
-        width: 100%;
         height: 100%;
+        width: 100%;
     }
 }
 
@@ -99,7 +100,8 @@ section {
 
 /* 記事タイトル */
 .archive_col>h3 {
-    padding: 50px 5%;
+    padding: 20px 20px 10px;
+    margin-bottom: 50px;
 }
 
 /* 3カラム */
@@ -162,4 +164,14 @@ section {
 /* moreボタン幅 */
 .more_btn {
     margin: 50px auto;
+}
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+
+    /* 記事タイトル */
+    .archive_col>h3 {
+        margin: 0 50px 50px;
+        padding: 40px 40px 10px;
+    }
 }
