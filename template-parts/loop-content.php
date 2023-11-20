@@ -27,12 +27,14 @@
     <!-- 営業時間のアイコンの出力 -->
 
     <!-- チェックボックスで選択した項目を変数へ代入する -->
-    <?php $times = get_field('business_hour');
-    if ($times) : ?>
-        <!-- 取得したものを一つずつ取り出す -->
-        <?php foreach ($times as $time) : ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $time; ?>_ico.png" />
-        <?php endforeach; ?>
+    <?php if (get_field('business_hour')) : ?>
+        <?php $times = get_field('business_hour');
+        if ($times) : ?>
+            <!-- 取得したものを一つずつ取り出す -->
+            <?php foreach ($times as $time) : ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $time; ?>_ico.png" />
+            <?php endforeach; ?>
+        <?php endif; ?>
     <?php endif; ?>
 
 

@@ -10,6 +10,8 @@
                 <div class="container">
                     <!-- 店名の表示 -->
                     <h2><?php the_title(); ?></h2>
+                    <!-- いいねボタン表示 -->
+                    <?php echo get_favorites_button(get_the_ID()); ?>
 
                     <div class="main_pic">
                         <!-- 画像1の表示  ※必須 -->
@@ -64,7 +66,6 @@
 
 
                     <span>[ここにタグが5つ入ります]</span>
-
 
 
 
