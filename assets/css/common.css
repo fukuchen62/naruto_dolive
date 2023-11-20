@@ -13,12 +13,8 @@ body {
     position: relative;
     overflow-x: hidden;
     background-color: #fff6e2;
+    width: 100vw;
 
-}
-
-main:not(.section_kv) {
-    width: 90%;
-    margin: 0 auto;
 }
 
 nav,
@@ -27,28 +23,51 @@ footer {
     font-family: 'Dela Gothic One', sans-serif;
 }
 
-
 h2 {
     font-family: 'Dela Gothic One', sans-serif;
     font-size: 2.2rem;
     text-shadow: 2px 2px 0 #000;
     -webkit-text-stroke: 1px #000;
-    text-align: center;
 }
+
 
 h3 {
     font-weight: bolder;
     font-size: 1.8rem;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-main:not(.section_kv) {
+h3>p {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+}
+
+h3::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 10px;
+    /* 下線の高さを調整 */
+    background-image: url("../img/wave_bottom.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+main:not(.section_kv):not(.teloparea) {
     width: 100%;
 }
 
 @media only screen and (max-width: 767px) {
     .sp_none {
         display: none;
-        display: block;
         /* ※モバイル表示時のみ(PCでは表示させない) */
     }
 }
@@ -57,13 +76,12 @@ main:not(.section_kv) {
 @media only screen and (min-width:768px) {
 
     main:not(.section_kv) {
-        width: 90%;
+        /* width: 90%; */
         margin: 0 auto;
     }
 
     .pc_none {
         display: none;
-        display: block;
         /* ※sp表示時のみ(PCでは表示させない) */
     }
 
@@ -72,11 +90,115 @@ main:not(.section_kv) {
 /* ------------------------------------------------------------------------
     header
 ------------------------------------------------------------------------  */
+.sp_nav {
+    height: 100px;
+    background-color: #555;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.header__inner {
+    position: relative;
+    z-index: 10;
+}
+
+.header__logo {
+    width: 125px;
+    height: 15px;
+    margin-left: 10px;
+}
+
+.header__menu {
+    position: fixed;
+    z-index: 5;
+    top: 50px;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease;
+}
+
+.header__inner.active .header__menu {
+    opacity: 1;
+    visibility: visible
+}
+
+.menu__list {
+    border-top: 1px solid #d7d7d7;
+}
+
+.menu__item {
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.menu__link {
+    display: block;
+    padding: 13px 10px;
+    color: #F5675B;
+}
+
+.header__menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.header__menu-btn span:nth-child(-n+3) {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #F5675B;
+}
+
+.header__menu-btn span:nth-child(1) {
+    top: 10px;
+    transition: all .2s ease;
+}
+
+.header__inner.active .header__menu-btn span:nth-child(1) {
+    top: 20px;
+    transform: rotate(45deg);
+}
+
+.header__menu-btn span:nth-child(2) {
+    top: 18px;
+    transition: opacity .2s ease;
+}
+
+.header__inner.active .header__menu-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.header__menu-btn span:nth-child(3) {
+    top: 26px;
+    transition: all .2s ease;
+}
+
+.header__inner.active .header__menu-btn span:nth-child(3) {
+    top: 20px;
+    transform: rotate(-45deg);
+}
+
+.header__menu-btn span:nth-child(4) {
+    font-size: 10px;
+    color: #F5675B;
+}
+
 
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
-    nav {
+    .pc_nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -90,31 +212,31 @@ main:not(.section_kv) {
         font-size: 1.5rem;
     }
 
-    nav>img {
+    .pc_nav>img {
         width: 70px;
         height: 70px;
         margin-left: 1rem;
     }
 
-    ul.navmenu {
+    .pc_nav ul.navmenu {
         display: flex;
         justify-content: space-around;
         gap: 10px;
         flex-grow: 1;
     }
 
-    .search_box {
+    .pc_nav .search_box {
         margin: 0 2rem;
         padding: 0 1rem;
         background-color: #fff;
         border-radius: 5px;
     }
 
-    .search_box input[type="text"] {
+    .pc_nav .search_box input[type="text"] {
         width: 150px;
     }
 
-    .search_box button {
+    .pc_nav .search_box button {
         padding: 5px 10px;
     }
 }
@@ -182,12 +304,12 @@ footer p:first-child {
 
 #toparea {
     height: 300px;
-    background-color: #d13a2b;
+    /* background-color: #d13a2b; */
     text-align: center;
 }
 
 #toparea>h2 {
-    color: #F8A59B;
+    /* color: #F8A59B; */
     line-height: calc(300px - 5px);
 }
 
@@ -196,6 +318,18 @@ footer p:first-child {
     background-color: #fff;
     max-width: 90%;
     margin: 5% auto 15%;
+}
+
+/* パンくずリスト */
+.breadcrumb {
+    padding: 20px 16px;
+}
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+    .breadcrumb {
+        padding: 40px 32px;
+    }
 }
 
 /* 画像横幅100％ */

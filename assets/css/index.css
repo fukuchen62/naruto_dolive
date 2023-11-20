@@ -1,6 +1,10 @@
 /* ------------------------------------------------------------------------
     TOP内共通
 ------------------------------------------------------------------------  */
+img {
+  width: 100%;
+}
+
 .teloparea {
   height: 100px;
   background-color: #fff;
@@ -13,82 +17,68 @@
   background-color: #fff6e2;
 }
 
-.logo {
-  text-align: center;
-}
-
-.logo img {
-  width: 300px;
-  height: auto;
-}
-
-.kv_img_wrap {
+.kv_left, .kv_main, .kv_right {
   position: relative;
+  padding: 23vh 0;
 }
 
-.kv_img2 {
-  text-align: center;
+.logo {
+  position: absolute;
+  top: 15%;
+  width: 90%;
+  left: 5%;
 }
 
-.kv_img_wrap img {
-  width: 610px;
-  height: 430px;
-  margin-top: 2rem;
-  object-fit: cover;
+.catchcopy {
+  width: 50%;
+  position: absolute;
+  bottom: 23%;
 }
 
 .purpose {
   padding: 38px 0;
 }
 
-.button-container{
-  display: flex;
-  justify-content: space-between;
-}
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+  .kv_img_wrap {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    overflow: hidden;
+  }
 
-.button-container2{
-  display: flex;
-}
+  .kv_left, .kv_main, .kv_right {
+    width: 46%;
+    min-width: 46%;
+    position: relative;
+    padding: 20vh 0;
+  }
 
-.course-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  text-decoration: none;
-  color: #555555;
-  font-size: 18px;
-  border-radius: 20px;
-  width: 200px;
-  height: 40px;
-  font-weight: bold;
-  border: 2px solid #555555;
-  transition: 0.3s;
-  box-shadow: 0px 6px 0px -2px rgba(67, 145, 209, 1);
-  background-color: #90caf9;
-}
+  .kv_left {
+    margin-left: -30%;
+  }
 
-.course-button:hover {
-  box-shadow: 0 0 #fff;
-  transform: translateY(1px);
-}
+  .kv_right {
+    margin-right: -30%;
+  }
 
-.course1{
-  margin-left: 30%;
-}
+  .logo {
+    top: 3%;
+  }
 
-.course2{
-  margin-right: 30%;
-}
+  .catchcopy {
+    bottom: 14%;
+  }
 
-.course3{
-  margin-left: 15%;
-}
+  .kv_img2 {
+    text-align: center;
+  }
 
-.course4{
-  margin: auto;
-}
-
-.course5{
-  margin-right:15%;
+  .kv_img_wrap img {
+    margin-top: 2rem;
+    object-fit: cover;
+    width: 100%;
+  }
 }
