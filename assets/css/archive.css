@@ -10,8 +10,13 @@
 
 /* 中見出し */
 
-.middle_title {
+/* 外枠中央配置 */
+.center_title {
     text-align: center;
+}
+
+/* 中見出し幅 */
+.middle_title {
     padding: 50px;
 }
 
