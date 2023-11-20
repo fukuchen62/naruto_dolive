@@ -3,20 +3,20 @@ get_header();
 
 ?>
 
-<h2 class="pageTitle">コラム記事タイトル</h2>
+<h2>コラム記事タイトル</h2>
 <p>コラム記事の説明コラム記事の説明コラム記事の説明</p>
 <?php get_template_part('template-parts/breadcrumb'); ?>
-<main class="main">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-9">
+<main>
+    <div>
+        <div>
+            <div>
 
 
-                <div class="row">
+                <div>
 
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
-                            <div class="col-md-4">
+                            <div>
                                 <?php get_template_part('template-parts/loop', 'news'); ?>
                                 <?php if (has_post_thumbnail()) : ?>
                                     <a href="<?php the_permalink(); ?>"></a>
@@ -35,11 +35,38 @@ get_header();
                 } ?>
             </div>
 
-            <div class="col-12 col-md-3">
-                <?php get_sidebar('categories'); ?>
+
+            <!-- サイドバー -->
+            <h2>以下サイドバーです</h2>
+            <div>
                 <?php get_sidebar('archives'); ?>
             </div>
         </div>
+
+        <aside>
+            <div>
+                <h3>カテゴリー一覧</h3>
+                <ul>
+                    <?php
+                    $categories = get_categories(array(
+                        'taxonomy' => 'column_type',
+                        'orderby' => 'name',
+                        'order' => 'ASC',
+                        'hide_empty' => false,
+                    ));
+
+                    foreach ($categories as $category) {
+                        echo '<li><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
+                    }
+                    ?>
+                </ul>
+            </div>
+
+
+        </aside>
+
+
+
     </div>
 </main>
 
