@@ -13,6 +13,7 @@ get_header();
 <h2><a href="<?php echo home_url('/stay') ?>">宿泊一覧へ</a></h2>
 <h2><a href="<?php echo home_url('/enjoy') ?>">遊ぶ一覧へ</a></h2>
 <h2><a href="<?php echo home_url('/column') ?>">コラム一覧へ</a></h2>
+<h2><a href="<?php echo home_url('/q_a') ?>">Q&A一覧へ</a></h2>
 <h2><a href="<?php echo get_permalink(239) ?>">マイページへ</a></h2>
 
 <?php get_search_form(); ?>
