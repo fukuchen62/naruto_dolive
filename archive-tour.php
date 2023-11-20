@@ -66,9 +66,9 @@
 
     <!-- サイドバー -->
     <h2>以下サイドバーです</h2>
-    <aside id="sidebar" class="sidebar">
-        <div class="widget widget_categories">
-            <h3 class="widget-title">カテゴリー一覧</h3>
+    <aside>
+        <div>
+            <h3>カテゴリー一覧</h3>
             <ul>
                 <?php
                 $categories = get_categories(array(
