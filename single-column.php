@@ -22,7 +22,10 @@
                                 </a>
                             </div>
                             <header class="article_header">
-                                <h2 class="article_title"><?php the_title(); ?></h2>
+                                <h2 class="article_title">
+                                    <!-- コラムタイトルを表示する -->
+                                    <?php the_title(); ?>
+                                </h2>
                                 <div class="article_meta">
                                     <?php the_category(); ?>
                                     <!-- <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y年m月d日'); ?></time> -->
@@ -44,26 +47,37 @@
             <div class="col-12 col-md-3">
                 <div class="content">
                     <div class="main-column">
+
                         <?php
                         while (have_posts()) :
                             the_post();
                         ?>
                             <article>
                                 <!-- カスタム投稿のコンテンツを表示 -->
+                                <!-- コラムタイトルを表示する -->
                                 <h1><?php the_title(); ?></h1>
                                 <div class="entry-content">
+                                    <!-- 本文を表示する -->
                                     <?php the_content(); ?>
-                                </div>
+                                </div><!-- entry-content -->
                             </article>
                         <?php endwhile; ?>
-                    </div>
+                    </div><!-- main-column -->
+
+                    <!-- ページナビゲーションの設定 -->
+                    <?php if (function_exists('wp_pagenavi')) {
+                        wp_pagenavi();
+                    } ?>
+
+                    <!-- サイドバーを表示する -->
                     <aside class="sidebar-column">
                         <?php dynamic_sidebar('custom_category_sidebar'); ?>
                     </aside>
-                </div>
+
+                </div><!-- content -->
                 <?php get_sidebar('archives'); ?>
-            </div>
-        </div>
-    </div>
+            </div><!-- col-12 col-md-3 -->
+        </div><!-- row -->
+    </div><!-- container -->
 </main>
 <?php get_footer(); ?>
