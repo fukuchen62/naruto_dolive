@@ -25,6 +25,9 @@ get_header();
 
 <a href="<?php echo home_url(''); ?>">ホームへ</a>
 
+<?php if (function_exists('wp_pagenavi')) {
+    wp_pagenavi();
+} ?>
 
 <?php
 get_footer();
