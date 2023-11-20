@@ -2,11 +2,11 @@
 
 // ▼TOP-kvのフラッシュ画像表示▼
 var pics_src = [
-    "./assets/img/mypic1.jpg",
-    "./assets/img/mypic2.jpg",
-    "./assets/img/mypic3.jpg",
-    "./assets/img/mypic4.jpg",
-    "./assets/img/mypic5.jpg"
+    "../assets/img/mypic1.jpg",
+    "../assets/img/mypic2.jpg",
+    "../assets/img/mypic3.jpg",
+    "../assets/img/mypic4.jpg",
+    "../assets/img/mypic5.jpg"
 ];
 var num = 0;
 
