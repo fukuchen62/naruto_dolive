@@ -225,18 +225,18 @@ main:not(.section_kv):not(.teloparea) {
         flex-grow: 1;
     }
 
-    .pc_nav .search_box {
+    .pc_nav .search_box_li {
         margin: 0 2rem;
         padding: 0 1rem;
         background-color: #fff;
         border-radius: 5px;
     }
 
-    .pc_nav .search_box input[type="text"] {
+    .pc_nav .search_box_li input[type="text"] {
         width: 150px;
     }
 
-    .pc_nav .search_box button {
+    .pc_nav .search_box_li button {
         padding: 5px 10px;
     }
 }
