@@ -1,3 +1,13 @@
+/* トップエリア */
+
+#toparea {
+    background-color: #d13a2b;
+}
+
+#toparea>h2 {
+    color: #F8A59B;
+}
+
 /* 中見出し */
 
 .middle_title {
