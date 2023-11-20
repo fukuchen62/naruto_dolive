@@ -18,6 +18,15 @@ get_header();
 <?php get_search_form(); ?>
 <hr>
 
+
+<h2>ドライブコース</h2>
+<p><a href="<?php echo get_permalink(324); ?>">コース1</a></p>
+<p><a href="<?php echo get_permalink(329); ?>">コース2</a></p>
+<p><a href="<?php echo get_permalink(477); ?>">コース3</a></p>
+<p><a href="">コース4</a></p>
+<p><a href="">コース5</a></p>
+<hr>
+
 <!-- 新着情報のループ -->
 <div>
     <?php if (have_posts()) : ?>
