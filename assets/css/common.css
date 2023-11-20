@@ -344,5 +344,50 @@ h4 {
 }
 
 /* ------------------------------------------------------------------------
+サイドバー
+------------------------------------------------------------------------ */
+
+/* カテゴリ枠中央寄せ */
+.aside_wrap {
+    width: 300px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+/* タイトル表示 */
+.aside_title {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/* li要素下線 */
+.aside_wrap li {
+    border-bottom: 3px dotted #000;
+    padding: 10px 20px 50px;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+/* カテゴリ別before要素 */
+.aside_wrap a::before {
+    content: '';
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-image: url(../img/sidebar_icon.png);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+/* リンクを親要素いっぱいに広げる */
+.aside_wrap a {
+    display: inline-block;
+    position: absolute;
+    width: 300px;
+    height: 50px;
+}
+
+/* ------------------------------------------------------------------------
     西野終わり
 ------------------------------------------------------------------------  */
