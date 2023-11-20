@@ -20,11 +20,6 @@
 
 <body>
     <!--
-        お疲れ様です！
-        この【index.html】をコピペして各ページ作成お願いします。
-        が、、、
-        まだnavのホバー時の表現やハンバーガーメニュー、レスポンシブ対応はできていません。
-        あくまでtest＆参考程度だと思って、必要に応じてclassの命名、cssの編集（各ページ毎にcssファイルを作成・追加した方がいいかも…例：common.cssは共通パーツ、TOPページ特有のcssは【index.css】を作成して記述していっています。
         決定事項がまとまったパワポファイルが【https://docs.google.com/presentation/d/1UH-e8r4syRd-EFv8QS8rbK_M89gBjzaU/edit?usp=drive_link&ouid=114449549919721686995&rtpof=true&sd=true】にあるので参照してください！
     -->
 
@@ -66,11 +61,11 @@
                 <li>インスタ</li>
                 <li>マイページ</li>
                 <li>Q&A</li>
+                <li class="search_box_li">
+                    <input type="text" placeholder="検索">
+                    <button><img src="../assets/img/search_ico.png" alt="検索" style="width: 40%;"></button>
+                </li>
             </ul>
-            <div class="search_box">
-                <input type="text" placeholder="検索">
-                <button>検索</button>
-            </div>
         </nav>
     </header>
 
@@ -128,7 +123,6 @@
 
         </section>
         <section id="instagram" class="section_instagram">
-            <h3><p>お気に入り詳細</p></h3>
         </section>
         <section></section>
     </main>
