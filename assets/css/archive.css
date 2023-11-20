@@ -23,7 +23,8 @@
 
 /* 中見出し幅 */
 .middle_title {
-    padding: 50px;
+    padding: 100px 50px 10px;
+    margin: 40px;
 }
 
 /* トップメニュー横並び */
@@ -59,8 +60,8 @@
 
     /* 地図画像 */
     .map_content img {
-        width: 100%;
         height: 100%;
+        width: 100%;
     }
 }
 
@@ -99,7 +100,8 @@ section {
 
 /* 記事タイトル */
 .archive_col>h3 {
-    padding: 50px 5%;
+    padding: 20px 5% 5px;
+    margin-bottom: 30px;
 }
 
 /* 3カラム */
