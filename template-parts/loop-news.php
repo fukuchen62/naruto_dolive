@@ -6,7 +6,7 @@
                 <?php the_post_thumbnail('medium'); ?>
             <?php else : ?>
                 <!-- 実装するか未定 -->
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="">
+
             <?php endif; ?>
         </a>
     </div>
