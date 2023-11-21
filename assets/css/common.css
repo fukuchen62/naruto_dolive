@@ -400,7 +400,7 @@ ul.overlaymenu_list {
     object-fit: cover;
 }
 
-.card_content>h4 {
+h4 .card1_content {
     padding: 20px 0;
 }
 
