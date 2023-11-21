@@ -381,6 +381,7 @@ ul.overlaymenu_list {
     width: 280px;
     border: 3px solid #000;
     box-shadow: 5px 5px 0 #000;
+    margin: 0 auto;
 }
 
 .card1_content {
