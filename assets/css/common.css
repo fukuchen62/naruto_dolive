@@ -101,7 +101,7 @@ main:not(.section_kv):not(.teloparea) {
 }
 
 .sp_nav.container {
-    overflow: hidden;
+    overflow: auto;
 }
 
 .sp_nav_logo img {
@@ -137,6 +137,8 @@ main:not(.section_kv):not(.teloparea) {
     visibility: visible;
     right: 0;
     left: auto;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
 }
 
 .search_box_wrap {
@@ -443,7 +445,7 @@ footer {
     text-align: center;
     background-image: url(../img/bg_road.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto 100px;
     background-position: bottom;
 }
 
