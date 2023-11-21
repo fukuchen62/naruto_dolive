@@ -1,0 +1,218 @@
+@charset "uft-8";
+
+html {
+    /* 1rem=10px */
+    font-size: 62.5%;
+}
+
+/*font-size : 16px と同等*/
+body {
+    font-size: 1.6rem;
+}
+
+html.small {
+    font-size: 50%;
+    /*小サイズ*/
+}
+
+html.big {
+    font-size: 87.5%;
+    /*大サイズ*/
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1040px;
+    margin: 10px auto;
+    /* border: 1px solid orange; */
+    padding: 0 40px;
+}
+
+header {
+    border: 1px red solid;
+}
+
+main {
+    border: 1px blue solid;
+}
+
+footer {
+    border: 1px green solid;
+}
+
+.gmenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gmenu li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    border: 2px chocolate dotted;
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+}
+
+.sitemap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sitemap li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    border: 2px goldenrod dotted;
+    background-color: yellowgreen;
+    padding: 10px;
+}
+
+.map svg {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.courses {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.courses li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18%;
+    border: 2px burlywood solid;
+    padding: 20px;
+    background-color: lightcyan;
+}
+
+/*
+=========================================
+  Utilities
+=========================================
+*/
+
+/* マージン
+---------------------------------*/
+
+.mb0 {
+    margin-bottom: 0 !important;
+}
+
+.mb5 {
+    margin-bottom: 5px !important;
+}
+
+.mb10 {
+    margin-bottom: 10px !important;
+}
+
+.mb15 {
+    margin-bottom: 15px !important;
+}
+
+.mb20 {
+    margin-bottom: 20px !important;
+}
+
+.mb25 {
+    margin-bottom: 25px !important;
+}
+
+.mb30 {
+    margin-bottom: 30px !important;
+}
+
+.mb35 {
+    margin-bottom: 35px !important;
+}
+
+.mb40 {
+    margin-bottom: 40px !important;
+}
+
+.mb45 {
+    margin-bottom: 45px !important;
+}
+
+.mb50 {
+    margin-bottom: 50px !important;
+}
+
+.mb55 {
+    margin-bottom: 55px !important;
+}
+
+.mb60 {
+    margin-bottom: 60px !important;
+}
+
+/* 左右行揃え
+---------------------------------*/
+
+.ta-l {
+    text-align: left;
+}
+
+.ta-r {
+    text-align: right;
+}
+
+.ta-c {
+    text-align: center;
+}
+
+/* フロート／フロート解除
+---------------------------------*/
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.fl-img {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.fr-img {
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+/* clearfix */
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
