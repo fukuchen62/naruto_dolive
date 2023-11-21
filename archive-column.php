@@ -43,9 +43,7 @@ get_header();
 
             <!-- サイドバー -->
             <h2>以下サイドバーです</h2>
-            <div>
-                <?php get_sidebar('archives'); ?>
-            </div>
+
         </div>
 
         <aside>

@@ -90,20 +90,6 @@
                         if ($the_query->have_posts()) :
                         ?>
                             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                                <?php
-
-                                // 緯度と経度の値を取得する
-                                $latitude = get_post_meta(get_the_ID(), 'latitude', true);
-                                $longitude = get_post_meta(get_the_ID(), 'longitude', true);
-                                $facilityName = get_the_title();
-
-                                $place[] = array(
-                                    'lat' => $latitude,
-                                    'lng' => $longitude,
-                                    'facilityName' => $facilityName
-                                );
-                                ?>
-
                                 <div>
                                     <!-- ここに内容を表示させる -->
                                     <?php get_template_part('template-parts/loop', 'content'); ?>

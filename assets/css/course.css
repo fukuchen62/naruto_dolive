@@ -2,16 +2,27 @@
     text-align: center;
 }
 
+#toparea{
+    border: 1px solid red;
+    background-color: #ed76bd;
+}
+
+#toparea>h2{
+color: #f8c9d7;
+}
+
 .main_wrap h3{
     border: 1px solid red;
-    margin: 30px 30px;
+    margin: 20px 10px;
 }
 
 /* コース説明のpタグ */
 .course_spot p{
 border: 1px solid red;
-margin: 20px;
+margin: 5px 10px;
+height: 150px;
 }
+
 
 
 
@@ -43,24 +54,21 @@ margin: 20px;
     /* border: 1px solid red; */
 }
 
+/* 他のおすすめコースカード型 */
+.card1_text{
+    margin-top: 10px;
+}
 
-
+/* ここからPC表示 */
 @media screen and (min-width:768px){
 
-    .solid_line{
-    height: 3px;
-    width: 1000px;
-    background-color: black;
-    margin: 0 auto;
-    /* text-align: center; */
-}
 
 .course_spot p{
 border: 1px solid red;
 margin: 50px;
 }
 
-.spot_wrap{
+.card_flex{
     border: 1px solid red;
     display: flex;
 }

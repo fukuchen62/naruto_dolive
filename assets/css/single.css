@@ -1,0 +1,248 @@
+@charset "utf-8";
+
+/* ------------------------------------------------------------------------
+    all
+------------------------------------------------------------------------  */
+main {
+    background-color: FFF6E2;
+}
+
+/* トップエリア */
+/* height見直し */
+#toparea {
+    height: 200px;
+    background-color: #d13a2b;
+    text-align: center;
+}
+
+#toparea>h2 {
+    color: #F8A59B;
+    line-height: 200px;
+}
+
+/* 自分なりのタイトルです（不採用） */
+/* .section_title {
+    position: relative;
+    height: 300px;
+    background-color: #d13a2b
+} */
+
+/* h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 0 #000;
+    -webkit-text-stroke: 1px #000;
+    color: #f8a59b;
+} */
+
+/* 記事背景 */
+.main_wrap {
+    background-color: #fff;
+    max-width: 90%;
+    margin: 5% auto 15%;
+}
+
+.breadcrumb {
+        padding: 20px 16px;
+    }
+
+section {
+    margin-bottom: 30px;
+}
+
+.toparea_title {
+    text-align: center;
+    margin: 30px auto;
+}
+
+h3 {
+    text-align: center;
+}
+
+/* 区切り線 */
+hr {
+    width: 80%;
+    margin: 2rem auto;
+    border: 2px solid #000;
+}
+
+/* 施設について */
+.facility_img1_box {
+    text-align: center;
+}
+
+.facility_img1 {
+    width: 240px;
+    height: 184px;
+    border: 3px solid #000;
+    object-fit: cover;
+}
+
+.facility_img_list {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.facility_img_list li {
+        margin: 0 7.5px;
+}
+
+.facility_img2 {
+    width: 80px;
+    height: 75px;
+    border: 3px solid #000;
+    object-fit: cover;
+}
+
+.facility_txt {
+    margin: 0 auto;
+    margin-bottom: 25px;
+    max-width: 300px;
+    border: 3px solid #000;
+}
+
+.facility_tag {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 250px;
+}
+
+/* moreボタンCSS */
+/* 外側・中央揃え・整形 */
+.facility_tag_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 11px;
+    padding: 0 5px;
+    background-color: #fffCAA;
+    border: 3px solid #000;
+    min-width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0 #000;
+}
+
+/* 施設の詳細情報 */
+table {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+th, td {
+    vertical-align: middle;
+    text-align: center;
+    border: 3px solid #000;
+    padding: 10px;
+}
+/* 営業時間と電話番号の指定 */
+tr:nth-child(2) th:nth-child(1){
+    padding: 15px;
+}
+
+tr:nth-child(4) th:nth-child(1){
+    padding: 15px;
+}
+
+.info_wrap {
+    margin-bottom: 25px;
+}
+
+/* マップ */
+.info_map {
+    text-align: center;
+}
+
+.info_map_img {
+    width: 300px;
+    height: 350px;
+    border: 3px solid #000;
+    object-fit: cover;
+}
+
+/* その他おすすめ */
+/* ▼1カラムカード▼ */
+.card1_wrap {
+    width: 300px;
+    height: 450px;
+    margin: 25px auto;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 #000;
+}
+
+.card1_content {
+    padding: 25px;
+}
+
+.card1_img {
+    text-align: center;
+}
+
+.card1_img img {
+    border: 3px solid #000;
+    width: 240px;
+    height: 184px;
+    object-fit: cover;
+}
+
+.card1_content>h4 {
+    margin: 20px auto;
+}
+
+.card1_text {
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.card1_tag {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.card1_tag img {
+    width: 35px;
+    height: 35px;
+}
+
+/* 僕のカード型の記載（不採用） */
+/* .recommend_wrap li {
+    margin: 0 auto;
+}
+
+.recommend_card {
+    border: 3px solid #000;
+    padding: 25px;
+    width: 300px;
+    height: 450px;
+}
+
+.recommend_card_img {
+    width: 240px;
+    height: 184px;
+    border: 3px solid #000;
+    object-fit: cover;
+}
+
+.recommend_card_txt {
+    border: 3px solid #000;
+}
+
+.recommend_card_tag {
+    border: 3px solid #000;
+}
+
+.tag_icon {
+    width: 36px;
+    height: 36px;
+
+} */
+
+.section_recommend {
+    padding-bottom: 30px;
+}

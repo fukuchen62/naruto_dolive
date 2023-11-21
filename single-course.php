@@ -6,6 +6,11 @@
 <h1>ドライブコース</h1>
 
 <main class="main">
+
+    <section>
+        <b>地図</b><!-- 必須 -->
+        <span><?php the_field('iframe'); ?></span>
+    </section>
     <section class="sec">
         <h2>コース詳細</h2>
         <div>
@@ -18,10 +23,7 @@
                 <div class="container">
 
                     <ul class="info_list">
-                        <li>
-                            <b>地図</b><!-- 必須 -->
-                            <span><?php the_field('iframe'); ?></span>
-                        </li>
+
 
                         <li>
                             <b>スポット</b><!-- 必須 -->
@@ -37,7 +39,7 @@
                                     <?php while ($post_query->have_posts()) : $post_query->the_post(); ?>
                                         <span><a href="<?php echo esc_url($page_link); ?>"></a></span>
                                         <?php get_template_part('template-parts/loop', 'content'); ?>
-                                        <hr>
+
                                     <?php endwhile; ?>
                                 <?php endif; ?>
                                 <?php wp_reset_postdata(); ?>
@@ -124,6 +126,42 @@
         <?php endfor; ?>
 
         <hr>
+        <h3>他のおすすめコース</h3>
+        <?php
+        $args = array(
+            'post_type' => 'course',
+            'posts_per_page' => 4,
+            'post__not_in' => array($post->ID),
+            'orderby' => 'rand',
+        );
+        $the_query = new WP_Query($args);
+        ?>
+
+
+        <section class="sec">
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    <!-- ↓ サブループの定型文を利用 -->
+                    <?php if ($the_query->have_posts()) : ?>
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                            <div class="col-md-3">
+                                <?php get_template_part('template-parts/loop', 'content'); ?>
+                            </div>
+                        <?php endwhile; ?>
+                        <!-- ↓ 関連メニューとして表示できるものがなかった場合の処理 -->
+                    <?php else : ?>
+                        <p>関連コースはまだありません。</p>
+                    <?php endif;
+                    // ↓ サブクエリのリセット処理
+                    wp_reset_postdata(); ?>
+
+                </div>
+            </div>
+        </section>
+        <hr>
+
+
         <div class="button">
             <p class="more"><a href="<?php echo home_url(); ?>">TOPにもどる</a></p>
         </div>
