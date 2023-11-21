@@ -75,7 +75,7 @@
                             'post_type' => 'tour',
                             'post_per_page' => 3,
                         );
-                        //料理の種類で絞り込む
+                        //タクソノミーの種類で絞り込む
                         $tourtax = array('relation' => 'AND');
                         $tourtax[] = array(
                             'taxonomy' => 'tour_type',

@@ -16,7 +16,7 @@ body {
     width: 100vw;
 }
 
-nav,
+.pc_nav,
 footer {
     color: #fff;
     font-family: 'Dela Gothic One', sans-serif;
@@ -97,28 +97,33 @@ main:not(.section_kv):not(.teloparea) {
 ------------------------------------------------------------------------  */
 .sp_nav {
     height: 100px;
-    background-color: #555;
+    background-image: url(../img/bg_road.png);
 }
 
-.container {
+.sp_nav.container {
     overflow: hidden;
 }
 
-.header__inner {
+.sp_nav_logo img {
+    width: 75px;
+    margin: 12px;
+}
+
+.header_inner {
     position: relative;
     z-index: 10;
 }
 
-.header__logo {
+.header_logo {
     width: 125px;
     height: 15px;
     margin-left: 10px;
 }
 
-.header__menu {
+.header_menu {
     position: fixed;
     z-index: 5;
-    top: 50px;
+    top: 0;
     width: 100%;
     height: calc(100vh - 50px);
     background: #fff;
@@ -127,82 +132,180 @@ main:not(.section_kv):not(.teloparea) {
     transition: opacity .2s ease;
 }
 
-.header__inner.active .header__menu {
+.header_inner.active .header_menu {
     opacity: 1;
-    visibility: visible
+    visibility: visible;
+    right: 0;
+    left: auto;
 }
 
-.menu__list {
-    border-top: 1px solid #d7d7d7;
+.search_box_wrap {
+    width: 250px;
+    margin: 2.2rem 0 0 .5rem;
 }
 
-.menu__item {
-    border-bottom: 1px solid #d7d7d7;
+.sp_nav .search_box {
+    display: flex;
+    width: 100%;
 }
 
-.menu__link {
-    display: block;
-    padding: 13px 10px;
-    color: #F5675B;
+.sp_nav .search_box input[type="text"] {
+    padding: 0 1rem;
+    border: 1px solid #555;
+    border-radius: 1.5rem 0 0 1.5rem;
+    width: 150px;
 }
 
-.header__menu-btn {
-    position: relative;
+.sp_nav .search_box button {
+    cursor: pointer;
+    padding: 0 9px;
+    margin-right: .5rem;
+    border-radius: 0 1.5rem 1.5rem 0;
+    border: none;
+    background-color: #555;
+    color: #555;
+    font-size: .75rem;
+}
+
+.sp_nav .search_box input:focus {
+    outline: 0;
+    border: 1px solid #FF9900;
+}
+
+.sp_nav .search_box button:hover {
+    color: #FF9900;
+}
+
+.sp_nav .search_box input::placeholder {
+    color: #555;
+}
+
+.header_menu-btn {
+    position: absolute;
+    right: 15px;
+    top: 20px;
     display: flex;
     justify-content: center;
-    align-items: end;
-    width: 50px;
-    height: 50px;
+    align-items: center;
+    width: 75px;
+    height: 75px;
     padding: 5px;
     cursor: pointer;
+    z-index: 5;
 }
 
-.header__menu-btn span:nth-child(-n+3) {
+.header_menu-btn span:nth-child(-n+3) {
     position: absolute;
     display: block;
-    width: 30px;
+    width: 35px;
     height: 2px;
-    background: #F5675B;
+    background: #fff;
+    box-shadow: 3px 3px 1px rgb(0 0 0);
 }
 
-.header__menu-btn span:nth-child(1) {
+.header_menu-btn span:nth-child(1) {
     top: 10px;
     transition: all .2s ease;
 }
 
-.header__inner.active .header__menu-btn span:nth-child(1) {
+.header_inner.active .header_menu-btn span:nth-child(1) {
     top: 20px;
     transform: rotate(45deg);
+    background: #000;
+    box-shadow: none;
 }
 
-.header__menu-btn span:nth-child(2) {
+.header_menu-btn span:nth-child(2) {
     top: 18px;
     transition: opacity .2s ease;
 }
 
-.header__inner.active .header__menu-btn span:nth-child(2) {
+.header_inner.active .header_menu-btn span:nth-child(2) {
     opacity: 0;
 }
 
-.header__menu-btn span:nth-child(3) {
+.header_menu-btn span:nth-child(3) {
     top: 26px;
     transition: all .2s ease;
 }
 
-.header__inner.active .header__menu-btn span:nth-child(3) {
+.header_inner.active .header_menu-btn span:nth-child(3) {
     top: 20px;
     transform: rotate(-45deg);
+    background: #000;
+    box-shadow: none;
 }
 
-.header__menu-btn span:nth-child(4) {
+.header_menu-btn span:nth-child(4) {
     font-size: 10px;
-    color: #F5675B;
+    color: #fff;
+    text-shadow: 3px 3px 1px rgb(0 0 0);
+    margin-top: 10px;
 }
 
+.header_inner.active .header_menu-btn span:nth-child(4) {
+    color: #000;
+    text-shadow: none;
+}
 
+.link_wrap {
+    text-align: center;
+    background-color: #FFFDF9;
+    width: 80%;
+    margin: 10%;
+}
+
+h3.overlaymenu_title {
+    margin-top: 2rem;
+}
+
+ul.overlaymenu_list {
+    text-align: left;
+    margin: 2rem 1rem;
+    letter-spacing: 0.1em;
+}
+
+.overlaymenu_list li {
+    display: flex;
+    background: no-repeat right center;
+}
+
+.overlaymenu_list li+li {
+    margin-top: 22px;
+}
+
+.overlaymenu_list li:not(.menu_title_li):after {
+    content: '';
+    margin: 0 40px 0 1em;
+    background: url(../img/bg_dots.png) repeat-x left center;
+    background-size: 3px auto;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.overlaymenu_list li:nth-child(odd) {
+    background-image: url(../img/hammenu_icon1.png);
+    background-size: 25px;
+}
+
+.overlaymenu_list li:nth-child(even) {
+    background-image: url(../img/hammenu_icon2.png);
+    background-size: 25px;
+}
+
+@media (max-width: 1024px) {
+    .sp_nav {
+        display: block;
+    }
+
+    .pc_nav {
+        display: none !important;
+    }
+}
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:768px) {
+@media (min-width:768px) {
     .pc_nav {
         display: flex;
         align-items: center;
@@ -214,7 +317,7 @@ main:not(.section_kv):not(.teloparea) {
         height: 100px;
         text-shadow: 2px 2px 0 #000;
         -webkit-text-stroke: 1px #000;
-        font-size: 1.5rem;
+        font-size: clamp(16px, 2vw, 24px);
     }
 
     .pc_nav>img {
@@ -247,7 +350,7 @@ main:not(.section_kv):not(.teloparea) {
 
     .pc_nav .search_box_li button {
         cursor: pointer;
-        padding: 0 0.25rem;
+        padding: 0 1rem;
         margin-right: .5rem;
         border-radius: 0 1.5rem 1.5rem 0;
         border: none;
@@ -270,6 +373,42 @@ main:not(.section_kv):not(.teloparea) {
     }
 }
 
+/* ------------------------------------------------------------------------
+    cardテンプレート
+------------------------------------------------------------------------  */
+/* ▼1カラムカード▼ */
+.card1_wrap {
+    width: 350px;
+    height: 500px;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 #000;
+}
+
+.card1_content {
+    padding: 30px;
+}
+
+.card1_img {
+    text-align: center;
+}
+
+.card1_img img {
+    border: 1px solid #000;
+    width: 300px;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card_content>h4 {
+    padding: 20px 0;
+}
+
+.card1_text {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+/* ▲1カラムカード▲ */
 /* ------------------------------------------------------------------------
     footer
 ------------------------------------------------------------------------  */
