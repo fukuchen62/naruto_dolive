@@ -510,7 +510,7 @@ moreボタン
 .main_wrap {
     background-color: #fffdf9;
     max-width: 90%;
-    margin: 5% auto 15%;
+    margin: 5% auto;
 }
 
 /* パンくずリスト */
