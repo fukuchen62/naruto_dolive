@@ -53,6 +53,7 @@
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/reservation_ico.png" />
     <?php endif; ?>
 
+
     <p>---------------------------------------------------end</p>
 
 </article>
