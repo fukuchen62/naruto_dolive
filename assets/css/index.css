@@ -37,6 +37,28 @@ img {
 
 .purpose {
   padding: 38px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+}
+
+.purpose p {
+  flex-shrink: 0;
+  margin-right: 20px;
+  animation-name: marquee;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */

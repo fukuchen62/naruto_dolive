@@ -1,4 +1,67 @@
+.main_wrap{
+    text-align: center;
+}
+
+.main_wrap h3{
+    border: 1px solid red;
+    margin: 30px 30px;
+}
+
+/* コース説明のpタグ */
+.course_spot p{
+border: 1px solid red;
+margin: 20px;
+}
+
+
+
+/* GoogleMap */
+.course_map{
+    border: 1px solid red;
+}
+
+/* GoogleMap-中身 */
+.map {
+    width: 100%;
+    position: relative;
+    padding-top: 56.25%;
+}
+
+/* iframe */
+.map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* コースボタン */
+.course_button{
+    margin: 20px 20px;
+    /* border: 1px solid red; */
+}
+
+
+
+@media screen and (min-width:768px){
+
+    .solid_line{
+    height: 3px;
+    width: 1000px;
+    background-color: black;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+
+.course_spot p{
+border: 1px solid red;
+margin: 50px;
+}
+
 .spot_wrap{
     border: 1px solid red;
     display: flex;
+}
 }
