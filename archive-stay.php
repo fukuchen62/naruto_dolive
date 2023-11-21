@@ -48,13 +48,6 @@
         </a>
     </h3>
 
-
-
-    <!-- タクソノミーを指定して配列のターム情報を取得する -->
-    <!-- タクソノミーのタイトルの取得 -->
-
-
-
     <section>
         <div class="container">
             <div class="map_sideber">
