@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>共通部分を部品にして使い回す</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!--header.htmlを読み込ませる記述-->
+
+    <main class="mb60">
+        <section class="container">
+            <h2 class="mb40 ta-c">h2:トップページ</h2>
+            <p>トップページの内容</p>
+
+            <section class="mb40">
+                <h3 class="mb20 ta-c">h3:サブタイトル</h3>
+                <p>サブテキスト>サブテキスト　サブテキスト　サブテキスト　サブテキスト　</サブテキスト　サブテキスト　</p>
+            </section>
+            <section class="mb40">
+                <h3 class="mb20 ta-c">h3:サブタイトル</h3>
+                <p>サブテキスト>サブテキスト　サブテキスト　サブテキスト　サブテキスト　</サブテキスト　サブテキスト　</p>
+            </section>
+        </section>
+    </main>
+
+    <!--footer.htmlを読み込ませる記述-->
+
+    <script>
+        // bodyの下にheader.htmlを嵌め込む
+        fetch("header.html")
+            .then((response) => response.text())
+            .then((data) => document.querySelector("body").insertAdjacentHTML('afterbegin', data));
+
+        // mainの下にfooter.htmlを嵌め込む
+        fetch("footer.html")
+            .then((response) => response.text())
+            .then((data) => document.querySelector("main").insertAdjacentHTML('afterend', data));
+    </script>
+</body>
+</html>
