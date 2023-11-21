@@ -25,12 +25,12 @@
                         <!-- 記事の本文の表示 -->
                         <?php the_content(); ?>
 
-                    </div><!-- main_pic -->
+                        <!-- 記事の本文の表示 -->
+                        <?php if (get_field('text')) : ?>
+                            <span><?php the_field('text'); ?></span>
+                        <?php endif; ?>
 
-                    <!-- キャッチフレーズの表示 -->
-                    <?php if (get_field('catch_phrase')) : ?>
-                        <?php the_field('catch_phrase'); ?>
-                    <?php endif; ?>
+                    </div><!-- main_pic -->
 
                     <div class="sub_pic">
                         <!-- 画像2の表示 -->
@@ -78,14 +78,53 @@
                     <div class="container">
                         <h2>詳細情報</h2>
                         <ul class="info_list">
+
+                            <?php if (get_field('recommend')) : ?>
+                                <li>
+                                    <b>おすすめポイント</b>
+                                    <span><?php the_field('recommend'); ?></span>
+                                </li>
+                            <?php endif; ?>
+
+                            <?php if (get_field('reservation')) : ?>
+                                <li>
+                                    <b>予約</b>
+                                    <?php if (get_field('reservation')) : ?>
+                                        <span>可能</span>
+                                    <?php else : ?>
+                                        <span>不可</span>
+                                    <?php endif; ?>
+                                </li>
+                            <?php endif; ?>
+
                             <li>
                                 <b>住所</b><!-- 必須 -->
                                 <span><?php the_field('address'); ?></span>
                             </li>
+
+                            <?php if (get_field('post_code')) : ?>
+                                <li>
+                                    <b>郵便番号</b>
+                                    <span><?php the_field('post_code'); ?></span>
+                                </li>
+                            <?php endif; ?>
+
                             <li>
                                 <b>電話番号</b><!-- 必須 -->
                                 <span><?php the_field('tel'); ?></span>
                             </li>
+
+                            <li>
+                                <b>営業時間</b><!-- 必須 -->
+                                <span><?php the_field('business_hours'); ?></span>
+                            </li>
+
+                            <?php if (get_field('email')) : ?>
+                                <li>
+                                    <b>Email</b>
+                                    <span><?php the_field('email'); ?></span>
+                                </li>
+                            <?php endif; ?>
 
                             <!-- リンク先がある場合に表示する -->
                             <span><?php if (get_field('url')) //リンク先の入力があれば
@@ -114,33 +153,13 @@
                                     </li>
                                 <?php endif; ?>
 
-                                <li>
-                                    <b>営業時間</b><!-- 必須 -->
-                                    <span><?php the_field('business_hours'); ?></span>
-                                </li>
-                                <li>
-                                    <b>定休日</b><!-- 必須 -->
-                                    <span><?php the_field('close'); ?></span>
-                                </li>
-
-                                <?php if (get_field('takeout')) : ?>
+                                <?php if (get_field('toilet')) : ?>
                                     <li>
-                                        <b>テイクアウト</b>
-                                        <?php if (get_field('takeout')) : ?>
+                                        <b>トイレ</b>
+                                        <?php if (get_field('toilet')) : ?>
                                             <span>あり</span>
                                         <?php else : ?>
                                             <span>なし</span>
-                                        <?php endif; ?>
-                                    </li>
-                                <?php endif; ?>
-
-                                <?php if (get_field('reservation')) : ?>
-                                    <li>
-                                        <b>予約</b>
-                                        <?php if (get_field('reservation')) : ?>
-                                            <span>可能</span>
-                                        <?php else : ?>
-                                            <span>不可</span>
                                         <?php endif; ?>
                                     </li>
                                 <?php endif; ?>
@@ -177,6 +196,32 @@
                                     </li>
                                 <?php endif; ?>
 
+                                <?php if (get_field('company')) : ?>
+                                    <li>
+                                        <b>管理会社</b>
+                                        <span><?php the_field('company'); ?></span>
+                                    </li>
+                                <?php endif; ?>
+
+                                <?php if (get_field('on_site')) : ?>
+                                    <li>
+                                        <b>常駐管理者</b>
+                                        <?php if (get_field('on_site')) : ?>
+                                            <span>あり</span>
+                                        <?php else : ?>
+                                            <span>なし</span>
+                                        <?php endif; ?>
+                                    </li>
+                                <?php endif; ?>
+
+
+                                <?php if (get_field('fee')) : ?>
+                                    <li>
+                                        <b>料金</b>
+                                        <span><?php the_field('fee'); ?></span>
+                                    </li>
+                                <?php endif; ?>
+
                                 <?php if (get_field('payment')) : ?>
                                     <li>
                                         <b>決済方法</b>
@@ -194,19 +239,10 @@
                                     </li>
                                 <?php endif; ?>
 
-                                <li>
-                                    <b>経度</b><!-- 必須 -->
-                                    <span><?php the_field('longitude'); ?></span>
-                                </li>
-                                <li>
-                                    <b>緯度</b><!-- 必須 -->
-                                    <span><?php the_field('latitude'); ?></span>
-                                </li>
-
-                                <?php if (get_field('recommend')) : ?>
+                                <?php if (get_field('access')) : ?>
                                     <li>
-                                        <b>おすすめメニュー</b>
-                                        <span><?php the_field('recommend'); ?></span>
+                                        <b>アクセス</b>
+                                        <span><?php the_field('access'); ?></span>
                                     </li>
                                 <?php endif; ?>
 
