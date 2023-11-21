@@ -2,9 +2,18 @@
     text-align: center;
 }
 
+#toparea{
+    border: 1px solid red;
+    background-color: #ed76bd;
+}
+
+#toparea>h2{
+color: #f8c9d7;
+}
+
 .main_wrap h3{
     border: 1px solid red;
-    margin: 30px 30px;
+    margin: 20px 30px;
 }
 
 /* コース説明のpタグ */
