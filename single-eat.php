@@ -306,6 +306,88 @@
                 </div><!-- other -->
             <?php endwhile; ?>
         <?php endif; ?>
-    </section><!-- sec -->
+
+
+
+
+
+        <?php
+        $taxonomy = 'eat_type'; // タクソノミーのスラッグまたは名前
+
+        $terms = get_the_terms(get_the_ID(), $taxonomy);
+
+        if ($terms && !is_wp_error($terms)) {
+            $term_slugs = array();
+            foreach ($terms as $term) {
+                $term_slugs[] = $term->slug;
+            }
+
+            $sub_query = new WP_Query(array(
+                'post_type' => 'eat', // 投稿タイプを適切なものに変更
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => $taxonomy,
+                        'field' => 'slug',
+                        'terms' => $term_slugs,
+                    ),
+                ),
+                'posts_per_page' => 3, // 表示する投稿の数を指定
+            ));
+
+
+            while ($sub_query->have_posts()) : $sub_query->the_post(); ?>
+                <p>start---------------------------------------------------</p>
+                <!-- 投稿の個別ページのURLを表示し、以下の内容をリンクにする-->
+                <a href="<?php the_permalink(); ?>">
+
+                    <!-- アイキャッチ画像の表示 -->
+                    <figure class="pic">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail('medium'); ?>
+                        <?php endif; ?>
+                    </figure>
+
+                    <!-- 店名の表示 -->
+                    <h3 class="title"><?php the_title(); ?></h3>
+                </a>
+
+                <!-- 抜粋の表示 -->
+                <p><?php the_field('excerpt'); ?></p>
+
+                <!-- ここにアイコンを表示する -->
+
+                <!-- 営業時間のアイコンの出力 -->
+                <!-- チェックボックスで選択した項目を変数へ代入する -->
+                <?php $times = get_field('business_hour');
+                if ($times) : ?>
+                    <!-- 取得したものを一つずつ取り出す -->
+                    <?php foreach ($times as $time) : ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $time; ?>_ico.png" />
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+
+                <!-- 駐車場のアイコンの出力 -->
+                <?php if (get_field('parking')) : ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/parking_ico.png" />
+                <?php endif; ?>
+
+                <!-- 喫煙のアイコンの出力 -->
+                <?php if (get_field('smoking')) : ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/smoking_ico.png" />
+                <?php endif; ?>
+
+                <!-- 予約のアイコンの出力 -->
+                <?php if (get_field('reservation')) : ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/reservation_ico.png" />
+                <?php endif; ?>
+
+                <p>---------------------------------------------------end</p>
+        <?php endwhile;
+
+            wp_reset_postdata();
+        }
+        ?>
+
 </main>
 <?php get_footer() ?>

@@ -52,9 +52,13 @@ section {
     margin-bottom: 30px;
 }
 
-h3 {
+.toparea_title {
     text-align: center;
     margin: 30px auto;
+}
+
+h3 {
+    text-align: center;
 }
 
 /* 区切り線 */
@@ -110,7 +114,7 @@ hr {
 
 /* moreボタンCSS */
 /* 外側・中央揃え・整形 */
-.more_btn {
+.facility_tag_btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,9 +168,9 @@ tr:nth-child(4) th:nth-child(1){
 /* その他おすすめ */
 /* ▼1カラムカード▼ */
 .card1_wrap {
-    width: 300px;
     height: 450px;
-    margin: 25px auto;
+    margin: 0 auto;
+    margin-bottom: 25px;
     border: 3px solid #000;
     box-shadow: 5px 5px 0 #000;
 }
@@ -188,9 +192,11 @@ tr:nth-child(4) th:nth-child(1){
 
 .card1_content>h4 {
     margin: 20px auto;
+    padding: 0;
 }
 
 .card1_text {
+    height: initial;
     border: 1px solid #000;
     padding: 10px;
     margin-bottom: 20px;
