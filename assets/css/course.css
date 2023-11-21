@@ -24,6 +24,7 @@ margin: 20px;
 
 
 
+
 /* GoogleMap */
 .course_map{
     border: 1px solid red;
@@ -70,6 +71,11 @@ margin: 50px;
 }
 
 .spot_wrap{
+    border: 1px solid red;
+    display: flex;
+}
+
+.card_flex{
     border: 1px solid red;
     display: flex;
 }
