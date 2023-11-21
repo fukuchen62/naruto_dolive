@@ -381,6 +381,8 @@ ul.overlaymenu_list {
     width: 280px;
     border: 3px solid #000;
     box-shadow: 5px 5px 0 #000;
+    margin: 0 auto;
+    margin-bottom: 25px;
 }
 
 .card1_content {
@@ -398,8 +400,8 @@ ul.overlaymenu_list {
     object-fit: cover;
 }
 
-.card_content>h4 {
-    padding: 20px 0;
+.card1_content h4 {
+    padding: 10px 0;
 }
 
 .card1_text {
@@ -419,7 +421,7 @@ ul.overlaymenu_list {
         height: 230px;
     }
 
-    .card_content>h4 {
+    .card1_content h4 {
         padding: 20px 0;
     }
 }
