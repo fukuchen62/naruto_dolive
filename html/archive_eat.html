@@ -17,8 +17,52 @@
 </head>
 <body>
     <header>
-        <nav class="sp_none">
-            <img src="../assets/img/nav_logo.png" alt="logo">
+        <nav class="sp_nav pc_none">
+            <div class="container">
+                <div class="header_inner" id="headerInner">
+                    <div class="sp_nav_logo">
+                        <a href="#">
+                            <img src="../assets/img/nav_logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="header_menu">
+                        <div class="search_box_wrap">
+                            <div class="search_box">
+                                <input type="text" placeholder="検索">
+                                <button type="submit">
+                                    <i class="fas fa-search fa-fw" style="color: white;"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="link_wrap">
+                            <h3 class="overlaymenu_title">コースで探す</h3>
+                            <ul class="overlaymenu_list">
+                                <li><a href="#">コースA</a></li>
+                                <li><a href="#">コースB</a></li>
+                                <li><a href="#">コースC</a></li>
+                                <li><a href="#">コースD</a></li>
+                                <li><a href="#">コースE</a></li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                    <div class="header_menu-btn" id="spMenuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span>MENU</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="pc_nav sp_none">
+            <div class="pc_nav_logo">
+                <a href="#">
+                    <img src="../assets/img/nav_logo.png" alt="logo">
+                </a>
+            </div>
             <div class="flex-grow"></div>
             <ul class="navmenu">
                 <li>コースで探す</li>
@@ -28,11 +72,13 @@
                 <li>インスタ</li>
                 <li>マイページ</li>
                 <li>Q&A</li>
+                <li class="search_box_li">
+                    <input type="text" placeholder="検索">
+                    <button type="submit">
+                        <i class="fas fa-search fa-fw" style="color: black;"></i>
+                    </button>
+                </li>
             </ul>
-            <div class="search_box">
-                <input type="text" placeholder="検索">
-                <button>検索</button>
-            </div>
         </nav>
     </header>
     <main>
@@ -47,7 +93,7 @@
                 </div>
 
                 <section class="menu_wrap">
-                    <div class="map_content"><img src="../assets/img/map_sample.png" alt="グーグルマップ"></div>
+                    <div class="map_content"><img src="../assets/img/map_img.png" alt="グーグルマップ"></div>
                     <aside class="aside_wrap aside_top">
                         <div class="aside_title">━━ カテゴリ別 ━━</div>
                         <ul>
@@ -58,7 +104,7 @@
                         </ul>
                     </aside>
                 </section>
-                <section class="archive_col">
+                <section class="archive_col sec01">
                     <h3>和食</h3>
                     <div class="card_3col">
                         <a href="single_eat.html" class="card_item">
@@ -188,13 +234,17 @@
                             </div>
                         </a>
                     </div>
-                    <div class="more_btn">
+                    <div class="more_btn more01">
                         <div class="more_link"><span class="more">more</span>
+                        </div>
+                    </div>
+                    <div class="close_btn close01">
+                        <div class="close_link"><span class="close">close</span>
                         </div>
                     </div>
                 </section>
 
-                <section class="archive_col">
+                <section class="archive_col sec02">
                     <h3>洋食</h3>
                     <div class="card_3col">
                         <a href="single_eat.html" class="card_item">
@@ -233,66 +283,18 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="single_eat.html" class="card_item">
-                            <div class="card_wrap1">
-                                <div class="card_wrap2">
-                                    <div class="thumbnail_img">
-                                        <img src="../assets/img/eat_sample_img.jpg" alt="サムネイル">
-                                    </div>
-                                    <h4>麺王</h4>
-                                    <div class="card_text">600～1000円・昼夜・年齢制限なし</div>
-                                    <div class="card_icon">
-                                        <img src="../assets/img/noon_ico.png" alt="昼アイコン">
-                                        <img src="../assets/img/night_ico.png" alt="夜アイコン">
-                                        <img src="../assets/img/parking_ico.png" alt="駐車場アイコン">
-                                        <img src="../assets/img/smoking_ico.png" alt="喫煙所アイコン">
-                                        <img src="../assets/img/reservation_ico.png" alt="予約アイコン">
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="single_eat.html" class="card_item">
-                            <div class="card_wrap1">
-                                <div class="card_wrap2">
-                                    <div class="thumbnail_img">
-                                        <img src="../assets/img/eat_sample_img.jpg" alt="サムネイル">
-                                    </div>
-                                    <h4>麺王</h4>
-                                    <div class="card_text">600～1000円・昼夜・年齢制限なし</div>
-                                    <div class="card_icon">
-                                        <img src="../assets/img/noon_ico.png" alt="昼アイコン">
-                                        <img src="../assets/img/night_ico.png" alt="夜アイコン">
-                                        <img src="../assets/img/parking_ico.png" alt="駐車場アイコン">
-                                        <img src="../assets/img/smoking_ico.png" alt="喫煙所アイコン">
-                                        <img src="../assets/img/reservation_ico.png" alt="予約アイコン">
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="single_eat.html" class="card_item">
-                            <div class="card_wrap1">
-                                <div class="card_wrap2">
-                                    <div class="thumbnail_img">
-                                        <img src="../assets/img/eat_sample_img.jpg" alt="サムネイル">
-                                    </div>
-                                    <h4>麺王</h4>
-                                    <div class="card_text">600～1000円・昼夜・年齢制限なし</div>
-                                    <div class="card_icon">
-                                        <img src="../assets/img/noon_ico.png" alt="昼アイコン">
-                                        <img src="../assets/img/night_ico.png" alt="夜アイコン">
-                                        <img src="../assets/img/parking_ico.png" alt="駐車場アイコン">
-                                        <img src="../assets/img/smoking_ico.png" alt="喫煙所アイコン">
-                                        <img src="../assets/img/reservation_ico.png" alt="予約アイコン">
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+
                     </div>
-                    <div class="more_btn">
-                        <div class="more_link"><span class="more">more</span></div>
+                    <div class="more_btn more02">
+                        <div class="more_link"><span class="more">more</span>
+                        </div>
+                    </div>
+                    <div class="close_btn close02">
+                        <div class="close_link"><span class="close">close</span>
+                        </div>
                     </div>
                 </section>
-                <section class="archive_col">
+                <section class="archive_col sec03">
 
                     <h3>中華</h3>
                     <div class="card_3col">
@@ -387,11 +389,16 @@
                             </div>
                         </a>
                     </div>
-                    <div class="more_btn">
-                        <div class="more_link"><span class="more">more</span></div>
+                    <div class="more_btn more03">
+                        <div class="more_link"><span class="more">more</span>
+                        </div>
+                    </div>
+                    <div class="close_btn close03">
+                        <div class="close_link"><span class="close">close</span>
+                        </div>
                     </div>
                 </section>
-                <section class="archive_col">
+                <section class="archive_col sec04">
                     <h3>スイーツ</h3>
                     <div class="card_3col">
                         <a href="single_eat.html" class="card_item">
@@ -485,11 +492,16 @@
                             </div>
                         </a>
                     </div>
-                    <div class="more_btn">
-                        <div class="more_link"><span class="more">more</span></div>
+                    <div class="more_btn more04">
+                        <div class="more_link"><span class="more">more</span>
+                        </div>
+                    </div>
+                    <div class="close_btn close04">
+                        <div class="close_link"><span class="close">close</span>
+                        </div>
                     </div>
                 </section>
-                <section class="archive_col">
+                <section class="archive_col sec05">
                     <h3>その他</h3>
                     <div class="card_3col">
                         <a href="single_eat.html" class="card_item">
@@ -583,7 +595,14 @@
                             </div>
                         </a>
                     </div>
-                    <div class="more_btn"><a href="#" class="more_link"><span class="more">more</span></a></div>
+                    <div class="more_btn more05">
+                        <div class="more_link"><span class="more">more</span>
+                        </div>
+                    </div>
+                    <div class="close_btn close05">
+                        <div class="close_link"><span class="close">close</span>
+                        </div>
+                    </div>
                 </section>
                 <aside class="aside_wrap aside_bottom">
                     <div class="aside_title">━━ カテゴリ別 ━━</div>
