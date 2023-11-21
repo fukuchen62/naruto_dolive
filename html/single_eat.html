@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/single.css">
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <title>鳴門DoLive | 愛車で四国の右上攻略！</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="assets/img/icon.ico">
+</head>
+
+
+<body>
+    <!--
+        お疲れ様です！
+        この【index.html】をコピペして各ページ作成お願いします。
+        が、、、
+        まだnavのホバー時の表現やハンバーガーメニュー、レスポンシブ対応はできていません。
+        あくまでtest＆参考程度だと思って、必要に応じてclassの命名、cssの編集（各ページ毎にcssファイルを作成・追加した方がいいかも…例：common.cssは共通パーツ、TOPページ特有のcssは【index.css】を作成して記述していっています。
+        決定事項がまとまったパワポファイルが【https://docs.google.com/presentation/d/1UH-e8r4syRd-EFv8QS8rbK_M89gBjzaU/edit?usp=drive_link&ouid=114449549919721686995&rtpof=true&sd=true】にあるので参照してください！
+    -->
+
+    <header>
+        <nav class="sp_none">
+            <img src="./assets/img/nav_logo.png" alt="logo">
+            <div class="flex-grow"></div>
+            <ul class="navmenu">
+                <li>コースで探す</li>
+                <li>目的で探す</li>
+                <li>新着情報</li>
+                <li>コラム</li>
+                <li>インスタ</li>
+                <li>マイページ</li>
+                <li>Q&A</li>
+            </ul>
+            <div class="search_box">
+                <input type="text" placeholder="検索">
+                <button>検索</button>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- タイトル -->
+        <section id="toparea" class="toparea">
+            <h2>食べる</h2>
+        </section>
+        <!-- メイン -->
+        <div class="main_wrap">
+            <!-- パンくずリスト -->
+            <p class="breadcrumb">HOME>目的別検索>目的別一覧>びんび屋</p>
+            <!-- 施設について -->
+            <section id="facility" class="section_facility">
+                <!-- facility=施設 -->
+                <h3 class="facility_name">びんび家</h3>
+                <div class="facility_img1_box">
+                    <img class="facility_img1" src="./assets/img/sample2.jpg" alt="">
+                </div>
+                <ul class="facility_img_list">
+                    <li><img class="facility_img2" src="./assets/img/sample3.jpg" alt=""></li>
+                    <li><img class="facility_img2" src="./assets/img/sample6.jpg" alt=""></li>
+                    <li><img class="facility_img2" src="./assets/img/sample2.jpg" alt=""></li>
+                </ul>
+                <p class="facility_txt">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                </p>
+                <div class="facility_tag">
+                    <div class="more_btn"><a href="#" class="more_link"><span class="more">渦潮</span></a></div>
+                    <div class="more_btn"><a href="#" class="more_link"><span class="more">アオアオリゾートホテル</span></a></div>
+                    <div class="more_btn"><a href="#" class="more_link"><span class="more">食べる</span></a></div>
+                    <div class="more_btn"><a href="#" class="more_link"><span class="more">ドライブ</span></a></div>
+                    <div class="more_btn"><a href="#" class="more_link"><span class="more">びんび家</span></a></div>
+                </div>
+            </section>
+            <!-- 施設の詳細情報 -->
+            <hr><!-- 区切りの線 -->
+            <section id="info" class="section_info">
+                <h3 class="info_title">詳細情報</h3>
+                <div class="info_wrap">
+                    <table>
+                        <tr>
+                            <th>所在地</th>
+                            <td>徳島県鳴門市北灘町粟田字ハシカ谷20-2</td>
+                        </tr>
+                        <tr>
+                            <th>営業時間</th>
+                            <td>平日:9時~16時
+                                <br>
+                                (ラストオーダー:15時30分)
+                                <br>
+                                土・日・祝:9時~21時
+                                <br>
+                                (ラストオーダー:20時30分)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>定休日</th>
+                            <td>記載なし</td>
+                        </tr>
+                        <tr>
+                            <th>電話番号</th>
+                            <td>088-682-0023</td>
+                        </tr>
+                        <tr>
+                            <th>URL</th>
+                            <td><a href="http://binbi-ya.com">http://binbi-ya.com</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- マップ -->
+                <div class="info_map">
+                    <img class="info_map_img" src="./assets/img/map_img.png" alt="map">
+                </div>
+            </section>
+            <hr>
+            <!-- その他おすすめ -->
+            <section id="recommend" class="section_recommend">
+                <h3>その他おすすめ</h3>
+                <div>
+                    <a href="" class="card1">
+                        <div class="card1_wrap">
+                            <div class="card1_content">
+                                <div class="card1_img">
+                                    <img src="./assets/img/sample2.jpg" alt="サムネイル">
+                                </div>
+                                <h4>味処あらし</h4>
+                                <div class="card1_text">600～1000円・昼夜・年齢制限なし</div>
+                                <div class="card1_tag">
+                                    <img src="./assets/img/noon_ico.png" alt="">
+                                    <img src="./assets/img/parking_ico.png" alt="">
+                                    <img src="./assets/img/smoking_ico.png" alt="">
+                                </div>
+                            </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="" class="card1">
+                        <div class="card1_wrap">
+                            <div class="card1_content">
+                                <div class="card1_img">
+                                    <img src="./assets/img/sample3.jpg" alt="サムネイル">
+                                </div>
+                                <h4>手打ちうどんたむら</h4>
+                                <div class="card1_text">600～1000円・昼夜・年齢制限なし</div>
+                                <div class="card1_tag">
+                                    <img src="./assets/img/noon_ico.png" alt="">
+                                    <img src="./assets/img/parking_ico.png" alt="">
+                                    <img src="./assets/img/smoking_ico.png" alt="">
+                                </div>
+                            </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="" class="card1">
+                        <div class="card1_wrap">
+                            <div class="card1_content">
+                                <div class="card1_img">
+                                    <img src="./assets/img/sample6.jpg" alt="サムネイル">
+                                </div>
+                                <h4>あそこ食堂</h4>
+                                <div class="card1_text">600～1000円・昼夜・年齢制限なし</div>
+                                <div class="card1_tag">
+                                    <img src="./assets/img/noon_ico.png" alt="">
+                                    <img src="./assets/img/parking_ico.png" alt="">
+                                    <img src="./assets/img/smoking_ico.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- 僕のカード型の記載（不採用） -->
+                <!-- <div class="recommend_wrap">
+                    <ul class="recommend_list">
+                        <li class="recommend_card">
+                            <img class="recommend_card_img" src="./assets/img/sample2.jpg" alt="img">
+                            <h3 class="recommend_card_title">味処あらし</h3>
+                            <p class="recommend_card_txt">
+                                600～1000円・昼夜・年齢制限なし
+                            </p>
+                            <div class="recommend_card_tag">
+                                <img class="tag_icon" src="./assets/img/noon_ico.png" alt="noon_img">
+                                <img class="tag_icon" src="./assets/img/parking_ico.png" alt="parking_img">
+                                <img class="tag_icon" src="./assets/img/smoking_ico.png" alt="smoking_img">
+                            </div>
+                        </li>
+                    </ul>
+                </div> -->
+            </section>
+        </div>
+    </main>
+
+
+    <footer>
+        <p><a href="#">このサイトについて</a></p>
+        <p><a href="#">サイトマップ</a></p>
+        <p><a href="#">プライバシーポリシー</a></p>
+        <p class="copyright"><small>&copy; 2023 Team藍 in QLIP</small></p>
+    </footer>
+    <script src="assets/js/top.js"></script>
+</body>
+</html>

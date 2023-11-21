@@ -20,6 +20,10 @@ get_header();
 <hr>
 
 
+<!-- おすすめキーワードを出す関数、第一引数にulを囲むタグ、第二引数に閉じタグ、第さん引数に表示数 -->
+<h2>おすすめキーワード</h2>
+<?php sm_list_popular_searches('<div class="test">', '</div>', 3); ?>
+
 <h2>ドライブコース</h2>
 <p><a href="<?php echo get_permalink(324); ?>">コース1</a></p>
 <p><a href="<?php echo get_permalink(329); ?>">コース2</a></p>
