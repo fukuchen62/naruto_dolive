@@ -11,6 +11,19 @@
 <body>
 
     <!--header.htmlを読み込ませる記述-->
+    <header class="mb60">
+        <div class="container">
+            <h1 class="mb40 ta-c">h1:共通部分を部品にして使い回す</h1>
+            <nav>
+                <ul class="gmenu mb20">
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                    <li>menu4</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main class="mb60">
         <section class="container">
@@ -29,17 +42,20 @@
     </main>
 
     <!--footer.htmlを読み込ませる記述-->
+    <footer>
+        <div class="container">
+            <h2 class="ta-c mb20">h2:フッター</h2>
+            <ul class="sitemap mb20">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+            </ul>
+            <div class="ta-c mb20">
+                <small>copyright: QLIP International Co., Ltd.</small>
+            </div>
+        </div>
+    </footer>
 
-    <script>
-        // bodyの下にheader.htmlを嵌め込む
-        fetch("header.html")
-            .then((response) => response.text())
-            .then((data) => document.querySelector("body").insertAdjacentHTML('afterbegin', data));
-
-        // mainの下にfooter.htmlを嵌め込む
-        fetch("footer.html")
-            .then((response) => response.text())
-            .then((data) => document.querySelector("main").insertAdjacentHTML('afterend', data));
-    </script>
 </body>
 </html>
