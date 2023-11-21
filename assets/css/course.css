@@ -1,20 +1,30 @@
+
+
+
+
+/* ページ全体 */
 .main_wrap{
     text-align: center;
 }
 
-#toparea{
-    border: 1px solid red;
-    background-color: #ed76bd;
-}
-
-#toparea>h2{
-color: #f8c9d7;
-}
 
 .main_wrap h3{
     border: 1px solid red;
     margin: 20px 10px;
 }
+
+/* 帯 */
+#toparea{
+    border: 1px solid red;
+    background-color: #ed76bd;
+}
+
+/* h2タイトル */
+#toparea>h2{
+color: #f8c9d7;
+}
+
+
 
 /* コース説明のpタグ */
 .course_spot p{
@@ -48,22 +58,354 @@ height: 150px;
 }
 
 
-/* コースボタン */
-.course_button{
-    margin: 20px 20px;
-    /* border: 1px solid red; */
+/***施設コースカードタイトルボタン***/
+/* ボタン共通設定 */
+.btn_course{
+    /*影の基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    text-decoration: none;
+    display: inline-block;
+
+    text-align: center;
+    background: transparent;
+    border-radius: 25px;
+    border: solid 1px #333;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all 0.2s ease;
+    margin-bottom: 30px;
 }
 
-/* 他のおすすめコースカード型 */
+/*ボタンの中のテキスト*/
+.btn_course span {
+    position: relative;
+    z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    /*テキストの形状*/
+    display: block;
+    padding: 10px 30px;
+    background:#ff8b03;
+    border-radius: 25px;
+    color:#333;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease;
+    border: 2px solid black;
+}
+
+/*== 右下に押し込まれる（立体が平面に） */
+
+/*影の設定*/
+.pushright:before {
+    content: "";
+    /*絶対配置で影の位置を決める*/
+    position: absolute;
+    z-index: -1;
+    top: 4px;
+    left: 4px;
+    /*影の形状*/
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #333;
+}
+
+/* 施設コースカード */
+.card1_content{
+background-color: #ff8b03;
+}
+
+.card1_text{
+    background-color: #fff;
+}
+.timeline{
+    display: none;
+}
+
+
+/***おすすめコースカードタイトルボタン***/
+
+/* 1 */
+/* ボタン共通設定 */
+.btn_course1{
+    /*影の基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    text-decoration: none;
+    display: inline-block;
+
+    text-align: center;
+    background: transparent;
+    border-radius: 25px;
+    border: solid 1px #333;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all 0.2s ease;
+    margin-bottom: 30px;
+}
+
+/*ボタンの中のテキスト*/
+.btn_course1 span {
+    position: relative;
+    z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    /*テキストの形状*/
+    display: block;
+    padding: 10px 30px;
+    background:#996633;
+    border-radius: 25px;
+    color:#333;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease;
+    border: 2px solid black;
+}
+
+/*影の設定*/
+.pushright:before {
+    content: "";
+    /*絶対配置で影の位置を決める*/
+    position: absolute;
+    z-index: -1;
+    top: 4px;
+    left: 4px;
+    /*影の形状*/
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #333;
+}
+
+/* 2 */
+/* ボタン共通設定 */
+.btn_course2{
+    /*影の基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    text-decoration: none;
+    display: inline-block;
+
+    text-align: center;
+    background: transparent;
+    border-radius: 25px;
+    border: solid 1px #333;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all 0.2s ease;
+    margin-bottom: 30px;
+}
+
+/*ボタンの中のテキスト*/
+.btn_course2 span {
+    position: relative;
+    z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    /*テキストの形状*/
+    display: block;
+    padding: 10px 30px;
+    background:#ff1e1e;
+    border-radius: 25px;
+    color:#333;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease;
+    border: 2px solid black;
+}
+
+/*影の設定*/
+.pushright:before {
+    content: "";
+    /*絶対配置で影の位置を決める*/
+    position: absolute;
+    z-index: -1;
+    top: 4px;
+    left: 4px;
+    /*影の形状*/
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #333;
+}
+
+/* 3 */
+/* ボタン共通設定 */
+.btn_course3{
+    /*影の基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    text-decoration: none;
+    display: inline-block;
+
+    text-align: center;
+    background: transparent;
+    border-radius: 25px;
+    border: solid 1px #333;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all 0.2s ease;
+    margin-bottom: 30px;
+}
+
+/*ボタンの中のテキスト*/
+.btn_course3 span {
+    position: relative;
+    z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    /*テキストの形状*/
+    display: block;
+    padding: 10px 30px;
+    background:#11cd7e;
+    border-radius: 25px;
+    color:#333;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease;
+    border: 2px solid black;
+}
+
+/*影の設定*/
+.pushright:before {
+    content: "";
+    /*絶対配置で影の位置を決める*/
+    position: absolute;
+    z-index: -1;
+    top: 4px;
+    left: 4px;
+    /*影の形状*/
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #333;
+}
+
+/* 4 */
+/* ボタン共通設定 */
+.btn_course4{
+    /*影の基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    text-decoration: none;
+    display: inline-block;
+
+    text-align: center;
+    background: transparent;
+    border-radius: 25px;
+    border: solid 1px #333;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all 0.2s ease;
+    margin-bottom: 30px;
+}
+
+/*ボタンの中のテキスト*/
+.btn_course4 span {
+    position: relative;
+    z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    /*テキストの形状*/
+    display: block;
+    padding: 10px 30px;
+    background:#d427f0;
+    border-radius: 25px;
+    color:#333;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease;
+    border: 2px solid black;
+}
+
+/*影の設定*/
+.pushright:before {
+    content: "";
+    /*絶対配置で影の位置を決める*/
+    position: absolute;
+    z-index: -1;
+    top: 4px;
+    left: 4px;
+    /*影の形状*/
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #333;
+}
+
+/* 5 */
+/* ボタン共通設定 */
+.btn_course5{
+    /*影の基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    text-decoration: none;
+    display: inline-block;
+
+    text-align: center;
+    background: transparent;
+    border-radius: 25px;
+    border: solid 1px #333;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all 0.2s ease;
+    margin-bottom: 30px;
+}
+
+/*ボタンの中のテキスト*/
+.btn_course5 span {
+    position: relative;
+    z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    /*テキストの形状*/
+    display: block;
+    padding: 10px 30px;
+    background:#ff8b03;
+    border-radius: 25px;
+    color:#333;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease;
+    border: 2px solid black;
+}
+
+/*影の設定*/
+.pushright:before {
+    content: "";
+    /*絶対配置で影の位置を決める*/
+    position: absolute;
+    z-index: -1;
+    top: 4px;
+    left: 4px;
+    /*影の形状*/
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #333;
+}
+
+/* おすすめコースカード */
 .card1_text{
     margin-top: 10px;
 }
 
+/* おすすめコースカードの背景 */
+.recommend_card1 .card1_content{
+background-color: #99663380;
+}
+
+.recommend_card2 .card1_content{
+background-color: #ff1e1e80;
+}
+
+.recommend_card3 .card1_content{
+    background-color: #11cd7e80;
+}
+
+.recommend_card4 .card1_content{
+    background-color: #d427f080;
+}
+
+.recommend_card5 .card1_content{
+    background-color: #ff8b0380;
+}
 /* ここからPC表示 */
 @media screen and (min-width:768px){
 
+    /* 施設コースカード */
+.card_flex{
+    display: none;
+}
+.timeline_flex{
+    display: block;
+    }
 
-.course_spot p{
+/* .course_spot p{
 border: 1px solid red;
 margin: 50px;
 }
@@ -71,5 +413,102 @@ margin: 50px;
 .card_flex{
     border: 1px solid red;
     display: flex;
+} */
+
+
+/*****コースタイトルボタン(PC)*****/
+
+/*hoverをした後のボタンの形状*/
+.btn_course:hover{
+    border-color:transparent;
+}
+
+/*hoverの際にX・Y軸に4pxずらす*/
+.pushright:hover span {
+    background-color: #333;
+    color: #fff;
+    transform: translate(4px, 4px);
+}
+
+/*****おすすめコースタイトルボタン(PC)*****/
+
+/* 1 */
+/*hoverをした後のボタンの形状*/
+.btn_course1:hover{
+    border-color:transparent;
+}
+
+/*hoverの際にX・Y軸に4pxずらす*/
+.pushright:hover span {
+    background-color: #333;
+    color: #fff;
+    transform: translate(4px, 4px);
+}
+
+/* 2 */
+/*hoverをした後のボタンの形状*/
+.btn_course2:hover{
+    border-color:transparent;
+}
+
+/*hoverの際にX・Y軸に4pxずらす*/
+.pushright:hover span {
+    background-color: #333;
+    color: #fff;
+    transform: translate(4px, 4px);
+}
+
+/* 3 */
+/*hoverをした後のボタンの形状*/
+.btn_course3:hover{
+    border-color:transparent;
+}
+
+/*hoverの際にX・Y軸に4pxずらす*/
+.pushright:hover span {
+    background-color: #333;
+    color: #fff;
+    transform: translate(4px, 4px);
+}
+
+/* 4 */
+/*hoverをした後のボタンの形状*/
+.btn_course4:hover{
+    border-color:transparent;
+}
+
+/*hoverの際にX・Y軸に4pxずらす*/
+.pushright:hover span {
+    background-color: #333;
+    color: #fff;
+    transform: translate(4px, 4px);
+}
+.recommend_flex{
+    display: flex;
+}
+/* 5 */
+/*hoverをした後のボタンの形状*/
+.btn_course5:hover{
+    border-color:transparent;
+}
+
+/*hoverの際にX・Y軸に4pxずらす*/
+.pushright:hover span {
+    background-color: #333;
+    color: #fff;
+    transform: translate(4px, 4px);
+}
+.recommend_flex{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 30px;
 }
 }
+
+/* @media screen and (min-width:1630px){
+.recommend_flex{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 30px;
+}
+} */
