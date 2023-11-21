@@ -6,7 +6,7 @@ img {
 }
 
 .teloparea {
-  height: 100px;
+  height: 150px;
   background-color: #fff;
 }
 
@@ -33,32 +33,6 @@ img {
   width: 50%;
   position: absolute;
   bottom: 23%;
-}
-
-.purpose {
-  padding: 38px 0;
-  overflow: hidden;
-  white-space: nowrap;
-  display: flex;
-}
-
-.purpose p {
-  flex-shrink: 0;
-  margin-right: 20px;
-  animation-name: marquee;
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(100%);
-  }
-
-  to {
-    transform: translateX(-100%);
-  }
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
@@ -103,4 +77,64 @@ img {
     object-fit: cover;
     width: 100%;
   }
+}
+
+/* ------------------------------------------------------------------------
+    section_map
+------------------------------------------------------------------------  */
+.section_map {
+  background-color: #ed76bd;
+}
+
+.marquee {
+  padding: 38px 0;
+  overflow: hidden;
+}
+
+.marquee .more_btn {
+  margin-top: 1.5rem;
+}
+
+.marquee-container {
+  display: flex;
+  justify-content: space-around;
+  animation-name: marquee;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  font-size: 1.5rem;
+  font-family: 'DotGothic16', sans-serif;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee p:nth-child(odd) {
+  color: #00B9C5;
+}
+
+.marquee p:nth-child(even) {
+  color: #FF27F6;
+}
+
+/* ------------------------------------------------------------------------
+    section_column
+------------------------------------------------------------------------  */
+.section_column {
+  background-color: #833091;
+}
+
+/* ------------------------------------------------------------------------
+    section_instagram
+------------------------------------------------------------------------  */
+.section_instagram {
+  background-color: #4E99F8;
 }

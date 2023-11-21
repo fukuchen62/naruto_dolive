@@ -30,9 +30,12 @@ get_header();
                     <?php endif; ?>
 
                 </div>
-                <?php if (function_exists('wp_pagenavi')) {
-                    wp_pagenavi();
-                } ?>
+                <?php if (function_exists('wp_pagenavi')) : ?>
+                    <div class="pagination">
+                        <?php wp_pagenavi(); ?>
+                    </div>
+
+                <?php endif ?>
             </div>
 
             <!-- ページナビゲーションの設定 -->
@@ -58,7 +61,9 @@ get_header();
                     ));
 
                     foreach ($categories as $category) {
-                        echo '<li><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
+                        $category_link = get_category_link($category->term_id);
+                        $post_count = $category->count;
+                        echo '<li><a href="' . $category_link . '">' . $category->name . '</a> (' . $post_count . ')</li>';
                     }
                     ?>
                 </ul>
