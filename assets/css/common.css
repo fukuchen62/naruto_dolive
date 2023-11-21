@@ -407,13 +407,13 @@ ul.overlaymenu_list {
 .card1_text {
     border: 1px solid #000;
     padding: 10px;
+    height: 150px;
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media (min-width:768px) {
     .card1_wrap {
         width: 350px;
-        height: 500px;
     }
 
     .card1_img img {
@@ -423,6 +423,10 @@ ul.overlaymenu_list {
 
     .card1_content h4 {
         padding: 20px 0;
+    }
+
+    .card1_text {
+        height: 200px;
     }
 }
 
