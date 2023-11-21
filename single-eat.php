@@ -334,15 +334,56 @@
                 'posts_per_page' => 3, // 表示する投稿の数を指定
             ));
 
-            echo "<pre>";
-            print_r($sub_query);
-            echo "</pre>";
 
-            while ($sub_query->have_posts()) : $sub_query->the_post();
-                echo the_title();
-                the_post_thumbnail('medium');
-                echo the_field('address');
-            endwhile;
+            while ($sub_query->have_posts()) : $sub_query->the_post(); ?>
+                <p>start---------------------------------------------------</p>
+                <!-- 投稿の個別ページのURLを表示し、以下の内容をリンクにする-->
+                <a href="<?php the_permalink(); ?>">
+
+                    <!-- アイキャッチ画像の表示 -->
+                    <figure class="pic">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail('medium'); ?>
+                        <?php endif; ?>
+                    </figure>
+
+                    <!-- 店名の表示 -->
+                    <h3 class="title"><?php the_title(); ?></h3>
+                </a>
+
+                <!-- 抜粋の表示 -->
+                <p><?php the_field('excerpt'); ?></p>
+
+                <!-- ここにアイコンを表示する -->
+
+                <!-- 営業時間のアイコンの出力 -->
+                <!-- チェックボックスで選択した項目を変数へ代入する -->
+                <?php $times = get_field('business_hour');
+                if ($times) : ?>
+                    <!-- 取得したものを一つずつ取り出す -->
+                    <?php foreach ($times as $time) : ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $time; ?>_ico.png" />
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+
+                <!-- 駐車場のアイコンの出力 -->
+                <?php if (get_field('parking')) : ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/parking_ico.png" />
+                <?php endif; ?>
+
+                <!-- 喫煙のアイコンの出力 -->
+                <?php if (get_field('smoking')) : ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/smoking_ico.png" />
+                <?php endif; ?>
+
+                <!-- 予約のアイコンの出力 -->
+                <?php if (get_field('reservation')) : ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/reservation_ico.png" />
+                <?php endif; ?>
+
+                <p>---------------------------------------------------end</p>
+        <?php endwhile;
 
             wp_reset_postdata();
         }
