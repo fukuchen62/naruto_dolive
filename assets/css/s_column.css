@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------------------------------
+トップエリア
+------------------------------------------------------------------------  */
+
+/* 帯色 */
+#toparea {
+    background-color: #9ac4f7;
+}
+
+/* 帯タイトルカラー */
+#toparea>h2 {
+    color: #5e83ea;
+}
+
+/* セクション幅 */
+section {
+    padding: 10px;
+}
+
+
+/* ------------------------------------------------------------------------
+cardテンプレート
+------------------------------------------------------------------------  */
+
+/* 記事幅 */
+.archive_col {
+    padding: 50px;
+}
+
+/* ▼bigカラムカード▼ */
+
+.card-big_wrap {
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 #000;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.card-big_content {
+    padding: 30px;
+}
+
+.card-big_img {
+    text-align: center;
+}
+
+.card-big_img img {
+    border: 1px solid #000;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+/* 見出し中央配置 */
+.center_title {
+    text-align: center;
+}
+
+/* 中見出し幅 */
+.middle_title {
+    margin: 40px;
+    padding: 10px 0;
+}
+
+/* 記事本文 */
+.card-big_text {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media (min-width:768px) {
+
+    /* メニュー横並び */
+    .archive_col {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .card-big {
+        max-width: 60%;
+    }
+
+    .card-big_content h3 {
+        padding: 20px 0;
+    }
+}
+
+/* ▲bigカラムカード▲ */
+
+/* ------------------------------------------------------------------------
+ページ送り※装飾だけなので消す
+------------------------------------------------------------------------  */
+.pageturn {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pageturn img {
+    width: 65px;
+}
+
+.p_before, .p_next {
+    display: flex;
+    flex-direction: column;
+}
