@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------------------------------
+トップエリア
+------------------------------------------------------------------------  */
+
+/* 帯色 */
+#toparea {
+    background-color: #b5766d;
+}
+
+/* 帯タイトルカラー */
+#toparea>h2 {
+    color: #ec7f69;
+}
+
+/* ------------------------------------------------------------------------
+中見出し
+------------------------------------------------------------------------  */
+
+/* トップメニュー横並び */
+.menu_wrap {
+    display: flex;
+}
+
+/* トップ画像非表示 */
+.top_img {
+    display: none;
+}
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+
+    /* トップメニュー幅調整 */
+    .menu_wrap {
+        margin: 0 auto;
+        max-width: 80%;
+    }
+
+    /* トップ外枠 */
+    .top_img {
+        display: block;
+        border: 3px solid #000;
+        margin: 0 auto;
+        width: 60%;
+    }
+
+    /* トップ画像 */
+    .top_img img {
+        min-width: 300px;
+        min-height: 350px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* ------------------------------------------------------------------------
+サイドバー
+------------------------------------------------------------------------ */
+
+/* 上部サイドバー非表示 */
+.aside_top {
+    display: none;
+}
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+
+    /* 下部サイドバー非表示 */
+    .aside_bottom {
+        display: none;
+    }
+
+    /* 上部サイドバー表示 */
+    .aside_top {
+        display: block;
+    }
+}
+
+/* セクション幅 */
+section {
+    padding: 10px;
+}
+
+/* ------------------------------------------------------------------------
+3カラム
+------------------------------------------------------------------------ */
+
+/* 記事幅 */
+.archive_col {
+    padding: 50px;
+}
+
+/* 3カラム列 */
+.card_3col {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ------------------------------------------------------------------------
+ページネーション※装飾だけなので消す
+------------------------------------------------------------------------ */
+
+.pagenation {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 30px auto;
+
+}
+
+.pagenation img {
+    width: 50px;
+    object-fit: cover;
+}
+
+.left_tri {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-right: 43px solid #000000;
+    border-left: 0;
+}
+
+.right_tri {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 43px solid #000000;
+    border-right: 0;
+}
