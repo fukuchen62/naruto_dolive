@@ -530,6 +530,7 @@ ul.overlaymenu_list_icon_list {
         width: 20%;
     }
 
+    /*ナビゲーションaタグの形状*/
     .pc_nav li.has-child ul li a {
         color: #fff;
     }
