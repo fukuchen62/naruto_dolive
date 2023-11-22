@@ -258,78 +258,87 @@
                 </div><!-- info -->
                 <p>==============================================================</p>
                 <div class="other">
-
+                    <!-- 現在のページのタクソノミーのおすすめ記事を3件表示する -->
                     <h4>その他おすすめ</h4>
 
-                    <!-- カテゴリIDの呼び出し -->
-                    <?php if (has_category()) {
-                        $cats = get_the_category();
-                        $catkwds = array();
-                        foreach ($cats as $cat) {
-                            $catkwds[] = $cat->term_id;
+                    <?php
+                    $taxonomy = 'tour_type'; // タクソノミーのスラッグ名
+                    $terms = get_the_terms(get_the_ID(), $taxonomy);
+
+                    if ($terms && !is_wp_error($terms)) {
+                        $term_slugs = array();
+                        foreach ($terms as $term) {
+                            $term_slugs[] = $term->slug;
                         }
+
+                        $sub_query = new WP_Query(array(
+                            'post_type' => 'tour', // 呼び出す記事のカスタム投稿指定
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => $taxonomy,
+                                    'field' => 'slug',
+                                    'terms' => $term_slugs,
+                                ),
+                            ),
+                            'posts_per_page' => 3, // 表示する投稿の数
+                            'post__not_in' => array($post->ID), //呼び出す記事から現在のページを除外する
+                        ));
+
+
+                        while ($sub_query->have_posts()) : $sub_query->the_post(); ?>
+                            <p>start---------------------------------------------------</p>
+                            <!-- 投稿の個別ページのURLを表示し、以下の内容をリンクにする-->
+                            <a href="<?php the_permalink(); ?>">
+
+                                <!-- アイキャッチ画像の表示 -->
+                                <figure class="pic">
+                                    <?php if (has_post_thumbnail()) : ?>
+                                        <?php the_post_thumbnail('medium'); ?>
+                                    <?php endif; ?>
+                                </figure>
+
+                                <!-- 店名の表示 -->
+                                <h3 class="title"><?php the_title(); ?></h3>
+                            </a>
+
+                            <!-- 抜粋の表示 -->
+                            <p><?php the_field('excerpt'); ?></p>
+
+                            <!-- ここにアイコンを表示する -->
+
+                            <!-- 営業時間のアイコンの出力 -->
+                            <!-- チェックボックスで選択した項目を変数へ代入する -->
+                            <?php $times = get_field('business_hour');
+                            if ($times) : ?>
+                                <!-- 取得したものを一つずつ取り出す -->
+                                <?php foreach ($times as $time) : ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $time; ?>_ico.png" />
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+
+
+                            <!-- 駐車場のアイコンの出力 -->
+                            <?php if (get_field('parking')) : ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/parking_ico.png" />
+                            <?php endif; ?>
+
+                            <!-- 喫煙のアイコンの出力 -->
+                            <?php if (get_field('smoking')) : ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/smoking_ico.png" />
+                            <?php endif; ?>
+
+                            <!-- 予約のアイコンの出力 -->
+                            <?php if (get_field('reservation')) : ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/reservation_ico.png" />
+                            <?php endif; ?>
+
+                            <p>---------------------------------------------------end</p>
+                        <?php endwhile; ?>
+
+                        <!-- 取得した情報をリセットする -->
+                    <?php wp_reset_postdata();
                     } ?>
 
-                    <!-- カテゴリIDを利用して記事の呼び出し -->
-                    <?php $args = array(
-                        'post_type' => 'tour', //呼び出す記事の種類の指定
-                        'posts_per_page' => '3', //ループで出力する記事数
-                        'post__not_in' => array($post->ID), //呼び出す記事から現在のページを除外する
-                        // 'category__in' => $catkwds, //呼び出す記事のカテゴリIDを指定する（※考え中）
-                        'orderby' => 'rand' //呼び出す記事の並び順をランダムにする
-                    );
-                    $my_query = new WP_Query($args); ?>
-                    <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
-                        <p>start---------------------------------------------------</p>
-                        <!-- 投稿の個別ページのURLを表示し、以下の内容をリンクにする-->
-                        <a href="<?php the_permalink(); ?>">
-
-                            <!-- アイキャッチ画像の表示 -->
-                            <figure class="pic">
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <?php the_post_thumbnail('medium'); ?>
-                                <?php endif; ?>
-                            </figure>
-
-                            <!-- 店名の表示 -->
-                            <h3 class="title"><?php the_title(); ?></h3>
-                        </a>
-
-                        <!-- 抜粋の表示 -->
-                        <p><?php the_field('excerpt'); ?></p>
-
-                        <!-- ここにアイコンを表示する -->
-
-                        <!-- 営業時間のアイコンの出力 -->
-                        <!-- チェックボックスで選択した項目を変数へ代入する -->
-                        <?php $times = get_field('business_hour');
-                        if ($times) : ?>
-                            <!-- 取得したものを一つずつ取り出す -->
-                            <?php foreach ($times as $time) : ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/<?php echo $time; ?>_ico.png" />
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-
-
-                        <!-- 駐車場のアイコンの出力 -->
-                        <?php if (get_field('parking')) : ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/parking_ico.png" />
-                        <?php endif; ?>
-
-                        <!-- 喫煙のアイコンの出力 -->
-                        <?php if (get_field('smoking')) : ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/smoking_ico.png" />
-                        <?php endif; ?>
-
-                        <!-- 予約のアイコンの出力 -->
-                        <?php if (get_field('reservation')) : ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/reservation_ico.png" />
-                        <?php endif; ?>
-
-                        <p>---------------------------------------------------end</p>
-                    <?php endwhile; ?>
-                    <!-- 取得した情報をリセットする -->
-                    <?php wp_reset_postdata(); ?>
                 </div><!-- other -->
             <?php endwhile; ?>
         <?php endif; ?>
