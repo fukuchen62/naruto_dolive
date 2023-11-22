@@ -505,7 +505,7 @@ ul.overlaymenu_list_icon_list {
 
     }
 
-    .child_wrap {
+    .has_child>.child_wrap {
         position: absolute;
         left: 5%;
         top: 58px;
