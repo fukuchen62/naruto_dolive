@@ -25,6 +25,15 @@
                         <!-- 記事の本文の表示 -->
                         <?php the_content(); ?>
 
+                        <!-- タクソノミー表示 -->
+                        <?php
+                        $tour_types = get_field('tour_type');
+                        foreach ($tour_types as $tour_type) : ?>
+
+                            <a href="<?php echo home_url(); ?>?s=<?php echo $tour_type; ?>"><span style="border: 1px solid black;"><?php echo $tour_type; ?></span></a>
+
+                        <?php endforeach ?>
+
                         <!-- 記事の本文の表示 -->
                         <?php if (get_field('text')) : ?>
                             <span><?php the_field('text'); ?></span>

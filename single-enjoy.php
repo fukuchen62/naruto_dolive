@@ -25,6 +25,15 @@
                         <!-- 記事の本文の表示 -->
                         <?php the_content(); ?>
 
+                        <!-- タクソノミー表示 -->
+                        <?php
+                        $enjoy_types = get_field('enjoy_type');
+                        foreach ($enjoy_types as $enjoy_type) : ?>
+
+                            <a href="<?php echo home_url(); ?>?s=<?php echo $enjoy_type; ?>"><span style="border: 1px solid black;"><?php echo $enjoy_type; ?></span></a>
+
+                        <?php endforeach ?>
+
                         <!-- 記事の本文の表示 -->
                         <?php if (get_field('text')) : ?>
                             <span><?php the_field('text'); ?></span>
