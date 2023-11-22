@@ -37,6 +37,21 @@
         <?php endif; ?>
     <?php endif; ?>
 
+    <!-- 支払い方法の出力 -->
+    <p>
+        <?php if (get_field('payment')) : ?>
+            <?php
+            $payments = get_field('payment');
+            foreach ($payments as $payment) {
+                echo $payment;
+                if ($payment !== end($payments)) {
+                    echo '、';
+                }
+            }
+            ?>
+        <?php endif; ?>
+    </p>
+
 
     <!-- 駐車場のアイコンの出力 -->
     <?php if (get_field('parking')) : ?>

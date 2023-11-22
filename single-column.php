@@ -14,10 +14,16 @@ get_header();
 
 <div class="postLinks">
     <div class="postLink postLink-prev">
-        <p><?php previous_post_link('<i class="fas fa-chevron-left"></i>%link'); ?> </p>
+        <?php if (get_previous_post_link('%link<i class="fas fa-chevron-left"></i>')) : ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/left_page.png" alt="">
+        <?php endif; ?>
+        <?php previous_post_link('<i class="fas fa-chevron-left"></i>%link') ?>
     </div>
     <div class="postLink postLink-next">
-        <p><?php next_post_link('%link<i class="fas fa-chevron-right"></i>'); ?></p>
+        <?php if (get_next_post_link('%link<i class="fas fa-chevron-right"></i>')) : ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/right_page.png" alt="">
+        <?php endif; ?>
+        <?php next_post_link('%link<i class="fas fa-chevron-right"></i>') ?>
     </div>
 </div>
 

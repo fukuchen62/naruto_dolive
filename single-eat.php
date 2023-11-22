@@ -25,6 +25,15 @@
                         <!-- 記事の本文の表示 -->
                         <?php the_content(); ?>
 
+                        <?php
+                        $eat_types = get_field('eat_type');
+                        foreach ($eat_types as $eat_type) : ?>
+
+                            <a href="<?php echo home_url(); ?>?s=<?php echo $eat_type; ?>"><span style="border: 1px solid black;"><?php echo $eat_type; ?></span></a>
+
+                        <?php endforeach ?>
+
+
                     </div><!-- main_pic -->
 
                     <!-- キャッチフレーズの表示 -->
@@ -315,5 +324,51 @@
                 </div><!-- other -->
             <?php endwhile; ?>
         <?php endif; ?>
+<<<<<<< Updated upstream
+=======
+
+
+
+
+
+        <?php
+        $taxonomy = 'eat_type'; // タクソノミーのスラッグまたは名前
+
+        $terms = get_the_terms(get_the_ID(), $taxonomy);
+
+        if ($terms && !is_wp_error($terms)) {
+            $term_slugs = array();
+            foreach ($terms as $term) {
+                $term_slugs[] = $term->slug;
+            }
+
+            $sub_query = new WP_Query(array(
+                'post_type' => 'eat', // 投稿タイプを適切なものに変更
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => $taxonomy,
+                        'field' => 'slug',
+                        'terms' => $term_slugs,
+                    ),
+                ),
+                'posts_per_page' => 3, // 表示する投稿の数を指定
+            ));
+
+            echo "<pre>";
+            print_r($sub_query);
+            echo "</pre>";
+
+            while ($sub_query->have_posts()) : $sub_query->the_post();
+                echo the_title();
+                the_post_thumbnail('medium');
+                echo the_field('address');
+
+            endwhile;
+
+            wp_reset_postdata();
+        }
+        ?>
+
+>>>>>>> Stashed changes
 </main>
 <?php get_footer() ?>
