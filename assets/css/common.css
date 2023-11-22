@@ -633,6 +633,47 @@ footer p:first-child {
     padding-bottom: 0;
 }
 
+/* トップへ戻るボタン */
+.button {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 20px;
+    bottom: 20px;
+    width: 100px;
+    height: 140px;
+    /* border-radius: 10px; */
+    background-image: url(../img/top.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.46); */
+    font-weight: bolder;
+
+    transition: .3s;
+    /* 非表示にする */
+    opacity: 0;
+    visibility: hidden;
+}
+
+.button img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 40px;
+}
+
+.is-active {
+    /* 表示する */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* TOPボタンのホバー時 */
+.button:hover {
+    background-color: #aae6ff63;
+}
+
 /* ------------------------------------------------------------------------
     西野
 ------------------------------------------------------------------------  */
