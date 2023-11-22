@@ -438,7 +438,7 @@ ul.overlaymenu_list_icon_list {
         color: #fff;
     }
 
-    .pc_nav ul.pc_navmenu {
+    .pc_nav ul .pc_navmenu {
         display: flex;
         justify-content: space-around;
         gap: 10px;
@@ -469,7 +469,7 @@ ul.overlaymenu_list_icon_list {
         color: #fff;
     }
 
-    .pc_nav ul li.has-child>a::before {
+    .pc_nav ul li .has-child>a::before {
         content: '';
         position: absolute;
         left: 15px;
@@ -481,31 +481,31 @@ ul.overlaymenu_list_icon_list {
         transform: rotate(135deg);
     }
 
-    .pc_nav ul li.has-child img {
+    .pc_nav ul li .has-child img {
         max-width: 100%;
         height: auto;
         transition: all .5s;
         vertical-align: bottom;
     }
 
-    .pc_nav ul li.has-child img:hover {
+    .pc_nav ul li .has-child img:hover {
         transform: scale(1.2);
     }
 
-    .pc_nav ul li.has-child dt {
+    .pc_nav ul li .has-child dt {
         overflow: hidden;
         height: 20vh;
         margin: 0 0 20px 0;
     }
 
     @media screen and (max-width:1200px) {
-        .pc_nav ul li.has-child dt {
+        .pc_nav ul li .has-child dt {
             height: 12vh;
         }
 
     }
 
-    .pc_nav li.has-child ul {
+    .pc_nav li .has-child ul {
         position: absolute;
         left: 5%;
         top: 58px;
@@ -520,23 +520,23 @@ ul.overlaymenu_list_icon_list {
         transition: all .3s;
     }
 
-    .pc_nav li.has-child:hover>ul {
+    .pc_nav li .has-child:hover>ul {
         visibility: visible;
         opacity: 1;
         display: flex;
     }
 
-    .pc_nav li.has-child ul li {
+    .pc_nav li .has-child ul li {
         width: 20%;
     }
 
     /*ナビゲーションaタグの形状*/
-    .pc_nav li.has-child ul li a {
+    .pc_nav li .has-child ul li a {
         color: #fff;
     }
 
-    .pc_nav li.has-child ul li a:hover,
-    .pc_nav li.has-child ul li a:active {
+    .pc_nav li .has-child ul li a:hover,
+    .pc_nav li .has-child ul li a:active {
         background: #3577CA;
     }
 }
