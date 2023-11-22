@@ -125,6 +125,28 @@ img {
   color: #FF27F6;
 }
 
+.map svg {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.courses {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.courses li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18%;
+    border: 2px burlywood solid;
+    padding: 20px;
+    background-color: lightcyan;
+}
+
 /* ------------------------------------------------------------------------
     section_column
 ------------------------------------------------------------------------  */
