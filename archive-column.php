@@ -144,6 +144,18 @@ get_header();
                     width: 100%;
                     height: 100%;
                 } */
+
+                .wp-pagenavi span.current {
+                    display: inline-block;
+                    background: url("http://localhost:8888/naruto_dolive/wp-content/themes/naruto_dolive/assets/img/1.png");
+                    /* background: url("naruto_dolive/wp-content/themes/naruto_dolive/assets/img/1.png"); */
+                    background-size: 50px 50px;
+                    /* 背景画像の大きさを指定 */
+                    background-position: center;
+                    /* 背景画像の配置を中央に指定 */
+                    color: transparent;
+                    text-indent: -9999px;
+                }
             </style>
 
             <!-- サイドバー -->
