@@ -671,7 +671,9 @@ moreボタン
     font-family: Dela Gothic One;
 }
 
-/* ------------------------------------------------------------------------ 帯 ------------------------------------------------------------------------  */
+/* ------------------------------------------------------------------------
+ 帯
+ ------------------------------------------------------------------------  */
 
 /* 帯全体左右中央 */
 #toparea {
@@ -686,9 +688,9 @@ moreボタン
 
 /* 記事背景 */
 .main_wrap {
-    background-color: #fffdf9;
+    background-color: #fff;
     max-width: 90%;
-    margin: 5% auto;
+    margin: 5% auto 15%;
 }
 
 /* パンくずリスト */
@@ -712,6 +714,53 @@ img {
 h4 {
     font-weight: bolder;
     font-size: 1.4rem;
+}
+
+/* ------------------------------------------------------------------------
+サイドバー
+------------------------------------------------------------------------ */
+
+/* カテゴリ枠中央寄せ */
+.aside_wrap {
+    width: 300px;
+    margin: 0 auto;
+    font-weight: bold;
+    padding-bottom: 50px;
+
+}
+
+/* タイトル表示 */
+.aside_title {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/* li要素下線 */
+.aside_wrap li {
+    border-bottom: 3px dotted #000;
+    padding: 10px 20px 50px;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+/* カテゴリ別before要素 */
+.aside_wrap a::before {
+    content: '';
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-image: url(../img/sidebar_icon.png);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+/* リンクを親要素いっぱいに広げる */
+.aside_wrap a {
+    display: inline-block;
+    position: absolute;
+    width: 300px;
+    height: 50px;
 }
 
 /* ------------------
