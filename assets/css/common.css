@@ -481,8 +481,6 @@ ul.overlaymenu_list_icon_list {
         transform: rotate(135deg);
     }
 
-    /*==2階層目以降の画像設定*/
-
     .pc_nav ul li.has-child img {
         max-width: 100%;
         height: auto;
@@ -490,7 +488,6 @@ ul.overlaymenu_list_icon_list {
         vertical-align: bottom;
     }
 
-    /*hoverしたら画像拡大*/
     .pc_nav ul li.has-child img:hover {
         transform: scale(1.2);
     }
@@ -508,36 +505,27 @@ ul.overlaymenu_list_icon_list {
 
     }
 
-    /*== 2層目の設定 */
-
     .pc_nav li.has-child ul {
-        /*絶対配置で位置を指定*/
         position: absolute;
         left: 5%;
         top: 58px;
         z-index: 4;
-        /*子要素を横並びに*/
         justify-content: space-between;
         flex-wrap: wrap;
-        /*形状を指定*/
         background: #888;
         width: 90%;
-        /*はじめは非表示*/
         display: none;
         visibility: hidden;
         opacity: 0;
-        /*アニメーション設定*/
         transition: all .3s;
     }
 
-    /*hoverしたら表示*/
     .pc_nav li.has-child:hover>ul {
         visibility: visible;
         opacity: 1;
         display: flex;
     }
 
-    /*各ナビゲーション横幅*/
     .pc_nav li.has-child ul li {
         width: 20%;
     }
@@ -627,6 +615,11 @@ footer {
     background-position: bottom;
 }
 
+footer a {
+    text-shadow: 2px 2px 0 #000;
+    -webkit-text-stroke: 1px #000;
+}
+
 footer>p {
     padding: 1.5rem 0;
 }
@@ -672,7 +665,7 @@ moreボタン
 }
 
 /* ------------------------------------------------------------------------
- 帯
+帯
  ------------------------------------------------------------------------  */
 
 /* 帯全体左右中央 */

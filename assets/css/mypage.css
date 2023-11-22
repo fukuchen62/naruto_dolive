@@ -6,12 +6,12 @@
 
 /* 帯色 */
 #toparea {
-    background-color: #d13a2b;
+    background-color: #FFA9CC;
 }
 
 /* 帯タイトルカラー */
 #toparea>h2 {
-    color: #F8A59B;
+    color: #F462AD;
 }
 
 /* ------------------------------------------------------------------------
@@ -20,6 +20,7 @@
 
 /* 外枠中央配置 */
 .center_title {
+    margin-top:150px;
     text-align: center;
 }
 
@@ -54,6 +55,12 @@
         margin: 0 auto;
         max-width: 80%;
     }
+
+    .menu_title{
+
+    width: 100%;
+    text-align: center;
+}
 
     /* 地図外枠 */
     .map_content {
@@ -109,15 +116,15 @@ section {
 /* 3カラム */
 .card_3col {
     display: flex;
-    gap: 40px;
+    gap: 100px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 /* カード設計 */
-.card_wrap1 {
-    width: 350px;
-    height: 500px;
+.card1_wrap {
+    width: 500px;
+    height: 600px;
     border: 3px solid #000;
     box-shadow: 5px 5px 0 #000;
 }
@@ -133,22 +140,24 @@ section {
 }
 
 /* サムネイル画像設定 */
-.thumbnail_img img {
+.card1_img img {
+    margin-top: 30px;
     border: 1px solid #000;
-    width: 300px;
-    height: 230px;
+    width: 350px;
+    height: 250px;
     object-fit: cover;
 }
 
 /* 小見出し幅 */
-.card_wrap2>h4 {
-    padding: 20px 0;
+.card1_content>h4 {
+    padding: 20px 20px;
 }
 
 /* カード説明幅 */
-.card_text {
+.card1_text {
     border: 1px solid #000;
     padding: 10px;
+    text-align: center;
 }
 
 /* アイコン欄 */
@@ -176,6 +185,25 @@ section {
         margin: 0 50px 50px;
         padding: 40px 40px 10px;
     }
+}
+
+/* GoogleMap-中身 */
+.map {
+    width: 100%;
+    position: relative;
+    padding-top: 56.25%;
+}
+
+/* iframe */
+.map iframe {
+    border: 1px solid red;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
 }
 
 /* ------------------------------------------------------------------------

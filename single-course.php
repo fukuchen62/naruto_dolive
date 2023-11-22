@@ -16,6 +16,15 @@
         <div>
             <?php echo the_content(); ?>
         </div>
+
+        <!-- タクソノミー表示 -->
+        <?php
+        $column_types = get_field('column_type');
+        foreach ($column_types as $column_type) : ?>
+
+            <a href="<?php echo home_url(); ?>?s=<?php echo $column_type; ?>"><span style="border: 1px solid black;"><?php echo $column_type; ?></span></a>
+
+        <?php endforeach ?>
         <div class="container">
             <h2><?php the_title(); ?></h2>
 
