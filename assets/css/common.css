@@ -437,6 +437,120 @@ ul.overlaymenu_list_icon_list {
     .pc_nav .search_box_li input::placeholder {
         color: #fff;
     }
+
+    .pc_nav ul.pc_navmenu {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        flex-grow: 1;
+        align-items: center;
+        position: relative;
+    }
+
+    .pc_nav ul ul {
+        display: block;
+    }
+
+    .pc_nav ul li a {
+        /*矢印の基点にするためrelativeを指定*/
+        position: relative;
+        display: block;
+        text-decoration: none;
+        color: #999;
+        padding: 20px 45px;
+        transition: all .3s;
+    }
+
+    .pc_nav ul li li a {
+        padding: 20px;
+    }
+
+    .pc_nav ul li a:hover {
+        color: #fff;
+    }
+
+    .pc_nav ul li.has-child>a::before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 25px;
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid #999;
+        border-right: 2px solid #999;
+        transform: rotate(135deg);
+    }
+
+    /*==2階層目以降の画像設定*/
+
+    .pc_nav ul li.has-child img {
+        max-width: 100%;
+        height: auto;
+        transition: all .5s;
+        vertical-align: bottom;
+    }
+
+    /*hoverしたら画像拡大*/
+    .pc_nav ul li.has-child img:hover {
+        transform: scale(1.2);
+    }
+
+    .pc_nav ul li.has-child dt {
+        overflow: hidden;
+        height: 20vh;
+        margin: 0 0 20px 0;
+    }
+
+    @media screen and (max-width:1200px) {
+        .pc_nav ul li.has-child dt {
+            height: 12vh;
+        }
+
+    }
+
+    /*== 2層目の設定 */
+
+    .pc_nav li.has-child ul {
+        /*絶対配置で位置を指定*/
+        position: absolute;
+        left: 5%;
+        top: 58px;
+        z-index: 4;
+        /*子要素を横並びに*/
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /*形状を指定*/
+        background: #888;
+        width: 90%;
+        /*はじめは非表示*/
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        /*アニメーション設定*/
+        transition: all .3s;
+    }
+
+    /*hoverしたら表示*/
+    .pc_nav li.has-child:hover>ul {
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+    }
+
+    /*各ナビゲーション横幅*/
+    .pc_nav li.has-child ul li {
+        width: 20%;
+    }
+
+    /*ナビゲーションaタグの形状*/
+    .pc_nav li.has-child ul li a {
+        color: #fff;
+    }
+
+    .pc_nav li.has-child ul li a:hover,
+    .pc_nav li.has-child ul li a:active {
+        background: #3577CA;
+    }
 }
 
 /* ------------------------------------------------------------------------
