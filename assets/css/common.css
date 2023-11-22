@@ -437,6 +437,108 @@ ul.overlaymenu_list_icon_list {
     .pc_nav .search_box_li input::placeholder {
         color: #fff;
     }
+
+    .pc_nav ul.pc_navmenu {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        flex-grow: 1;
+        align-items: center;
+        position: relative;
+    }
+
+    .pc_nav ul ul {
+        display: block;
+    }
+
+    .pc_nav ul li a {
+        /*矢印の基点にするためrelativeを指定*/
+        position: relative;
+        display: block;
+        text-decoration: none;
+        color: #999;
+        padding: 20px 45px;
+        transition: all .3s;
+    }
+
+    .pc_nav ul li li a {
+        padding: 20px;
+    }
+
+    .pc_nav ul li a:hover {
+        color: #fff;
+    }
+
+    .pc_nav ul li.has-child>a::before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 25px;
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid #999;
+        border-right: 2px solid #999;
+        transform: rotate(135deg);
+    }
+
+    .pc_nav ul li.has-child img {
+        max-width: 100%;
+        height: auto;
+        transition: all .5s;
+        vertical-align: bottom;
+    }
+
+    .pc_nav ul li.has-child img:hover {
+        transform: scale(1.2);
+    }
+
+    .pc_nav ul li.has-child dt {
+        overflow: hidden;
+        height: 20vh;
+        margin: 0 0 20px 0;
+    }
+
+    @media screen and (max-width:1200px) {
+        .pc_nav ul li.has-child dt {
+            height: 12vh;
+        }
+
+    }
+
+    .pc_nav li.has-child ul {
+        position: absolute;
+        left: 5%;
+        top: 58px;
+        z-index: 4;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background: #888;
+        width: 90%;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s;
+    }
+
+    .pc_nav li.has-child:hover>ul {
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+    }
+
+    .pc_nav li.has-child ul li {
+        width: 20%;
+    }
+
+    /*ナビゲーションaタグの形状*/
+    .pc_nav li.has-child ul li a {
+        color: #fff;
+    }
+
+    .pc_nav li.has-child ul li a:hover,
+    .pc_nav li.has-child ul li a:active {
+        background: #3577CA;
+    }
 }
 
 /* ------------------------------------------------------------------------
@@ -513,6 +615,11 @@ footer {
     background-position: bottom;
 }
 
+footer a {
+    text-shadow: 2px 2px 0 #000;
+    -webkit-text-stroke: 1px #000;
+}
+
 footer>p {
     padding: 1.5rem 0;
 }
@@ -557,7 +664,9 @@ moreボタン
     font-family: Dela Gothic One;
 }
 
-/* ------------------------------------------------------------------------ 帯 ------------------------------------------------------------------------  */
+/* ------------------------------------------------------------------------
+帯
+ ------------------------------------------------------------------------  */
 
 /* 帯全体左右中央 */
 #toparea {
@@ -572,9 +681,9 @@ moreボタン
 
 /* 記事背景 */
 .main_wrap {
-    background-color: #fffdf9;
+    background-color: #fff;
     max-width: 90%;
-    margin: 5% auto;
+    margin: 5% auto 15%;
 }
 
 /* パンくずリスト */
@@ -598,6 +707,53 @@ img {
 h4 {
     font-weight: bolder;
     font-size: 1.4rem;
+}
+
+/* ------------------------------------------------------------------------
+サイドバー
+------------------------------------------------------------------------ */
+
+/* カテゴリ枠中央寄せ */
+.aside_wrap {
+    width: 300px;
+    margin: 0 auto;
+    font-weight: bold;
+    padding-bottom: 50px;
+
+}
+
+/* タイトル表示 */
+.aside_title {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/* li要素下線 */
+.aside_wrap li {
+    border-bottom: 3px dotted #000;
+    padding: 10px 20px 50px;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+/* カテゴリ別before要素 */
+.aside_wrap a::before {
+    content: '';
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-image: url(../img/sidebar_icon.png);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+/* リンクを親要素いっぱいに広げる */
+.aside_wrap a {
+    display: inline-block;
+    position: absolute;
+    width: 300px;
+    height: 50px;
 }
 
 /* ------------------
