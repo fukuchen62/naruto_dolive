@@ -9,7 +9,7 @@
     <div id="map"></div>
     <p>カテゴリ別</p>
     <h3>
-        <a href="<?php echo home_url('/eat') ?>">
+        <a href="<?php echo home_url('/eat') ?>"><img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sidebar_icon.png" alt="サイドバーアイコン">
             食べる(
             <?php
             $count_custom = wp_count_posts('eat');
@@ -19,7 +19,7 @@
     </h3>
 
     <h3>
-        <a href="<?php echo home_url('/enjoy') ?>">
+        <a href="<?php echo home_url('/enjoy') ?>"><img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sidebar_icon.png" alt="サイドバーアイコン">
             遊ぶ(
             <?php
             $count_custom = wp_count_posts('enjoy');
@@ -29,7 +29,7 @@
     </h3>
 
     <h3>
-        <a href="<?php echo home_url('/tour') ?>">
+        <a href="<?php echo home_url('/tour') ?>"><img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sidebar_icon.png" alt="サイドバーアイコン">
             観光(
             <?php
             $count_custom = wp_count_posts('tour');
@@ -39,7 +39,7 @@
     </h3>
 
     <h3>
-        <a href="<?php echo home_url('/stay') ?>">
+        <a href="<?php echo home_url('/stay') ?>"><img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sidebar_icon.png" alt="サイドバーアイコン">
             宿泊(
             <?php
             $count_custom = wp_count_posts('stay');

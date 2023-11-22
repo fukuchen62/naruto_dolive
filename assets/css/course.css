@@ -7,34 +7,22 @@
     text-align: center;
 }
 
-
+/* ページのh3 */
 .main_wrap h3{
     border: 1px solid red;
     margin: 20px 10px;
 }
 
-/* 帯 */
+/*ヘッダー下部の帯 */
 #toparea{
     border: 1px solid red;
     background-color: #ed76bd;
 }
 
-/* h2タイトル */
+/* 帯内のh2タイトル */
 #toparea>h2{
 color: #f8c9d7;
 }
-
-
-
-/* コース説明のpタグ */
-.course_spot p{
-border: 1px solid red;
-margin: 5px 10px;
-height: 150px;
-}
-
-
-
 
 /* GoogleMap */
 .course_map{
@@ -58,8 +46,40 @@ height: 150px;
 }
 
 
-/***施設コースカードタイトルボタン***/
-/* ボタン共通設定 */
+/***コース説明欄***/
+/* コース説明(sp) */
+.course_text{
+    border: 1px solid red;
+    margin: 20px 10px;
+}
+
+.course_text p{
+    border: 1px solid red;
+    margin: 20px;
+}
+
+@media screen and (min-width:768px){
+/* コース説明(pc) */
+.course_text{
+    border: 1px solid red;
+    margin: 20px 10px;
+}
+
+.course_text p{
+    border: 1px solid red;
+    margin: 50px 20px;
+    height: 300px;
+}
+
+.card_flex .card1_wrap{
+    display: flex;
+    margin-bottom: 250px;
+}
+}
+
+
+/***コースタイトルボタン***/
+/* ボタン共通設定(sp) */
 .btn_course{
     /*影の基点とするためrelativeを指定*/
     position: relative;
@@ -93,7 +113,6 @@ height: 150px;
 }
 
 /*== 右下に押し込まれる（立体が平面に） */
-
 /*影の設定*/
 .pushright:before {
     content: "";
@@ -109,21 +128,76 @@ height: 150px;
     background-color: #333;
 }
 
-/* 施設コースカード */
+@media screen and (min-width:768px){
+/* コースタイトルボタン(pc) */
+/*hoverをした後のボタンの形状*/
+.btn_course:hover{
+    border-color:transparent;
+}
+
+/*hoverの際にX・Y軸に4pxずらす*/
+.pushright:hover span {
+    background-color: #333;
+    color: #fff;
+    transform: translate(4px, 4px);
+}
+}
+
+
+/***コースカード一覧***/
+/* 道路バー(sp) */
+.wrapper {
+width: 80%;
+height: auto;
+margin: 0 auto;
+}
+.road {
+background-color: gray;
+height: 7000px;
+width: 50px;
+}
+.car {
+width: 50px;
+position: sticky;
+top: 125px;
+}
+
+/* コースカード(sp) */
+.card_all{
+    border: 3px solid green;
+}
+.card_flex .card1_wrap{
+    margin-bottom: 250px;
+    z-index: 2rem;
+}
 .card1_content{
 background-color: #ff8b03;
 }
-
 .card1_text{
     background-color: #fff;
 }
-.timeline{
-    display: none;
+
+
+@media screen and (min-width:768px){
+/* コースカード(pc) */
+.card_all{
+    border: 3px solid green;
+}
+.card_flex .card1_wrap{
+    margin-bottom: 50px;
+}
+.card1_flex{
+background-color: #ff8b03;
+}
+.card1_text{
+    background-color: #fff;
+}
 }
 
 
-/***おすすめコースカードタイトルボタン***/
 
+/***おすすめコースタイトルボタン***/
+/* おすすめコースボタン(sp) */
 /* 1 */
 /* ボタン共通設定 */
 .btn_course1{
@@ -369,69 +443,8 @@ background-color: #ff8b03;
     background-color: #333;
 }
 
-/* おすすめコースカード */
-.card1_text{
-    margin-top: 10px;
-}
-
-/* おすすめコースカードの背景 */
-.recommend_card1 .card1_content{
-background-color: #99663380;
-}
-
-.recommend_card2 .card1_content{
-background-color: #ff1e1e80;
-}
-
-.recommend_card3 .card1_content{
-    background-color: #11cd7e80;
-}
-
-.recommend_card4 .card1_content{
-    background-color: #d427f080;
-}
-
-.recommend_card5 .card1_content{
-    background-color: #ff8b0380;
-}
-/* ここからPC表示 */
 @media screen and (min-width:768px){
-
-    /* 施設コースカード */
-.card_flex{
-    display: none;
-}
-.timeline_flex{
-    display: block;
-    }
-
-/* .course_spot p{
-border: 1px solid red;
-margin: 50px;
-}
-
-.card_flex{
-    border: 1px solid red;
-    display: flex;
-} */
-
-
-/*****コースタイトルボタン(PC)*****/
-
-/*hoverをした後のボタンの形状*/
-.btn_course:hover{
-    border-color:transparent;
-}
-
-/*hoverの際にX・Y軸に4pxずらす*/
-.pushright:hover span {
-    background-color: #333;
-    color: #fff;
-    transform: translate(4px, 4px);
-}
-
-/*****おすすめコースタイトルボタン(PC)*****/
-
+/* おすすめコースボタン(pc) */
 /* 1 */
 /*hoverをした後のボタンの形状*/
 .btn_course1:hover{
@@ -498,17 +511,42 @@ margin: 50px;
     color: #fff;
     transform: translate(4px, 4px);
 }
-.recommend_flex{
-    display: flex;
-    justify-content: space-between;
-    margin: 30px 30px;
-}
 }
 
-/* @media screen and (min-width:1630px){
+
+/***おすすめコースカード***/
+/* おすすめコースカード(sp) */
+.card1_text{
+    margin-top: 10px;
+}
+
+/* おすすめコースカードの背景 */
+.recommend_card1 .card1_content{
+background-color: #99663380;
+}
+
+.recommend_card2 .card1_content{
+background-color: #ff1e1e80;
+}
+
+.recommend_card3 .card1_content{
+    background-color: #11cd7e80;
+}
+
+.recommend_card4 .card1_content{
+    background-color: #d427f080;
+}
+
+.recommend_card5 .card1_content{
+    background-color: #ff8b0380;
+}
+
+
+@media screen and (min-width:768px){
+/* おすすめコースカード(pc) */
 .recommend_flex{
     display: flex;
     justify-content: space-between;
     margin: 30px 30px;
 }
-} */
+}

@@ -100,8 +100,8 @@ main:not(.section_kv):not(.teloparea) {
     background-image: url(../img/bg_road.png);
 }
 
-.sp_nav.container {
-    overflow: auto;
+.sp_nav .container {
+    overflow: hidden;
 }
 
 .sp_nav_logo img {
@@ -137,13 +137,13 @@ main:not(.section_kv):not(.teloparea) {
     visibility: visible;
     right: 0;
     left: auto;
-    height: calc(100vh - 50px);
-    overflow-y: scroll;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .search_box_wrap {
     width: 250px;
-    margin: 2.2rem 0 0 .5rem;
+    margin: 2.2rem 0 0 1.5rem;
 }
 
 .sp_nav .search_box {
@@ -183,9 +183,9 @@ main:not(.section_kv):not(.teloparea) {
 }
 
 .header_menu-btn {
-    position: absolute;
-    right: 15px;
-    top: 20px;
+    position: relative;
+    right: -85vw;
+    top: -75px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,6 +194,12 @@ main:not(.section_kv):not(.teloparea) {
     padding: 5px;
     cursor: pointer;
     z-index: 5;
+}
+
+.header_inner.active .header_menu-btn {
+    position: fixed;
+    right: 15px;
+    top: 20px;
 }
 
 .header_menu-btn span:nth-child(-n+3) {
@@ -252,31 +258,32 @@ main:not(.section_kv):not(.teloparea) {
 
 .link_wrap {
     text-align: center;
-    background-color: #FFFDF9;
+    background-color: #fff6e2;
     width: 80%;
     margin: 10%;
 }
 
-h3.overlaymenu_title {
+h3.overlaymenu_title_course {
+    font-size: 24px;
     margin-top: 2rem;
 }
 
-ul.overlaymenu_list {
+ul.overlaymenu_list_course {
     text-align: left;
     margin: 2rem 1rem;
     letter-spacing: 0.1em;
 }
 
-.overlaymenu_list li {
+.overlaymenu_list_course li {
     display: flex;
     background: no-repeat right center;
 }
 
-.overlaymenu_list li+li {
+.overlaymenu_list_course li+li {
     margin-top: 22px;
 }
 
-.overlaymenu_list li:not(.menu_title_li):after {
+.overlaymenu_list_course li:not(.menu_title_li):after {
     content: '';
     margin: 0 40px 0 1em;
     background: url(../img/bg_dots.png) repeat-x left center;
@@ -286,14 +293,62 @@ ul.overlaymenu_list {
     flex: 1 1 auto;
 }
 
-.overlaymenu_list li:nth-child(odd) {
+.overlaymenu_list_course li:nth-child(odd) {
     background-image: url(../img/hammenu_icon1.png);
+    background-size: 24px;
+}
+
+.overlaymenu_list_course li:nth-child(even) {
+    background-image: url(../img/hammenu_icon2.png);
     background-size: 25px;
 }
 
-.overlaymenu_list li:nth-child(even) {
-    background-image: url(../img/hammenu_icon2.png);
-    background-size: 25px;
+.overlaymenu_list_purpose li a {
+    display: block;
+}
+
+h3.overlaymenu_title_purpose {
+    font-size: 24px;
+    color: #fff;
+    background-color: #555;
+    display: block;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 0;
+}
+
+h3.overlaymenu_title_purpose::after {
+    bottom: 12px;
+    border-bottom: 2px solid #FF9900;
+    background-image: initial;
+}
+
+.overlaymenu_list_purpose {
+    background-color: #555;
+}
+
+ul.overlaymenu_list_purpose {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.overlaymenu_list_purpose li {
+    flex-basis: 42%;
+    margin: 22px auto 22px auto;
+    background-color: #FFFDF9;
+    padding: 1rem;
+}
+
+.overlaymenu_list_icon {
+    margin-top: 3rem;
+}
+
+ul.overlaymenu_list_icon_list {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+    padding-bottom: 3rem;
 }
 
 @media (max-width: 1024px) {
@@ -306,9 +361,18 @@ ul.overlaymenu_list {
     }
 }
 
+@media (max-width: 550px) {
+    .header_menu-btn {
+        right: -75vw;
+    }
+}
+
+
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media (min-width:768px) {
-    .pc_nav {
+
+    .pc_nav,
+    .pc_navmenu a {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -328,7 +392,7 @@ ul.overlaymenu_list {
         margin-left: 1rem;
     }
 
-    .pc_nav ul.navmenu {
+    .pc_nav ul.pc_navmenu {
         display: flex;
         justify-content: space-around;
         gap: 10px;
@@ -372,6 +436,108 @@ ul.overlaymenu_list {
 
     .pc_nav .search_box_li input::placeholder {
         color: #fff;
+    }
+
+    .pc_nav ul.pc_navmenu {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        flex-grow: 1;
+        align-items: center;
+        position: relative;
+    }
+
+    .pc_nav ul ul {
+        display: block;
+    }
+
+    .pc_nav ul li a {
+        /*矢印の基点にするためrelativeを指定*/
+        position: relative;
+        display: block;
+        text-decoration: none;
+        color: #999;
+        padding: 20px 45px;
+        transition: all .3s;
+    }
+
+    .pc_nav ul li li a {
+        padding: 20px;
+    }
+
+    .pc_nav ul li a:hover {
+        color: #fff;
+    }
+
+    .pc_nav ul li.has-child>a::before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 25px;
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid #999;
+        border-right: 2px solid #999;
+        transform: rotate(135deg);
+    }
+
+    .pc_nav ul li.has-child img {
+        max-width: 100%;
+        height: auto;
+        transition: all .5s;
+        vertical-align: bottom;
+    }
+
+    .pc_nav ul li.has-child img:hover {
+        transform: scale(1.2);
+    }
+
+    .pc_nav ul li.has-child dt {
+        overflow: hidden;
+        height: 20vh;
+        margin: 0 0 20px 0;
+    }
+
+    @media screen and (max-width:1200px) {
+        .pc_nav ul li.has-child dt {
+            height: 12vh;
+        }
+
+    }
+
+    .pc_nav li.has-child ul {
+        position: absolute;
+        left: 5%;
+        top: 58px;
+        z-index: 4;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background: #888;
+        width: 90%;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s;
+    }
+
+    .pc_nav li.has-child:hover>ul {
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+    }
+
+    .pc_nav li.has-child ul li {
+        width: 20%;
+    }
+
+    /*ナビゲーションaタグの形状*/
+    .pc_nav li.has-child ul li a {
+        color: #fff;
+    }
+
+    .pc_nav li.has-child ul li a:hover,
+    .pc_nav li.has-child ul li a:active {
+        background: #3577CA;
     }
 }
 
@@ -449,6 +615,11 @@ footer {
     background-position: bottom;
 }
 
+footer a {
+    text-shadow: 2px 2px 0 #000;
+    -webkit-text-stroke: 1px #000;
+}
+
 footer>p {
     padding: 1.5rem 0;
 }
@@ -493,7 +664,9 @@ moreボタン
     font-family: Dela Gothic One;
 }
 
-/* ------------------------------------------------------------------------ 帯 ------------------------------------------------------------------------  */
+/* ------------------------------------------------------------------------
+帯
+ ------------------------------------------------------------------------  */
 
 /* 帯全体左右中央 */
 #toparea {
@@ -508,9 +681,9 @@ moreボタン
 
 /* 記事背景 */
 .main_wrap {
-    background-color: #fffdf9;
+    background-color: #fff;
     max-width: 90%;
-    margin: 5% auto;
+    margin: 5% auto 15%;
 }
 
 /* パンくずリスト */
@@ -583,7 +756,4 @@ h4 {
     height: 50px;
 }
 
-
-/* ------------------------------------------------------------------------
-    西野終わり
-------------------------------------------------------------------------  */
+/* ------------------
