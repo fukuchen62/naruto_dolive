@@ -100,8 +100,8 @@ main:not(.section_kv):not(.teloparea) {
     background-image: url(../img/bg_road.png);
 }
 
-.sp_nav.container {
-    overflow: auto;
+.sp_nav .container {
+    overflow: hidden;
 }
 
 .sp_nav_logo img {
@@ -137,13 +137,13 @@ main:not(.section_kv):not(.teloparea) {
     visibility: visible;
     right: 0;
     left: auto;
-    height: calc(100vh - 50px);
-    overflow-y: scroll;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .search_box_wrap {
     width: 250px;
-    margin: 2.2rem 0 0 .5rem;
+    margin: 2.2rem 0 0 1.5rem;
 }
 
 .sp_nav .search_box {
@@ -183,9 +183,9 @@ main:not(.section_kv):not(.teloparea) {
 }
 
 .header_menu-btn {
-    position: absolute;
-    right: 15px;
-    top: 20px;
+    position: relative;
+    right: -85vw;
+    top: -75px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,6 +194,12 @@ main:not(.section_kv):not(.teloparea) {
     padding: 5px;
     cursor: pointer;
     z-index: 5;
+}
+
+.header_inner.active .header_menu-btn {
+    position: fixed;
+    right: 15px;
+    top: 20px;
 }
 
 .header_menu-btn span:nth-child(-n+3) {
@@ -252,31 +258,32 @@ main:not(.section_kv):not(.teloparea) {
 
 .link_wrap {
     text-align: center;
-    background-color: #FFFDF9;
+    background-color: #fff6e2;
     width: 80%;
     margin: 10%;
 }
 
-h3.overlaymenu_title {
+h3.overlaymenu_title_course {
+    font-size: 24px;
     margin-top: 2rem;
 }
 
-ul.overlaymenu_list {
+ul.overlaymenu_list_course {
     text-align: left;
     margin: 2rem 1rem;
     letter-spacing: 0.1em;
 }
 
-.overlaymenu_list li {
+.overlaymenu_list_course li {
     display: flex;
     background: no-repeat right center;
 }
 
-.overlaymenu_list li+li {
+.overlaymenu_list_course li+li {
     margin-top: 22px;
 }
 
-.overlaymenu_list li:not(.menu_title_li):after {
+.overlaymenu_list_course li:not(.menu_title_li):after {
     content: '';
     margin: 0 40px 0 1em;
     background: url(../img/bg_dots.png) repeat-x left center;
@@ -286,14 +293,62 @@ ul.overlaymenu_list {
     flex: 1 1 auto;
 }
 
-.overlaymenu_list li:nth-child(odd) {
+.overlaymenu_list_course li:nth-child(odd) {
     background-image: url(../img/hammenu_icon1.png);
+    background-size: 24px;
+}
+
+.overlaymenu_list_course li:nth-child(even) {
+    background-image: url(../img/hammenu_icon2.png);
     background-size: 25px;
 }
 
-.overlaymenu_list li:nth-child(even) {
-    background-image: url(../img/hammenu_icon2.png);
-    background-size: 25px;
+.overlaymenu_list_purpose li a {
+    display: block;
+}
+
+h3.overlaymenu_title_purpose {
+    font-size: 24px;
+    color: #fff;
+    background-color: #555;
+    display: block;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 0;
+}
+
+h3.overlaymenu_title_purpose::after {
+    bottom: 12px;
+    border-bottom: 2px solid #FF9900;
+    background-image: initial;
+}
+
+.overlaymenu_list_purpose {
+    background-color: #555;
+}
+
+ul.overlaymenu_list_purpose {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.overlaymenu_list_purpose li {
+    flex-basis: 42%;
+    margin: 22px auto 22px auto;
+    background-color: #FFFDF9;
+    padding: 1rem;
+}
+
+.overlaymenu_list_icon {
+    margin-top: 3rem;
+}
+
+ul.overlaymenu_list_icon_list {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+    padding-bottom: 3rem;
 }
 
 @media (max-width: 1024px) {
@@ -306,9 +361,18 @@ ul.overlaymenu_list {
     }
 }
 
+@media (max-width: 550px) {
+    .header_menu-btn {
+        right: -75vw;
+    }
+}
+
+
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media (min-width:768px) {
-    .pc_nav {
+
+    .pc_nav,
+    .pc_navmenu a {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -328,7 +392,7 @@ ul.overlaymenu_list {
         margin-left: 1rem;
     }
 
-    .pc_nav ul.navmenu {
+    .pc_nav ul.pc_navmenu {
         display: flex;
         justify-content: space-around;
         gap: 10px;
@@ -536,54 +600,4 @@ h4 {
     font-size: 1.4rem;
 }
 
-/* ------------------------------------------------------------------------
-サイドバー
------------------------------------------------------------------------- */
-
-/* カテゴリ枠中央寄せ */
-.aside_wrap {
-    width: 300px;
-    margin: 0 auto;
-    font-weight: bold;
-    padding-bottom: 50px;
-
-}
-
-/* タイトル表示 */
-.aside_title {
-    padding: 30px 0;
-    text-align: center;
-    font-size: 1.8rem;
-}
-
-/* li要素下線 */
-.aside_wrap li {
-    border-bottom: 3px dotted #000;
-    padding: 10px 20px 50px;
-    font-size: 1.4rem;
-    position: relative;
-}
-
-/* カテゴリ別before要素 */
-.aside_wrap a::before {
-    content: '';
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    background-image: url(../img/sidebar_icon.png);
-    background-size: contain;
-    vertical-align: middle;
-}
-
-/* リンクを親要素いっぱいに広げる */
-.aside_wrap a {
-    display: inline-block;
-    position: absolute;
-    width: 300px;
-    height: 50px;
-}
-
-
-/* ------------------------------------------------------------------------
-    西野終わり
-------------------------------------------------------------------------  */
+/* ------------------
