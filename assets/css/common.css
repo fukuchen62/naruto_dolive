@@ -505,7 +505,7 @@ ul.overlaymenu_list_icon_list {
 
     }
 
-    .pc_nav li .has-child ul {
+    .child_wrap ul {
         position: absolute;
         left: 5%;
         top: 58px;
