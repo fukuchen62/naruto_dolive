@@ -24,22 +24,6 @@ function slideshow_timer() {
 }
 // ▲TOP-kvのフラッシュ画像表示▲
 
-// ▼sp_nav(ハンバーガーメニュー)▼
-// スマホ・タブレットサイズ時のみ表示されるメニューの開閉ボタンを変数に格納。
-const spMenuBtn = $("#spMenuBtn");
-
-// メニューや開閉ボタンをラップしている要素を変数に格納。
-const headerInner = $("#headerInner");
-
-// 開閉ボタンをクリックすると発火。
-spMenuBtn.click(function () {
-    // ラップ要素にactiveというクラスを付与する。
-    headerInner.toggleClass("active");
-});
-// ▲sp_nav(ハンバーガーメニュー)▲
-
-
-
 // ▼ドライブコース切替▼
 $(document).ready(function () {
 
@@ -94,33 +78,22 @@ function clear_all() {
 }
 // ▲ドライブコース切替▲
 
+// ▼目的別ボタンtest▼
+var imageItems = document.querySelectorAll('.image-item');
 
-// ▼PC_NAVの装飾▼
-//ドロップダウンの設定を関数でまとめる
-function mediaQueriesWin() {
-    var width = $(window).width();
-    if (width <= 1024) {//横幅が768px以下の場合
-        $(".has-child>a").off('click'); //has-childクラスがついたaタグのonイベントを複数登録を避ける為offにして一旦初期状態へ
-        $(".has-child>a").on('click', function () {//has-childクラスがついたaタグをクリックしたら
-            var parentElem = $(this).parent();// aタグから見た親要素の<li>を取得し
-            $(parentElem).toggleClass('active');//矢印方向を変えるためのクラス名を付与して
-            $(parentElem).children('ul').stop().slideToggle(500);//liの子要素のスライドを開閉させる※数字が大きくなるほどゆっくり開く
-            return false;//リンクの無効化
-        });
-    } else {//横幅が1024px以上の場合
-        $(".has-child>a").off('click');//has-childクラスがついたaタグのonイベントをoff(無効)にし
-        $(".has-child").removeClass('active');//activeクラスを削除
-        $('.has-child').children('ul').css("display", "");//スライドトグルで動作したdisplayも無効化にする
-    }
+function showImagesWithDelay() {
+    var delay = 5000; // 遅延時間（ミリ秒）
+    var initialDelay = 5000; // 最初の画像の遅延時間（ミリ秒）
+
+    var index = 0;
+    var timer = setInterval(function () {
+        imageItems[index].style.opacity = '1';
+        index++;
+        if (index === imageItems.length) {
+            clearInterval(timer);
+        }
+    }, delay);
 }
 
-// ページがリサイズされたら動かしたい場合の記述
-$(window).resize(function () {
-    mediaQueriesWin();/* ドロップダウンの関数を呼ぶ*/
-});
-
-// ページが読み込まれたらすぐに動かしたい場合の記述
-$(window).on('load', function () {
-    mediaQueriesWin();/* ドロップダウンの関数を呼ぶ*/
-});
-// ▼ドライブコース切替▼
+window.addEventListener('load', showImagesWithDelay);
+// ▲目的別ボタンtest▲
