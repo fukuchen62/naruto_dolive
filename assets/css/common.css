@@ -13,7 +13,7 @@ body {
     position: relative;
     overflow-x: hidden;
     background-color: #fff6e2;
-    width: 100vw;
+    width: 100%;
 }
 
 .pc_nav,
@@ -72,8 +72,12 @@ main:not(.section_kv):not(.teloparea) {
 
 @media only screen and (max-width: 767px) {
     .sp_none {
-        display: none;
+        display: none !important;
         /* ※モバイル表示時のみ(PCでは表示させない) */
+    }
+
+    .pc_none {
+        display: block;
     }
 }
 
@@ -85,11 +89,14 @@ main:not(.section_kv):not(.teloparea) {
         margin: 0 auto;
     }
 
-    .pc_none {
-        display: none;
-        /* ※sp表示時のみ(PCでは表示させない) */
+    .sp_none {
+        display: block;
     }
 
+    .pc_none {
+        display: none !important;
+        /* ※sp表示時のみ(PCでは表示させない) */
+    }
 }
 
 /* ------------------------------------------------------------------------
@@ -353,7 +360,7 @@ ul.overlaymenu_list_icon_list {
 
 @media (max-width: 1024px) {
     .sp_nav {
-        display: block;
+        display: block !important;
     }
 
     .pc_nav {
@@ -371,8 +378,7 @@ ul.overlaymenu_list_icon_list {
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media (min-width:768px) {
 
-    .pc_nav,
-    .pc_navmenu a {
+    .pc_nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -384,6 +390,19 @@ ul.overlaymenu_list_icon_list {
         text-shadow: 2px 2px 0 #000;
         -webkit-text-stroke: 1px #000;
         font-size: clamp(16px, 2vw, 24px);
+    }
+
+    .pc_nav_logo {
+        padding-left: 0.5rem;
+    }
+
+    .pc_navmenu a {
+        text-shadow: 2px 2px 0 #000;
+        -webkit-text-stroke: 1px #000;
+        position: relative;
+        display: block;
+        padding: 45px 0;
+        transition: all .3s;
     }
 
     .pc_nav>img {
@@ -398,6 +417,7 @@ ul.overlaymenu_list_icon_list {
         gap: 10px;
         flex-grow: 1;
         align-items: center;
+        position: relative;
     }
 
     .pc_nav .search_box_li {
@@ -438,106 +458,115 @@ ul.overlaymenu_list_icon_list {
         color: #fff;
     }
 
-    .pc_nav ul .pc_navmenu {
-        display: flex;
-        justify-content: space-around;
-        gap: 10px;
-        flex-grow: 1;
-        align-items: center;
-        position: relative;
-    }
-
-    .pc_nav ul ul {
+    .child_wrap {
         display: block;
-    }
-
-    .pc_nav ul li a {
-        /*矢印の基点にするためrelativeを指定*/
-        position: relative;
-        display: block;
-        text-decoration: none;
-        color: #999;
-        padding: 20px 45px;
-        transition: all .3s;
-    }
-
-    .pc_nav ul li li a {
-        padding: 20px;
-    }
-
-    .pc_nav ul li a:hover {
-        color: #fff;
-    }
-
-    .pc_nav ul li .has-child>a::before {
-        content: '';
         position: absolute;
-        left: 15px;
-        top: 25px;
-        width: 6px;
-        height: 6px;
-        border-top: 2px solid #999;
-        border-right: 2px solid #999;
-        transform: rotate(135deg);
-    }
-
-    .pc_nav ul li .has-child img {
-        max-width: 100%;
-        height: auto;
-        transition: all .5s;
-        vertical-align: bottom;
-    }
-
-    .pc_nav ul li .has-child img:hover {
-        transform: scale(1.2);
-    }
-
-    .pc_nav ul li .has-child dt {
-        overflow: hidden;
-        height: 20vh;
-        margin: 0 0 20px 0;
-    }
-
-    @media screen and (max-width:1200px) {
-        .pc_nav ul li .has-child dt {
-            height: 12vh;
-        }
-
-    }
-
-    .has_child>.child_wrap {
-        position: absolute;
-        left: 5%;
-        top: 58px;
+        top: 82px;
         z-index: 4;
         justify-content: space-between;
-        flex-wrap: wrap;
-        background: #888;
-        width: 90%;
+        background: #555;
+        width: 55%;
         display: none;
         visibility: hidden;
         opacity: 0;
         transition: all .3s;
     }
 
-    .pc_nav li .has-child:hover>ul {
+    .child_wrap a {
+        padding: 20px;
+        position: relative;
+        transition: all .7s;
+    }
+
+    ul.child_wrap dd {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .has_child>a::before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: 54px;
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(135deg);
+    }
+
+    nav ul li.has_child img {
+        max-width: 100%;
+        height: auto;
+        transition: all .5s;
+        vertical-align: bottom;
+    }
+
+    nav ul li.has_child img:hover {
+        transform: scale(1.2);
+    }
+
+    nav ul li.has_child dt {
+        overflow: hidden;
+        margin: 0 0 20px 0;
+    }
+
+    @media screen and (max-width:1200px) {
+        nav ul li.has_child dt {
+            height: 6vh;
+        }
+
+    }
+
+    nav li.has_child:hover>ul {
         visibility: visible;
         opacity: 1;
         display: flex;
     }
 
-    .pc_nav li .has-child ul li {
+    nav li.has_child ul li {
         width: 20%;
     }
 
-    /*ナビゲーションaタグの形状*/
-    .pc_nav li .has-child ul li a {
-        color: #fff;
+    nav li.has_child ul li a:hover,
+    nav li.has_child ul li a:active {
+        height: 100%;
     }
 
-    .pc_nav li .has-child ul li a:hover,
-    .pc_nav li .has-child ul li a:active {
-        background: #3577CA;
+    .child_wrap li a::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #FF9900;
+        opacity: 0;
+    }
+
+    .child_wrap li a:hover::after {
+        width: 100%;
+        opacity: 1;
+        animation: bgappear .8s forwards;
+    }
+
+    @keyframes bgappear {
+        0% {
+            width: 0%;
+            height: 1px;
+        }
+
+        50% {
+            width: 100%;
+            height: 1px;
+        }
+
+        100% {
+            width: 100%;
+            height: 100%;
+            background: #FF9900;
+        }
     }
 }
 
@@ -618,9 +647,30 @@ footer {
 footer a {
     text-shadow: 2px 2px 0 #000;
     -webkit-text-stroke: 1px #000;
+    position: relative;
+    text-decoration: none;
 }
 
-footer>p {
+footer a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #FF9900;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+footer a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+footer p {
     padding: 1.5rem 0;
 }
 

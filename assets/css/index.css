@@ -5,6 +5,21 @@ img {
   width: 100%;
 }
 
+#toparea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: initial;
+}
+
+#toparea>h2 {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
 .teloparea {
   height: 150px;
   background-color: #fff;
@@ -126,25 +141,25 @@ img {
 }
 
 .map svg {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .courses {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .courses li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 18%;
-    border: 2px burlywood solid;
-    padding: 20px;
-    background-color: lightcyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18%;
+  border: 2px burlywood solid;
+  padding: 20px;
+  background-color: lightcyan;
 }
 
 /* ------------------------------------------------------------------------
@@ -154,9 +169,241 @@ img {
   background-color: #833091;
 }
 
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.image-item {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slide-in 1s ease-in forwards;
+  width: 200px;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* ------------------------------------------------------------------------
     section_instagram
 ------------------------------------------------------------------------  */
 .section_instagram {
   background-color: #4E99F8;
+}
+
+.section_instagram>#toparea>h2 {
+  color: #A9D6FF;
+}
+
+.instagram_grid {
+  display: grid;
+  grid-gap: 20px;
+  margin: 0 10%;
+  padding-bottom: 5%;
+}
+
+.instagram_grid_item {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.instagram_grid_item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.instagram_follow {
+  text-align: center;
+  padding-bottom: 10%;
+}
+
+.instagram_follow_btn {
+  background-color: #fff;
+  border: 3px solid #000;
+  width: 280px;
+  padding: 5px;
+  position: relative;
+  height: 2em;
+  transition: 0.5s;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 0.4em;
+  box-shadow: 5px 5px 0 #000;
+  font-family: Dela Gothic One;
+}
+
+.instagram_follow_btn p {
+  position: absolute;
+  top: 8px;
+  left: 4.5rem;
+  margin: 0;
+  padding: 0;
+  transition: .5s;
+}
+
+.instagram_follow_btn svg {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.5em;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: 0.5s;
+  height: 1em;
+  fill: #fff
+}
+
+.instagram_follow_btn:hover p {
+  left: 4rem;
+  color: #fff
+}
+
+.instagram_follow_btn:hover svg {
+  opacity: 1;
+}
+
+.instagram_follow_btn:hover {
+  background-color: #bc2a8d;
+}
+
+/* ~~~~~~~~~~~~タブレット表示~~~~~~~~~~~~ */
+@media (min-width: 768px) {
+  .instagram_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media (min-width: 1024px) {
+  .instagram_grid {
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: calc(100% / 6);
+    margin-right: calc(100% / 6);
+  }
+}
+
+/* ------------------------------------------------------------------------
+    section_pde
+------------------------------------------------------------------------  */
+.section_pdf {
+  background-color: #3CC8C3;
+}
+
+.pdf_wrap_sp.pc_none {
+  padding: 10%;
+}
+
+.pdf_wrap_sp .card1_content {
+  background-color: #fff;
+}
+
+.pdf_wrap_sp .card1_img img {
+  height: auto;
+  border: initial;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1s;
+}
+
+.pdf_wrap_sp .card1_text {
+  border: initial;
+  height: auto;
+  padding: 1.5rem 10px 10px 10px;
+}
+
+.pdf_anim {
+  animation-name: yureru;
+  transform: rotate(1deg);
+  animation-duration: 5s;
+}
+
+@keyframes yureru {
+  50% {
+    transform: rotate(-1deg);
+  }
+
+  100% {
+    transform: rotate(1deg);
+  }
+}
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media (min-width: 768px) {
+  .pdf_wrap_pc {
+    padding: 10%;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .pdf_page2 {
+    position: relative;
+    width: 100%;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 5px 5px 0px #000;
+    box-shadow: 5px 5px 0px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+    margin: 0 auto;
+  }
+
+  .pdf_page1 {
+    top: 0;
+    position: absolute;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 5px 5px 0px #000;
+    box-shadow: 5px 5px 0px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .pdf_page2:hover .pdf_page1 {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+  }
 }
