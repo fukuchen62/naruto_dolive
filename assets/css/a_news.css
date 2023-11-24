@@ -20,7 +20,7 @@ cardテンプレート
 
 /* 記事幅 */
 .archive_col {
-    padding: 20px;
+    padding: 10px;
 }
 
 /* ▼card3カラムカード▼ */
@@ -40,7 +40,7 @@ cardテンプレート
 
 /* 記事画像サイズ */
 .card3_img {
-    width: 100px;
+    width: 80px;
 }
 
 .card3_img img {
@@ -49,18 +49,17 @@ cardテンプレート
 }
 
 .article_wrap {
-    padding: 0 10px;
+    padding-left: 10px;
 }
 
 .news_tab {
     text-align: center;
     border-bottom: double #87ceeb;
-    width: 100px;
+    width: 80px;
 }
 
 /* 記事タイトルフォントサイズ */
 .news_title {
-    font-size: 1.1rem;
     font-weight: bold;
 }
 
@@ -117,13 +116,12 @@ cardテンプレート
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    margin: 50px auto;
-
+    gap: 10px;
+    margin: 30px auto;
 }
 
 .pagenation img {
-    width: 50px;
+    width: 40px;
     object-fit: cover;
 }
 
