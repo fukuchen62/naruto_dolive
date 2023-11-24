@@ -65,4 +65,20 @@ function add_individual_scripts()
             false
         );
     }
+    if (is_archive('eat')) {
+        wp_enqueue_style(
+            'archive_purpose',
+            get_template_directory_uri() . '/assets/css/a_purpose.css',
+            array(),
+            false
+        );
+    }
+    if (is_archive('column')) {
+        wp_enqueue_style(
+            'archive_column',
+            get_template_directory_uri() . '/assets/css/a_column.css',
+            array(),
+            false
+        );
+    }
 }
