@@ -95,6 +95,10 @@ section {
     padding: 10px;
 }
 
+/* ------------------------------------------------------------------------
+3カラム
+------------------------------------------------------------------------ */
+
 /* 記事幅 */
 .archive_col {
     padding: 50px;
@@ -106,13 +110,16 @@ section {
     margin-bottom: 50px;
 }
 
-/* 3カラム */
+/* 3カラム列 */
 .card_3col {
     display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
     gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 
 /* カード設計 */
 .card_wrap1 {
