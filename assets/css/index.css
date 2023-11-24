@@ -156,11 +156,12 @@ background-color: #333;
 
 .map_container{
   text-align: center;
+  padding-bottom: 2%;
 }
 
 .map svg {
   width: 90%;
-  margin: 0 auto;
+  height: 100%;
 }
 
 .courses {
