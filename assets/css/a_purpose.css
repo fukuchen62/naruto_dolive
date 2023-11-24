@@ -123,15 +123,14 @@ section {
 
 /* カード設計 */
 .card_wrap1 {
-    width: 350px;
-    height: 500px;
+    width: 280px;
     border: 3px solid #000;
     box-shadow: 5px 5px 0 #000;
 }
 
 /* カード内幅揃え */
 .card_wrap2 {
-    padding: 30px;
+    padding: 30px 30px 10px;
 }
 
 /* サムネイル画像真ん中並び */
@@ -142,8 +141,8 @@ section {
 /* サムネイル画像設定 */
 .thumbnail_img img {
     border: 1px solid #000;
-    width: 300px;
-    height: 230px;
+    width: 280px;
+    height: 184px;
     object-fit: cover;
 }
 
@@ -167,13 +166,14 @@ section {
 
 /* アイコンサイズ */
 .card_icon img {
-    width: 40px;
+    width: 35px;
 }
 
 /* moreボタン幅 */
 .more_btn {
     margin: 50px auto;
 }
+
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
@@ -182,6 +182,21 @@ section {
     .archive_col>h3 {
         margin: 0 50px 50px;
         padding: 40px 40px 10px;
+    }
+
+    /* カード設計 */
+    .card_wrap1 {
+        width: 350px;
+    }
+
+    /* カード内幅揃え */
+    .card_wrap2 {
+        padding: 30px;
+    }
+
+    /* サムネイル画像設定 */
+    .thumbnail_img img {
+        width: 240px;
     }
 }
 
@@ -199,7 +214,7 @@ section {
     margin: 0 auto;
     background-color: #aae6ff;
     border: 3px solid #000;
-    width: 280px;
+    width: 250px;
     border-radius: 20px;
     box-shadow: 5px 5px 0 #000;
 
@@ -207,7 +222,7 @@ section {
 
 /* ボタンいっぱいにリンクを広げる */
 .close_link {
-    padding: 5px 106px 0;
+    padding: 5px 86px 0;
     border-radius: 20px;
 }
 
