@@ -13,7 +13,7 @@ get_header();
             $term = $terms[0]->name;
         }
         ?>
-        <h2><?php echo $term; ?></h2>
+        <h2 class="page_title"><?php echo $term; ?></h2>
     </section>
 
     <div class="main_wrap">
@@ -35,15 +35,20 @@ get_header();
                     <div class="p_before">
                         <?php if (get_previous_post_link()) : ?>
                             <?php $previous_post = get_previous_post(); ?>
-                            <a href="<?php echo get_permalink($previous_post); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/left_page.png" alt=""></a>
+                            <div class="p_arrow_wrapper">
+                                <a href="<?php echo get_permalink($previous_post); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/left_page.png" alt=""></a>
+                            </div>
                         <?php endif; ?>
                         <?php previous_post_link('%link', '%title') ?>
                     </div>
                     <div class="p_next">
                         <?php if (get_next_post_link()) : ?>
                             <?php $next_post = get_next_post(); ?>
-                            <a href="<?php echo get_permalink($next_post); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/right_page.png" alt=""></a>
+                            <div class="n_arrow_wrapper">
+                                <a href="<?php echo get_permalink($next_post); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/right_page.png" alt=""></a>
+                            </div>
                         <?php endif; ?>
+
                         <?php next_post_link('%link', '%title'); ?>
                     </div>
                 </div>

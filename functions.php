@@ -46,7 +46,8 @@ function add_common_scripts()
     wp_enqueue_style('index-style', get_template_directory_uri() . '/assets/css/index.css');
 
     // jQuery未検証
-    wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery-3.7.1.min.js', array(), '3.7.1', true);
+    // jQueryの読み込みむ
+    wp_enqueue_script('jquery');
 }
 
 
@@ -63,6 +64,14 @@ function add_individual_scripts()
             get_template_directory_uri() . '/assets/css/s_column.css',
             array(),
             false
+        );
+
+        wp_enqueue_script(
+            's_column_script',
+            get_template_directory_uri() . '/assets/js/s_column.js',
+            '',
+            '',
+            true
         );
     }
     if (is_archive('eat')) {
