@@ -58,6 +58,14 @@ add_action('wp_enqueue_scripts', 'add_individual_scripts');
 function add_individual_scripts()
 {
     // 各singleページの時読み込むcss
+    if (is_home()) {
+        wp_enqueue_style(
+            'front_page_style',
+            get_template_directory_uri() . '/assets/css/index.css',
+            array(),
+            false
+        );
+    }
     if (is_singular('column')) {
         wp_enqueue_style(
             's_column_style',

@@ -30,7 +30,213 @@
         }
     </style>
 </head>
-
 <?php wp_head(); ?>
 
 <body>
+    <!-- カード型(1カラムver)テンプレートパーツ化しました
+    <div>
+        <a href="" class="card1">
+            <div class="card1_wrap">
+                <div class="card1_content">
+                    <div class="card1_img">
+                        <img src="" alt="サムネイル">
+                    </div>
+                    <h4></h4>
+                    <div class="card1_text"></div>
+                </div>
+            </div>
+        </a>
+    </div> -->
+    <!--
+        決定事項がまとまったパワポファイルが【https://docs.google.com/presentation/d/1UH-e8r4syRd-EFv8QS8rbK_M89gBjzaU/edit?usp=drive_link&ouid=114449549919721686995&rtpof=true&sd=true】にあるので参照してください！
+    -->
+
+    <header>
+        <nav class="sp_nav pc_none">
+            <div class="container">
+                <div class="header_inner" id="headerInner">
+                    <div class="sp_nav_logo">
+                        <a href="<?php echo home_url('/') ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="header_menu">
+                        <div class="search_box_wrap">
+                            <div class="search_box">
+                                <input type="text" placeholder="検索">
+                                <button type="submit">
+                                    <i class="fas fa-search fa-fw" style="color: white;"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="link_wrap">
+                            <h3 class="overlaymenu_title_course">コースで探す</h3>
+                            <ul class="overlaymenu_list_course">
+                                <li><a href="<?php echo get_permalink(324); ?>">コースA</a></li>
+                                <li><a href="<?php echo get_permalink(329); ?>">コースB</a></li>
+                                <li><a href="#">コースC</a></li>
+                                <li><a href="#">コースD</a></li>
+                                <li><a href="#">コースE</a></li>
+                            </ul>
+                            <h3 class="overlaymenu_title_purpose">目的で探す</h3>
+                            <ul class="overlaymenu_list_purpose">
+                                <li><a href="#">食べる</a></li>
+                                <li><a href="#">遊ぶ</a></li>
+                                <li><a href="#">観光</a></li>
+                                <li><a href="#">宿泊</a></li>
+                            </ul>
+
+                            <div class="overlaymenu_list_icon">
+                                <div class="overlaymenu_list_icon_text">
+                                    <p>他ページもご利用ください！</p>
+                                </div>
+                                <ul class="overlaymenu_list_icon_list">
+                                    <li class="overlaymenu_list_icon_item">
+                                        <a href="#">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/column_icon.svg" width="45" height="45" alt="コラム一覧へのリンク" decoding="async" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li class="overlaymenu_list_icon_item">
+                                        <a href="#">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram_icon.svg" width="45" height="45" alt="インスタへのリンク" decoding="async" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li class="overlaymenu_list_icon_item">
+                                        <a href="#">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mypage_icon.svg" width="45" height="45" alt="マイページへのリンク" decoding="async" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li class="overlaymenu_list_icon_item">
+                                        <a href="#">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/news_icon.svg" width="45" height="45" alt="新着情報一覧へのリンク" decoding="async" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li class="overlaymenu_list_icon_item">
+                                        <a href="#">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/q&a_icon.svg" width="45" height="45" alt="Q&Aへのリンク" decoding="async" loading="lazy" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header_menu-btn" id="spMenuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span>MENU</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="pc_nav sp_none">
+            <div class="pc_nav_logo">
+                <a href="#">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_logo.png" alt="logo">
+                </a>
+            </div>
+            <ul class="pc_navmenu">
+                <li class="has_child"><a href="#">コースで探す</a>
+                    <ul class="child_wrap">
+                        <li><a href="<?php echo get_permalink(324); ?>">
+                                <dl>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_sea.jpg" alt="鳴門海峡満喫旅"></dt>
+                                    <dd>鳴門海峡満喫旅</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#<?php echo get_permalink(329); ?>">
+                                <dl>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_culture.jpg" alt="歴史・文化の鳴門旅"></dt>
+                                    <dd>歴史･文化の<br>鳴門旅</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_round.jpg" alt="ぐるっと一周鳴門旅"></dt>
+                                    <dd>ぐるっと一周<br>鳴門旅</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_○○○○○.jpg" alt="○○○○○旅"></dt>
+                                    <dd>○○○○○旅</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_×××××.jpg" alt="×××××旅" alt=""></dt>
+                                    <dd>×××××旅</dd>
+                                </dl>
+                            </a></li>
+                    </ul>
+                </li>
+                <li class="has_child"><a href="#">目的で探す</a>
+                    <ul class="child_wrap">
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_eat.jpg" alt="食べる"></dt>
+                                    <dd>食べる</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_enjoy.jpg" alt="遊ぶ"></dt>
+                                    <dd>遊ぶ</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_tourism.jpg" alt="観光"></dt>
+                                    <dd>観光</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_lodging.jpg" alt="宿泊"></dt>
+                                    <dd>宿泊</dd>
+                                </dl>
+                            </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">新着情報</a></li>
+                <li class="has_child"><a href="#">コラム</a>
+                    <ul class="child_wrap">
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_aboutnaruto.JPG" alt="鳴門について"></dt>
+                                    <dd>鳴門について</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_spend.jpg" alt="過ごし方"></dt>
+                                    <dd>過ごし方</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_specialty.jpg" alt="名物"></dt>
+                                    <dd>名物</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_other.jpg" alt="その他"></dt>
+                                    <dd>その他</dd>
+                                </dl>
+                            </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">インスタ</a></li>
+                <li><a href="#">マイページ</a></li>
+                <li><a href="#">Q&A</a></li>
+                <li class="search_box_li">
+                    <input type="text" placeholder="検索">
+                    <button type="submit">
+                        <i class="fas fa-search fa-fw" style="color: black;"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
