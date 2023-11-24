@@ -141,25 +141,65 @@ img {
 }
 
 .map svg {
-  width: 100%;
-  margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .courses {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.courses li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 18%;
-  border: 2px burlywood solid;
-  padding: 20px;
-  background-color: lightcyan;
+.title_drivecourse{
+  color: #F8C9D7;
+}
+
+.btn{
+  width: 15%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  padding: 18px 30px;
+  border-radius: 25px;
+  transition: .3s;
+  text-align: center;
+}
+
+.btn_course1{
+  background-color: #FF8B03;
+}
+
+.btn_course2{
+  background-color: #996633;
+}
+
+.btn_course3{
+  background-color: #FF1E1E;
+}
+
+.btn_course4{
+  background-color: #11CD7E;
+}
+
+.btn_course5{
+  background-color: #D427F0;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+
+
+
+
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+
 }
 
 /* ------------------------------------------------------------------------
@@ -169,30 +209,60 @@ img {
   background-color: #833091;
 }
 
-.image-container {
-  display: flex;
-  justify-content: space-around;
-  overflow: hidden;
+.title_pickupcolumn{
+  color: #DB64EF;
 }
 
-.image-item {
-  opacity: 0;
-  transform: translateX(100%);
-  animation: slide-in 1s ease-in forwards;
-  width: 200px;
+.column-container{
+  width:90%;
+  display:flex;
+  margin:auto;
+  margin-bottom:10px;
+  background-color:#AE85B5;
 }
 
-@keyframes slide-in {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
+.column-image{
+  width:50%;
+  border-radius:3%;
+  margin-left:3%;
+  margin-bottom:1%;
+  margin-top:1%;
+}
+
+.column-text{
+  width:40%;
+  margin:auto;
+}
+
+
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+  .column-containers{
+    display: flex;
+    width: 70%;
+    margin: auto;
   }
 
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  .column-container{
+  width:30%;
+  display: block;
+  text-align: center;
 }
+.column-image{
+  width:80%;
+  border-radius:5%;
+  margin-top: 5%;
+  height: 50%;
+}
+
+.column-text{
+  width:80%;
+  margin:auto;
+  height: 45%;
+}
+}
+
 
 /* ------------------------------------------------------------------------
     section_instagram
