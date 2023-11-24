@@ -25,6 +25,12 @@ img {
   background-color: #fff;
 }
 
+.more_btn{
+  width: 85%;
+  text-align: center;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
 /* ------------------------------------------------------------------------
     section_kv
 ------------------------------------------------------------------------  */
@@ -154,6 +160,18 @@ img {
 
 .title_drivecourse{
   color: #F8C9D7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: initial;
+}
+
+.title_drivecourse>h2 {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
 .btn{
@@ -211,6 +229,18 @@ img {
 
 .title_pickupcolumn{
   color: #DB64EF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: initial;
+}
+
+.title_pickupcolumn>h2 {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
 .column-container{
