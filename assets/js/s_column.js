@@ -1,8 +1,8 @@
 // カテゴリーによって色を変える
 
-pageH2 = document.querySelector(".page_title");
-topArea = document.querySelector(".toparea");
-pageTitle = pageH2.textContent;
+const pageH2 = document.querySelector(".page_title");
+const topArea = document.querySelector(".toparea");
+const pageTitle = pageH2.textContent;
 if (pageTitle === "名物") {
     pageH2.style.color = "#FEB59B";
     topArea.style.backgroundColor = "#FF7162";
