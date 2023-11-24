@@ -67,6 +67,10 @@
             <!-- タクソノミーのタイトルの取得 -->
             <?php $eat_types = get_terms(array('taxonomy' => 'eat_type'));
             if (!empty($eat_types)) : ?>
+                <?php
+                $more_counter = 1;
+                $close_counter = 1;
+                ?>
                 <?php foreach ($eat_types as $eat_type) : ?>
                     <h3><?php echo $eat_type->name ?></h3>
                     <div class="card_3col">
@@ -89,6 +93,7 @@
 
                         $the_query = new WP_Query($args);
 
+
                         //記事があればある分だけループさせる
                         if ($the_query->have_posts()) :
                         ?>
@@ -102,20 +107,27 @@
                             <?php endwhile; ?>
                         <?php endif ?>
                     </div><!-- card_3col -->
+
+                    <?php $more_number = 'more0' . $more_counter; ?>
                     <!-- moreボタン -->
-                    <div class="more_btn more01">
+                    <div class="more_btn <?php echo $more_number; ?>">
                         <div class="more_link">
                             <span class="more">more</span>
                         </div><!-- more_link -->
                     </div><!-- more_btn more01 -->
 
+                    <?php $close_number = 'close0' . $close_counter; ?>
                     <!-- closeボタン -->
-                    <div class="close_btn close01">
+                    <div class="close_btn <?php echo $close_number; ?>">
                         <div class="close_link">
                             <span class="close">close</span>
                         </div><!-- close_link -->
                     </div><!-- close_btn close01 -->
 
+                    <?php
+                    $more_counter++;
+                    $close_counter++;
+                    ?>
 
                 <?php endforeach; ?>
             <?php endif; ?>
