@@ -45,6 +45,11 @@ h3>p {
     margin: 0 auto;
 }
 
+.column-text>h3{
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
 h3::after {
     content: "";
     display: inline-block;
