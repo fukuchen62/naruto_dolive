@@ -21,6 +21,7 @@
 /* トップメニュー横並び */
 .menu_wrap {
     display: flex;
+
 }
 
 /* トップ画像非表示 */
@@ -93,6 +94,7 @@ section {
     padding: 10px;
 }
 
+
 /* ------------------------------------------------------------------------
 3カラム
 ------------------------------------------------------------------------ */
@@ -117,13 +119,13 @@ section {
 .pagenation {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     margin: 30px auto;
 
 }
 
 .pagenation img {
-    width: 50px;
+    width: 40px;
     object-fit: cover;
 }
 

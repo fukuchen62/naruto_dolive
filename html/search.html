@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
     <!-- 独自のCSS -->
-    <link rel="stylesheet" href="../assets/css/a_news.css">
+    <link rel="stylesheet" href="../assets/css/search.css">
     <script src="../assets/js/jquery-3.7.1.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,23 @@
 
 
 <body>
+    <!-- カード型(1カラムver)テンプレートパーツ化しました
+    <div>
+        <a href="" class="card1">
+            <div class="card1_wrap">
+                <div class="card1_content">
+                    <div class="card1_img">
+                        <img src="" alt="サムネイル">
+                    </div>
+                    <h4></h4>
+                    <div class="card1_text"></div>
+                </div>
+            </div>
+        </a>
+    </div> -->
+    <!--
+        決定事項がまとまったパワポファイルが【https://docs.google.com/presentation/d/1UH-e8r4syRd-EFv8QS8rbK_M89gBjzaU/edit?usp=drive_link&ouid=114449549919721686995&rtpof=true&sd=true】にあるので参照してください！
+    -->
 
     <header>
         <nav class="sp_nav pc_none">
@@ -213,82 +230,156 @@
 
     <main>
         <section id="toparea" class="toparea">
-            <h2>新着情報一覧</h2>
+            <h2>文字列：の検索結果</h2>
         </section>
         <div class="main_wrap">
             <div class="breadcrumb">パンくずリスト > パンくずリスト</div>
             <div class="archive_col">
-                <div class="card3_left">
-                    <a href="#" class="card3">
-                        <div class="card3_wrap">
-                            <div class="card3_content">
-                                <div class="card3_img">
-                                    <img src="../assets/img/sample3.jpg" alt="サムネイル">
-                                </div>
-                                <div class="article_wrap">
-                                    <div class="news_tab">ニュース</div>
-                                    <div class="news_title">
-                                        <p>20xx年〇月〇日</p>
-                                        <p>タイトルがここに入ります。</p>
-                                    </div>
-                                    <div class="card3_text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="card3">
-                        <div class="card3_wrap">
-                            <div class="card3_content">
-                                <div class="card3_img">
-                                    <img src="../assets/img/sample3.jpg" alt="サムネイル">
-                                </div>
-                                <div class="article_wrap">
-                                    <div class="news_tab">ニュース</div>
-                                    <div class="news_title">
-                                        <p>20xx年〇月〇日</p>
-                                        <p>タイトルがここに入ります。</p>
-                                    </div>
-                                    <div class="card3_text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="card3">
-                        <div class="card3_wrap">
-                            <div class="card3_content">
-                                <div class="card3_img">
-                                    <img src="../assets/img/sample3.jpg" alt="サムネイル">
-                                </div>
-                                <div class="article_wrap">
-                                    <div class="news_tab">ニュース</div>
-                                    <div class="news_title">
-                                        <p>20xx年〇月〇日</p>
-                                        <p>タイトルがここに入ります。</p>
-                                    </div>
-                                    <div class="card3_text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="pagenation"><span class="left_tri"></span>
-                        <img src="../assets/img/pagination.png" alt="ページネーション">
-                        <img src="../assets/img/pagination.png" alt="ページネーション">
-                        <img src="../assets/img/pagination.png" alt="ページネーション">
-                        <span class="right_tri"></span>
-                    </div>
+                <div class="center_title">
+                    <h3 class="middle_title">遊ぶの結果()</h3>
                 </div>
-                <aside class="aside_wrap aside_top">
-                    <div class="aside_title">━━ カテゴリ別 ━━</div>
-                    <ul>
-                        <li><a href="#">ニュース()</a></li>
-                        <li><a href="#">イベント()</a></li>
-                        <li><a href="#">アップデート()</a></li>
-                    </ul>
-                </aside>
+                <div class="card_3col">
+                    <a href="single_eat.html" class="card_item">
+                        <div class="card_wrap1">
+                            <div class="card_wrap2">
+                                <div class="thumbnail_img">
+                                    <img src="../assets/img/eat_sample_img.jpg" alt="サムネイル">
+                                </div>
+                                <h4>麺王</h4>
+                                <div class="card_text">600～1000円・昼夜・年齢制限なし</div>
+                                <div class="card_icon">
+                                    <img src="../assets/img/noon_ico.png" alt="昼アイコン">
+                                    <img src="../assets/img/night_ico.png" alt="夜アイコン">
+                                    <img src="../assets/img/parking_ico.png" alt="駐車場アイコン">
+                                    <img src="../assets/img/smoking_ico.png" alt="喫煙所アイコン">
+                                    <img src="../assets/img/reservation_ico.png" alt="予約アイコン">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="single_eat.html" class="card_item">
+                        <div class="card_wrap1">
+                            <div class="card_wrap2">
+                                <div class="thumbnail_img">
+                                    <img src="../assets/img/eat_sample_img.jpg" alt="サムネイル">
+                                </div>
+                                <h4>麺王</h4>
+                                <div class="card_text">600～1000円・昼夜・年齢制限なし</div>
+                                <div class="card_icon">
+                                    <img src="../assets/img/noon_ico.png" alt="昼アイコン">
+                                    <img src="../assets/img/night_ico.png" alt="夜アイコン">
+                                    <img src="../assets/img/parking_ico.png" alt="駐車場アイコン">
+                                    <img src="../assets/img/smoking_ico.png" alt="喫煙所アイコン">
+                                    <img src="../assets/img/reservation_ico.png" alt="予約アイコン">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="single_eat.html" class="card_item">
+                        <div class="card_wrap1">
+                            <div class="card_wrap2">
+                                <div class="thumbnail_img">
+                                    <img src="../assets/img/eat_sample_img.jpg" alt="サムネイル">
+                                </div>
+                                <h4>麺王</h4>
+                                <div class="card_text">600～1000円・昼夜・年齢制限なし</div>
+                                <div class="card_icon">
+                                    <img src="../assets/img/noon_ico.png" alt="昼アイコン">
+                                    <img src="../assets/img/night_ico.png" alt="夜アイコン">
+                                    <img src="../assets/img/parking_ico.png" alt="駐車場アイコン">
+                                    <img src="../assets/img/smoking_ico.png" alt="喫煙所アイコン">
+                                    <img src="../assets/img/reservation_ico.png" alt="予約アイコン">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="single_eat.html" class="card_item">
+                        <div class="card_wrap1">
+                            <div class="card_wrap2">
+                                <div class="thumbnail_img">
+                                    <img src="../assets/img/eat_sample_img.jpg" alt="サムネイル">
+                                </div>
+                                <h4>麺王</h4>
+                                <div class="card_text">600～1000円・昼夜・年齢制限なし</div>
+                                <div class="card_icon">
+                                    <img src="../assets/img/noon_ico.png" alt="昼アイコン">
+                                    <img src="../assets/img/night_ico.png" alt="夜アイコン">
+                                    <img src="../assets/img/parking_ico.png" alt="駐車場アイコン">
+                                    <img src="../assets/img/smoking_ico.png" alt="喫煙所アイコン">
+                                    <img src="../assets/img/reservation_ico.png" alt="予約アイコン">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="single_eat.html" class="card_item">
+                        <div class="card_wrap1">
+                            <div class="card_wrap2">
+                                <div class="thumbnail_img">
+                                    <img src="../assets/img/eat_sample_img.jpg" alt="サムネイル">
+                                </div>
+                                <h4>麺王</h4>
+                                <div class="card_text">600～1000円・昼夜・年齢制限なし</div>
+                                <div class="card_icon">
+                                    <img src="../assets/img/noon_ico.png" alt="昼アイコン">
+                                    <img src="../assets/img/night_ico.png" alt="夜アイコン">
+                                    <img src="../assets/img/parking_ico.png" alt="駐車場アイコン">
+                                    <img src="../assets/img/smoking_ico.png" alt="喫煙所アイコン">
+                                    <img src="../assets/img/reservation_ico.png" alt="予約アイコン">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
+
+            <div class="archive_col">
+                <div class="center_title">
+                    <h3 class="middle_title">食べるの結果()</h3>
+                </div>
+                <div class="card_3col">
+                    <a href="single_eat.html" class="card_item">
+                        <div class="card_wrap1">
+                            <div class="card_wrap2">
+                                <div class="thumbnail_img">
+                                    <img src="../assets/img/eat_sample_img.jpg" alt="サムネイル">
+                                </div>
+                                <h4>麺王</h4>
+                                <div class="card_text">600～1000円・昼夜・年齢制限なし</div>
+                                <div class="card_icon">
+                                    <img src="../assets/img/noon_ico.png" alt="昼アイコン">
+                                    <img src="../assets/img/night_ico.png" alt="夜アイコン">
+                                    <img src="../assets/img/parking_ico.png" alt="駐車場アイコン">
+                                    <img src="../assets/img/smoking_ico.png" alt="喫煙所アイコン">
+                                    <img src="../assets/img/reservation_ico.png" alt="予約アイコン">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="single_eat.html" class="card_item">
+                        <div class="card_wrap1">
+                            <div class="card_wrap2">
+                                <div class="thumbnail_img">
+                                    <img src="../assets/img/eat_sample_img.jpg" alt="サムネイル">
+                                </div>
+                                <h4>麺王</h4>
+                                <div class="card_text">600～1000円・昼夜・年齢制限なし</div>
+                                <div class="card_icon">
+                                    <img src="../assets/img/noon_ico.png" alt="昼アイコン">
+                                    <img src="../assets/img/night_ico.png" alt="夜アイコン">
+                                    <img src="../assets/img/parking_ico.png" alt="駐車場アイコン">
+                                    <img src="../assets/img/smoking_ico.png" alt="喫煙所アイコン">
+                                    <img src="../assets/img/reservation_ico.png" alt="予約アイコン">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
         </div>
     </main>
-
     <footer>
         <p><a href="#">このサイトについて</a></p>
         <p><a href="#">サイトマップ</a></p>
@@ -298,5 +389,6 @@
     <div class="button">
     </div>
     <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/変更.js"></script>
 </body>
 </html>

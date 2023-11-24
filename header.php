@@ -80,10 +80,10 @@
                             </ul>
                             <h3 class="overlaymenu_title_purpose">目的で探す</h3>
                             <ul class="overlaymenu_list_purpose">
-                                <li><a href="#">食べる</a></li>
-                                <li><a href="#">遊ぶ</a></li>
-                                <li><a href="#">観光</a></li>
-                                <li><a href="#">宿泊</a></li>
+                                <li><a href="<?php echo home_url('/eat'); ?>">食べる</a></li>
+                                <li><a href="<?php echo home_url('/enjoy'); ?>">遊ぶ</a></li>
+                                <li><a href="<?php echo home_url('/tour'); ?>">観光</a></li>
+                                <li><a href="<?php echo home_url('/stay'); ?>">宿泊</a></li>
                             </ul>
 
                             <div class="overlaymenu_list_icon">
@@ -132,11 +132,12 @@
 
         <nav class="pc_nav sp_none">
             <div class="pc_nav_logo">
-                <a href="#">
+                <a href="<?php echo home_url('/'); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_logo.png" alt="logo">
                 </a>
             </div>
             <ul class="pc_navmenu">
+                <!-- ページ内リンク？ -->
                 <li class="has_child"><a href="#">コースで探す</a>
                     <ul class="child_wrap">
                         <li><a href="<?php echo get_permalink(324); ?>">
@@ -145,7 +146,7 @@
                                     <dd>鳴門海峡満喫旅</dd>
                                 </dl>
                             </a></li>
-                        <li><a href="#<?php echo get_permalink(329); ?>">
+                        <li><a href="<?php echo get_permalink(329); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_culture.jpg" alt="歴史・文化の鳴門旅"></dt>
                                     <dd>歴史･文化の<br>鳴門旅</dd>
@@ -171,27 +172,28 @@
                             </a></li>
                     </ul>
                 </li>
+                <!-- ページ内リンク？ -->
                 <li class="has_child"><a href="#">目的で探す</a>
                     <ul class="child_wrap">
-                        <li><a href="#">
+                        <li><a href="<?php echo home_url('/eat'); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_eat.jpg" alt="食べる"></dt>
                                     <dd>食べる</dd>
                                 </dl>
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="<?php echo home_url('/enjoy'); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_enjoy.jpg" alt="遊ぶ"></dt>
                                     <dd>遊ぶ</dd>
                                 </dl>
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="<?php echo home_url('/tour'); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_tourism.jpg" alt="観光"></dt>
                                     <dd>観光</dd>
                                 </dl>
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="<?php echo home_url('/stay'); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_lodging.jpg" alt="宿泊"></dt>
                                     <dd>宿泊</dd>
@@ -199,28 +201,32 @@
                             </a></li>
                     </ul>
                 </li>
-                <li><a href="#">新着情報</a></li>
-                <li class="has_child"><a href="#">コラム</a>
+                <?php
+                $news = get_term_by('slug', 'news', 'category');
+                $news_link = get_term_link($news, 'category');
+                ?>
+                <li><a href="<?php echo $news_link; ?>" ?>新着情報</a>
+                <li class="has_child"><a href="<?php echo home_url('/column') ?>">コラム</a>
                     <ul class="child_wrap">
-                        <li><a href="#">
+                        <li><a href="<?php echo get_term_link('about_naruto', 'column_type'); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_aboutnaruto.JPG" alt="鳴門について"></dt>
                                     <dd>鳴門について</dd>
                                 </dl>
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="<?php echo get_term_link('life_style', 'column_type'); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_spend.jpg" alt="過ごし方"></dt>
                                     <dd>過ごし方</dd>
                                 </dl>
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="<?php echo get_term_link('products', 'column_type'); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_specialty.jpg" alt="名物"></dt>
                                     <dd>名物</dd>
                                 </dl>
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="<?php echo get_term_link('others', 'column_type'); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_other.jpg" alt="その他"></dt>
                                     <dd>その他</dd>
@@ -229,13 +235,10 @@
                     </ul>
                 </li>
                 <li><a href="#">インスタ</a></li>
-                <li><a href="#">マイページ</a></li>
-                <li><a href="#">Q&A</a></li>
+                <li><a href="<?php echo get_permalink(239) ?>">マイページ</a></li>
+                <li><a href="<?php echo home_url('/q_a') ?>">Q&A</a></li>
                 <li class="search_box_li">
-                    <input type="text" placeholder="検索">
-                    <button type="submit">
-                        <i class="fas fa-search fa-fw" style="color: black;"></i>
-                    </button>
+                    <?php get_search_form(); ?>
                 </li>
             </ul>
         </nav>

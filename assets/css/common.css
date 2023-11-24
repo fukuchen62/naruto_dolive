@@ -45,6 +45,12 @@ h3>p {
     margin: 0 auto;
 }
 
+.column-text>h3{
+    font-weight: bolder;
+    font-size: 1.3rem;
+    position: initial;
+}
+
 h3::after {
     content: "";
     display: inline-block;
@@ -737,15 +743,14 @@ moreボタン
     margin: 0 auto;
     background-color: #fffCAA;
     border: 3px solid #000;
-    width: 280px;
+    width: 250px;
     border-radius: 20px;
     box-shadow: 5px 5px 0 #000;
-
 }
 
 /* ボタンいっぱいにリンクを広げる */
 .more_link {
-    padding: 5px 106px 0;
+    padding: 5px 86px 0;
     border-radius: 20px;
 }
 
