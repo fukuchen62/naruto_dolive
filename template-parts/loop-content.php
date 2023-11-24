@@ -5,7 +5,7 @@
 
 
 <!-- 投稿の個別ページのURLを表示し、以下の内容をリンクにする-->
-<a href="<?php the_permalink(); ?>">
+<a href="<?php the_permalink(); ?>" class="card_item">
     <div class="card_wrap1">
         <div class="card_wrap2">
             <!-- アイキャッチ画像の表示 -->
@@ -55,7 +55,7 @@
             </div><!-- card_icon -->
         </div><!-- card_wrap2 -->
     </div><!-- card_wrap1 -->
-</a><!-- リンク -->
+</a><!-- card_item -->
 
 <?php
 

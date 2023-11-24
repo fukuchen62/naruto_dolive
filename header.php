@@ -92,7 +92,7 @@
                                 </div>
                                 <ul class="overlaymenu_list_icon_list">
                                     <li class="overlaymenu_list_icon_item">
-                                        <a href="#">
+                                        <a href="<?php echo home_url('/column'); ?>">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/column_icon.svg" width="45" height="45" alt="コラム一覧へのリンク" decoding="async" loading="lazy" />
                                         </a>
                                     </li>
@@ -102,17 +102,22 @@
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
-                                        <a href="#">
+                                        <a href="<?php echo get_permalink(239) ?>">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mypage_icon.svg" width="45" height="45" alt="マイページへのリンク" decoding="async" loading="lazy" />
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
-                                        <a href="#">
+                                        <!-- 新着情報一覧へのリンク取得 -->
+                                        <?php
+                                        $news = get_term_by('slug', 'news', 'category');
+                                        $news_link = get_term_link($news, 'category');
+                                        ?>
+                                        <a href="<?php echo $news_link; ?>">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/news_icon.svg" width="45" height="45" alt="新着情報一覧へのリンク" decoding="async" loading="lazy" />
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
-                                        <a href="#">
+                                        <a href="<?php echo home_url('/q_a') ?>">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/q&a_icon.svg" width="45" height="45" alt="Q&Aへのリンク" decoding="async" loading="lazy" />
                                         </a>
                                     </li>
@@ -201,12 +206,8 @@
                             </a></li>
                     </ul>
                 </li>
-                <?php
-                $news = get_term_by('slug', 'news', 'category');
-                $news_link = get_term_link($news, 'category');
-                ?>
-                <li><a href="<?php echo $news_link; ?>" ?>新着情報</a>
-                <li class="has_child"><a href="<?php echo home_url('/column') ?>">コラム</a>
+                <li><a href="<?php echo $news_link; ?>">新着情報</a>
+                <li class="has_child"><a href="<?php echo home_url('/column'); ?>">コラム</a>
                     <ul class="child_wrap">
                         <li><a href="<?php echo get_term_link('about_naruto', 'column_type'); ?>">
                                 <dl>
