@@ -99,3 +99,20 @@ function add_individual_scripts()
         );
     }
 }
+
+function my_theme_enqueue_scripts()
+{
+    // jQueryを登録解除
+    wp_deregister_script('jquery');
+
+    // jQueryをCDNから読み込む
+    wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.7.1.min.js', array(), null, true);
+
+    // 一つ目のスクリプトを読み込む
+    wp_enqueue_script('my-script', get_template_directory_uri() . '/assets/js/common.js', array('jquery'), null, true);
+
+    // 二つ目のスクリプトを読み込む
+    wp_enqueue_script('my-script2', get_template_directory_uri() . '/assets/js/a_purpose.js', array('jquery'), null, true);
+}
+
+add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
