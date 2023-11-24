@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------------------------------
+トップエリア
+------------------------------------------------------------------------  */
+
+/* 帯色 */
+#toparea {
+    background-color: #ddc69f;
+}
+
+/* 帯タイトルカラー */
+#toparea>h2 {
+    color: #a95b40;
+}
+
+/* セクション幅 */
+section {
+    padding: 10px;
+}
+
+
+/* ------------------------------------------------------------------------
+中見出し
+------------------------------------------------------------------------  */
+
+/* 外枠中央配置 */
+.center_title {
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+/* 中見出し幅 */
+.middle_title {
+    padding: 50px 50px 10px;
+    margin: 40px;
+}
+
+
+/* ------------------------------------------------------------------------
+3カラム
+------------------------------------------------------------------------ */
+
+/* 記事幅 */
+.archive_col {
+    padding: 50px;
+}
+
+/* 記事タイトル */
+.archive_col>h3 {
+    padding: 20px 20px 10px;
+    margin-bottom: 50px;
+
+}
+
+/* 3カラム列 */
+.card_3col {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* カード設計 */
+.card_wrap1 {
+    width: 350px;
+    height: 500px;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 #000;
+}
+
+/* カード内幅揃え */
+.card_wrap2 {
+    padding: 30px;
+}
+
+/* サムネイル画像真ん中並び */
+.thumbnail_img {
+    text-align: center;
+}
+
+/* サムネイル画像設定 */
+.thumbnail_img img {
+    border: 1px solid #000;
+    width: 300px;
+    height: 230px;
+    object-fit: cover;
+}
+
+/* 小見出し幅 */
+.card_wrap2>h4 {
+    padding: 20px 0;
+}
+
+/* カード説明幅 */
+.card_text {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+/* アイコン欄 */
+.card_icon {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+/* アイコンサイズ */
+.card_icon img {
+    width: 40px;
+}
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+
+    /* 記事タイトル */
+    .archive_col>h3 {
+        margin: 0 50px 50px;
+        padding: 40px 40px 10px;
+    }
+}
