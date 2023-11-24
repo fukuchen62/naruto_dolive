@@ -11,8 +11,12 @@ function my_theme_setup()
 add_action('after_setup_theme', 'my_theme_setup');
 
 
+//headが出力される直前に実行される
+// add_favicon_fontの読み込み
+add_action('wp_head', 'add_favicon_font');
 
 // headに出力 Googleフォント,ファビコンの読み込み
+// ヘッダーに出力されます
 function add_favicon_font()
 {
     // ファビコン
@@ -24,14 +28,15 @@ function add_favicon_font()
     echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
     echo '<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DotGothic16&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">';
 }
-//headが出力される直前に実行される
-add_action('wp_head', 'add_favicon_font');
 
 
 
-// cssとjsの読み込み
+// add_common_scriptsの読み込み
+add_action('wp_enqueue_scripts', 'add_common_scripts');
 
-function add_my_files()
+// 共通のcssとjsの読み込み
+// ヘッダーに出力されます
+function add_common_scripts()
 {
     // Reset.css
     wp_enqueue_style('reset-style', get_template_directory_uri() . '/assets/css/reset.css');
@@ -44,4 +49,20 @@ function add_my_files()
     wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery-3.7.1.min.js', array(), '3.7.1', true);
 }
 
-// add_action('wp_enqueue_scripts', 'add_my_files');
+
+
+// add_individual_scriptsの読み込み
+add_action('wp_enqueue_scripts', 'add_individual_scripts');
+
+function add_individual_scripts()
+{
+    // 各singleページの時読み込むcss
+    if (is_singular('column')) {
+        wp_enqueue_style(
+            's_column_style',
+            get_template_directory_uri() . '/assets/css/s_column.css',
+            array(),
+            false
+        );
+    }
+}
