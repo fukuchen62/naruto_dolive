@@ -78,6 +78,27 @@ function clear_all() {
 }
 // ▲ドライブコース切替▲
 
+// ▼コースリンク切替▼
+$(document).ready(function () {
+            let currentLink = ''; // 現在のリンクを保持する変数
+
+            // ボタンクリック時の処理
+            $('.course_button').on('click', function () {
+                // 対応するリンクを取得し、現在のリンクを更新する
+                const targetLink = $(this).data('link');
+                currentLink = targetLink;
+            });
+
+            // 詳細ボタンクリック時の処理
+            $('#detailButton').on('click', function () {
+                // 現在のリンクに遷移
+                if (currentLink) {
+                    window.location.href = currentLink;
+                }
+            });
+});
+// ▲コースリンク切替▲
+
 // ▼目的別ボタンtest▼
 var imageItems = document.querySelectorAll('.image-item');
 
