@@ -87,6 +87,16 @@ cardテンプレート
     .card2_content h3 {
         padding: 20px 0;
     }
+
+    .n_arrow_wrapper{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .p_arrow_wrapper{
+        display: flex;
+        justify-content: flex-start;
+    }
 }
 
 /* ▲card2カラムカード▲ */
@@ -97,7 +107,7 @@ cardテンプレート
 .pageturn {
     padding: 20px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .pageturn img {
