@@ -25,11 +25,18 @@ img {
   background-color: #fff;
 }
 
+.more_btn_container{
+  padding-bottom: 5%;
+}
+
 .more_btn {
   width: 280px;
   text-align: center;
-  margin-bottom: 2%;
-  margin-top: 2%;
+}
+
+.more_btn:hover{
+color: #fff;
+background-color: #333;
 }
 
 /* ------------------------------------------------------------------------
@@ -147,8 +154,12 @@ img {
   color: #FF27F6;
 }
 
+.map_container{
+  text-align: center;
+}
+
 .map svg {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -157,6 +168,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding-bottom: 2%;
 }
 
 .title_drivecourse {
@@ -296,6 +308,7 @@ img {
     display: flex;
     width: 70%;
     margin: auto;
+    padding-bottom: 5%;
   }
 
   .column-container {
