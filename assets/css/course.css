@@ -146,23 +146,108 @@ color: #f8c9d7;
 
 /***コースカード一覧***/
 /* 道路バー(sp) */
-.wrapper {
-width: 80%;
-height: auto;
-margin: 0 auto;
-position: relative;
-}
-.road {
-background-color: gray;
-height: 700px;
-width: 50px;
+    .wrapper {
+        width: 80%;
+        height: auto;
+        background-color: bisque;
+        margin: 0 auto;
+        display: flex;
+    }
+    .road_wrapper {
+        display: inline-block;
+        border-left: 2px solid gray;
+        border-right: 2px solid gray;
+    }
 
+    .road {
+        background-color: gray;
+        /* height: 7000px; */
+        width: 50px;
+        border-left: 2px solid white;
+        border-right: 2px solid white;
+        position: relative;
+        overflow: hidden;
+    }
+    .line {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 2px;
+        height: 100%;
+        /* border-right: 3px dashed white; */
+
+        background-image: linear-gradient(
+        to bottom,
+        transparent,
+        transparent 8px,
+        #fff 4px,
+        #fff 12px
+        );
+        background-size: 100% 20px;
+        background-repeat: repeat-y;
+        background-position: left top;
+    }
+
+    .car_wrapper{
+        position: fixed;
+        top: 200px;
+        width: 50px;
+        height: 50px;
+        border: 1px solid red;
+        text-align: center;
+        line-height: 50px;
+        z-index: 998;
+        margin: 0 auto;
+    }
+    .car_text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 999;
+        width: 100%;
+    }
+    .car {
+        position: relative;
+    }
+
+.car img {
+    width: 100%; /* 画像を親要素に合わせる */
+    height: 100%;
 }
-.car {
-width: 50px;
-position: sticky;
-top: 125px;
-}
+    .card {
+        height: 300px;
+        background-color: cornflowerblue;
+        margin-bottom: 300px;
+    }
+
+    .card:nth-child(1) {
+        margin-top: 300px;
+    }
+
+    .test {
+        height: 1000px;
+    }
+
+/* 道路バー(pc) */
+@media (max-width: 768px) {
+        .left_wrapper {
+        position: absolute;
+        left: 45%;
+        }
+
+        .right_wrapper {
+        position: relative;
+        z-index: 999;
+        }
+
+        .car {
+        z-index: 10;
+        }
+    }
+
+
 
 /* コースカード(sp) */
 .course_all{
