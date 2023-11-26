@@ -13,19 +13,12 @@
 
 
                     <!-- いいねボタン表示 -->
-                    <?php
-                    $favorite_icon = get_field('favorite_icon');
-                    $favorite_icon_url = $favorite_icon['sizes']['medium'];
-
-                    $favorited_icon = get_field('favorited_icon');
-                    $favorited_icon_url = $favorited_icon['sizes']['medium'];
-                    ?>
                     <div class="favorite_wrapper">
                         <?php
                         echo get_favorites_button(get_the_ID());
                         ?>
-                        <img style="display: none;" class="favorite_icon" src="<?php echo $favorite_icon_url; ?>" alt="お気に入り前ボタン">
-                        <img style="display: none;" class="favorited_icon" src="<?php echo $favorited_icon_url; ?>" alt="お気に入り後ボタン">
+                        <img style="display: none;" class="favorite_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/hammenu_icon1.png" alt="お気に入り前ボタン">
+                        <img style="display: none;" class="favorited_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/favorite_flag.png" alt="お気に入り後ボタン">
                     </div>
 
                     <div class="main_pic">

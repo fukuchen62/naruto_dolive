@@ -12,7 +12,7 @@ get_header();
         <?php get_template_part('template-parts/breadcrumb'); ?>
 
         <div class="menu_wrap">
-            <div class="top_img"><img src="<?php echo get_template_directory_uri(); ?>../assets/img/sample5.jpg" alt="トップ画像"></div>
+            <div class="top_img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sample5.jpg" alt="トップ画像"></div>
 
             <div class="aside_wrap aside_top">
 

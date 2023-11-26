@@ -18,8 +18,8 @@
         <!---- 地図とカテゴリ別サイドバー ---->
         <div class="menu_wrap">
             <!---- 地図 ---->
-            <div class="map_content">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/map_img.png" alt="グーグルマップ">
+            <div class="map_content" id="map">
+
             </div><!-- map_content-->
 
             <!---- pc版カテゴリ別サイドバー ---->
@@ -111,6 +111,18 @@
 
                                     <!---- １件ずつカード型で表示 ---->
                                     <?php get_template_part('template-parts/loop', 'content'); ?>
+                                    <!-- 緯度経度を取得してマップに表示 -->
+                                    <?php
+                                    $latitude = get_post_meta(get_the_ID(), 'latitude', true);
+                                    $longitude = get_post_meta(get_the_ID(), 'longitude', true);
+                                    $facilityName = get_the_title();
+
+                                    $place[] = array(
+                                        'lat' => $latitude,
+                                        'lng' => $longitude,
+                                        'facilityName' => $facilityName
+                                    );
+                                    ?>
 
                                 <?php endwhile; ?>
                             <?php endif ?>
@@ -197,7 +209,7 @@
     function initMap() {
         let map = new google.maps.Map(document.getElementById("map"), {
             // 地図表示のスーむレベル
-            zoom: 12,
+            zoom: 12.3,
             // 地図の初期値 これは緯度と経度を中心にしている。本番は鳴門を中心にする予定
             center: {
                 lat: <?php echo $latitude; ?>,
@@ -235,6 +247,11 @@
             infowindow.open(map, marker);
         }
     }
+
+    // ページ遷移後も表示されるように
+    window.onload = function() {
+        initMap();
+    };
 </script>
 
 <?php get_footer(); ?>
