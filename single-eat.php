@@ -10,8 +10,23 @@
                 <div class="container">
                     <!-- 店名の表示 -->
                     <h2><?php the_title(); ?></h2>
+
+
                     <!-- いいねボタン表示 -->
-                    <?php echo get_favorites_button(get_the_ID()); ?>
+                    <?php
+                    $favorite_icon = get_field('favorite_icon');
+                    $favorite_icon_url = $favorite_icon['sizes']['medium'];
+
+                    $favorited_icon = get_field('favorited_icon');
+                    $favorited_icon_url = $favorited_icon['sizes']['medium'];
+                    ?>
+                    <div class="favorite_wrapper">
+                        <?php
+                        echo get_favorites_button(get_the_ID());
+                        ?>
+                        <img style="display: none;" class="favorite_icon" src="<?php echo $favorite_icon_url; ?>" alt="お気に入り前ボタン">
+                        <img style="display: none;" class="favorited_icon" src="<?php echo $favorited_icon_url; ?>" alt="お気に入り後ボタン">
+                    </div>
 
                     <div class="main_pic">
                         <!-- 画像1の表示  ※必須 -->
@@ -324,6 +339,35 @@
                 </div><!-- other -->
             <?php endwhile; ?>
         <?php endif; ?>
+
+        <script>
+            // いいねボタン表示のスクリプト
+            const favorite_icon = document.querySelector(".favorite_icon");
+            const favorited_icon = document.querySelector(".favorited_icon");
+            const favorite_btn = document.querySelector(".simplefavorite-button");
+
+            // ロードの時にアイコンを読み込む
+            window.addEventListener("load", () => {
+                if (favorite_btn.classList.contains("active")) {
+                    favorite_icon.style.display = "none";
+                    favorited_icon.style.display = "inline-block";
+                } else {
+                    favorite_icon.style.display = "inline-block";
+                    favorited_icon.style.display = "none";
+                }
+            });
+
+            // クリックでアイコンを変える
+            favorite_btn.addEventListener("click", () => {
+                if (favorite_icon.style.display === "none") {
+                    favorite_icon.style.display = "inline-block";
+                    favorited_icon.style.display = "none";
+                } else if (favorite_icon.style.display === "inline-block") {
+                    favorite_icon.style.display = "none";
+                    favorited_icon.style.display = "inline-block";
+                }
+            });
+        </script>
 
 </main>
 <?php get_footer() ?>
