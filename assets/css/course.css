@@ -253,18 +253,8 @@ color: #f8c9d7;
 .course_all{
     border: 3px solid green;
 }
-/* .card2_all{
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
 .card_flex .card1_wrap{
     margin-bottom: 250px;
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(0, -50%);
 }
 .card1_content{
 background-color: #ff8b03;
@@ -272,22 +262,60 @@ background-color: #ff8b03;
 .card1_text{
     background-color: #fff;
 }
+.course2_all{
+    display: none;
+}
 
 
 @media screen and (min-width:768px){
 /* コースカード(pc) */
-.card_all{
-    border: 3px solid green;
+.course_all{
+    display: none;
 }
-.card_flex .card1_wrap{
-    margin-bottom: 50px;
+.course2_all{
+    display: block;
 }
-.card1_flex{
-background-color: #ff8b03;
+.card3_wrap {
+    width: 1300px;
+    border: 5px solid #000;
+    box-shadow: 15px 20px 0 #000;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    display: flex;
+    padding: 30px;
+    background-color: #ff8b03;
 }
-.card1_text{
-    background-color: #fff;
+
+.card3_content {
+    padding: 20px;
+    display: flex;
 }
+
+/* 記事画像サイズ */
+.card3_img {
+    width: 100px;
+}
+
+.card3_img img {
+    border: 1px solid #000;
+    object-fit: cover;
+}
+
+    /* 記事画像サイズ */
+    .card3_img {
+        min-width: 150px;
+        width: 50%;
+    }
+
+    /* 記事本文表示 */
+    .card3_text {
+        display: block;
+        border: 1px solid #000;
+        padding: 10px;
+        margin: 30px 30px;
+        background-color: #fff;
+    }
+
 }
 
 
