@@ -5,8 +5,7 @@
     </section><!-- id="toparea" class="toparea" -->
     <div class="main_wrap">
         <!-- パンくずリスト -->
-        <div class="breadcrumb"><?php get_template_part('template-parts/breadcrumb'); ?>
-        </div><!-- breadcrumb -->
+        <?php get_template_part('template-parts/breadcrumb'); ?>
         <div class="center_title">
             <h3 class="middle_title">観光</h3>
         </div><!-- center_title -->

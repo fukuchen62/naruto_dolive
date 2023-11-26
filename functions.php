@@ -39,65 +39,96 @@ add_action('wp_enqueue_scripts', 'add_common_scripts');
 function add_common_scripts()
 {
     // Reset.css
-    wp_enqueue_style('reset-style', get_template_directory_uri() . '/assets/css/reset.css');
-    // Common.css
-    wp_enqueue_style('common-style', get_template_directory_uri() . '/assets/css/common.css');
-    // Index.css
-    wp_enqueue_style('index-style', get_template_directory_uri() . '/assets/css/index.css');
+    wp_enqueue_style(
+        'reset-style',
+        get_template_directory_uri() . '/assets/css/reset.css',
+        array(),
+        false
+    );
 
-    // jQuery未検証
-    // jQueryの読み込みむ
-    wp_enqueue_script('jquery');
+    // Common.css
+    wp_enqueue_style(
+        'common-style',
+        get_template_directory_uri() . '/assets/css/common.css',
+        array('reset-style'),
+        false
+    );
+
+
+    // Index.css
+    // wp_enqueue_style('index-style', get_template_directory_uri() . '/assets/css/index.css');
+
 }
 
 
 
-// add_individual_scriptsの読み込み
+// add_individual_scriptsの読み込み(各ページのcss/jsの読み込み)
 add_action('wp_enqueue_scripts', 'add_individual_scripts');
-
 function add_individual_scripts()
 {
-    // 各singleページの時読み込むcss
-    if (is_home()) {
-        wp_enqueue_style(
-            'front_page_style',
-            get_template_directory_uri() . '/assets/css/index.css',
-            array(),
-            false
-        );
-    }
-    if (is_singular('column')) {
-        wp_enqueue_style(
-            's_column_style',
-            get_template_directory_uri() . '/assets/css/s_column.css',
-            array(),
-            false
-        );
 
-        wp_enqueue_script(
-            's_column_script',
-            get_template_directory_uri() . '/assets/js/s_column.js',
-            '',
-            '',
-            true
-        );
-    }
-    if (is_archive('eat')) {
-        wp_enqueue_style(
-            'archive_purpose',
-            get_template_directory_uri() . '/assets/css/a_purpose.css',
-            array(),
-            false
-        );
-    }
-    if (is_archive('column')) {
-        wp_enqueue_style(
-            'archive_column',
-            get_template_directory_uri() . '/assets/css/a_column.css',
-            array(),
-            false
-        );
-    }
+    //----------------------
+    //  トップページ
+    //----------------------
+    if (is_home()) : {
+
+            //トップページのCSS（index.css）を読み込む
+            wp_enqueue_style(
+                'front_page_style',
+                get_template_directory_uri() . '/assets/css/index.css',
+                array(),
+                false
+            );
+        }
+
+    //----------------------
+    //  コラム詳細ページ
+    //----------------------
+    elseif (is_singular('column')) : {
+
+            //コラム詳細ページのCSSとJSを読み込む
+            wp_enqueue_style(
+                's_column_style',
+                get_template_directory_uri() . '/assets/css/s_column.css',
+                array(),
+                false
+            );
+
+            wp_enqueue_script(
+                's_column_script',
+                get_template_directory_uri() . '/assets/js/s_column.js',
+                '',
+                '',
+                true
+            );
+        }
+    //----------------------
+    //  食べる・遊ぶ・宿泊・観光の一覧ページ
+    //----------------------
+    elseif (is_post_type_archive('eat') || is_post_type_archive('enjoy') || is_post_type_archive('stay') || is_post_type_archive('tour')) : {
+
+            //目的別一覧ページのCSSを読み込む
+            wp_enqueue_style(
+                'archive_purpose',
+                get_template_directory_uri() . '/assets/css/a_purpose.css',
+                array('common-style'),
+                false // headタグ内に出力
+            );
+        }
+    //----------------------
+    // コラムの一覧ページ
+    //----------------------
+    elseif (is_post_type_archive('column')) : {
+
+            //コラム一覧ページのCSSを読み込む
+            wp_enqueue_style(
+                'archive_column',
+                get_template_directory_uri() . '/assets/css/a_column.css',
+                array(),
+                false
+            );
+        }
+    endif;
 }
 
 function my_theme_enqueue_scripts()

@@ -1,9 +1,3 @@
-<div class="news_meta">
-    <?php the_category();  ?>
-</div>
-
-
-
 <!-- 投稿の個別ページのURLを表示し、以下の内容をリンクにする-->
 <a href="<?php the_permalink(); ?>" class="card_item">
     <div class="card_wrap1">
