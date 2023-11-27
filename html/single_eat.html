@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
-    <!-- slick css読み込み -->
-    <link rel="stylesheet" href="../assets/css/slick.css">
-    <link rel="stylesheet" href="../assets/css/slick-theme.css">
+
     <!-- singleページのcss -->
     <link rel="stylesheet" href="../assets/css/single.css">
     <script src="../assets/js/jquery-3.7.1.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
     <title>鳴門DoLive | 愛車で四国の右上攻略！</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -23,9 +22,6 @@
 
 
 <body>
-    <!-- slick js 読み込み -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../assets/js/slick.min.js"></script>
     <!--
         お疲れ様です！
         この【index.html】をコピペして各ページ作成お願いします。
@@ -47,7 +43,7 @@
                     <div class="header_menu">
                         <div class="search_box_wrap">
                             <div class="search_box">
-                                <form action="">
+                                <form action="#">
                                     <input type="text" placeholder="検索" value="初期値">
                                     <button type="submit">
                                         <i class="fas fa-search fa-fw" style="color: white;"></i>
@@ -220,7 +216,7 @@
                 <li class="search_box_li">
                     <div class="search_box_wrap">
                         <div class="search_box">
-                            <form action="">
+                            <form action="#">
                                 <input type="text" placeholder="検索">
                                 <button type="submit">
                                     <i class="fas fa-search fa-fw" style="color: black;"></i>
@@ -247,15 +243,6 @@
                 <h3 class="facility_name toparea_title">びんび家</h3>
                 <!-- facilityのwrap1は写真ちゃん達、wrap2はテキストちゃんとタグちゃん達 -->
                 <div class="facility_wrap">
-
-                    <!-- <div class="facility_wrap1">
-                        <div class="facility_img_box">
-                            <div><img src="../assets/img/sample2.jpg"></div>
-                            <div><img src="../assets/img/sample3.jpg"></div>
-                            <div><img src="../assets/img/sample2.jpg"></div>
-                        </div>
-                    </div> -->
-
                     <div class="facility_wrap1">
                         <div class="facility_img1_box">
                             <img class="facility_img1" src="../assets/img/sample2.jpg" alt="">
@@ -266,8 +253,6 @@
                             <li><img class="facility_img2" src="../assets/img/sample2.jpg" alt=""></li>
                         </ul>
                     </div>
-
-
                     <div class="facility_wrap2">
                         <div class="facility_txt_box">
                             <p class="facility_txt">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
@@ -322,7 +307,8 @@
                 </div>
                 <!-- マップ -->
                 <div class="info_map">
-                    <img class="info_map_img" src="../assets/img/map_img.png" alt="map">
+                    <iframe class="info_map_img" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d154140.7141983337!2d134.48998549788942!3d34.18674494036548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35537004b8db8063%3A0xbfd0dc7e9484a6ae!2z5b6z5bO255yM6bO06ZaA5biC!5e0!3m2!1sja!2sjp!4v1700445370859!5m2!1sja!2sjp" title="google">
+                    </iframe>
                 </div>
             </section>
             <hr>
@@ -393,8 +379,7 @@
             <p id="page_top"><a href="#"><span>Page Top</span></a></p>
         </div>
     </footer>
-    <script src="../assets/js/paginathing.js"></script>
-    <script src="../assets/js/top.js"></script>
+    <script src="../assets/js/common.js"></script>
     <script src="../assets/js/single.js"></script>
 </body>
 </html>
