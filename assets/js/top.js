@@ -28,53 +28,53 @@ function slideshow_timer() {
 $(document).ready(function () {
 
     // 1つ目のコース以外のコースを非表示させる
-    // guruttocourse
-    $('#guruttocourse').attr('display', "block");
-    // mankitsucourse
-    $('#mankitsucourse').attr('display', "none");
-    // rekishibunkacourse
-    $('#rekishibunkacourse').attr('display', "none");
-    // osusumecourse
-    $('#osusumecourse').attr('display', "none");
-    // Nightcourse
-    $('#Nightcourse').attr('display', "none");
+    // 鳴門海峡満喫旅
+    $('#narutokaikyoumankitu').attr('display', "block");
+    // ぐるっと一周鳴門旅
+    $('#guruttoissyuunaruto').attr('display', "none");
+    // 歴史・文化の鳴門旅
+    $('#rekishibunkanonaruto').attr('display', "none");
+    // 鳴門おおそと一周旅
+    $('#narutooosotoissyuu').attr('display', "none");
+    // キッズが主役旅
+    $('#kizzugasyuyaku').attr('display', "none");
 
 
     jQuery('#course1').on('click', function () {
         clear_all();
-        $('#guruttocourse').attr('display', "block");
+        $('#narutokaikyoumankitu').attr('display', "block");
     });
     jQuery('#course2').on('click', function () {
         clear_all();
-        $('#mankitsucourse').attr('display', "block");
+        $('#guruttoissyuunaruto').attr('display', "block");
     });
     jQuery('#course3').on('click', function () {
         clear_all();
-        $('#rekishibunkacourse').attr('display', "block");
+        $('#rekishibunkanonaruto').attr('display', "block");
     });
     jQuery('#course4').on('click', function () {
         clear_all();
-        $('#osusumecourse').attr('display', "block");
+        $('#narutooosotoissyuu').attr('display', "block");
     });
     jQuery('#course5').on('click', function () {
         clear_all();
-        $('#Nightcourse').attr('display', "block");
+        $('#kizzugasyuyaku').attr('display', "block");
     });
 });
 
 function clear_all() {
 
     // 全てのコース以外のコースを非表示させる
-    // guruttocourse
-    $('#guruttocourse').attr('display', "none");
-    // mankitsucourse
-    $('#mankitsucourse').attr('display', "none");
-    // rekishibunkacourse
-    $('#rekishibunkacourse').attr('display', "none");
-    // osusumecourse
-    $('#osusumecourse').attr('display', "none");
-    // Nightcourse
-    $('#Nightcourse').attr('display', "none");
+    // 鳴門海峡満喫旅
+    $('#narutokaikyoumankitu').attr('display', "none");
+    // ぐるっと一周鳴門旅
+    $('#guruttoissyuunaruto').attr('display', "none");
+    // 歴史・文化の鳴門旅
+    $('#rekishibunkanonaruto').attr('display', "none");
+    // 鳴門おおそと一周旅
+    $('#narutooosotoissyuu').attr('display', "none");
+    // キッズが主役旅
+    $('#kizzugasyuyaku').attr('display', "none");
 }
 // ▲ドライブコース切替▲
 
