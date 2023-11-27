@@ -2,7 +2,7 @@
 <main>
     <!---- トップエリアタイトル ---->
     <section id="toparea" class="toparea">
-        <h2>目的別一覧</h2>
+        <h2>目的別一覧：観光</h2>
     </section><!-- id="toparea" class="toparea" -->
 
     <div class="main_wrap">
@@ -64,99 +64,99 @@
 
             </aside><!-- aside_wrap aside_top-->
         </div><!-- menu_wrap -->
-
+        <?php $test = 1; ?>
         <!---- 記事一覧 ---->
-        <section class="archive_col">
-            <!-- タクソノミーを指定して配列のターム情報を取得する -->
-            <!-- タクソノミーのタイトルの取得 -->
-            <?php $tour_types = get_terms(array('taxonomy' => 'tour_type'));
-            if (!empty($tour_types)) : ?>
 
-                <?php
-                $more_counter = 1;
-                $close_counter = 1;
-                ?>
+        <!-- タクソノミーを指定して配列のターム情報を取得する -->
+        <!-- タクソノミーのタイトルの取得 -->
+        <?php $tour_types = get_terms(array('taxonomy' => 'tour_type'));
+        if (!empty($tour_types)) : ?>
 
-                <?php foreach ($tour_types as $tour_type) : ?>
-                    <!-- 記事からボタンまでをsecとする -->
-                    <div class="sec01">
-                        <!---- タクソノミー別タイトル ---->
-                        <h3><?php echo $tour_type->name ?></h3>
-                        <div class="card_3col">
+            <?php
+            $more_counter = 1;
+            $close_counter = 1;
+            ?>
 
-
-                            <?php
-                            //観光の投稿タイプ
-                            $args = array(
-                                'post_type' => 'tour',
-                                // 'post_per_page' => 3,
-                            );
-                            //料理の種類で絞り込む
-                            $tourtax = array('relation' => 'AND');
-                            $tourtax[] = array(
-                                'taxonomy' => 'tour_type',
-                                'terms' => $tour_type->slug,
-                                'field' => 'slug',
-                            );
-                            $args['tax_query'] = $tourtax;
-
-                            $the_query = new WP_Query($args);
-
-                            //記事があればある分だけループさせる
-                            if ($the_query->have_posts()) :
-                            ?>
-                                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+            <?php foreach ($tour_types as $tour_type) : ?>
+                <!-- 記事からボタンまでをsecとする -->
+                <?php $test_class = 'sec' . sprintf('%02d', $test); ?>
+                <section class="archive_col <?php echo $test_class; ?>">
+                    <!---- タクソノミー別タイトル ---->
+                    <h3 class="purpose_btn"><?php echo '<a href="' . get_term_link($tour_type) . '">' . $tour_type->name . '</a>'; ?>
+                    </h3><!---- purpose_btn ---->
+                    <div class="card_3col">
 
 
-                                    <!---- １件ずつカード型で表示 ---->
-                                    <?php get_template_part('template-parts/loop', 'content'); ?>
-
-                                    <!-- 緯度経度を取得してマップに表示 -->
-                                    <?php
-                                    $latitude = get_post_meta(get_the_ID(), 'latitude', true);
-                                    $longitude = get_post_meta(get_the_ID(), 'longitude', true);
-                                    $facilityName = get_the_title();
-
-                                    $place[] = array(
-                                        'lat' => $latitude,
-                                        'lng' => $longitude,
-                                        'facilityName' => $facilityName
-                                    );
-                                    ?>
-
-
-                                <?php endwhile; ?>
-                            <?php endif ?>
-                        </div><!-- card_3col -->
-
-                        <!-- moreボタン -->
-                        <?php $more_number = 'more0' . $more_counter; ?>
-                        <!-- moreボタン -->
-                        <div class="more_btn <?php echo $more_number; ?>">
-                            <div class="more_link">
-                                <span class="more">more</span>
-                            </div><!-- more_link -->
-                        </div><!-- more_btn more01 -->
-
-                        <?php $close_number = 'close0' . $close_counter; ?>
-                        <!-- closeボタン -->
-                        <div class="close_btn <?php echo $close_number; ?>">
-                            <div class="close_link">
-                                <span class="close">close</span>
-                            </div><!-- close_link -->
-                        </div><!-- close_btn close01 -->
-
-                        <!-- $more_counter,$close_counterを1ずつ増やす -->
                         <?php
-                        $more_counter++;
-                        $close_counter++;
+                        //観光の投稿タイプ
+                        $args = array(
+                            'post_type' => 'tour',
+                            'post_per_page' => 3,
+                        );
+                        //料理の種類で絞り込む
+                        $tourtax = array('relation' => 'AND');
+                        $tourtax[] = array(
+                            'taxonomy' => 'tour_type',
+                            'terms' => $tour_type->slug,
+                            'field' => 'slug',
+                        );
+                        $args['tax_query'] = $tourtax;
+
+                        $the_query = new WP_Query($args);
+
+                        //記事があればある分だけループさせる
+                        if ($the_query->have_posts()) :
                         ?>
-                    </div><!-- sec01 -->
+                            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-                <?php endforeach; ?>
-            <?php endif; ?>
 
-        </section><!-- archive_col -->
+                                <!---- １件ずつカード型で表示 ---->
+                                <?php get_template_part('template-parts/loop', 'content'); ?>
+
+                                <!-- 緯度経度を取得してマップに表示 -->
+                                <?php
+                                $latitude = get_post_meta(get_the_ID(), 'latitude', true);
+                                $longitude = get_post_meta(get_the_ID(), 'longitude', true);
+                                $facilityName = get_the_title();
+
+                                $place[] = array(
+                                    'lat' => $latitude,
+                                    'lng' => $longitude,
+                                    'facilityName' => $facilityName
+                                );
+                                ?>
+
+
+                            <?php endwhile; ?>
+                        <?php endif ?>
+                    </div><!-- card_3col -->
+
+                    <!-- moreボタン -->
+                    <?php $more_number = 'more0' . $more_counter; ?>
+                    <!-- moreボタン -->
+                    <div class="more_btn <?php echo $more_number; ?>">
+                        <div class="more_link">
+                            <span class="more">more</span>
+                        </div><!-- more_link -->
+                    </div><!-- more_btn more01 -->
+
+                    <?php $close_number = 'close0' . $close_counter; ?>
+                    <!-- closeボタン -->
+                    <div class="close_btn <?php echo $close_number; ?>">
+                        <div class="close_link">
+                            <span class="close">close</span>
+                        </div><!-- close_link -->
+                    </div><!-- close_btn close01 -->
+
+                    <!-- $more_counter,$close_counterを1ずつ増やす -->
+                    <?php
+                    $more_counter++;
+                    $close_counter++;
+                    ?>
+                </section><!-- archive_col sec -->
+                <?php $test++; ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
 
         <!-- スマホ版カテゴリ別サイドバー -->
         <aside class="aside_wrap aside_bottom">

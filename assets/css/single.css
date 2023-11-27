@@ -4,7 +4,7 @@
     all
 ------------------------------------------------------------------------  */
 main {
-    background-color: FFF6E2;
+    background-color: #FFF6E2;
 }
 
 /* トップエリア */
@@ -14,9 +14,6 @@ main {
     height: 200px;
     background-color: #d13a2b;
     text-align: center;
-}
-
-#toparea>h2 {
     color: #F8A59B;
     line-height: 200px;
 }
@@ -33,7 +30,9 @@ main {
     }
 
 .toparea_title {
-    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     margin-bottom: 50px;
 }
 
@@ -65,10 +64,20 @@ hr {
     margin: 0 auto;
 }
 
+.facility_wrap1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.facility_img1_box {
+    margin: 0 auto;
+}
+
 .facility_img1 {
     margin: 0 auto;
     max-width: 240px;
     height: 184px;
+    border: 3px solid #000;
 }
 
 .facility_img1 img {
@@ -139,10 +148,6 @@ hr {
         margin: 0 auto;
     }
 
-    .facility_wrap1 {
-        margin: 0 auto;
-    }
-
     .facility_img_wrap {
         display: flex;
         flex-direction: column;
@@ -188,6 +193,10 @@ hr {
 
 /* 施設の詳細情報 */
 
+.info_wrap {
+    margin: 0 auto 50px auto;
+}
+
 .section_info {
     padding-top: 34px;
     padding-bottom: 34px;
@@ -206,9 +215,13 @@ th, td {
 }
 
 @media only screen and (min-width:768px) {
+.info_wrap {
+    max-width: 1500px;
+    }
+
     table {
-        max-width: none;
-        width: 70%;
+        width: 80%;
+        max-width: 100%;
         height: 600px;
     }
 }
@@ -222,13 +235,9 @@ tr:nth-child(4) th:nth-child(1){
     padding: 15px;
 }
 
-.info_wrap {
-    margin-bottom: 50px;
-}
-
 /* マップ */
 .info_map {
-    width: 280px;
+    max-width: 280px;
     height: 350px;
     margin: 0 auto;
 }
@@ -242,9 +251,13 @@ tr:nth-child(4) th:nth-child(1){
 
 @media only screen and (min-width:768px) {
 .info_map {
-    width: 70%;
+    max-width: 1500px;
     height: 500px;
     text-align: center;
+}
+
+.info_map_img {
+    width: 80%;
 }
 }
 
@@ -313,67 +326,4 @@ tr:nth-child(4) th:nth-child(1){
         width: 350px;
         height: 500px;
 }
-}
-
-
-
-/* slickで写真の切り替え */
-.facility_wrap1 {
-    margin: 0 auto;
-    max-width: 270px;
-}
-
-.slick-list {
-    height: 184px;
-    margin-bottom: 25px;
-    border: 3px solid #000;
-}
-
-.slick-dots li {
-    width: 80px;
-    height: 75px;
-    margin: 0;
-    border: 3px solid #000;
-}
-
-.slick-dots {
-    position: static;
-    bottom: -25px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.slick-dots li button{
-    height: 100%;
-	width: 100%;
-}
-
-.slick-dots li img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-@media only screen and (min-width:768px) {
-    .facility_wrap1 {
-        margin: 0 auto;
-        max-width: 46%;
-    }
-
-    .slick-list {
-        width: 100%;
-        height: auto;
-    }
-
-    .slick-dots li {
-        width: 100px;
-        height: 80px;
-    }
-}
-
-@media only screen and (min-width:900px) {
-    .slick-dots li {
-        width: 30%;
-        height: auto;
-    }
 }

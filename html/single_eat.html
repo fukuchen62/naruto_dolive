@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
-    <!-- slick css読み込み -->
-    <link rel="stylesheet" href="../assets/css/slick.css">
-    <link rel="stylesheet" href="../assets/css/slick-theme.css">
+
     <!-- singleページのcss -->
     <link rel="stylesheet" href="../assets/css/single.css">
     <script src="../assets/js/jquery-3.7.1.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
     <title>鳴門DoLive | 愛車で四国の右上攻略！</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -23,9 +22,6 @@
 
 
 <body>
-    <!-- slick js 読み込み -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../assets/js/slick.min.js"></script>
     <!--
         お疲れ様です！
         この【index.html】をコピペして各ページ作成お願いします。
@@ -41,16 +37,18 @@
                 <div class="header_inner" id="headerInner">
                     <div class="sp_nav_logo">
                         <a href="#">
-                            <img src=".../assets/img/nav_logo.png" alt="logo">
+                            <img src="../assets/img/nav_logo.png" alt="logo">
                         </a>
                     </div>
                     <div class="header_menu">
                         <div class="search_box_wrap">
                             <div class="search_box">
-                                <input type="text" placeholder="検索">
-                                <button type="submit">
-                                    <i class="fas fa-search fa-fw" style="color: white;"></i>
-                                </button>
+                                <form action="#">
+                                    <input type="text" placeholder="検索" value="初期値">
+                                    <button type="submit">
+                                        <i class="fas fa-search fa-fw" style="color: white;"></i>
+                                    </button>
+                                </form>
                             </div>
                         </div>
                         <div class="link_wrap">
@@ -77,34 +75,34 @@
                                 <ul class="overlaymenu_list_icon_list">
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="#">
-                                            <img src=".../assets/img/column_icon.svg" width="45" height="45" alt="コラム一覧へのリンク" decoding="async" loading="lazy" />
+                                            <img src="../assets/img/column_icon.svg" width="45" height="45" alt="コラム一覧へのリンク">
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="#">
-                                            <img src=".../assets/img/instagram_icon.svg" width="45" height="45" alt="インスタへのリンク" decoding="async" loading="lazy" />
+                                            <img src="../assets/img/instagram_icon.svg" width="45" height="45" alt="インスタへのリンク">
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="#">
-                                            <img src=".../assets/img/mypage_icon.svg" width="45" height="45" alt="マイページへのリンク" decoding="async" loading="lazy" />
+                                            <img src="../assets/img/mypage_icon.svg" width="45" height="45" alt="マイページへのリンク">
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="#">
-                                            <img src=".../assets/img/news_icon.svg" width="45" height="45" alt="新着情報一覧へのリンク" decoding="async" loading="lazy" />
+                                            <img src="../assets/img/news_icon.svg" width="45" height="45" alt="新着情報一覧へのリンク">
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="#">
-                                            <img src=".../assets/img/q&a_icon.svg" width="45" height="45" alt="Q&Aへのリンク" decoding="async" loading="lazy" />
+                                            <img src="../assets/img/q&a_icon.svg" width="45" height="45" alt="Q&Aへのリンク">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="header_menu-btn" id="spMenuBtn">
+                    <div class="header_menu_btn" id="spMenuBtn">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -117,7 +115,7 @@
         <nav class="pc_nav sp_none">
             <div class="pc_nav_logo">
                 <a href="#">
-                    <img src=".../assets/img/nav_logo.png" alt="logo">
+                    <img src="../assets/img/nav_logo.png" alt="logo">
                 </a>
             </div>
             <ul class="pc_navmenu">
@@ -125,32 +123,32 @@
                     <ul class="child_wrap">
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src=".../assets/img/nav_sea.jpg" alt="鳴門海峡満喫旅"></dt>
+                                    <dt><img src="../assets/img/nav_sea.jpg" alt="鳴門海峡満喫旅"></dt>
                                     <dd>鳴門海峡満喫旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src=".../assets/img/nav_culture.jpg" alt="歴史・文化の鳴門旅"></dt>
+                                    <dt><img src="../assets/img/nav_culture.jpg" alt="歴史・文化の鳴門旅"></dt>
                                     <dd>歴史･文化の<br>鳴門旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src=".../assets/img/nav_round.jpg" alt="ぐるっと一周鳴門旅"></dt>
+                                    <dt><img src="../assets/img/nav_round.jpg" alt="ぐるっと一周鳴門旅"></dt>
                                     <dd>ぐるっと一周<br>鳴門旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src=".../assets/img/nav_○○○○○.jpg" alt="○○○○○旅"></dt>
-                                    <dd>○○○○○旅</dd>
+                                    <dt><img src="../assets/img/nav_ooooo.jpg" alt="ooooo旅"></dt>
+                                    <dd>ooooo旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src=".../assets/img/nav_×××××.jpg" alt="×××××旅" alt=""></dt>
-                                    <dd>×××××旅</dd>
+                                    <dt><img src="../assets/img/nav_xxxxx.jpg" alt="xxxxx旅"></dt>
+                                    <dd>xxxxx旅</dd>
                                 </dl>
                             </a></li>
                     </ul>
@@ -159,25 +157,25 @@
                     <ul class="child_wrap">
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src=".../assets/img/nav_eat.jpg" alt="食べる"></dt>
+                                    <dt><img src="../assets/img/nav_eat.jpg" alt="食べる"></dt>
                                     <dd>食べる</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src=".../assets/img/nav_enjoy.jpg" alt="遊ぶ"></dt>
+                                    <dt><img src="../assets/img/nav_enjoy.jpg" alt="遊ぶ"></dt>
                                     <dd>遊ぶ</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src=".../assets/img/nav_tourism.jpg" alt="観光"></dt>
+                                    <dt><img src="../assets/img/nav_tourism.jpg" alt="観光"></dt>
                                     <dd>観光</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src=".../assets/img/nav_lodging.jpg" alt="宿泊"></dt>
+                                    <dt><img src="../assets/img/nav_lodging.jpg" alt="宿泊"></dt>
                                     <dd>宿泊</dd>
                                 </dl>
                             </a></li>
@@ -188,25 +186,25 @@
                     <ul class="child_wrap">
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src=".../assets/img/nav_aboutnaruto.JPG" alt="鳴門について"></dt>
+                                    <dt><img src="../assets/img/nav_aboutnaruto.JPG" alt="鳴門について"></dt>
                                     <dd>鳴門について</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src=".../assets/img/nav_spend.jpg" alt="過ごし方"></dt>
+                                    <dt><img src="../assets/img/nav_spend.jpg" alt="過ごし方"></dt>
                                     <dd>過ごし方</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src=".../assets/img/nav_specialty.jpg" alt="名物"></dt>
+                                    <dt><img src="../assets/img/nav_specialty.jpg" alt="名物"></dt>
                                     <dd>名物</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src=".../assets/img/nav_other.jpg" alt="その他"></dt>
+                                    <dt><img src="../assets/img/nav_other.jpg" alt="その他"></dt>
                                     <dd>その他</dd>
                                 </dl>
                             </a></li>
@@ -216,10 +214,16 @@
                 <li><a href="#">マイページ</a></li>
                 <li><a href="#">Q&A</a></li>
                 <li class="search_box_li">
-                    <input type="text" placeholder="検索">
-                    <button type="submit">
-                        <i class="fas fa-search fa-fw" style="color: black;"></i>
-                    </button>
+                    <div class="search_box_wrap">
+                        <div class="search_box">
+                            <form action="#">
+                                <input type="text" placeholder="検索">
+                                <button type="submit">
+                                    <i class="fas fa-search fa-fw" style="color: black;"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -228,10 +232,7 @@
 
     <main>
         <!-- タイトル -->
-        <section id="toparea" class="toparea">
-            <h2>食べる</h2>
-            </div>
-        </section>
+        <h2 id="toparea" class="toparea">食べる</h2>
         <!-- メイン -->
         <div class="main_wrap">
             <!-- パンくずリスト -->
@@ -239,36 +240,19 @@
             <!-- 施設について -->
             <section id="facility" class="section_facility">
                 <!-- facility=施設 -->
-                <div class="toparea_title">
-                    <h3 class="facility_name">びんび家</h3>
-                </div>
+                <h3 class="facility_name toparea_title">びんび家</h3>
                 <!-- facilityのwrap1は写真ちゃん達、wrap2はテキストちゃんとタグちゃん達 -->
                 <div class="facility_wrap">
-
                     <div class="facility_wrap1">
-                        <div class="facility_img_box">
-                            <div><img src="../assets/img/sample2.jpg"></div>
-                            <div><img src="../assets/img/sample3.jpg"></div>
-                            <div><img src="../assets/img/sample2.jpg"></div>
-                        </div>
-                    </div>
-
-
-
-                    <!-- <div class="news-container">
-                        <div class="facility_img1">
-                            <img src="../assets/img/sample2.jpg" alt="">
+                        <div class="facility_img1_box">
+                            <img class="facility_img1" src="../assets/img/sample2.jpg" alt="">
                         </div>
                         <ul class="facility_img_list">
-                            <li class="facility_img2"><img src=" ../assets/img/sample3.jpg" alt=""></li>
-                            <li class="facility_img2"><img src=" ../assets/img/sample6.jpg" alt=""></li>
-                            <li class="facility_img2"><img src=" ../assets/img/sample2.jpg" alt=""></li>
+                            <li><img class="facility_img2" src="../assets/img/sample3.jpg" alt=""></li>
+                            <li><img class="facility_img2" src="../assets/img/sample6.jpg" alt=""></li>
+                            <li><img class="facility_img2" src="../assets/img/sample2.jpg" alt=""></li>
                         </ul>
-                    </div> -->
-
-
-
-
+                    </div>
                     <div class="facility_wrap2">
                         <div class="facility_txt_box">
                             <p class="facility_txt">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
@@ -289,9 +273,7 @@
             <!-- 施設の詳細情報 -->
             <hr><!-- 区切りの線 -->
             <section id="info" class="section_info">
-                <div class="toparea_title">
-                    <h3 class="info_title">詳細情報</h3>
-                </div>
+                <h3 class="info_title toparea_title">詳細情報</h3>
                 <div class="info_wrap">
                     <table>
                         <tr>
@@ -325,15 +307,14 @@
                 </div>
                 <!-- マップ -->
                 <div class="info_map">
-                    <img class="info_map_img" src="../assets/img/map_img.png" alt="map">
+                    <iframe class="info_map_img" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d154140.7141983337!2d134.48998549788942!3d34.18674494036548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35537004b8db8063%3A0xbfd0dc7e9484a6ae!2z5b6z5bO255yM6bO06ZaA5biC!5e0!3m2!1sja!2sjp!4v1700445370859!5m2!1sja!2sjp" title="google">
+                    </iframe>
                 </div>
             </section>
             <hr>
             <!-- その他おすすめ -->
             <section id="recommend" class="section_recommend">
-                <div class="toparea_title">
-                    <h3>その他おすすめ</h3>
-                </div>
+                <h3 class="toparea_title">その他おすすめ</h3>
                 <div class="card_3col">
                     <a href="#" class="card1">
                         <div class="card1_wrap">
@@ -394,9 +375,11 @@
         <p><a href="#">サイトマップ</a></p>
         <p><a href="#">プライバシーポリシー</a></p>
         <p class="copyright"><small>&copy; 2023 Team藍 in QLIP</small></p>
+        <div>
+            <p id="page_top"><a href="#"><span>Page Top</span></a></p>
+        </div>
     </footer>
-    <script src="../assets/js/paginathing.js"></script>
-    <script src="../assets/js/top.js"></script>
+    <script src="../assets/js/common.js"></script>
     <script src="../assets/js/single.js"></script>
 </body>
 </html>
