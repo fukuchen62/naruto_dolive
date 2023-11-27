@@ -32,6 +32,7 @@
 /* トップメニュー横並び */
 .menu_wrap {
     display: flex;
+    margin-bottom: 50px;
 }
 
 /* 地図外枠 */
@@ -51,7 +52,7 @@
 @media only screen and (min-width:768px) {
 
     .menu_wrap {
-        margin: 0 auto;
+        margin: 0 auto 50px;
         max-width: 80%;
     }
 
@@ -102,12 +103,7 @@ section {
 /* 記事幅 */
 .archive_col {
     padding: 50px;
-}
-
-/* 記事タイトル */
-.archive_col>h3 {
-    padding: 20px 20px 10px;
-    margin-bottom: 50px;
+    margin: 0 auto;
 }
 
 /* 3カラム列 */
@@ -120,6 +116,27 @@ section {
     justify-content: center;
 }
 
+/* 目的別項目ボタン装飾非表示 */
+.purpose_btn::after {
+    display: none;
+}
+
+/* 目的別項目ボタン外側 */
+.purpose_btn {
+    display: block;
+    margin-bottom: 50px;
+    background-color: #ffaaaa;
+    border: 3px solid #000;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0 #000;
+}
+
+/* リンクを親要素いっぱいに広げる */
+.purpose_btn>a {
+    display: block;
+    padding: 20px 10px;
+    border-radius: 20px;
+}
 
 /* カード設計 */
 .card_wrap1 {
@@ -179,9 +196,8 @@ section {
 @media only screen and (min-width:768px) {
 
     /* 記事タイトル */
-    .archive_col>h3 {
+    .purpose_btn {
         margin: 0 50px 50px;
-        padding: 40px 40px 10px;
     }
 
     /* カード設計 */
