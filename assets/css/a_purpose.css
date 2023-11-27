@@ -245,7 +245,7 @@ section {
 /* 文字設定 */
 .close {
     font-size: 1.5rem;
-    font-family: Dela Gothic One;
+    font-family: "Dela Gothic One";
 }
 
 /* closeボタン幅 */
