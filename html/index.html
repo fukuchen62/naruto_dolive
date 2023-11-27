@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../assets/css/index.css">
     <script src="../assets/js/jquery-3.7.1.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DotGothic16&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
     <title>鳴門DoLive | 愛車で四国の右上攻略！</title>
@@ -50,7 +50,7 @@
                         <div class="search_box_wrap">
                             <div class="search_box">
                                 <form action="">
-                                    <input type="text" placeholder="検索">
+                                    <input type="text" placeholder="検索" value="初期値">
                                     <button type="submit">
                                         <i class="fas fa-search fa-fw" style="color: white;"></i>
                                     </button>
@@ -81,34 +81,34 @@
                                 <ul class="overlaymenu_list_icon_list">
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="#">
-                                            <img src="../assets/img/column_icon.svg" width="45" height="45" alt="コラム一覧へのリンク" decoding="async" loading="lazy" />
+                                            <img src="../assets/img/column_icon.svg" width="45" height="45" alt="コラム一覧へのリンク">
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="#">
-                                            <img src="../assets/img/instagram_icon.svg" width="45" height="45" alt="インスタへのリンク" decoding="async" loading="lazy" />
+                                            <img src="../assets/img/instagram_icon.svg" width="45" height="45" alt="インスタへのリンク">
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="#">
-                                            <img src="../assets/img/mypage_icon.svg" width="45" height="45" alt="マイページへのリンク" decoding="async" loading="lazy" />
+                                            <img src="../assets/img/mypage_icon.svg" width="45" height="45" alt="マイページへのリンク">
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="#">
-                                            <img src="../assets/img/news_icon.svg" width="45" height="45" alt="新着情報一覧へのリンク" decoding="async" loading="lazy" />
+                                            <img src="../assets/img/news_icon.svg" width="45" height="45" alt="新着情報一覧へのリンク">
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="#">
-                                            <img src="../assets/img/q&a_icon.svg" width="45" height="45" alt="Q&Aへのリンク" decoding="async" loading="lazy" />
+                                            <img src="../assets/img/q&a_icon.svg" width="45" height="45" alt="Q&Aへのリンク">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="header_menu-btn" id="spMenuBtn">
+                    <div class="header_menu_btn" id="spMenuBtn">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -147,14 +147,14 @@
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src="../assets/img/nav_○○○○○.jpg" alt="○○○○○旅"></dt>
-                                    <dd>○○○○○旅</dd>
+                                    <dt><img src="../assets/img/nav_ooooo.jpg" alt="ooooo旅"></dt>
+                                    <dd>ooooo旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src="../assets/img/nav_×××××.jpg" alt="×××××旅" alt=""></dt>
-                                    <dd>×××××旅</dd>
+                                    <dt><img src="../assets/img/nav_xxxxx.jpg" alt="xxxxx旅"></dt>
+                                    <dd>xxxxx旅</dd>
                                 </dl>
                             </a></li>
                     </ul>
@@ -220,12 +220,16 @@
                 <li><a href="#">マイページ</a></li>
                 <li><a href="#">Q&A</a></li>
                 <li class="search_box_li">
-                    <form action="">
-                        <input type="text" placeholder="検索">
-                        <button type="submit">
-                            <i class="fas fa-search fa-fw" style="color: black;"></i>
-                        </button>
-                    </form>
+                    <div class="search_box_wrap">
+                        <div class="search_box">
+                            <form action="">
+                                <input type="text" placeholder="検索">
+                                <button type="submit">
+                                    <i class="fas fa-search fa-fw" style="color: black;"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -236,51 +240,69 @@
             <div class="kv_img_wrap">
                 <div class="kv_left sp_none">
                     <div class="kv_img1">
-                        <div class="logo">
-                            <img src="../assets/img/logo.png" alt="鳴門DoLive">
+                        <div class="logo poyoyon is-animated">
+                            <img src="../assets/img/logo4.png" alt="鳴門DoLive">
                         </div>
-                        <img id="mypic1" src="../assets/img/mypic1.jpg">
+                        <div class="kv_img1">
+                            <img id="mypic1" src="../assets/img/mypic1.jpg" alt="キービジュアル">
+                        </div>
                         <div class="catchcopy">
-                            <img src="../assets/img/catchcopy.png" alt="愛車で四国の右上攻略！">
+                            <img src="../assets/img/catchcopy.png" alt="愛車で四国の右上攻略！" class="anim-box slidein is-animated">
+                        </div>
+                        <div class="kv_deco">
+                            <img src="../assets/img/kv_deco.png" alt="車" class="anim-box slide-skew is-animated">
                         </div>
                     </div>
                 </div>
                 <div class="kv_main">
-                    <div class="logo">
-                        <h1><img src="../assets/img/logo.png" alt="鳴門DoLive"></h1>
+                    <div class="logo poyoyon is-animated">
+                        <h1><img src="../assets/img/logo4.png" alt="鳴門DoLive"></h1>
                     </div>
                     <div class="kv_img2">
-                        <img id="mypic2" src="../assets/img/mypic1.jpg">
+                        <img id="mypic2" src="../assets/img/mypic1.jpg" alt="キービジュアル">
                     </div>
                     <div class="catchcopy">
-                        <img src="../assets/img/catchcopy.png" alt="愛車で四国の右上攻略！">
+                        <img src="../assets/img/catchcopy.png" alt="愛車で四国の右上攻略！" class="anim-box slidein is-animated">
+                    </div>
+                    <div class="kv_deco">
+                        <img src="../assets/img/kv_deco.png" alt="車" class="anim-box slide-skew is-animated">
                     </div>
                 </div>
                 <div class="kv_right sp_none">
-                    <div class="logo">
-                        <img src="../assets/img/logo.png" alt="鳴門DoLive">
+                    <div class="logo poyoyon is-animated">
+                        <img src="../assets/img/logo4.png" alt="鳴門DoLive">
                     </div>
                     <div class="kv_img3">
-                        <img id="mypic3" src="../assets/img/mypic1.jpg">
+                        <img id="mypic3" src="../assets/img/mypic1.jpg" alt="キービジュアル">
                     </div>
                     <div class="catchcopy">
-                        <img src="../assets/img/catchcopy.png" alt="愛車で四国の右上攻略！">
+                        <img src="../assets/img/catchcopy.png" alt="愛車で四国の右上攻略！" class="anim-box slidein is-animated">
+                    </div>
+                    <div class="kv_deco">
+                        <img src="../assets/img/kv_deco.png" alt="車" class="anim-box slide-skew is-animated">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="map" class="section_map">
-            <div class="teloparea marquee">
-                <div class="marquee-container">
+        <div class="teloparea marquee">
+            <div class="marquee-container">
+                <a href="#">
                     <p class="marquee_news1">ニュースが入ります。記事が入ります。</p>
+                </a>
+                <a href="#">
                     <p class="marquee_news2">ニュースが入ります。記事が入ります。</p>
+                </a>
+                <a href="#">
                     <p class="marquee_news3">ニュースが入ります。記事が入ります。</p>
-                </div>
-                <div class="more_btn">
-                    <a href="#" class="more_link"><span class="more">more</span></a>
-                </div>
+                </a>
             </div>
+            <div class="more_btn">
+                <a href="#" class="more_link"><span class="more">more</span></a>
+            </div>
+        </div>
+
+        <section id="map" class="section_map">
             <div class="map_content">
                 <div class="title_drivecourse">
                     <h2>ドライブコース</h2>
@@ -2592,16 +2614,18 @@
             <div class="teloparea"></div>
         </section>
 
-        <section id="column" class="section_column">
-            <div class="teloparea purpose_btn_wrap">
-                <div class="image-container">
-                    <img class="image-item" src="../assets/img/test_car1.png" alt="Image 1">
-                    <img class="image-item" src="../assets/img/test_car1.png" alt="Image 2">
-                    <img class="image-item" src="../assets/img/test_car1.png" alt="Image 3">
-                    <img class="image-item" src="../assets/img/test_car1.png" alt="Image 4">
-                    <img class="image-item" src="../assets/img/test_car1.png" alt="Image 5">
-                </div>
+        <div class="teloparea purpose_delaywrap">
+            <div class="purpose_delaywrap_flex delayScroll">
+                <div class="purpose_delaywrap_box initial show"><img src="../assets/img/traffic_light.png" alt="信号機"></div>
+                <div class="purpose_delaywrap_box"><img src="../assets/img/delaywrap_car.png" alt="車"></div>
+                <div class="purpose_delaywrap_box"><a href="#"><img src="../assets/img/delaywrap_eat.png" alt="食べる"></a></div>
+                <div class="purpose_delaywrap_box"><a href="#"><img src="../assets/img/delaywrap_enjoy.png" alt="遊ぶ"></a></div>
+                <div class="purpose_delaywrap_box"><a href="#"><img src="../assets/img/delaywrap_tourism.png" alt="観光"></a></div>
+                <div class="purpose_delaywrap_box"><a href="#"><img src="../assets/img/delaywrap_lodging.png" alt="宿泊"></a></div>
             </div>
+        </div>
+
+        <section id="column" class="section_column">
             <div class="title_pickupcolumn">
                 <h2>ピックアップコラム</h2>
             </div>
@@ -2635,13 +2659,26 @@
             </div>
         </section>
 
+        <div id="recommended_keywords" class="teloparea recommended_keywords">
+            <a href="#">
+                <p class="moving_text">#渦潮</p>
+            </a>
+            <a href="#">
+                <p class="moving_text">#鳴ちゅる</p>
+            </a>
+            <a href="#">
+                <p class="moving_text">#鳴門鯛</p>
+            </a>
+            <a href="#">
+                <p class="moving_text">#</p>
+            </a>
+            <a href="#">
+                <p class="moving_text">##</p>
+            </a>
+        </div>
+
         <section id="instagram" class="section_instagram">
-            <div class="teloparea">
-                <p>おススメキーワード</p>
-            </div>
-            <div id="toparea" class="toparea">
-                <h2>インスタグラム</h2>
-            </div>
+            <h2 class="toparea">インスタグラム</h2>
             <div class="instagram_grid">
                 <div class="instagram_grid_item">
                     <img src="../assets/img/ig01.jpg" alt="Instagram Photo 1">
@@ -2669,21 +2706,23 @@
                 </div>
             </div>
             <div class="instagram_follow">
-                <button class="instagram_follow_btn">
+                <div class="instagram_follow_btn">
                     <a href="https://www.instagram.com/narutodolive/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" rel="noopener" target="_blank">
-                        <p>Follow me</p>
+                        <span>Follow me</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="ig_icon" viewBox="0 0 16 16">
-                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
                         </svg>
                     </a>
-                </button>
+                </div>
             </div>
         </section>
 
+        <div class="teloparea move_js">
+            <p>testarea</p>
+        </div>
+
         <section id="pdf" class="section_pdf">
-            <div class="teloparea">
-                <p>testarea</p>
-            </div>
+            <h2 class="toparea">PDF</h2>
             <div class="pdf_wrap_sp pc_none">
                 <div class="card1_wrap">
                     <div class="card1_content">
@@ -2717,9 +2756,10 @@
         <p><a href="#">サイトマップ</a></p>
         <p><a href="#">プライバシーポリシー</a></p>
         <p class="copyright"><small>&copy; 2023 Team藍 in QLIP</small></p>
+        <div>
+            <p id="page_top"><a href="#"><span>Page Top</span></a></p>
+        </div>
     </footer>
-    <div class="button">
-    </div>
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/top.js"></script>
 </body>
