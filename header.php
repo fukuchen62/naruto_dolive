@@ -11,10 +11,19 @@
 
     <style>
         #map {
-            width: 100%;
+            width: 400px;
             height: 400px;
             background-color: grey;
         }
+
+        @media only screen and (min-width:768px) {
+            #map {
+                width: 60%;
+                height: 550px;
+            }
+
+        }
+
 
         .wp-pagenavi span.current {
             display: inline-block;

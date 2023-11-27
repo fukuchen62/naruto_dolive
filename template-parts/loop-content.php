@@ -13,8 +13,11 @@
             <h4><?php the_title(); ?></h4>
 
             <!-- 抜粋の表示 -->
-            <div class="card_text"><?php the_field('excerpt'); ?>
-            </div>
+            <!-- 字数制限 -->
+            <div class="card_text"><?php echo mb_substr(get_field('excerpt'), 0, 32); ?>
+            </div><!-- card_text -->
+
+
 
             <!-- ここにアイコン -->
             <div class="card_icon">

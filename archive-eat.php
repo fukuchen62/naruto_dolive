@@ -2,7 +2,7 @@
 <main>
     <!---- トップエリアタイトル ---->
     <section id="toparea" class="toparea">
-        <h2>目的別一覧</h2>
+        <h2>目的別一覧：食べる</h2>
     </section><!-- id="toparea" class="toparea" -->
 
     <div class="main_wrap">
@@ -20,7 +20,7 @@
             <!---- 地図 ---->
             <div class="map_content" id="map">
 
-            </div><!-- map_content-->
+            </div><!-- class="map_content" id="map"-->
 
             <!---- pc版カテゴリ別サイドバー ---->
             <aside class="aside_wrap aside_top">
@@ -67,96 +67,100 @@
             </aside><!-- aside_wrap aside_top-->
         </div><!-- menu_wrap -->
         <?php $test = 1; ?>
-        <!---- 記事一覧 ---->
-        <section class="archive_col">
-            <!-- タクソノミーを指定して配列のターム情報を取得する -->
-            <!-- タクソノミーのタイトルの取得 -->
-            <?php $eat_types = get_terms(array('taxonomy' => 'eat_type'));
-            if (!empty($eat_types)) : ?>
-                <?php
-                $more_counter = 1;
-                $close_counter = 1;
-                ?>
+
+        <!-- タクソノミーを指定して配列のターム情報を取得する -->
+        <!-- タクソノミーのタイトルの取得 -->
+        <?php $eat_types = get_terms(array('taxonomy' => 'eat_type'));
+        if (!empty($eat_types)) : ?>
+            <?php
+            $more_counter = 1;
+            $close_counter = 1;
+            ?>
 
 
-                <?php foreach ($eat_types as $eat_type) : ?>
-                    <!-- 記事からボタンまでをsecとする -->
-                    <?php $test_class = 'sec' . sprintf('%02d', $test); ?>
-                    <div class="<?php echo $test_class; ?>">
-                        <!---- タクソノミー別タイトル ---->
-                        <h3><?php echo $eat_type->name ?></h3>
-                        <div class="card_3col">
+            <?php foreach ($eat_types as $eat_type) : ?>
+                <!-- 記事からボタンまでをsection -->
+                <?php $test_class = 'sec' . sprintf('%02d', $test); ?>
+                <section class="archive_col <?php echo $test_class; ?>">
+                    <!---- タクソノミー別タイトル ---->
+                    <h3 class="purpose_btn"><?php echo '<a href="' . get_term_link($eat_type) . '">' . $eat_type->name . '</a>'; ?>
+                    </h3><!---- purpose_btn ---->
+                    <div class="card_3col">
 
-                            <?php
-                            //食べるの投稿タイプ
-                            $args = array(
-                                'post_type' => 'eat',
-                                'post_per_page' => 3,
-                            );
-                            //料理の種類で絞り込む
-                            $eattax = array('relation' => 'AND');
-                            $eattax[] = array(
-                                'taxonomy' => 'eat_type',
-                                'terms' => $eat_type->slug,
-                                'field' => 'slug',
-                            );
-                            $args['tax_query'] = $eattax;
-
-                            $the_query = new WP_Query($args);
-
-
-                            //記事があればある分だけループさせる
-                            if ($the_query->have_posts()) :
-                            ?>
-                                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-
-
-                                    <!---- １件ずつカード型で表示 ---->
-                                    <?php get_template_part('template-parts/loop', 'content'); ?>
-                                    <!-- 緯度経度を取得してマップに表示 -->
-                                    <?php
-                                    $latitude = get_post_meta(get_the_ID(), 'latitude', true);
-                                    $longitude = get_post_meta(get_the_ID(), 'longitude', true);
-                                    $facilityName = get_the_title();
-
-                                    $place[] = array(
-                                        'lat' => $latitude,
-                                        'lng' => $longitude,
-                                        'facilityName' => $facilityName
-                                    );
-                                    ?>
-
-
-                                <?php endwhile; ?>
-                            <?php endif ?>
-                        </div><!-- card_3col -->
-
-                        <?php $more_number = 'more0' . $more_counter; ?>
-                        <!-- moreボタン -->
-                        <div class="more_btn <?php echo $more_number; ?>">
-                            <div class="more_link">
-                                <span class="more">more</span>
-                            </div><!-- more_link -->
-                        </div><!-- more_btn more01 -->
-
-                        <?php $close_number = 'close0' . $close_counter; ?>
-                        <!-- closeボタン -->
-                        <div class="close_btn <?php echo $close_number; ?>">
-                            <div class="close_link">
-                                <span class="close">close</span>
-                            </div><!-- close_link -->
-                        </div><!-- close_btn close01 -->
-
-                        <!-- $more_counter,$close_counterを1ずつ増やす -->
                         <?php
-                        $more_counter++;
-                        $close_counter++;
+                        //食べるの投稿タイプ
+                        $args = array(
+                            'post_type' => 'eat',
+                            'post_per_page' => 3,
+                        );
+                        //料理の種類で絞り込む
+                        $eattax = array('relation' => 'AND');
+                        $eattax[] = array(
+                            'taxonomy' => 'eat_type',
+                            'terms' => $eat_type->slug,
+                            'field' => 'slug',
+                        );
+                        $args['tax_query'] = $eattax;
+
+                        $the_query = new WP_Query($args);
+
+
+                        //記事があればある分だけループさせる
+                        if ($the_query->have_posts()) :
                         ?>
-                    </div><!-- sec -->
-                    <?php $test++; ?>
-                <?php endforeach; ?>
-            <?php endif; ?>
-        </section><!-- archive_col -->
+                            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+
+
+                                <!---- １件ずつカード型で表示 ---->
+                                <?php get_template_part('template-parts/loop', 'content'); ?>
+                                <!-- 緯度経度を取得してマップに表示 -->
+                                <?php
+                                $latitude = get_post_meta(get_the_ID(), 'latitude', true);
+                                $longitude = get_post_meta(get_the_ID(), 'longitude', true);
+                                $facilityName = get_the_title();
+
+                                $place[] = array(
+                                    'lat' => $latitude,
+                                    'lng' => $longitude,
+                                    'facilityName' => $facilityName
+                                );
+                                ?>
+
+
+                            <?php endwhile; ?>
+                        <?php endif ?>
+                    </div><!-- card_3col -->
+
+                    <?php $more_number = 'more0' . $more_counter; ?>
+                    <!-- moreボタン -->
+                    <div class="more_btn <?php echo $more_number; ?>">
+                        <div class="more_link">
+                            <span class="more">more</span>
+                        </div><!-- more_link -->
+                    </div><!-- more_btn more01 -->
+
+                    <?php $close_number = 'close0' . $close_counter; ?>
+                    <!-- closeボタン -->
+                    <div class="close_btn <?php echo $close_number; ?>">
+                        <div class="close_link">
+                            <span class="close">close</span>
+                        </div><!-- close_link -->
+                    </div><!-- close_btn close01 -->
+
+                    <!-- $more_counter,$close_counterを1ずつ増やす -->
+                    <?php
+                    $more_counter++;
+                    $close_counter++;
+                    ?>
+                </section><!-- archive_col -->
+                <?php $test++; ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
+
+
+
+
+
         <!-- スマホ版カテゴリ別サイドバー -->
         <aside class="aside_wrap aside_bottom">
             <div class="aside_title">━━ カテゴリ別 ━━
