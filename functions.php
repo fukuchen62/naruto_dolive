@@ -156,3 +156,15 @@ function my_theme_enqueue_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
+
+function enqueue_custom_styles()
+{
+    // index.phpで使用するCSSを登録・読み込み
+    wp_enqueue_style(
+        'a_news_news',
+        get_template_directory_uri() . '/assets/css/a_news_news.css',
+        array(),
+        '1.0.0' // バージョン番号を適切に指定してください
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_styles');

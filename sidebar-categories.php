@@ -1,5 +1,5 @@
 <aside class="archive">
-    <h2 class="archive_title">カテゴリー別</h2>
+    <div class="aside_title">━━ カテゴリ別 ━━</div>
     <ul class="archive_list">
         <?php
         $args = array(
