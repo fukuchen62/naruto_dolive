@@ -4,7 +4,7 @@
     all
 ------------------------------------------------------------------------  */
 main {
-    background-color: FFF6E2;
+    background-color: #FFF6E2;
 }
 
 /* トップエリア */
@@ -14,9 +14,6 @@ main {
     height: 200px;
     background-color: #d13a2b;
     text-align: center;
-}
-
-#toparea>h2 {
     color: #F8A59B;
     line-height: 200px;
 }
@@ -194,6 +191,10 @@ hr {
 
 /* 施設の詳細情報 */
 
+.info_wrap {
+    margin-bottom: 50px;
+}
+
 .section_info {
     padding-top: 34px;
     padding-bottom: 34px;
@@ -212,9 +213,13 @@ th, td {
 }
 
 @media only screen and (min-width:768px) {
+.info_wrap {
+    margin: 0 auto;
+    max-width: 1500px;
+    }
+
     table {
-        max-width: none;
-        width: 70%;
+        max-width: 80%;
         height: 600px;
     }
 }
@@ -226,10 +231,6 @@ tr:nth-child(2) th:nth-child(1){
 
 tr:nth-child(4) th:nth-child(1){
     padding: 15px;
-}
-
-.info_wrap {
-    margin-bottom: 50px;
 }
 
 /* マップ */
