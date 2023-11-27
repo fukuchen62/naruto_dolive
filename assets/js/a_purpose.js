@@ -30,7 +30,7 @@ $(".close01").click(function () {
     $(".more01").show();
 });
 //2番目の記事
-$(".sec01").each(function () {
+$(".sec02").each(function () {
     // moreボタンを表示し、closeボタンを隠す
     $(this).find(".more02").show();
     $(this).find(".close02").hide();
@@ -38,12 +38,12 @@ $(".sec01").each(function () {
 // 初期表示数以降のリストを非表示に
 $(".card_item:nth-child(n+" + (init + 1) + ")").hide()
 //初期表示数以下であればMoreボタンを非表示
-$(".sec01").filter(function () {
+$(".sec02").filter(function () {
     return $(this).find(".card_item").length <= init
 }).find(".more02", ".close02").hide()
 // Moreボタンクリックで指定数表示
 $(".more02").on("click", function () {
-    let this_list = $(this).closest(".sec01")
+    let this_list = $(this).closest(".sec02")
     this_list.find(".card_item:hidden").slice(0, more).slideToggle()
     if (this_list.find(".card_item:hidden").length == 0) {
         $(this).hide();
@@ -58,7 +58,7 @@ $(".close02").click(function () {
     $(".more02").show();
 });
 //3番目の記事
-$(".sec01").each(function () {
+$(".sec03").each(function () {
     // moreボタンを表示し、closeボタンを隠す
     $(this).find(".more03").show();
     $(this).find(".close03").hide();
@@ -66,12 +66,12 @@ $(".sec01").each(function () {
 // 初期表示数以降のリストを非表示に
 $(".card_item:nth-child(n+" + (init + 1) + ")").hide()
 //初期表示数以下であればMoreボタンを非表示
-$(".sec01").filter(function () {
+$(".sec03").filter(function () {
     return $(this).find(".card_item").length <= init
 }).find(".more03", ".close03").hide()
 // Moreボタンクリックで指定数表示
 $(".more03").on("click", function () {
-    let this_list = $(this).closest(".sec01")
+    let this_list = $(this).closest(".sec03")
     this_list.find(".card_item:hidden").slice(0, more).slideToggle()
     if (this_list.find(".card_item:hidden").length == 0) {
         $(this).hide();
@@ -86,7 +86,7 @@ $(".close03").click(function () {
     $(".more03").show();
 });
 //4番目の記事
-$(".sec01").each(function () {
+$(".sec04").each(function () {
     // moreボタンを表示し、closeボタンを隠す
     $(this).find(".more04").show();
     $(this).find(".close04").hide();
@@ -94,12 +94,12 @@ $(".sec01").each(function () {
 // 初期表示数以降のリストを非表示に
 $(".card_item:nth-child(n+" + (init + 1) + ")").hide()
 //初期表示数以下であればMoreボタンを非表示
-$(".sec01").filter(function () {
+$(".sec04").filter(function () {
     return $(this).find(".card_item").length <= init
 }).find(".more04", ".close04").hide()
 // Moreボタンクリックで指定数表示
 $(".more04").on("click", function () {
-    let this_list = $(this).closest(".sec01")
+    let this_list = $(this).closest(".sec04")
     this_list.find(".card_item:hidden").slice(0, more).slideToggle()
     if (this_list.find(".card_item:hidden").length == 0) {
         $(this).hide();
@@ -114,7 +114,7 @@ $(".close04").click(function () {
     $(".more04").show();
 });
 //5番目の記事
-$(".sec01").each(function () {
+$(".sec05").each(function () {
     // moreボタンを表示し、closeボタンを隠す
     $(this).find(".more05").show();
     $(this).find(".close05").hide();
@@ -122,12 +122,12 @@ $(".sec01").each(function () {
 // 初期表示数以降のリストを非表示に
 $(".card_item:nth-child(n+" + (init + 1) + ")").hide()
 //初期表示数以下であればMoreボタンを非表示
-$(".sec01").filter(function () {
+$(".sec05").filter(function () {
     return $(this).find(".card_item").length <= init
 }).find(".more05", ".close05").hide()
 // Moreボタンクリックで指定数表示
 $(".more05").on("click", function () {
-    let this_list = $(this).closest(".sec01")
+    let this_list = $(this).closest(".sec05")
     this_list.find(".card_item:hidden").slice(0, more).slideToggle()
     if (this_list.find(".card_item:hidden").length == 0) {
         $(this).hide();
