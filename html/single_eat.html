@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
+    <!-- slick css読み込み -->
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/slick-theme.css">
+    <!-- singleページのcss -->
     <link rel="stylesheet" href="../assets/css/single.css">
     <script src="../assets/js/jquery-3.7.1.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,10 +18,14 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="shortcut icon" href="../assets/img/icon.ico">
+
 </head>
 
 
 <body>
+    <!-- slick js 読み込み -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
     <!--
         お疲れ様です！
         この【index.html】をコピペして各ページ作成お願いします。
@@ -28,22 +36,192 @@
     -->
 
     <header>
-        <nav class="sp_none">
-            <img src="../assets/img/nav_logo.png" alt="logo">
-            <div class="flex-grow"></div>
-            <ul class="navmenu">
-                <li>コースで探す</li>
-                <li>目的で探す</li>
-                <li>新着情報</li>
-                <li>コラム</li>
-                <li>インスタ</li>
-                <li>マイページ</li>
-                <li>Q&A</li>
-            </ul>
-            <div class="search_box">
-                <input type="text" placeholder="検索">
-                <button>検索</button>
+        <nav class="sp_nav pc_none">
+            <div class="container">
+                <div class="header_inner" id="headerInner">
+                    <div class="sp_nav_logo">
+                        <a href="#">
+                            <img src=".../assets/img/nav_logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="header_menu">
+                        <div class="search_box_wrap">
+                            <div class="search_box">
+                                <input type="text" placeholder="検索">
+                                <button type="submit">
+                                    <i class="fas fa-search fa-fw" style="color: white;"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="link_wrap">
+                            <h3 class="overlaymenu_title_course">コースで探す</h3>
+                            <ul class="overlaymenu_list_course">
+                                <li><a href="#">コースA</a></li>
+                                <li><a href="#">コースB</a></li>
+                                <li><a href="#">コースC</a></li>
+                                <li><a href="#">コースD</a></li>
+                                <li><a href="#">コースE</a></li>
+                            </ul>
+                            <h3 class="overlaymenu_title_purpose">目的で探す</h3>
+                            <ul class="overlaymenu_list_purpose">
+                                <li><a href="#">食べる</a></li>
+                                <li><a href="#">遊ぶ</a></li>
+                                <li><a href="#">観光</a></li>
+                                <li><a href="#">宿泊</a></li>
+                            </ul>
+
+                            <div class="overlaymenu_list_icon">
+                                <div class="overlaymenu_list_icon_text">
+                                    <p>他ページもご利用ください！</p>
+                                </div>
+                                <ul class="overlaymenu_list_icon_list">
+                                    <li class="overlaymenu_list_icon_item">
+                                        <a href="#">
+                                            <img src=".../assets/img/column_icon.svg" width="45" height="45" alt="コラム一覧へのリンク" decoding="async" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li class="overlaymenu_list_icon_item">
+                                        <a href="#">
+                                            <img src=".../assets/img/instagram_icon.svg" width="45" height="45" alt="インスタへのリンク" decoding="async" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li class="overlaymenu_list_icon_item">
+                                        <a href="#">
+                                            <img src=".../assets/img/mypage_icon.svg" width="45" height="45" alt="マイページへのリンク" decoding="async" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li class="overlaymenu_list_icon_item">
+                                        <a href="#">
+                                            <img src=".../assets/img/news_icon.svg" width="45" height="45" alt="新着情報一覧へのリンク" decoding="async" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li class="overlaymenu_list_icon_item">
+                                        <a href="#">
+                                            <img src=".../assets/img/q&a_icon.svg" width="45" height="45" alt="Q&Aへのリンク" decoding="async" loading="lazy" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header_menu-btn" id="spMenuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span>MENU</span>
+                    </div>
+                </div>
             </div>
+        </nav>
+
+        <nav class="pc_nav sp_none">
+            <div class="pc_nav_logo">
+                <a href="#">
+                    <img src=".../assets/img/nav_logo.png" alt="logo">
+                </a>
+            </div>
+            <ul class="pc_navmenu">
+                <li class="has_child"><a href="#">コースで探す</a>
+                    <ul class="child_wrap">
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src=".../assets/img/nav_sea.jpg" alt="鳴門海峡満喫旅"></dt>
+                                    <dd>鳴門海峡満喫旅</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src=".../assets/img/nav_culture.jpg" alt="歴史・文化の鳴門旅"></dt>
+                                    <dd>歴史･文化の<br>鳴門旅</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src=".../assets/img/nav_round.jpg" alt="ぐるっと一周鳴門旅"></dt>
+                                    <dd>ぐるっと一周<br>鳴門旅</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src=".../assets/img/nav_○○○○○.jpg" alt="○○○○○旅"></dt>
+                                    <dd>○○○○○旅</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src=".../assets/img/nav_×××××.jpg" alt="×××××旅" alt=""></dt>
+                                    <dd>×××××旅</dd>
+                                </dl>
+                            </a></li>
+                    </ul>
+                </li>
+                <li class="has_child"><a href="#">目的で探す</a>
+                    <ul class="child_wrap">
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src=".../assets/img/nav_eat.jpg" alt="食べる"></dt>
+                                    <dd>食べる</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src=".../assets/img/nav_enjoy.jpg" alt="遊ぶ"></dt>
+                                    <dd>遊ぶ</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src=".../assets/img/nav_tourism.jpg" alt="観光"></dt>
+                                    <dd>観光</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src=".../assets/img/nav_lodging.jpg" alt="宿泊"></dt>
+                                    <dd>宿泊</dd>
+                                </dl>
+                            </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">新着情報</a></li>
+                <li class="has_child"><a href="#">コラム</a>
+                    <ul class="child_wrap">
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src=".../assets/img/nav_aboutnaruto.JPG" alt="鳴門について"></dt>
+                                    <dd>鳴門について</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src=".../assets/img/nav_spend.jpg" alt="過ごし方"></dt>
+                                    <dd>過ごし方</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src=".../assets/img/nav_specialty.jpg" alt="名物"></dt>
+                                    <dd>名物</dd>
+                                </dl>
+                            </a></li>
+                        <li><a href="#">
+                                <dl>
+                                    <dt><img src=".../assets/img/nav_other.jpg" alt="その他"></dt>
+                                    <dd>その他</dd>
+                                </dl>
+                            </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">インスタ</a></li>
+                <li><a href="#">マイページ</a></li>
+                <li><a href="#">Q&A</a></li>
+                <li class="search_box_li">
+                    <input type="text" placeholder="検索">
+                    <button type="submit">
+                        <i class="fas fa-search fa-fw" style="color: black;"></i>
+                    </button>
+                </li>
+            </ul>
         </nav>
     </header>
 
@@ -64,24 +242,48 @@
                 <div class="toparea_title">
                     <h3 class="facility_name">びんび家</h3>
                 </div>
-                <div class="facility_img1_box">
-                    <img class="facility_img1" src="../assets/img/sample2.jpg" alt="">
-                </div>
-                <ul class="facility_img_list">
-                    <li><img class="facility_img2" src="../assets/img/sample3.jpg" alt=""></li>
-                    <li><img class="facility_img2" src="../assets/img/sample6.jpg" alt=""></li>
-                    <li><img class="facility_img2" src="../assets/img/sample2.jpg" alt=""></li>
-                </ul>
-                <p class="facility_txt">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                <!-- facilityのwrap1は写真ちゃん達、wrap2はテキストちゃんとタグちゃん達 -->
+                <div class="facility_wrap">
+
+                    <div class="facility_wrap1">
+                        <div class="facility_img_box">
+                            <div><img src="../assets/img/sample2.jpg"></div>
+                            <div><img src="../assets/img/sample3.jpg"></div>
+                            <div><img src="../assets/img/sample2.jpg"></div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- <div class="news-container">
+                        <div class="facility_img1">
+                            <img src="../assets/img/sample2.jpg" alt="">
+                        </div>
+                        <ul class="facility_img_list">
+                            <li class="facility_img2"><img src=" ../assets/img/sample3.jpg" alt=""></li>
+                            <li class="facility_img2"><img src=" ../assets/img/sample6.jpg" alt=""></li>
+                            <li class="facility_img2"><img src=" ../assets/img/sample2.jpg" alt=""></li>
+                        </ul>
+                    </div> -->
+
+
+
+
+                    <div class="facility_wrap2">
+                        <div class="facility_txt_box">
+                            <p class="facility_txt">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                </p>
-                <div class="facility_tag">
-                    <div class="facility_tag_btn"><a href="#" class="facility_tag_link"><span class="facility_tag_name">渦潮</span></a></div>
-                    <div class="facility_tag_btn"><a href="#" class="facility_tag_link"><span class="facility_tag_name">アオアオリゾートホテル</span></a></div>
-                    <div class="facility_tag_btn"><a href="#" class="facility_tag_link"><span class="facility_tag_name">食べる</span></a></div>
-                    <div class="facility_tag_btn"><a href="#" class="facility_tag_link"><span class="facility_tag_name">ドライブ</span></a></div>
-                    <div class="facility_tag_btn"><a href="#" class="facility_tag_link"><span class="facility_tag_name">びんび家</span></a></div>
+                    </p>
+                        </div>
+                        <div class="facility_tag">
+                            <div class="facility_tag_btn"><a href="#" class="facility_tag_link"><span class="facility_tag_name">渦潮</span></a></div>
+                            <div class="facility_tag_btn"><a href="#" class="facility_tag_link"><span class="facility_tag_name">アオアオリゾートホテル</span></a></div>
+                            <div class="facility_tag_btn"><a href="#" class="facility_tag_link"><span class="facility_tag_name">食べる</span></a></div>
+                            <div class="facility_tag_btn"><a href="#" class="facility_tag_link"><span class="facility_tag_name">ドライブ</span></a></div>
+                            <div class="facility_tag_btn"><a href="#" class="facility_tag_link"><span class="facility_tag_name">びんび家</span></a></div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- 施設の詳細情報 -->
@@ -132,7 +334,7 @@
                 <div class="toparea_title">
                     <h3>その他おすすめ</h3>
                 </div>
-                <div>
+                <div class="card_3col">
                     <a href="#" class="card1">
                         <div class="card1_wrap">
                             <div class="card1_content">
@@ -147,9 +349,8 @@
                                     <img src="../assets/img/smoking_ico.png" alt="smoking">
                                 </div>
                             </div>
+                        </div>
                     </a>
-                </div>
-                <div>
                     <a href="#" class="card1">
                         <div class="card1_wrap">
                             <div class="card1_content">
@@ -164,9 +365,8 @@
                                     <img src="../assets/img/smoking_ico.png" alt="smoking">
                                 </div>
                             </div>
+                        </div>
                     </a>
-                </div>
-                <div>
                     <a href="#" class="card1">
                         <div class="card1_wrap">
                             <div class="card1_content">
@@ -184,23 +384,6 @@
                         </div>
                     </a>
                 </div>
-                <!-- 僕のカード型の記載（不採用） -->
-                <!-- <div class="recommend_wrap">
-                    <ul class="recommend_list">
-                        <li class="recommend_card">
-                            <img class="recommend_card_img" src="./../assets/img/sample2.jpg" alt="img">
-                            <h3 class="recommend_card_title">味処あらし</h3>
-                            <p class="recommend_card_txt">
-                                600～1000円・昼夜・年齢制限なし
-                            </p>
-                            <div class="recommend_card_tag">
-                                <img class="tag_icon" src="../assets/img/noon_ico.png" alt="noon_img">
-                                <img class="tag_icon" src="../assets/img/parking_ico.png" alt="parking_img">
-                                <img class="tag_icon" src="../assets/img/smoking_ico.png" alt="smoking_img">
-                            </div>
-                        </li>
-                    </ul>
-                </div> -->
             </section>
         </div>
     </main>
@@ -212,6 +395,8 @@
         <p><a href="#">プライバシーポリシー</a></p>
         <p class="copyright"><small>&copy; 2023 Team藍 in QLIP</small></p>
     </footer>
+    <script src="../assets/js/paginathing.js"></script>
     <script src="../assets/js/top.js"></script>
+    <script src="../assets/js/single.js"></script>
 </body>
 </html>
