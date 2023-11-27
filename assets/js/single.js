@@ -8,7 +8,7 @@ $('.facility_img_box').slick({
     autoplaySpeed: 5000, // 再生速度（ミリ秒設定） 1000ミリ秒=1秒
     infinite: true,
     dots: true,
-    // variableWidth: true, //width等をcssで管理
+    variableWidth: true, //width等をcssで管理
     customPaging: function (slick, index) {
         let targetImage = slick.$slides.eq(index).find('img').attr('src');
         return '<img src=' + targetImage + '>';
