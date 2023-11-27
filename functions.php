@@ -116,6 +116,16 @@ function add_individual_scripts()
                 false // headタグ内に出力
             );
         }
+
+    // 食べる詳細ページのcss
+    elseif (is_singular('eat')) : {
+            wp_enqueue_style(
+                's_style',
+                get_template_directory_uri() . '/assets/css/single.css',
+                array(),
+                false
+            );
+        }
     //----------------------
     // コラムの一覧ページ
     //----------------------
@@ -129,6 +139,7 @@ function add_individual_scripts()
                 false
             );
         }
+
     elseif (is_post_type_archive('q_a')) : {
             wp_enqueue_style(
                 'archive_q_a',
