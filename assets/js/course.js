@@ -7,13 +7,14 @@ const courseBottom = courseRect.bottom;
 
 //   cardを全て取得し、変数に入れる
 const cards = document.querySelectorAll(".card");
-
 //   車の位置とサイズに関する情報を取得
 let car_rect = carText.getBoundingClientRect();
 //   cardの座標を入れる配列を用意
 let card_rects = [];
 //   cardのx座標を代入する配列を用意
-let xValues = [];
+let xValues = []
+// スクロール位置と要素の距離の閾値
+let offset = 200; 
 
 //   配列にcards配列の要素それぞれの位置などを代入
 //   xValuesにcardのそれぞれのx座標マイナス50を代入
@@ -38,73 +39,48 @@ window.addEventListener("scroll", () => {
             break; // 車のx座標がcardのx座標より小さい場合にループを抜ける
         }
         let lastIndex = cards.length - 1;
-        // //   もし車のx座標が最後のカードのｘ座標より大きくなれば最後のカードの横で固定する
-        // if (car_x >= xValues[lastIndex]) {
-        //     carWrapper.style.position = "absolute";
-        //     carWrapper.style.top = xValues[lastIndex] + 90 + "px";
-        // }
-        // もし車のｘ座標が最後のカードのｘ座標以下であればfixedにする
-        if (car_x <= xValues[lastIndex]) {
-            carWrapper.style.position = "fixed";
-            carWrapper.style.top = 0 + "px";
+
+        // ここにlastindexを用いた処理を書く
+
+    }
+    carText.textContent = labelText;
+
+        // 車の要素の位置やサイズの情報を変数に取得
+        let carWrapRect = carWrapper.getBoundingClientRect();
+
+        // コース要素の初期位置のオフセットを取得
+        // コースが親要素からどれだけ離れているかを取得
+        let coursePos = course.offsetTop;
+    
+        // スクロール位置を取得
+        let scrollPos = window.scrollY;
+        
+        // スクロール位置と要素の距離の閾値に基づいて判定
+        // トップから200pxで固定
+        if (carWrapRect.top <= offset) {
+            // 要素が閾値以下にスクロールされた場合の処理
+            carWrapper.style.position = 'fixed';
+            carWrapper.style.top = offset + 'px';
             if(window.innerWidth >= 768){
                 carWrapper.style.left= 5.3 + "%";
             }
-        }
-
-
-    }
-
-
-    if(car_x >= courseBottom){
-        console.log("あああああああ");
-    }
-    console.log("コースのボトムは"+courseBottom);
-    carText.textContent = labelText;
-});
-
-
-
-let offset = 200; // スクロール位置と要素の距離の閾値
-
-window.addEventListener('scroll', function() {
-
-    // 車の要素の位置やサイズの情報を変数に取得
-    let carWrapRect = carWrapper.getBoundingClientRect();
-
-    // コース要素の初期位置のオフセットを取得
-    // コースが親要素からどれだけ離れているかを取得
-    let coursePos = course.offsetTop;
-
-    // スクロール位置を取得
-    let scrollPos = window.scrollY;
+        } 
     
-    // スクロール位置と要素の距離の閾値に基づいて判定
-    if (carWrapRect.top <= offset) {
-        // 要素が閾値以下にスクロールされた場合の処理
-        carWrapper.style.position = 'fixed';
-        carWrapper.style.top = offset + 'px';
-        if(window.innerWidth >= 768){
-            carWrapper.style.left= 5.3 + "%";
+        // 初期位置を超えた場合の処理
+        // コースからはみ出ないように
+        if(coursePos >= scrollPos + 200 ){
+            carWrapper.style.position = 'absolute';
+            carWrapper.style.top = 0 + "px";
+            if(window.innerWidth >= 768){
+                carWrapper.style.left = 0 + "px";
+            }
         }
-       
-    } 
-
-    // 初期位置を超えた場合の処理
-    if(coursePos >= scrollPos + 200 ){
-        carWrapper.style.position = 'absolute';
-        carWrapper.style.top = 0 + "px";
-        if(window.innerWidth >= 768){
-            carWrapper.style.left = 0 + "px";
-        }
-    }
 });
+
 
 
 
 // 以下は道を表示する処理
-
-
 
 
 // ドキュメントの読み込み完了後に実行される関数

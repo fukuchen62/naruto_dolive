@@ -33,7 +33,7 @@ main {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 
 h3 {
@@ -326,4 +326,48 @@ tr:nth-child(4) th:nth-child(1){
         width: 350px;
         height: 500px;
 }
+}
+
+/* お気に入りボタン */
+
+.title_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.facility_name{
+
+}
+
+.favorite_wrapper{
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+
+.favorite_btns{
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.favorite_icon{
+    display: none;
+}
+
+.favorited_icon{
+    display: none;
+}
+
+.simplefavorite-button{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
 }
