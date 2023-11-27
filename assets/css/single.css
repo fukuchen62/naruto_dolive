@@ -65,10 +65,20 @@ hr {
     margin: 0 auto;
 }
 
+.facility_wrap1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.facility_img1_box {
+    margin: 0 auto;
+}
+
 .facility_img1 {
     margin: 0 auto;
     max-width: 240px;
     height: 184px;
+    border: 3px solid #000;
 }
 
 .facility_img1 img {
@@ -136,10 +146,6 @@ hr {
         display: flex;
         justify-content: center;
         gap: 20px;
-        margin: 0 auto;
-    }
-
-    .facility_wrap1 {
         margin: 0 auto;
     }
 
@@ -317,7 +323,7 @@ tr:nth-child(4) th:nth-child(1){
 
 
 
-/* slickで写真の切り替え */
+/* slickで写真の切り替え
 .facility_wrap1 {
     margin: 0 auto;
     max-width: 270px;
@@ -376,4 +382,4 @@ tr:nth-child(4) th:nth-child(1){
         width: 30%;
         height: auto;
     }
-}
+} */
