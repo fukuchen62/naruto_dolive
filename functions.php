@@ -106,7 +106,7 @@ function add_individual_scripts()
     //----------------------
     //  食べる・遊ぶ・宿泊・観光の一覧ページ
     //----------------------
-    elseif (is_post_type_archive('eat') || is_post_type_archive('enjoy') || is_post_type_archive('stay') || is_post_type_archive('tour')) : {
+    elseif (is_post_type_archive('eat') || is_post_type_archive('enjoy') || is_post_type_archive('stay') || is_post_type_archive('tour') || is_tax()) : {
 
             //目的別一覧ページのCSSを読み込む
             wp_enqueue_style(
