@@ -375,6 +375,35 @@ h2.toparea {
   margin: auto;
 }
 
+.purpose_delaywrap_flex {
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  align-items: end;
+  padding-top: 2rem;
+}
+
+.purpose_delaywrap_box {
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  transform: translateX(100%);
+  margin-right: 10px;
+  max-width: 15%;
+}
+
+.purpose_delaywrap_flex img {
+  max-height: 150px;
+}
+
+.purpose_delaywrap_box img:not(.initial) {
+  max-height: 100px;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
   .column-containers {
