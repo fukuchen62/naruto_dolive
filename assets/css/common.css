@@ -120,11 +120,10 @@ main:not(.section_kv):not(.teloparea) {
     position: relative;
     z-index: 10;
     width: 98%;
-    margin-top: 0.5rem;
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
-    align-items: end;
+    align-items: center;
 }
 
 .header_logo {
