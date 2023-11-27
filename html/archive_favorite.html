@@ -31,10 +31,12 @@
                     <div class="header_menu">
                         <div class="search_box_wrap">
                             <div class="search_box">
-                                <input type="text" placeholder="検索">
-                                <button type="submit">
-                                    <i class="fas fa-search fa-fw" style="color: white;"></i>
-                                </button>
+                                <form action="">
+                                    <input type="text" placeholder="検索" value="初期値">
+                                    <button type="submit">
+                                        <i class="fas fa-search fa-fw" style="color: white;"></i>
+                                    </button>
+                                </form>
                             </div>
                         </div>
                         <div class="link_wrap">
@@ -61,34 +63,34 @@
                                 <ul class="overlaymenu_list_icon_list">
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="#">
-                                            <img src="../assets/img/column_icon.svg" width="45" height="45" alt="コラム一覧へのリンク" decoding="async" loading="lazy" />
+                                            <img src="../assets/img/column_icon.svg" width="45" height="45" alt="コラム一覧へのリンク">
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="#">
-                                            <img src="../assets/img/instagram_icon.svg" width="45" height="45" alt="インスタへのリンク" decoding="async" loading="lazy" />
+                                            <img src="../assets/img/instagram_icon.svg" width="45" height="45" alt="インスタへのリンク">
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="#">
-                                            <img src="../assets/img/mypage_icon.svg" width="45" height="45" alt="マイページへのリンク" decoding="async" loading="lazy" />
+                                            <img src="../assets/img/mypage_icon.svg" width="45" height="45" alt="マイページへのリンク">
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="#">
-                                            <img src="../assets/img/news_icon.svg" width="45" height="45" alt="新着情報一覧へのリンク" decoding="async" loading="lazy" />
+                                            <img src="../assets/img/news_icon.svg" width="45" height="45" alt="新着情報一覧へのリンク">
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="#">
-                                            <img src="../assets/img/q&a_icon.svg" width="45" height="45" alt="Q&Aへのリンク" decoding="async" loading="lazy" />
+                                            <img src="../assets/img/q&a_icon.svg" width="45" height="45" alt="Q&Aへのリンク">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="header_menu-btn" id="spMenuBtn">
+                    <div class="header_menu_btn" id="spMenuBtn">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -127,14 +129,14 @@
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src="../assets/img/nav_○○○○○.jpg" alt="○○○○○旅"></dt>
-                                    <dd>○○○○○旅</dd>
+                                    <dt><img src="../assets/img/nav_ooooo.jpg" alt="ooooo旅"></dt>
+                                    <dd>ooooo旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src="../assets/img/nav_×××××.jpg" alt="×××××旅" alt=""></dt>
-                                    <dd>×××××旅</dd>
+                                    <dt><img src="../assets/img/nav_xxxxx.jpg" alt="xxxxx旅"></dt>
+                                    <dd>xxxxx旅</dd>
                                 </dl>
                             </a></li>
                     </ul>
@@ -200,10 +202,16 @@
                 <li><a href="#">マイページ</a></li>
                 <li><a href="#">Q&A</a></li>
                 <li class="search_box_li">
-                    <input type="text" placeholder="検索">
-                    <button type="submit">
-                        <i class="fas fa-search fa-fw" style="color: black;"></i>
-                    </button>
+                    <div class="search_box_wrap">
+                        <div class="search_box">
+                            <form action="">
+                                <input type="text" placeholder="検索">
+                                <button type="submit">
+                                    <i class="fas fa-search fa-fw" style="color: black;"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -396,10 +404,10 @@
         <p><a href="#">サイトマップ</a></p>
         <p><a href="#">プライバシーポリシー</a></p>
         <p class="copyright"><small>&copy; 2023 Team藍 in QLIP</small></p>
+        <div>
+            <p id="page_top"><a href="#"><span>Page Top</span></a></p>
+        </div>
     </footer>
-
-    <div class="button">
-    </div>
 
     <script src="../assets/js/common.js">
     </script>
