@@ -38,32 +38,27 @@ get_header();
 
         <div class="archive_col">
             <div class="card_3col">
-                <a href="#" class="card1">
-                    <?php if (have_posts()) : ?>
-                        <?php while (have_posts()) : the_post(); ?>
-                            <div class="card1_wrap">
-                                <div class="card1_content">
+                <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                        <div class="card1_wrap">
+                            <?php get_template_part('template-parts/loop', 'column'); ?>
 
-                                    <?php get_template_part('template-parts/loop', 'column'); ?>
+                            <?php if (has_post_thumbnail()) : ?>
+                                <a href="<?php the_permalink(); ?>"></a>
 
-                                    <?php if (has_post_thumbnail()) : ?>
-                                        <a href="<?php the_permalink(); ?>"></a>
+                            <?php else : ?>
+                                <img src="<?php echo esc_url(home_url('/')); ?>img/ファイル名" alt="<?php the_title(); ?>">
 
-                                    <?php else : ?>
-                                        <img src="<?php echo esc_url(home_url('/')); ?>img/ファイル名" alt="<?php the_title(); ?>">
+                            <?php endif; ?>
 
-                                    <?php endif; ?>
-
-                                </div>
-                            </div>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                </a>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
             </div>
             <div class="pagination">
                 <?php the_posts_pagination(
                     array(
-                        'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
+                        'mid_size'      => 1, // 現在ページの左右に表示するページ番号の数
                         'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
                         'prev_text'     => ('◀'), // 「前へ」リンクのテキスト
                         'next_text'     => ('▶'), // 「次へ」リンクのテキスト
@@ -98,12 +93,7 @@ get_header();
         </aside>
     </div>
 
-
-
-
     <!-- ページナビゲーションの設定 -->
-
-
 
 
 </main>
