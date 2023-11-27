@@ -30,10 +30,12 @@
                     <div class="header_menu">
                         <div class="search_box_wrap">
                             <div class="search_box">
-                                <input type="text" placeholder="検索">
-                                <button type="submit">
-                                    <i class="fas fa-search fa-fw" style="color: white;"></i>
-                                </button>
+                                <form action="">
+                                    <input type="text" placeholder="検索" value="初期値">
+                                    <button type="submit">
+                                        <i class="fas fa-search fa-fw" style="color: white;"></i>
+                                    </button>
+                                </form>
                             </div>
                         </div>
                         <div class="link_wrap">
@@ -87,7 +89,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="header_menu-btn" id="spMenuBtn">
+                    <div class="header_menu_btn" id="spMenuBtn">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -126,14 +128,14 @@
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src="../assets/img/nav_○○○○○.jpg" alt="○○○○○旅"></dt>
-                                    <dd>○○○○○旅</dd>
+                                    <dt><img src="../assets/img/nav_ooooo.jpg" alt="ooooo旅"></dt>
+                                    <dd>ooooo旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src="../assets/img/nav_×××××.jpg" alt="×××××旅" alt=""></dt>
-                                    <dd>×××××旅</dd>
+                                    <dt><img src="../assets/img/nav_xxxxx.jpg" alt="xxxxx旅"></dt>
+                                    <dd>xxxxx旅</dd>
                                 </dl>
                             </a></li>
                     </ul>
@@ -199,10 +201,16 @@
                 <li><a href="#">マイページ</a></li>
                 <li><a href="#">Q&A</a></li>
                 <li class="search_box_li">
-                    <input type="text" placeholder="検索">
-                    <button type="submit">
-                        <i class="fas fa-search fa-fw" style="color: black;"></i>
-                    </button>
+                    <div class="search_box_wrap">
+                        <div class="search_box">
+                            <form action="">
+                                <input type="text" placeholder="検索">
+                                <button type="submit">
+                                    <i class="fas fa-search fa-fw" style="color: black;"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -225,6 +233,9 @@
             <p><a href="#">サイトマップ</a></p>
             <p><a href="#">プライバシーポリシー</a></p>
             <p class="copyright"><small>&copy; 2023 Team藍 in QLIP</small></p>
+            <div>
+                <p id="page_top"><a href="#"><span>Page Top</span></a></p>
+            </div>
         </footer>
 </body>
 </html>
