@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
-    <!-- slick css読み込み -->
-    <link rel="stylesheet" href="../assets/css/slick.css">
-    <link rel="stylesheet" href="../assets/css/slick-theme.css">
+
     <!-- singleページのcss -->
     <link rel="stylesheet" href="../assets/css/single.css">
     <script src="../assets/js/jquery-3.7.1.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
     <title>鳴門DoLive | 愛車で四国の右上攻略！</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -23,9 +22,6 @@
 
 
 <body>
-    <!-- slick js 読み込み -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../assets/js/slick.min.js"></script>
     <!--
         お疲れ様です！
         この【index.html】をコピペして各ページ作成お願いします。
@@ -47,7 +43,7 @@
                     <div class="header_menu">
                         <div class="search_box_wrap">
                             <div class="search_box">
-                                <form action="">
+                                <form action="#">
                                     <input type="text" placeholder="検索" value="初期値">
                                     <button type="submit">
                                         <i class="fas fa-search fa-fw" style="color: white;"></i>
@@ -220,7 +216,7 @@
                 <li class="search_box_li">
                     <div class="search_box_wrap">
                         <div class="search_box">
-                            <form action="">
+                            <form action="#">
                                 <input type="text" placeholder="検索">
                                 <button type="submit">
                                     <i class="fas fa-search fa-fw" style="color: black;"></i>
@@ -244,20 +240,9 @@
             <!-- 施設について -->
             <section id="facility" class="section_facility">
                 <!-- facility=施設 -->
-                <div class="toparea_title">
-                    <h3 class="facility_name">びんび家</h3>
-                </div>
+                <h3 class="facility_name toparea_title">びんび家</h3>
                 <!-- facilityのwrap1は写真ちゃん達、wrap2はテキストちゃんとタグちゃん達 -->
                 <div class="facility_wrap">
-
-                    <!-- <div class="facility_wrap1">
-                        <div class="facility_img_box">
-                            <div><img src="../assets/img/sample2.jpg"></div>
-                            <div><img src="../assets/img/sample3.jpg"></div>
-                            <div><img src="../assets/img/sample2.jpg"></div>
-                        </div>
-                    </div> -->
-
                     <div class="facility_wrap1">
                         <div class="facility_img1_box">
                             <img class="facility_img1" src="../assets/img/sample2.jpg" alt="">
@@ -268,8 +253,6 @@
                             <li><img class="facility_img2" src="../assets/img/sample2.jpg" alt=""></li>
                         </ul>
                     </div>
-
-
                     <div class="facility_wrap2">
                         <div class="facility_txt_box">
                             <p class="facility_txt">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
@@ -330,9 +313,7 @@
             <hr>
             <!-- その他おすすめ -->
             <section id="recommend" class="section_recommend">
-                <div class="toparea_title">
-                    <h3>その他おすすめ</h3>
-                </div>
+                <h3 class="toparea_title">その他おすすめ</h3>
                 <div class="card_3col">
                     <a href="#" class="card1">
                         <div class="card1_wrap">
@@ -397,8 +378,7 @@
             <p id="page_top"><a href="#"><span>Page Top</span></a></p>
         </div>
     </footer>
-    <script src="../assets/js/paginathing.js"></script>
-    <script src="../assets/js/top.js"></script>
+    <script src="../assets/js/common.js"></script>
     <script src="../assets/js/single.js"></script>
 </body>
 </html>
