@@ -48,7 +48,7 @@ h2.toparea {
 
 .kv_left, .kv_main, .kv_right {
   position: relative;
-  padding: 23vh 0;
+  padding: 17vh 0;
 }
 
 .logo {
@@ -157,7 +157,7 @@ h2.toparea {
     width: 46%;
     min-width: 46%;
     position: relative;
-    padding: 20vh 0;
+    padding: 12vh 0;
   }
 
   .kv_left {
@@ -305,14 +305,14 @@ h2.toparea {
 
 /* ~~~~~~~~~~~~スマホボタン表示~~~~~~~~~~~~ */
 @media only screen and (max-width:767px) {
-  .pc_button{
+  .pc_button {
     display: none;
   }
 }
 
 /* ~~~~~~~~~~~~pcボタン表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
-  .sp_button{
+  .sp_button {
     display: none;
   }
 }
@@ -401,7 +401,7 @@ h2.toparea {
   opacity: 0;
   transition: opacity 0.5s, transform 0.5s;
   transform: translateX(100%);
-  margin-right: 10px;
+  margin-right: 5px;
   max-width: 15%;
 }
 
