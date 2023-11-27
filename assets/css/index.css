@@ -303,6 +303,20 @@ h2.toparea {
   background-color: #333;
 }
 
+/* ~~~~~~~~~~~~スマホボタン表示~~~~~~~~~~~~ */
+@media only screen and (max-width:767px) {
+  .pc_button{
+    display: none;
+  }
+}
+
+/* ~~~~~~~~~~~~pcボタン表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+  .sp_button{
+    display: none;
+  }
+}
+
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {}
 
