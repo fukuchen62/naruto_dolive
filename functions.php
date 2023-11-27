@@ -129,6 +129,14 @@ function add_individual_scripts()
                 false
             );
         }
+    elseif (is_post_type_archive('q_a')) : {
+            wp_enqueue_style(
+                'archive_q_a',
+                get_template_directory_uri() . '/assets/css/q_a.css',
+                array(),
+                false
+            );
+        }
     endif;
 }
 
