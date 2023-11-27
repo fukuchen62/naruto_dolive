@@ -66,7 +66,9 @@
                 </ul>
             </aside><!-- aside_wrap aside_top-->
         </div><!-- menu_wrap -->
-
+        <?php
+        $test = 1;
+        ?>
         <!---- 記事一覧 ---->
         <section class="archive_col">
             <!-- タクソノミーを指定して配列のターム情報を取得する -->
@@ -77,10 +79,11 @@
                 $more_counter = 1;
                 $close_counter = 1;
                 ?>
-                <?php foreach ($eat_types as $eat_type) : ?>
 
-                    <!-- 記事からボタンまでをsecとする -->
-                    <div class="sec01">
+                <!-- 記事からボタンまでをsecとする -->
+                <?php foreach ($eat_types as $eat_type) : ?>
+                    <?php $test_class = 'sec' . sprintf('%02d', $test); ?>
+                    <div class="<?php echo $test_class; ?>">
                         <!---- タクソノミー別タイトル ---->
                         <h3><?php echo $eat_type->name ?></h3>
                         <div class="card_3col">
@@ -124,6 +127,7 @@
                                     );
                                     ?>
 
+
                                 <?php endwhile; ?>
                             <?php endif ?>
                         </div><!-- card_3col -->
@@ -150,10 +154,10 @@
                         $close_counter++;
                         ?>
                     </div><!-- sec01 -->
+                    <?php $test++; ?>
                 <?php endforeach; ?>
             <?php endif; ?>
         </section><!-- archive_col -->
-
         <!-- スマホ版カテゴリ別サイドバー -->
         <aside class="aside_wrap aside_bottom">
             <div class="aside_title">━━ カテゴリ別 ━━
