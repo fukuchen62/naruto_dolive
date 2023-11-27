@@ -5,14 +5,14 @@ img {
   width: 100%;
 }
 
-#toparea {
+.toparea {
   display: flex;
   align-items: center;
   justify-content: center;
   height: initial;
 }
 
-#toparea>h2 {
+h2.toparea {
   height: 240px;
   display: flex;
   align-items: center;
@@ -25,7 +25,7 @@ img {
   background-color: #fff;
 }
 
-.more_btn_container{
+.more_btn_container {
   padding-bottom: 5%;
 }
 
@@ -34,9 +34,9 @@ img {
   text-align: center;
 }
 
-.more_btn:hover{
-color: #fff;
-background-color: #333;
+.more_btn:hover {
+  color: #fff;
+  background-color: #333;
 }
 
 /* ------------------------------------------------------------------------
@@ -58,11 +58,90 @@ background-color: #333;
   left: 5%;
 }
 
+.logo.poyoyon.is-animated {
+  animation: poyoyon 0.5s cubic-bezier(0.12, 0, 0.39, 0) 1 forwards;
+}
+
+@keyframes poyoyon {
+  0% {
+    transform: translateX(140px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  65% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+
+  20%, 100% {
+    opacity: 1;
+  }
+}
+
 .catchcopy {
   width: 50%;
   position: absolute;
   bottom: 23%;
 }
+
+.anim-box.slidein.is-animated {
+  animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+  40%, 100% {
+    opacity: 1;
+  }
+}
+
+.kv_deco {
+  width: 30%;
+  position: absolute;
+  bottom: 37%;
+  right: 2px;
+}
+
+.anim-box.slide-skew.is-animated {
+  animation: slide-skew 0.4s cubic-bezier(0.25, 1, 0.5, 1) 2s forwards;
+  transform: skew(-30deg);
+  opacity: 0;
+}
+
+@keyframes slide-skew {
+  0% {
+    transform: translate(180px, 30px) skew(-30deg);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(90px, 15px) skew(-15deg);
+    /* 途中まで傾いた状態 */
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 0) skew(0);
+    /* 傾きを元に戻す */
+    opacity: 1;
+  }
+}
+
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
@@ -154,7 +233,7 @@ background-color: #333;
   color: #FF27F6;
 }
 
-.map_container{
+.map_container {
   text-align: center;
   padding-bottom: 2%;
 }
@@ -223,11 +302,6 @@ background-color: #333;
   color: #fff;
   background-color: #333;
 }
-
-
-
-
-
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {}
@@ -301,8 +375,6 @@ background-color: #333;
   margin: auto;
 }
 
-
-
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
   .column-containers {
@@ -343,7 +415,31 @@ background-color: #333;
   background-color: #4E99F8;
 }
 
-.section_instagram>#toparea>h2 {
+#recommended_keywords {
+  position: relative;
+  width: 100vw;
+  height: 150px;
+  overflow: hidden;
+}
+
+.moving_text {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0 2% 4.5% 1.5%;
+  background-image: url(../img/bg_keyword.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+}
+
+p.moving_text:hover {
+  background-image: url(../img/bg_keyword2.png);
+}
+
+.section_instagram h2.toparea {
   color: #A9D6FF;
 }
 
@@ -374,6 +470,7 @@ background-color: #333;
 }
 
 .instagram_follow_btn {
+  display: inline-block;
   background-color: #fff;
   border: 3px solid #000;
   width: 280px;
@@ -385,16 +482,22 @@ background-color: #333;
   font-weight: bold;
   border-radius: 0.4em;
   box-shadow: 5px 5px 0 #000;
-  font-family: Dela Gothic One;
+  font-family: "Dela Gothic One", sans-serif;
 }
 
-.instagram_follow_btn p {
+.instagram_follow_btn a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.instagram_follow_btn span {
   position: absolute;
   top: 8px;
   left: 4.5rem;
   margin: 0;
   padding: 0;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .instagram_follow_btn svg {
@@ -406,12 +509,12 @@ background-color: #333;
   opacity: 0;
   transition: 0.5s;
   height: 1em;
-  fill: #fff
+  fill: #fff;
 }
 
-.instagram_follow_btn:hover p {
+.instagram_follow_btn:hover span {
   left: 4rem;
-  color: #fff
+  color: #fff;
 }
 
 .instagram_follow_btn:hover svg {
@@ -439,10 +542,14 @@ background-color: #333;
 }
 
 /* ------------------------------------------------------------------------
-    section_pde
+    section_pdf
 ------------------------------------------------------------------------  */
 .section_pdf {
   background-color: #3CC8C3;
+}
+
+.section_pdf h2.toparea {
+  color: #0bb2bf;
 }
 
 .pdf_wrap_sp.pc_none {
@@ -487,7 +594,7 @@ background-color: #333;
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media (min-width: 768px) {
   .pdf_wrap_pc {
-    padding: 10%;
+    padding: 0 10% 10% 10%;
     width: 80%;
     margin: 0 auto;
   }
