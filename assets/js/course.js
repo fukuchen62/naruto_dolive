@@ -1,9 +1,12 @@
 // 各要素を変数に
 const carText = document.querySelector(".car_text");
+const carWrapper = document.querySelector(".car_wrapper");
+const course = document.querySelector('.course_all');
+const courseRect = course.getBoundingClientRect();
+const courseBottom = courseRect.bottom;
+
 //   cardを全て取得し、変数に入れる
 const cards = document.querySelectorAll(".card");
-
-const carWrapper = document.querySelector(".car_wrapper");
 
 //   車の位置とサイズに関する情報を取得
 let car_rect = carText.getBoundingClientRect();
@@ -16,7 +19,7 @@ let xValues = [];
 //   xValuesにcardのそれぞれのx座標マイナス50を代入
 for (let i = 0; i < cards.length; i++) {
     card_rects[i] = cards[i].getBoundingClientRect();
-    xValues[i] = card_rects[i].top + window.pageYOffset - 50;
+    xValues[i] = card_rects[i].top + window.pageYOffset;
 }
 
 //   windowをスクロールした際のイベント
@@ -35,23 +38,74 @@ window.addEventListener("scroll", () => {
             break; // 車のx座標がcardのx座標より小さい場合にループを抜ける
         }
         let lastIndex = cards.length - 1;
-        //   もし車のx座標が最後のカードのｘ座標より大きくなれば最後のカードの横で固定する
-        if (car_x >= xValues[lastIndex]) {
-
-            carWrapper.style.position = "absolute";
-            carWrapper.style.top = xValues[lastIndex] + 90 + "px";
-        }
+        // //   もし車のx座標が最後のカードのｘ座標より大きくなれば最後のカードの横で固定する
+        // if (car_x >= xValues[lastIndex]) {
+        //     carWrapper.style.position = "absolute";
+        //     carWrapper.style.top = xValues[lastIndex] + 90 + "px";
+        // }
         // もし車のｘ座標が最後のカードのｘ座標以下であればfixedにする
         if (car_x <= xValues[lastIndex]) {
             carWrapper.style.position = "fixed";
-            carWrapper.style.top = 200 + "px";
+            carWrapper.style.top = 0 + "px";
+            if(window.innerWidth >= 768){
+                carWrapper.style.left= 5.3 + "%";
+            }
         }
 
-        console.log("car_xは" + car_x);
-        console.log(xValues[lastIndex]);
+
     }
+
+
+    if(car_x >= courseBottom){
+        console.log("あああああああ");
+    }
+    console.log("コースのボトムは"+courseBottom);
     carText.textContent = labelText;
 });
+
+
+
+let offset = 200; // スクロール位置と要素の距離の閾値
+
+window.addEventListener('scroll', function() {
+
+    // 車の要素の位置やサイズの情報を変数に取得
+    let carWrapRect = carWrapper.getBoundingClientRect();
+
+    // コース要素の初期位置のオフセットを取得
+    // コースが親要素からどれだけ離れているかを取得
+    let coursePos = course.offsetTop;
+
+    // スクロール位置を取得
+    let scrollPos = window.scrollY;
+    
+    // スクロール位置と要素の距離の閾値に基づいて判定
+    if (carWrapRect.top <= offset) {
+        // 要素が閾値以下にスクロールされた場合の処理
+        carWrapper.style.position = 'fixed';
+        carWrapper.style.top = offset + 'px';
+        if(window.innerWidth >= 768){
+            carWrapper.style.left= 5.3 + "%";
+        }
+       
+    } 
+
+    // 初期位置を超えた場合の処理
+    if(coursePos >= scrollPos + 200 ){
+        carWrapper.style.position = 'absolute';
+        carWrapper.style.top = 0 + "px";
+        if(window.innerWidth >= 768){
+            carWrapper.style.left = 0 + "px";
+        }
+    }
+});
+
+
+
+// 以下は道を表示する処理
+
+
+
 
 // ドキュメントの読み込み完了後に実行される関数
 document.addEventListener("DOMContentLoaded", function () {
@@ -62,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let roadHeight = cardCount * 600; // 1つの.cardの高さが300pxと仮定
     document.querySelector(".road").style.height = roadHeight + "px";
 });
+
 
 // $(document).ready(function () {
 //     const car = $(".car");
