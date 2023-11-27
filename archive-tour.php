@@ -64,7 +64,7 @@
 
             </aside><!-- aside_wrap aside_top-->
         </div><!-- menu_wrap -->
-
+        <?php $test = 1; ?>
         <!---- 記事一覧 ---->
         <section class="archive_col">
             <!-- タクソノミーを指定して配列のターム情報を取得する -->
@@ -79,7 +79,8 @@
 
                 <?php foreach ($tour_types as $tour_type) : ?>
                     <!-- 記事からボタンまでをsecとする -->
-                    <div class="sec01">
+                    <?php $test_class = 'sec' . sprintf('%02d', $test); ?>
+                    <div class="<?php echo $test_class; ?>">
                         <!---- タクソノミー別タイトル ---->
                         <h3><?php echo $tour_type->name ?></h3>
                         <div class="card_3col">
@@ -89,7 +90,7 @@
                             //観光の投稿タイプ
                             $args = array(
                                 'post_type' => 'tour',
-                                // 'post_per_page' => 3,
+                                'post_per_page' => 3,
                             );
                             //料理の種類で絞り込む
                             $tourtax = array('relation' => 'AND');
@@ -151,11 +152,10 @@
                         $more_counter++;
                         $close_counter++;
                         ?>
-                    </div><!-- sec01 -->
-
+                    </div><!-- sec -->
+                    <?php $test++; ?>
                 <?php endforeach; ?>
             <?php endif; ?>
-
         </section><!-- archive_col -->
 
         <!-- スマホ版カテゴリ別サイドバー -->

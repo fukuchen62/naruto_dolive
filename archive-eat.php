@@ -66,9 +66,7 @@
                 </ul>
             </aside><!-- aside_wrap aside_top-->
         </div><!-- menu_wrap -->
-        <?php
-        $test = 1;
-        ?>
+        <?php $test = 1; ?>
         <!---- 記事一覧 ---->
         <section class="archive_col">
             <!-- タクソノミーを指定して配列のターム情報を取得する -->
@@ -80,8 +78,9 @@
                 $close_counter = 1;
                 ?>
 
-                <!-- 記事からボタンまでをsecとする -->
+
                 <?php foreach ($eat_types as $eat_type) : ?>
+                    <!-- 記事からボタンまでをsecとする -->
                     <?php $test_class = 'sec' . sprintf('%02d', $test); ?>
                     <div class="<?php echo $test_class; ?>">
                         <!---- タクソノミー別タイトル ---->
@@ -153,7 +152,7 @@
                         $more_counter++;
                         $close_counter++;
                         ?>
-                    </div><!-- sec01 -->
+                    </div><!-- sec -->
                     <?php $test++; ?>
                 <?php endforeach; ?>
             <?php endif; ?>
