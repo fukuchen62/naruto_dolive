@@ -361,7 +361,8 @@ tr:nth-child(4) th:nth-child(1){
     }
 
     .slick-list {
-        height: 300px;
+        width: 100%;
+        height: auto;
     }
 
     .slick-dots li {
@@ -372,7 +373,7 @@ tr:nth-child(4) th:nth-child(1){
 
 @media only screen and (min-width:900px) {
     .slick-dots li {
-        width: 120px;
-        height: 100px;
+        width: 30%;
+        height: auto;
     }
 }
