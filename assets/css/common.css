@@ -26,7 +26,7 @@ h2 {
     font-family: 'Dela Gothic One', sans-serif;
     font-size: 2.2rem;
     text-shadow: 2px 2px 0 #000;
-    -webkit-text-stroke: 1px #000;
+    -webkit-text-stroke: 2px #000;
 }
 
 
@@ -43,12 +43,6 @@ h3>p {
     display: inline-block;
     position: relative;
     margin: 0 auto;
-}
-
-.column-text>h3{
-    font-weight: bolder;
-    font-size: 1.3rem;
-    position: initial;
 }
 
 h3::after {
@@ -118,13 +112,19 @@ main:not(.section_kv):not(.teloparea) {
 }
 
 .sp_nav_logo img {
-    width: 75px;
+    max-width: 75px;
     margin: 12px;
 }
 
 .header_inner {
     position: relative;
     z-index: 10;
+    width: 98%;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: end;
 }
 
 .header_logo {
@@ -173,8 +173,8 @@ main:not(.section_kv):not(.teloparea) {
 
 .sp_nav .search_box button {
     cursor: pointer;
-    padding: 0 9px;
-    margin-right: .5rem;
+    padding: 1px 9px;
+    margin-left: -4px;
     border-radius: 0 1.5rem 1.5rem 0;
     border: none;
     background-color: #555;
@@ -195,10 +195,8 @@ main:not(.section_kv):not(.teloparea) {
     color: #555;
 }
 
-.header_menu-btn {
+.header_menu_btn {
     position: relative;
-    right: -85vw;
-    top: -75px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,13 +207,13 @@ main:not(.section_kv):not(.teloparea) {
     z-index: 5;
 }
 
-.header_inner.active .header_menu-btn {
+.header_inner.active .header_menu_btn {
     position: fixed;
     right: 15px;
     top: 20px;
 }
 
-.header_menu-btn span:nth-child(-n+3) {
+.header_menu_btn span:nth-child(-n+3) {
     position: absolute;
     display: block;
     width: 35px;
@@ -224,47 +222,48 @@ main:not(.section_kv):not(.teloparea) {
     box-shadow: 3px 3px 1px rgb(0 0 0);
 }
 
-.header_menu-btn span:nth-child(1) {
+.header_menu_btn span:nth-child(1) {
     top: 10px;
     transition: all .2s ease;
 }
 
-.header_inner.active .header_menu-btn span:nth-child(1) {
+.header_inner.active .header_menu_btn span:nth-child(1) {
     top: 20px;
     transform: rotate(45deg);
     background: #000;
     box-shadow: none;
 }
 
-.header_menu-btn span:nth-child(2) {
+.header_menu_btn span:nth-child(2) {
     top: 18px;
     transition: opacity .2s ease;
 }
 
-.header_inner.active .header_menu-btn span:nth-child(2) {
+.header_inner.active .header_menu_btn span:nth-child(2) {
     opacity: 0;
 }
 
-.header_menu-btn span:nth-child(3) {
+.header_menu_btn span:nth-child(3) {
     top: 26px;
     transition: all .2s ease;
 }
 
-.header_inner.active .header_menu-btn span:nth-child(3) {
+.header_inner.active .header_menu_btn span:nth-child(3) {
     top: 20px;
     transform: rotate(-45deg);
     background: #000;
     box-shadow: none;
 }
 
-.header_menu-btn span:nth-child(4) {
+.header_menu_btn span:nth-child(4) {
+    font-family: Dela Gothic One;
     font-size: 10px;
     color: #fff;
     text-shadow: 3px 3px 1px rgb(0 0 0);
     margin-top: 10px;
 }
 
-.header_inner.active .header_menu-btn span:nth-child(4) {
+.header_inner.active .header_menu_btn span:nth-child(4) {
     color: #000;
     text-shadow: none;
 }
@@ -374,11 +373,6 @@ ul.overlaymenu_list_icon_list {
     }
 }
 
-@media (max-width: 550px) {
-    .header_menu-btn {
-        right: -75vw;
-    }
-}
 
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
@@ -395,10 +389,11 @@ ul.overlaymenu_list_icon_list {
         height: 100px;
         text-shadow: 2px 2px 0 #000;
         -webkit-text-stroke: 1px #000;
-        font-size: clamp(16px, 2vw, 24px);
+        font-size: clamp(16px, 1.5vw, 24px);
     }
 
     .pc_nav_logo {
+        max-width: 75px;
         padding-left: 0.5rem;
     }
 
@@ -428,8 +423,11 @@ ul.overlaymenu_list_icon_list {
 
     .pc_nav .search_box_li {
         display: flex;
-        width: 100%;
-        flex-basis: 70px;
+    }
+
+    .pc_nav .search_box_wrap {
+        width: initial;
+        margin: initial;
     }
 
     .pc_nav .search_box_li input[type="text"] {
@@ -437,18 +435,20 @@ ul.overlaymenu_list_icon_list {
         padding: 0 0.5rem;
         border: 1px solid #fff;
         border-radius: 1.5rem 0 0 1.5rem;
-        width: 150px;
+        max-width: 150px;
+        height: 35px;
     }
 
     .pc_nav .search_box_li button {
         cursor: pointer;
         padding: 0 1rem;
-        margin-right: .5rem;
+        margin-left: -5px;
         border-radius: 0 1.5rem 1.5rem 0;
         border: none;
         background-color: #fff;
         color: #fff;
         font-size: .75rem;
+        height: 35px;
     }
 
     .pc_nav .search_box_li input:focus {
@@ -485,7 +485,6 @@ ul.overlaymenu_list_icon_list {
     }
 
     ul.child_wrap dd {
-        font-size: 1.4rem;
         text-align: center;
     }
 
@@ -515,13 +514,6 @@ ul.overlaymenu_list_icon_list {
     nav ul li.has_child dt {
         overflow: hidden;
         margin: 0 0 20px 0;
-    }
-
-    @media screen and (max-width:1200px) {
-        nav ul li.has_child dt {
-            height: 6vh;
-        }
-
     }
 
     nav li.has_child:hover>ul {
@@ -690,44 +682,114 @@ footer p:first-child {
 }
 
 /* トップへ戻るボタン */
-.button {
+#page_top {
     position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: 20px;
-    bottom: 20px;
-    width: 100px;
-    height: 140px;
-    /* border-radius: 10px; */
-    background-image: url(../img/top.png);
-    background-size: 100px;
-    background-repeat: no-repeat;
-    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.46); */
-    font-weight: bolder;
-
-    transition: .3s;
-    /* 非表示にする */
+    right: 35px;
+    bottom: 30px;
+    z-index: 2;
+    /*はじめは非表示*/
     opacity: 0;
-    visibility: hidden;
+    transform: translateY(150px);
 }
 
-.button img {
+/*　上に上がる動き　*/
+#page_top.UpMove {
+    animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*　下に下がる動き　*/
+#page_top.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(150px);
+    }
+}
+
+/*画像の切り替えと動き*/
+#page_top a {
+    /*aタグの形状*/
+    display: block;
     width: 100px;
     height: 100px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    /*背景画像の指定*/
+    background: url("../img/top.png") no-repeat center;
+    background-size: contain;
+    -webkit-text-stroke: 0.5px #000;
+}
+
+#page_top a::before {
+    background-color: initial;
+}
+
+#page_top.floatAnime a {
+    width: 100px;
+    height: 130px;
+    /*背景画像の指定*/
+    background: url("../img/top2.png") no-repeat center;
+    background-size: contain;
+    /*アニメーションの指定*/
+    animation: floatAnime 2s linear infinite;
+    opacity: 0;
+}
+
+@keyframes floatAnime {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateX(-6px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(6px);
+        opacity: 1;
+    }
+}
+
+/*Page Topと書かれたテキストの位置*/
+#page_top span {
     position: absolute;
-    top: 40px;
+    bottom: 2px;
+    right: 14px;
 }
 
-.is-active {
-    /* 表示する */
-    opacity: 1;
-    visibility: visible;
-}
-
-/* TOPボタンのホバー時 */
-.button:hover {
-    background-color: #aae6ff63;
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media (min-width:768px) {
+    #page_top {
+        right: 10px;
+    }
 }
 
 /* ------------------------------------------------------------------------
