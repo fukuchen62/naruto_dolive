@@ -21,17 +21,3 @@
         </div>
     </div>
 </a><!-- リンク -->
-
-<?php
-
-// 緯度と経度の値を取得する
-$latitude = get_post_meta(get_the_ID(), 'latitude', true);
-$longitude = get_post_meta(get_the_ID(), 'longitude', true);
-$facilityName = get_the_title();
-
-$place[] = array(
-    'lat' => $latitude,
-    'lng' => $longitude,
-    'facilityName' => $facilityName
-);
-?>
