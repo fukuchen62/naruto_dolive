@@ -1,33 +1,41 @@
 // ▼トップへ戻るボタン▼
 
-$(function () {
-    var btn = $('.button');
-    var timer;
+function PageTopAnime() {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 100) {//上から100pxスクロールしたら
+        $('#page_top').removeClass('DownMove');//#page_topについているDownMoveというクラス名を除く
+        $('#page_top').addClass('UpMove');//#page_topについているUpMoveというクラス名を付与
+    } else {
+        if ($('#page_top').hasClass('UpMove')) {//すでに#page_topにUpMoveというクラス名がついていたら
+            $('#page_top').removeClass('UpMove');//UpMoveというクラス名を除き
+            $('#page_top').addClass('DownMove');//DownMoveというクラス名を#page_topに付与
+        }
+    }
+}
 
-    $(window).scroll(function () {
-        //スクロール開始するとボタンを非表示
-        btn.removeClass('is-active');
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function () {
+    PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
+});
 
-        //スクロール中はイベントの発火をキャンセルする
-        clearTimeout(timer);
+// ページが読み込まれたらすぐに動かしたい場合の記述
+$(window).on('load', function () {
+    PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
+});
 
-        //スクロールが停止して0.2秒後にイベントを発火する
-        timer = setTimeout(function () {
-            //スクロール位置を判定してページ上部のときはボタンを非表示にする
-            if ($(this).scrollTop()) {
-                btn.addClass('is-active');
-            } else {
-                btn.removeClass('is-active');
-            }
-        }, 200);
-    });
 
-    //ボタンクリックでトップへ戻る
-    btn.on('click', function () {
+// #page_topをクリックした際の設定
+$('#page_top').click(function () {
+    var scroll = $(window).scrollTop(); //スクロール値を取得
+    if (scroll > 0) {
+        $(this).addClass('floatAnime');//クリックしたらfloatAnimeというクラス名が付与
         $('body,html').animate({
             scrollTop: 0
+        }, 2000, function () {//スクロールの速さ。数字が大きくなるほど遅くなる
+            $('#page_top').removeClass('floatAnime');//上までスクロールしたらfloatAnimeというクラス名を除く
         });
-    });
+    }
+    return false;//リンク自体の無効化
 });
 // ▲トップへ戻るボタン▲
 

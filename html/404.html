@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assets/css/404.css">
     <script src="../assets/js/jquery-3.7.1.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DotGothic16&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
     <title>鳴門DoLive | 愛車で四国の右上攻略！</title>
@@ -30,10 +30,12 @@
                     <div class="header_menu">
                         <div class="search_box_wrap">
                             <div class="search_box">
-                                <input type="text" placeholder="検索">
-                                <button type="submit">
-                                    <i class="fas fa-search fa-fw" style="color: white;"></i>
-                                </button>
+                                <form action="">
+                                    <input type="text" placeholder="検索" value="初期値">
+                                    <button type="submit">
+                                        <i class="fas fa-search fa-fw" style="color: white;"></i>
+                                    </button>
+                                </form>
                             </div>
                         </div>
                         <div class="link_wrap">
@@ -87,7 +89,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="header_menu-btn" id="spMenuBtn">
+                    <div class="header_menu_btn" id="spMenuBtn">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -126,14 +128,14 @@
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src="../assets/img/nav_○○○○○.jpg" alt="○○○○○旅"></dt>
-                                    <dd>○○○○○旅</dd>
+                                    <dt><img src="../assets/img/nav_ooooo.jpg" alt="ooooo旅"></dt>
+                                    <dd>ooooo旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src="../assets/img/nav_×××××.jpg" alt="×××××旅" alt=""></dt>
-                                    <dd>×××××旅</dd>
+                                    <dt><img src="../assets/img/nav_xxxxx.jpg" alt="xxxxx旅"></dt>
+                                    <dd>xxxxx旅</dd>
                                 </dl>
                             </a></li>
                     </ul>
@@ -199,32 +201,40 @@
                 <li><a href="#">マイページ</a></li>
                 <li><a href="#">Q&A</a></li>
                 <li class="search_box_li">
-                    <input type="text" placeholder="検索">
-                    <button type="submit">
-                        <i class="fas fa-search fa-fw" style="color: black;"></i>
-                    </button>
+                    <div class="search_box_wrap">
+                        <div class="search_box">
+                            <form action="">
+                                <input type="text" placeholder="検索">
+                                <button type="submit">
+                                    <i class="fas fa-search fa-fw" style="color: black;"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>
     </header>
     <section id="toparea" class="toparea">
-        <h2>目的別一覧</h2>
+        <h2>404NotFound</h2>
     </section>
-    <div class="main_wrap">
-        <div class="breadcrumb">HOME > 404</div>
-        <div class="center_title">
-            <p class="middle_title">お探しのページが見つかりません...</p>
-            <p>お探しのページが見つかりませんでした。<br>お手数ですが、<u>こちらのリンク</u>からTOPページにお戻りください。</p>
+    <div class="breadcrumb">HOME > 404</div>
+    <div class="center_title">
+        <p class="middle_title">お探しのページが見つかりません...</p>
+        <p>お探しのページが見つかりませんでした。<br>お手数ですが、<u>こちらのリンク</u>からTOPページにお戻りください。</p>
+    </div>
+    <div class="image-container">
+        <img src="../assets/img/not-found.png" alt="ページが見つからなかったときの画像">
+    </div>
+    <footer>
+        <p><a href="#">このサイトについて</a></p>
+        <p><a href="#">サイトマップ</a></p>
+        <p><a href="#">プライバシーポリシー</a></p>
+        <p class="copyright"><small>&copy; 2023 Team藍 in QLIP</small></p>
+        <div>
+            <p id="page_top"><a href="#"><span>Page Top</span></a></p>
         </div>
-        <div class="image-container">
-            <img src="../assets/img/not-found.png" alt="ページが見つからなかったときの画像">
-        </div>
-        </section>
-        <footer>
-            <p><a href="#">このサイトについて</a></p>
-            <p><a href="#">サイトマップ</a></p>
-            <p><a href="#">プライバシーポリシー</a></p>
-            <p class="copyright"><small>&copy; 2023 Team藍 in QLIP</small></p>
-        </footer>
+    </footer>
+    <script src="../assets/js/common.js"></script>
 </body>
 </html>
