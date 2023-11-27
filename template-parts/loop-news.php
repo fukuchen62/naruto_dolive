@@ -12,15 +12,17 @@
     </div>
 
     <!-- カテゴリーの出力 -->
-    <span><?php the_category(); ?> </span>
+    <div class="news_tab"><?php the_category(); ?> </div>
+    <div class="news_title">
+        <div>
+            <!-- 投稿日時表示 -->
+            <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y年m月d日'); ?></time>
+        </div>
 
-    <div>
-        <!-- 投稿日時表示 -->
-        <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y年m月d日'); ?></time>
+        <!-- タイトルの出力 -->
+        <p><?php the_title(); ?></p>
     </div>
-
-    <!-- タイトル、抜粋の出力 -->
-    <h2><?php the_title(); ?></h2>
+    <!-- 抜粋の出力 -->
     <div>
         <p><?php the_excerpt(); ?></p>
         <p><a href="<?php the_permalink(); ?>">[続きを読む]</a></p>
