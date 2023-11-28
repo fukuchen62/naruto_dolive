@@ -10,7 +10,7 @@
 /* ページのh3 */
 .main_wrap h3{
     border: 1px solid red;
-    margin: 20px 10px;
+    margin: 30px;
 }
 
 /*ヘッダー下部の帯 */
@@ -29,6 +29,7 @@ color: #f8c9d7;
     border: 1px solid red;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 /* GoogleMap-中身 */
@@ -63,14 +64,14 @@ color: #f8c9d7;
 @media screen and (min-width:768px){
 /* コース説明(pc) */
 .course_text{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 20px 10px;
 }
 
 .course_text p{
-    border: 1px solid red;
-    margin: 50px 20px;
-    height: 300px;
+    /* border: 1px solid red; */
+    margin-bottom: 50px;
+
 }
 
 .card_flex .card1_wrap{
@@ -299,10 +300,15 @@ color: #f8c9d7;
 }
 .card_flex .card1_wrap{
     /* margin-bottom: 200px; */
-    width: 280px;
+    width: 200px;
 }
 .card1_content{
 background-color: #ff8b03;
+}
+
+.card1_img1{
+    /* width: 180px; */
+    object-fit: cover;
 }
 .card1_text{
     background-color: #fff;
