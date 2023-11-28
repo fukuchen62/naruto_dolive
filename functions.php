@@ -54,10 +54,6 @@ function add_common_scripts()
         array('reset-style'),
         false
     );
-
-
-    // Index.css
-    wp_enqueue_style('index-style', get_template_directory_uri() . '/assets/css/a_news_news.css');
 }
 
 
@@ -70,85 +66,89 @@ function add_individual_scripts()
     //----------------------
     //  トップページ
     //----------------------
-    if (is_home()) : {
+    if (is_home()) {
 
-            //トップページのCSS（index.css）を読み込む
-            wp_enqueue_style(
-                'front_page_style',
-                get_template_directory_uri() . '/assets/css/index.css',
-                array(),
-                false
-            );
-        }
+        //トップページのCSS（index.css）を読み込む
+        wp_enqueue_style(
+            'front_page_style',
+            get_template_directory_uri() . '/assets/css/index.css',
+            array(),
+            false
+        );
+    } elseif (is_category()) {
+        // Index.css
+        wp_enqueue_style(
+            'index-style',
+            get_template_directory_uri() . '/assets/css/a_news_news.css',
+            array(),
+            false
+        );
+    }
 
     //----------------------
     //  コラム詳細ページ
     //----------------------
-    elseif (is_singular('column')) : {
+    elseif (is_singular('column')) {
 
-            //コラム詳細ページのCSSとJSを読み込む
-            wp_enqueue_style(
-                's_column_style',
-                get_template_directory_uri() . '/assets/css/s_column.css',
-                array(),
-                false
-            );
+        //コラム詳細ページのCSSとJSを読み込む
+        wp_enqueue_style(
+            's_column_style',
+            get_template_directory_uri() . '/assets/css/s_column.css',
+            array(),
+            false
+        );
 
-            wp_enqueue_script(
-                's_column_script',
-                get_template_directory_uri() . '/assets/js/s_column.js',
-                '',
-                '',
-                true
-            );
-        }
+        wp_enqueue_script(
+            's_column_script',
+            get_template_directory_uri() . '/assets/js/s_column.js',
+            '',
+            '',
+            true
+        );
+    }
     //----------------------
     //  食べる・遊ぶ・宿泊・観光の一覧ページ
     //----------------------
-    elseif (is_post_type_archive('eat') || is_post_type_archive('enjoy') || is_post_type_archive('stay') || is_post_type_archive('tour') || is_tax()) : {
+    elseif (is_post_type_archive('eat') || is_post_type_archive('enjoy') || is_post_type_archive('stay') || is_post_type_archive('tour') || is_tax()) {
 
-            //目的別一覧ページのCSSを読み込む
-            wp_enqueue_style(
-                'archive_purpose',
-                get_template_directory_uri() . '/assets/css/a_purpose.css',
-                array('common-style'),
-                false // headタグ内に出力
-            );
-        }
+        //目的別一覧ページのCSSを読み込む
+        wp_enqueue_style(
+            'archive_purpose',
+            get_template_directory_uri() . '/assets/css/a_purpose.css',
+            array('common-style'),
+            false // headタグ内に出力
+        );
+    }
 
     // 食べる詳細ページのcss
-    elseif (is_singular('eat')) : {
-            wp_enqueue_style(
-                's_style',
-                get_template_directory_uri() . '/assets/css/single.css',
-                array(),
-                false
-            );
-        }
+    elseif (is_singular('eat')) {
+        wp_enqueue_style(
+            's_style',
+            get_template_directory_uri() . '/assets/css/single.css',
+            array(),
+            false
+        );
+    }
     //----------------------
     // コラムの一覧ページ
     //----------------------
-    elseif (is_post_type_archive('column')) : {
+    elseif (is_post_type_archive('column')) {
 
-            //コラム一覧ページのCSSを読み込む
-            wp_enqueue_style(
-                'archive_column',
-                get_template_directory_uri() . '/assets/css/a_column.css',
-                array(),
-                false
-            );
-        }
-
-    elseif (is_post_type_archive('q_a')) : {
-            wp_enqueue_style(
-                'archive_q_a',
-                get_template_directory_uri() . '/assets/css/q_a.css',
-                array(),
-                false
-            );
-        }
-
-    endif;
+        //コラム一覧ページのCSSを読み込む
+        wp_enqueue_style(
+            'archive_column',
+            get_template_directory_uri() . '/assets/css/a_column.css',
+            array(),
+            false
+        );
+    } elseif (is_post_type_archive('q_a')) {
+        wp_enqueue_style(
+            'archive_q_a',
+            get_template_directory_uri() . '/assets/css/q_a.css',
+            array(),
+            false
+        );
+    }
 }
 
 function my_theme_enqueue_scripts()
