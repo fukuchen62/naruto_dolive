@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+
+
+
 <main>
     <!---- トップエリアタイトル ---->
     <section id="toparea" class="toparea">
@@ -8,6 +11,7 @@
     <div class="main_wrap">
         <!-- パンくずリスト -->
         <?php get_template_part('template-parts/breadcrumb'); ?>
+
 
         <!-- 選択したタクソノミーをタイトルで表示 -->
         <div class="center_title">
@@ -45,8 +49,6 @@
 
         <div class="archive_col">
             <div class="card_3col">
-
-
                 <!-- 記事がある分表示させる -->
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
@@ -65,6 +67,21 @@
 
 
             </div><!-- card_3col -->
+
+
+            <div class="pagination">
+                <?php the_posts_pagination(
+                    array(
+                        'mid_size'      => 1, // 現在ページの左右に表示するページ番号の数
+                        'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
+                        'prev_text'     => ('◀'), // 「前へ」リンクのテキスト
+                        'next_text'     => ('▶'), // 「次へ」リンクのテキスト
+                        'type'          => 'plain', // 戻り値の指定 (plain/list)
+                    )
+
+                ); ?>
+            </div>
+
             <div class="close_btn">
                 <!-- 前のページに戻るボタンの分岐条件 -->
 
@@ -73,9 +90,6 @@
                         <span class="close">back</span>
                     </div><!-- close_link -->
                 </a>
-
-
-
 
             </div><!-- close_btn -->
         </div><!-- archive_col -->

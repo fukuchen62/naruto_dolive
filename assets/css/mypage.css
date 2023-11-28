@@ -279,3 +279,7 @@ section {
 .button:hover{
     background-color: #aae6ff63;
 }
+
+.no_favorite{
+    text-align: center;
+}
