@@ -321,18 +321,6 @@ get_header();
     }
 </script>
 
-
-
-
-
-<a href="<?php echo home_url(''); ?>">ホームへ</a><br>
-
-
-
-
-
-
-
 <?php
 get_footer();
 ?>
