@@ -248,9 +248,8 @@
 
             <!-- 地図の表示 -->
             <div class="info_map">
-                <span class="info_map_img" title="google">
-                    <?php the_field('iframe'); ?>
-                </span>
+                <iframe class="info_map_img" title=" google" src="<?php the_field('iframe'); ?>">
+                </iframe>
             </div><!-- info_mrap -->
         </section><!-- id="info" class="section_info" -->
 
@@ -261,8 +260,8 @@
 
             <!-- 現在のページのタクソノミーのおすすめ記事を3件表示する -->
             <h3 class="toparea_title">その他おすすめ</h3>
-
-            <?php
+            <div class="card_3col">
+                <?php
                     $taxonomy = 'eat_type'; // タクソノミーのスラッグ名
                     $terms = get_the_terms(get_the_ID(), $taxonomy);
 
@@ -288,7 +287,7 @@
 
                         while ($sub_query->have_posts()) : $sub_query->the_post(); ?>
 
-                    <div class="card_3col">
+
                         <!-- 投稿の個別ページのURLを表示し、以下の内容をリンクにする-->
                         <a href="<?php the_permalink(); ?>" class="card1">
                             <div class="card1_wrap">
@@ -304,7 +303,10 @@
                                     <h4><?php the_title(); ?></h4>
 
                                     <!-- 抜粋の表示 -->
-                                    <div class="card1_text"><?php the_field('excerpt'); ?></div>
+                                    <div class="card1_text">
+                                        <!-- 字数制限32文字まで -->
+                                        <?php echo mb_substr(get_field('excerpt'), 0, 32); ?>
+                                    </div><!-- card1_text -- >
 
                                     <!-- ここにアイコンを表示する -->
 
@@ -346,10 +348,10 @@
                     <!-- 取得した情報をリセットする -->
                 <?php wp_reset_postdata();
                     } ?>
-                    </div><!-- card_3col -->
-                <?php endwhile; ?>
-            <?php endif; ?>
 
+            <?php endwhile; ?>
+        <?php endif; ?>
+            </div><!-- card_3col -->
 
             <script>
                 // いいねボタン表示のスクリプト
