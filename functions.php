@@ -141,10 +141,21 @@ function add_individual_scripts()
             array(),
             false
         );
-    } elseif (is_post_type_archive('q_a')) {
+    }
+    // Q&AのCSSの読み込み
+    elseif (is_post_type_archive('q_a')) {
         wp_enqueue_style(
             'archive_q_a',
             get_template_directory_uri() . '/assets/css/q_a.css',
+            array(),
+            false
+        );
+    }
+    // マイページのcssの読み込み
+    elseif (is_page('mypage')) {
+        wp_enqueue_style(
+            'mypage_atyle',
+            get_template_directory_uri() . '/assets/css/mypage.css',
             array(),
             false
         );
