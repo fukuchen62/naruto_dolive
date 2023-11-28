@@ -84,7 +84,6 @@ function add_individual_scripts()
             false
         );
     }
-
     //----------------------
     //  コラム詳細ページ
     //----------------------
@@ -167,6 +166,22 @@ function add_individual_scripts()
             get_template_directory_uri() . '/assets/css/privacy_policy.css',
             array(),
             false
+        );
+    } elseif (is_single()) {
+        // Index.css
+        wp_enqueue_style(
+            'single-style',
+            get_template_directory_uri() . '/assets/css/s_news.css',
+            array(),
+            false
+        );
+
+        wp_enqueue_script(
+            's_column_script',
+            get_template_directory_uri() . '/assets/js/color.js',
+            '',
+            '',
+            true
         );
     }
 }
