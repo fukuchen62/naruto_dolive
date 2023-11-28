@@ -5,15 +5,19 @@
 ------------------------------------------------------------------------  */
 
 /* 帯色 */
-#toparea {
+/* #toparea {
     background-color: #f1d470;
-}
+} */
 
 /* 帯タイトルカラー */
-#toparea>h2 {
+/* #toparea>h2 {
     color: #ffb357;
-}
+} */
 
+h2 a{
+    text-shadow: 2px 2px 0 #000;
+    -webkit-text-stroke: 2px #000;
+}
 /* セクション幅 */
 section {
     padding: 10px;
