@@ -312,7 +312,7 @@ h2.title_drivecourse {
   box-shadow: 0 0 2px #b6ecde;
   background-color:#333;
   color:#fff;
-  translate: 5px 5px;
+  transform: translate(5px,5px);
 }
 
 /* ~~~~~~~~~~~~スマホボタン表示~~~~~~~~~~~~ */
