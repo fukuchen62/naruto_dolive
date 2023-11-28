@@ -17,6 +17,23 @@
 中見出し
 ------------------------------------------------------------------------  */
 
+.breadcrumb {
+    margin: auto;
+    padding: 5%;
+    }
+
+@media only screen and (min-width:540px){
+    .breadcrumb{
+        padding: 4%;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .breadcrumb{
+        padding: 3%;
+    }
+}
+
 .text-container{
     text-align: center;
 }
