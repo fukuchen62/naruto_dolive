@@ -140,7 +140,7 @@ function createCar() {
     // img要素を作成
     const car = document.createElement("img");
     // 上記のimg要素を参照する変数carのimgのsrc属性の設定
-    car.setAttribute("src", "./assets/img/running_around.png");
+    car.setAttribute("src", "../assets/img/running_around.png");
     // car変数にcarクラスを付与する
     car.classList.add("moving_car");
     // carの初期位置を横方向にランダム設定
@@ -153,7 +153,7 @@ function createCar() {
     // img要素の作成
     const tireTrack = document.createElement("img");
     // 上記のimg要素を参照する変数carのimgのsrc属性の設定
-    tireTrack.setAttribute("src", "./assets/img/exhaust_fumes.gif");
+    tireTrack.setAttribute("src", "../assets/img/exhaust_fumes.gif");
     // tireTrack変数にtire-trackクラスを付与する
     tireTrack.classList.add("smoke_of_car");
     // tireTrack要素を水平位置をcar要素の水平位置から10ピクセル左にオフセット
