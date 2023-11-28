@@ -18,7 +18,7 @@ get_header();
                         <div class="center_title">
                             <h3 class="middle_title"><?php the_title(); ?></h3>
                         </div>
-                        <div class="card2_text"><?php the_field('text'); ?></div>
+                        <div class="card2_text"><?php the_content(); ?></div>
                     </div>
                 </div>
                 <div class="pageturn">
@@ -42,7 +42,7 @@ get_header();
                         <?php next_post_link('%link', '%title'); ?>
                     </div>
                 </div>
-                <a href="<?php echo home_url(''); ?>">ホームへ</a>
+
             </div>
             <aside class="aside_wrap aside_top">
                 <!-- <div class="aside_title">━━ カテゴリ別 ━━</div> -->
