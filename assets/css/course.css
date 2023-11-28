@@ -27,6 +27,8 @@ color: #f8c9d7;
 /* GoogleMap */
 .course_map{
     border: 1px solid red;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* GoogleMap-中身 */
@@ -237,39 +239,39 @@ color: #f8c9d7;
     }
     .card_flex1{
         top: 100px;
-    } 
+    }
 
     .card_flex2{
         top: 700px;
-    } 
+    }
 
     .card_flex3{
         top: 1300px;
-    } 
+    }
 
     .card_flex4{
         top: 1900px;
-    } 
+    }
 
     .card_flex5{
         top:2500px;
-    } 
+    }
 
     .card_flex6{
         top: 3100px;
-    } 
+    }
 
     .card_flex7{
         top: 3700px;
-    } 
+    }
 
     .card_flex8{
         top: 4300px;
-    } 
+    }
 
     .card_flex9{
         top: 4900px;
-    } 
+    }
 
 
 /* 道路バー(pc) */
@@ -327,12 +329,12 @@ background-color: #ff8b03;
 
 .road{
     width: 80px;
-    
+
 }
 
 .road_wrapper{
     box-sizing: content-box;
-    
+
 }
 
 .course_all{
@@ -380,39 +382,39 @@ background-color: #ff8b03;
 
 .card_flex1{
     top: 100px;
-} 
+}
 
 .card_flex2{
     top: 500px;
-} 
+}
 
 .card_flex3{
     top: 900px;
-} 
+}
 
 .card_flex4{
     top: 1300px;
-} 
+}
 
 .card_flex5{
     top: 1700px;
-} 
+}
 
 .card_flex6{
     top: 2100px;
-} 
+}
 
 .card_flex7{
     top: 2500px;
-} 
+}
 
 .card_flex8{
     top: 2900px;
-} 
+}
 
 .card_flex9{
     top: 3300px;
-} 
+}
 
 
 /* .card3_wrap {
@@ -837,4 +839,10 @@ background-color: #ff1e1e80;
     min-width: 300px;
     max-width: 300px;
 }
+}
+
+@media screen and (max-width:1360px){
+    .recommend_flex{
+        display: initial;
+    }
 }
