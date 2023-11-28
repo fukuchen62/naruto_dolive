@@ -26,7 +26,7 @@ h2.toparea {
 }
 
 .more_btn_container {
-  padding-bottom: 5%;
+  padding-bottom: 10%;
 }
 
 .more_btn {
@@ -88,7 +88,7 @@ h2.toparea {
 .catchcopy {
   width: 50%;
   position: absolute;
-  bottom: 23%;
+  bottom: 21%;
 }
 
 .anim-box.slidein.is-animated {
@@ -203,11 +203,12 @@ h2.toparea {
   margin-top: 1.5rem;
 }
 
-.marquee-container {
+.marquee_container {
   display: flex;
+  gap: 100px;
   justify-content: space-around;
   animation-name: marquee;
-  animation-duration: 20s;
+  animation-duration: 30s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   font-size: 1.5rem;
@@ -225,22 +226,30 @@ h2.toparea {
   }
 }
 
-.marquee p:nth-child(odd) {
+.marquee_container a:nth-child(odd) {
   color: #00B9C5;
 }
 
-.marquee p:nth-child(even) {
+.marquee_container a:nth-child(even) {
   color: #FF27F6;
 }
 
+.marquee_container a:first-child {
+  padding-left: 350px;
+}
+
 .map_container {
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
-  padding-bottom: 2%;
+  padding-bottom: 3%;
 }
 
 .map svg {
   width: 90%;
   height: 100%;
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0 #000;
 }
 
 .courses {
@@ -248,18 +257,11 @@ h2.toparea {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-bottom: 2%;
+  padding-bottom: 3%;
 }
 
-.title_drivecourse {
+h2.title_drivecourse {
   color: #F8C9D7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: initial;
-}
-
-.title_drivecourse>h2 {
   height: 240px;
   display: flex;
   align-items: center;
@@ -276,6 +278,8 @@ h2.toparea {
   border-radius: 25px;
   transition: .3s;
   text-align: center;
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0 #000;
 }
 
 .btn_course1 {
@@ -318,7 +322,11 @@ h2.toparea {
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:768px) {}
+@media only screen and (min-width:768px) {
+  .map_container {
+    width: 90%;
+  }
+}
 
 /* ------------------------------------------------------------------------
     section_column
@@ -352,15 +360,8 @@ h2.toparea {
   }
 }
 
-.title_pickupcolumn {
-  color: #DB64EF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: initial;
-}
-
-.title_pickupcolumn>h2 {
+h2.title_pickupcolumn {
+  color: #a3a0d4;
   height: 240px;
   display: flex;
   align-items: center;
@@ -372,21 +373,32 @@ h2.toparea {
   width: 90%;
   display: flex;
   margin: auto;
-  margin-bottom: 10px;
-  background-color: #AE85B5;
+  margin-bottom: 5%;
+  background-color: #fff;
+  gap: 3%;
+  align-items: flex-start;
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0 #000;
+}
+
+.column_imgbox,
+.column-text {
+  flex-basis: 48%;
+  padding: 1%;
 }
 
 .column-image {
-  width: 50%;
+  width: 100%;
+  min-width: 140px;
   border-radius: 3%;
   margin-left: 3%;
   margin-bottom: 1%;
   margin-top: 1%;
 }
 
-.column-text {
-  width: 40%;
-  margin: auto;
+.column-text h3 {
+  font-size: 18px;
+  text-align: left;
 }
 
 .purpose_delaywrap_flex {
@@ -420,34 +432,46 @@ h2.toparea {
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
-  .column-containers {
+  .column-flexbox {
     display: flex;
-    width: 70%;
-    margin: auto;
     padding-bottom: 5%;
+    gap: 5%;
+    justify-content: center;
   }
 
   .column-container {
-    width: 30%;
     display: block;
     text-align: center;
+    padding: 7% 0;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 #000;
+  }
+
+  .column_imgbox,
+  .column-text {
+    padding: 0;
   }
 
   .column-image {
     width: 80%;
     border-radius: 5%;
-    margin-top: 5%;
+    margin: 3% 0;
     height: 50%;
+  }
+
+  .column-text h3 {
+    font-size: 20px;
+    margin-bottom: 12%;
   }
 
   .column-text {
     width: 80%;
-    margin: auto;
-    height: 45%;
-    padding-bottom: 5%;
+    margin: 5% auto;
   }
 
-
+  .column-text p {
+    text-align: left;
+  }
 }
 
 
@@ -460,7 +484,6 @@ h2.toparea {
 
 #recommended_keywords {
   position: relative;
-  width: 100vw;
   height: 150px;
   overflow: hidden;
 }
@@ -483,7 +506,7 @@ p.moving_text:hover {
 }
 
 .section_instagram h2.toparea {
-  color: #A9D6FF;
+  color: #0b5ce2;
 }
 
 .instagram_grid {
@@ -491,6 +514,8 @@ p.moving_text:hover {
   grid-gap: 20px;
   margin: 0 10%;
   padding-bottom: 5%;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 5%;
 }
 
 .instagram_grid_item {
@@ -498,6 +523,8 @@ p.moving_text:hover {
   width: 100%;
   height: 0;
   padding-bottom: 100%;
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0 #000;
 }
 
 .instagram_grid_item img {
@@ -596,7 +623,7 @@ p.moving_text:hover {
 }
 
 .pdf_wrap_sp.pc_none {
-  padding: 10%;
+  padding: 0 10% 10% 10%;
 }
 
 .pdf_wrap_sp .card1_content {
@@ -646,21 +673,11 @@ p.moving_text:hover {
     position: relative;
     width: 100%;
     background-color: whitesmoke;
-    -webkit-box-shadow: 5px 5px 0px #000;
     box-shadow: 5px 5px 0px #000;
-    -webkit-transform: preserve-3d;
-    -ms-transform: preserve-3d;
-    transform: preserve-3d;
-    -webkit-perspective: 2000px;
+    transform-style: preserve-3d;
     perspective: 2000px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     color: #000;
     margin: 0 auto;
@@ -673,29 +690,16 @@ p.moving_text:hover {
     width: 100%;
     height: 100%;
     cursor: pointer;
-    -webkit-transition: all 0.5s;
     transition: all 0.5s;
-    -webkit-transform-origin: 0;
-    -ms-transform-origin: 0;
     transform-origin: 0;
-    -webkit-box-shadow: 5px 5px 0px #000;
     box-shadow: 5px 5px 0px #000;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
 
   .pdf_page2:hover .pdf_page1 {
-    -webkit-transition: all 0.5s;
     transition: all 0.5s;
-    -webkit-transform: rotatey(-80deg);
-    -ms-transform: rotatey(-80deg);
     transform: rotatey(-80deg);
   }
 }

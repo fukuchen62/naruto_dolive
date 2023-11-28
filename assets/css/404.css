@@ -49,13 +49,13 @@ section {
 
 .image-container{
     margin: auto;
-    width: 70%;
+    width: 45%;
     padding: 30px;
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px){
     .image-container{
-        width: 50%;
+        width: 35%;
     }
 }
