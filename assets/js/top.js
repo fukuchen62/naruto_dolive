@@ -40,23 +40,23 @@ $(document).ready(function () {
     $('#kizzugasyuyaku').attr('display', "none");
 
 
-    jQuery('#course1').on('click', function () {
+    jQuery('.course1').on('click', function () {
         clear_all();
         $('#narutokaikyoumankitu').attr('display', "block");
     });
-    jQuery('#course2').on('click', function () {
+    jQuery('.course2').on('click', function () {
         clear_all();
         $('#guruttoissyuunaruto').attr('display', "block");
     });
-    jQuery('#course3').on('click', function () {
+    jQuery('.course3').on('click', function () {
         clear_all();
         $('#rekishibunkanonaruto').attr('display', "block");
     });
-    jQuery('#course4').on('click', function () {
+    jQuery('.course4').on('click', function () {
         clear_all();
         $('#narutooosotoissyuu').attr('display', "block");
     });
-    jQuery('#course5').on('click', function () {
+    jQuery('.course5').on('click', function () {
         clear_all();
         $('#kizzugasyuyaku').attr('display', "block");
     });
