@@ -14,17 +14,20 @@
     <!-- カテゴリーの出力 -->
     <div class="news_tab"><?php the_category(); ?> </div>
     <div class="news_title">
-        <div>
+        <p>
             <!-- 投稿日時表示 -->
-            <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y年m月d日'); ?></time>
-        </div>
+            <?php the_time('Y年m月d日'); ?>
+        </p>
 
         <!-- タイトルの出力 -->
         <p><?php the_title(); ?></p>
     </div>
     <!-- 抜粋の出力 -->
-    <div>
-        <p><?php the_excerpt(); ?></p>
-        <p><a href="<?php the_permalink(); ?>">[続きを読む]</a></p>
+    <div class="card3_text">
+
+        <p><a href="<?php the_permalink(); ?>"><?php echo mb_substr(get_the_excerpt(), 0, 55) . '･･･' . '[続きを読む]'; ?></a></p>
+
     </div>
+
+
 </article>

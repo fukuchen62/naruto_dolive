@@ -178,3 +178,17 @@ function my_theme_enqueue_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
+
+/**
+ * メインクエリの内容を変更する
+ */
+add_action('pre_get_posts', 'my_pre_get_posts');
+function my_pre_get_posts($query)
+{
+
+    //トップページの場合
+    if ($query->is_category()) {
+        $query->set('posts_per_page', 3);
+        return;
+    }
+}
