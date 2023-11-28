@@ -821,13 +821,13 @@ moreボタン
 
 /* 帯全体左右中央 */
 #toparea {
-    height: 300px;
+    height: 200px;
     text-align: center;
 }
 
 /* 帯上下中央 */
 #toparea>h2 {
-    line-height: calc(300px - 5px);
+    line-height: calc(200px - 5px);
 }
 
 /* 記事背景 */

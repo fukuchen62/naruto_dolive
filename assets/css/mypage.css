@@ -41,12 +41,17 @@
     margin: 0 auto;
 }
 
-/* 地図画像 */
-.map_content img {
-    width: 300px;
-    height: 350px;
-    object-fit: cover;
+
+/* GoogleMap-中身 */
+#map {
+    height: 400px;
+    width: 100%;
+    /* position: relative; */
+    padding-top: 56.25%;
+    margin-bottom: 100px;
 }
+
+
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
@@ -67,11 +72,15 @@
         width: 60%;
     }
 
-    /* 地図画像 */
-    .map_content img {
-        height: 100%;
+    .course_map{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    #map{
         width: 100%;
     }
+
 }
 
 /* ------------------------------------------------------------------------
@@ -116,15 +125,15 @@ section {
 /* 3カラム */
 .card_3col {
     display: flex;
-    gap: 100px;
+    gap: 60px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 /* カード設計 */
 .card1_wrap {
-    width: 500px;
-    height: 600px;
+    width: 350px;
+    height: 550px;
     border: 3px solid #000;
     box-shadow: 5px 5px 0 #000;
 }
@@ -187,24 +196,7 @@ section {
     }
 }
 
-/* GoogleMap-中身 */
-.map {
-    width: 100%;
-    position: relative;
-    padding-top: 56.25%;
-}
 
-/* iframe */
-.map iframe {
-    border: 1px solid red;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-}
 
 /* ------------------------------------------------------------------------
 アコーディオンメニュー
