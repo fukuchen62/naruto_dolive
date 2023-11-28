@@ -136,10 +136,17 @@ hr {
     height: 40px;
     border-radius: 20px;
     box-shadow: 5px 5px 0 #000;
+    transition: .3s;
+    color: #333;
 }
 
     .facility_tag_btn:hover {
-    transform: translate(3px, 3px);
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 2px #b6ecde;
+    background-color:#333;
+    color:#fff;
+    transform: translate(5px,5px);
 }
 
 @media only screen and (min-width:768px) {
