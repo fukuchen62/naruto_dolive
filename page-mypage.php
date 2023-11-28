@@ -37,24 +37,24 @@ get_header();
         <!-- 与えられた引数で新しいwp_queryオブジェクトを作成 -->
         <?php $the_query = new WP_Query($args); ?>
         <section class="archive_col">
-            <?php if ($the_query->have_posts()) : ?>
-                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+            <div class="card_3col">
+                <?php if ($the_query->have_posts()) : ?>
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-                    <?php
-                    // 緯度と経度、タイトルを取得し、配列に代入
-                    $latitude = get_post_meta(get_the_ID(), 'latitude', true);
-                    $longitude = get_post_meta(get_the_ID(), 'longitude', true);
-                    $facilityName = get_the_title();
-                    // $argsに代入したそれぞれの施設の情報を配列に追加
-                    $favorite[] = array(
-                        'lat' => $latitude,
-                        'lng' => $longitude,
-                        'facilityName' => $facilityName
-                    );
-                    ?>
+                        <?php
+                        // 緯度と経度、タイトルを取得し、配列に代入
+                        $latitude = get_post_meta(get_the_ID(), 'latitude', true);
+                        $longitude = get_post_meta(get_the_ID(), 'longitude', true);
+                        $facilityName = get_the_title();
+                        // $argsに代入したそれぞれの施設の情報を配列に追加
+                        $favorite[] = array(
+                            'lat' => $latitude,
+                            'lng' => $longitude,
+                            'facilityName' => $facilityName
+                        );
+                        ?>
 
 
-                    <div class="card_3col">
                         <a href="<?php the_permalink(); ?>" class="card1">
                             <div class="card1_wrap">
                                 <div class="card1_content">
@@ -71,9 +71,14 @@ get_header();
                                 </div>
                             </div>
                         </a>
+
                     <?php endwhile; ?>
+                <?php else : ?>
+                    <h4 class="no_favorite">お気に入り登録０件
+                    </h4>
                 <?php endif; ?>
-                <?php wp_reset_postdata(); ?>
+                <div>
+                    <?php wp_reset_postdata(); ?>
         </section>
 
 
@@ -134,8 +139,12 @@ get_header();
                             </div>
                         </a>
                     <?php endwhile; ?>
+                <?php else : ?>
+                    <h4 class="no_favorite">お気に入り登録０件
+                    </h4>
                 <?php endif; ?>
                 <?php wp_reset_postdata(); ?>
+
         </section>
 
 
@@ -196,6 +205,9 @@ get_header();
                             </div>
                         </a>
                     <?php endwhile; ?>
+                <?php else : ?>
+                    <h4 class="no_favorite">お気に入り登録０件
+                    </h4>
                 <?php endif; ?>
                 <?php wp_reset_postdata(); ?>
         </section>
@@ -259,6 +271,9 @@ get_header();
                             </div>
                         </a>
                     <?php endwhile; ?>
+                <?php else : ?>
+                    <h4 class="no_favorite">お気に入り登録０件
+                    </h4>
                 <?php endif; ?>
                 <?php wp_reset_postdata(); ?>
         </section>
