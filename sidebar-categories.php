@@ -5,6 +5,12 @@
         $args = array(
             'title_li' => '',
         );
-        wp_list_categories($args); ?>
+        $categories = get_categories();
+        foreach ($categories as $category) : ?>
+            <li><a href="<?php echo get_category_link($category->cat_ID); ?>"><?php echo $category->name; ?>（<?php echo $category->count; ?>）</a></li>
+        <?php endforeach; ?>
+        <?php
+        // wp_list_categories($args);
+        ?>
     </ul>
 </aside>
