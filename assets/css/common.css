@@ -785,6 +785,20 @@ footer p:first-child {
     right: 14px;
 }
 
+.moving_car {
+    position: fixed;
+    /* position: absolute; */
+    width: 200px;
+    z-index: 100;
+}
+
+.smoke_of_car {
+    position: fixed;
+    /* position: absolute; */
+    width: 200px;
+    z-index: 100;
+}
+
 /* ------------------------------------------------------------------------
     西野
 ------------------------------------------------------------------------  */
@@ -1000,6 +1014,7 @@ h4 {
         gap: 20px;
         margin: 30px auto;
     }
+
     /*ページタブの共通スタイル*/
     .nav-links a.page-numbers,
     .nav-links .current,
@@ -1018,12 +1033,13 @@ h4 {
         color: #000;
 
     }
+
     .nav-links .current {
-    background-color: #999;
-    color: #fff;
-    border-radius: 50%;
-    padding: 0px;
-    padding-top: 10px;
+        background-color: #999;
+        color: #fff;
+        border-radius: 50%;
+        padding: 0px;
+        padding-top: 10px;
     }
 
     /*マウスが乗った時の、ボタンの背景の色と文字の色*/
@@ -1038,45 +1054,45 @@ h4 {
 /* ------------------------------------------------------------------------
     マウスストーカー
 ------------------------------------------------------------------------  */
-        #stkr {
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            width: 100px;
-            /* height: 200px; */
-            /* background: rgba(0, 0, 0, 0.5); */
-            border-radius: 50%;
-            transition: 0.4s;
-            transition-timing-function: ease-out;
-            pointer-events: none;
-            z-index: 10;
-            display: flex;
-        }
+#stkr {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100px;
+    /* height: 200px; */
+    /* background: rgba(0, 0, 0, 0.5); */
+    border-radius: 50%;
+    transition: 0.4s;
+    transition-timing-function: ease-out;
+    pointer-events: none;
+    z-index: 10;
+    display: flex;
+}
 
-        #stkr img {
-            width: 120px;
-        }
+#stkr img {
+    width: 120px;
+}
 
-        /* マウスストーカーに影響のない装飾CSS */
-        * {
-            margin: 0;
-            padding: 0;
-        }
+/* マウスストーカーに影響のない装飾CSS */
+* {
+    margin: 0;
+    padding: 0;
+}
 
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-        }
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
 
-        .car_img {
-            margin-top: 200px;
-            margin-left: 50px;
-            z-index: 2;
-        }
+.car_img {
+    margin-top: 200px;
+    margin-left: 50px;
+    z-index: 2;
+}
 
-        .gas {
-            /* border: 1px solid red; */
-            margin-top: 140px;
-            margin-left: -20px;
-        }
+.gas {
+    /* border: 1px solid red; */
+    margin-top: 140px;
+    margin-left: -20px;
+}
