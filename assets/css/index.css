@@ -285,6 +285,7 @@ h2.title_drivecourse {
 
 
 
+
 .btn_course1 {
   background-color: #FF8B03;
 }
@@ -306,8 +307,12 @@ h2.title_drivecourse {
 }
 
 .btn:hover {
-  color: #fff;
-  background-color: #333;
+  left: 0;
+  top: 0;
+  box-shadow: 0 0 2px #b6ecde;
+  background-color:#333;
+  color:#fff;
+  translate: 5px 5px;
 }
 
 /* ~~~~~~~~~~~~スマホボタン表示~~~~~~~~~~~~ */
