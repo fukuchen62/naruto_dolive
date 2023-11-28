@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------------------------------
+トップエリア
+------------------------------------------------------------------------  */
+
+/* 帯色 */
+#toparea {
+    background-color: #9996ca;
+}
+
+/* 帯タイトルカラー */
+#toparea>h2 {
+    color: #812c89;
+}
+
+/* セクション幅 */
+section {
+    padding: 10px;
+}
+
+/* トップメニュー横並び */
+.menu_wrap {
+    margin: 40px auto 50px;
+    padding: 0 30px;
+}
+
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+
+    .menu_wrap {
+        margin: 140px auto 250px;
+        padding: 0 100px;
+        max-width: 80%;
+    }
+}
+
+/* ------------------------------------------------------------------------
+ボタン設定
+------------------------------------------------------------------------  */
+
+/* 項目ボタン装飾非表示 */
+.sitemap_btn::after {
+    display: none;
+}
+
+/* 項目ボタン外側 */
+.sitemap_btn {
+    display: block;
+    width: 280px;
+    height: 80px;
+    margin: 40px auto 40px;
+    background-color: #FFFCAA;
+    border: 3px solid #000;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0 #000;
+}
+
+/* リンクを親要素いっぱいに広げる */
+.sitemap_btn>a {
+    display: block;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+
+    /* 項目ボタン */
+    .sitemap_btn {
+        margin: 0 50px 50px;
+    }
+}
+
+
+/* ------------------------------------------------------------------------
+リスト
+------------------------------------------------------------------------  */
+
+.sitemap_list {
+    margin: 20px;
+}
+
+.sitemap_list li {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 15px 0;
+}
+
+.sitemap_list a {
+    border-bottom: 1px solid #000;
+}
+
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+
+    /* 小リスト横並び */
+    .sitemap_list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 100px 50px;
+        gap: 20px;
+        width: 100%;
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+
+    .sitemap_list li {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -1px;
+        padding-left: 20px;
+        border-left: 1px solid #000;
+        zoom: 1;
+    }
+}
+
+/* ------------------------------------------------------------------------
+小見出し
+------------------------------------------------------------------------  */
+
+/* 小見出しフォント */
+.menu_wrap>h4 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 30px 50px 10px;
+    text-align: center;
+    position: relative;
+}
+
+/* リンク幅 */
+.menu_wrap>h4>a {
+    padding: 20px 50px;
+}
+
+/* 下線 */
+.menu_wrap>h4>a::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 10px;
+    /* 下線の高さを調整 */
+    background-image: url("../img/wave_bottom.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+
+    /* 小見出しフォント */
+    .menu_wrap>h4 {
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding: 30px 0 10px;
+        margin-bottom: 50px;
+        position: relative;
+        left: -30%;
+
+    }
+
+    /* リンク幅 */
+    .menu_wrap>h4>a {
+        padding: 20px 70px;
+    }
+
+    /* 下線 */
+    .menu_wrap>h4>a::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20%;
+        height: 10px;
+        /* 下線の高さを調整 */
+        background-image: url("../img/wave_bottom.svg");
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+}
+
+/* 下部コンテンツ */
+.u_content {
+    padding: 40px 0 60px;
+}
+
+.u_content li {
+    font-size: 1.8rem;
+}
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+    .u_content {
+        padding: 50px 0 250px;
+
+    }
+}
