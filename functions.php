@@ -154,8 +154,17 @@ function add_individual_scripts()
     // マイページのcssの読み込み
     elseif (is_page('mypage')) {
         wp_enqueue_style(
-            'mypage_atyle',
+            'mypage_style',
             get_template_directory_uri() . '/assets/css/mypage.css',
+            array(),
+            false
+        );
+    }
+    // プライバシーポリシーのcssの読み込み
+    elseif (is_page('privacy-policy')) {
+        wp_enqueue_style(
+            'privacy_style',
+            get_template_directory_uri() . '/assets/css/privacy_policy.css',
             array(),
             false
         );
