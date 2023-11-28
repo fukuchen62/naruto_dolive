@@ -149,21 +149,12 @@ color: #f8c9d7;
 
 /***コースカード一覧***/
 /* 道路バー(sp) */
-    /* .wrapper {
-        width: 80%;
-        height: auto;
-        background-color: bisque;
-        margin: 0 auto;
-        display: flex;
-    } */
+
     .road_wrapper {
-        /* position: relative; */
         border-left: 2px solid gray;
         border-right: 2px solid gray;
         width: 50px;
-        margin: 0 auto;
         box-sizing:content-box;
-        z-index: -999;
     }
 
     .road {
@@ -198,10 +189,6 @@ color: #f8c9d7;
     }
 
     .car_wrapper{
-        position: absolute;
-        top: 0px;
-        left: 50%;
-        transform: translate(-50%, 0);
         width: 50px;
         height: 50px;
         /* border: 1px solid red; */
@@ -228,34 +215,30 @@ color: #f8c9d7;
         height: 100%;
     }
 
-    .course_all{
-        position: relative;
-    }
-
     .card_flex{
-        z-index: 999;
+        /* z-index: 999;
         position: absolute;
         left: 50%;
-        transform: translate(-50%, 0);
+        transform: translate(-50%, 0); */
     }
     .card_flex1{
-        top: 100px;
+        top: 0px;
     }
 
     .card_flex2{
-        top: 700px;
+        top: 450px;
     }
 
     .card_flex3{
-        top: 1300px;
+        top: 900px;
     }
 
     .card_flex4{
-        top: 1900px;
+        top: 1350px;
     }
 
     .card_flex5{
-        top:2500px;
+        top: 1800px;
     }
 
     .card_flex6{
@@ -273,6 +256,7 @@ color: #f8c9d7;
     .card_flex9{
         top: 4900px;
     }
+
 
 
 /* 道路バー(pc) */
@@ -293,40 +277,36 @@ color: #f8c9d7;
     }
 
 
-
 /* コースカード(sp) */
 .course_all{
     border: 3px solid green;
 }
+
+.course_all_flex{
+    display: flex;
+}
+
 .card_flex .card1_wrap{
-    /* margin-bottom: 200px; */
-    width: 200px;
+    width: 80%;
+    margin-left: 40px;
+    max-width: 800px;
 }
 .card1_content{
 background-color: #ff8b03;
 }
 
 .card1_img1{
-    /* width: 180px; */
     object-fit: cover;
 }
 .card1_text{
     background-color: #fff;
     width: 100%;
+
 }
-/* .course2_all{
-    display: none;
-} */
 
 
 @media (min-width: 768px){
 /* コースカード(pc) */
-/* .course_all{
-    display: none;
-} */
-/* .course2_all{
-    display: block;
-} */
 
 .car_wrapper{
     width: 80px;
@@ -342,10 +322,21 @@ background-color: #ff8b03;
     box-sizing: content-box;
 
 }
+.course_all_flex{
+    justify-content: center;
+    width: 100%;
+}
+    .card_flex .card1_wrap {
+    width: 80%;
+    margin-left: 40px;
+    max-width: 90%;
+margin: 0 auto;
 
-.course_all{
-    display: flex;
-    justify-content: flex-start;
+}
+}
+
+.course_flex{
+    width: 2000px;
 }
 
 .car_wrapper{
@@ -421,49 +412,6 @@ background-color: #ff8b03;
 .card_flex9{
     top: 3300px;
 }
-
-
-/* .card3_wrap {
-    width: 1300px;
-    border: 5px solid #000;
-    box-shadow: 15px 20px 0 #000;
-    margin: 0 auto;
-    margin-bottom: 150px;
-    display: flex;
-    padding: 30px;
-    background-color: #ff8b03;
-}
-
-.card3_content {
-    padding: 20px;
-    display: flex;
-} */
-
-/* 記事画像サイズ */
-/* .card3_img {
-    width: 100px;
-}
-
-.card3_img img {
-    border: 1px solid #000;
-    object-fit: cover;
-} */
-
-    /* 記事画像サイズ */
-    /* .card3_img {
-        min-width: 150px;
-        width: 50%;
-    } */
-
-    /* 記事本文表示 */
-    /* .card3_text {
-        display: block;
-        border: 1px solid #000;
-        padding: 10px;
-        margin: 30px 30px;
-        background-color: #fff;
-    } */
-
 }
 
 
