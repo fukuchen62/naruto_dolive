@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
-<!-- カスタム投稿タイプの指定と、表示件数の指定=3件 -->
-<?php $loop_topics = new wp_Query(array('post_type' => 'taxonomy-column_type', 'posts_per_page' => 6)); ?>
+
 
 <main>
     <!---- トップエリアタイトル ---->
@@ -50,8 +49,6 @@
 
         <div class="archive_col">
             <div class="card_3col">
-
-
                 <!-- 記事がある分表示させる -->
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
