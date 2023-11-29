@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <main>
     <!-- タイトル -->
-    <h2 id="toparea" class="toparea">食べる</h2>
+    <h2 id="toparea" class="toparea page_title"">食べる</h2>
     <!-- メイン -->
-    <div class="main_wrap">
+    <div class=" main_wrap">
         <!-- パンくずリスト -->
         <p><?php get_template_part('template-parts/breadcrumb'); ?></p>
         <!-- 施設についての画像 -->
@@ -292,12 +292,12 @@
                                     </div><!-- card1_img -->
 
                                     <!-- 店名の表示 -->
-                                    <h4><?php the_title(); ?></h4>
+                                    <h4><?php echo mb_substr(get_the_title(), 0, 10) . '…'; ?></h4>
 
                                     <!-- 抜粋の表示 -->
                                     <div class="card1_text">
-                                        <!-- 字数制限32文字まで -->
-                                        <?php echo mb_substr(get_field('excerpt'), 0, 32); ?>
+                                        <!-- 字数制限24文字まで -->
+                                        <?php echo mb_substr(get_field('excerpt'), 0, 24); ?>
                                     </div><!-- card1_text -- >
 
                                     <!-- ここにアイコンを表示する -->
@@ -374,6 +374,6 @@
                 });
             </script>
         </section><!-- id="recommend" class="section_recommend" -->
-    </div><!-- main_wrap -->
+        </div><!-- main_wrap -->
 </main>
 <?php get_footer() ?>
