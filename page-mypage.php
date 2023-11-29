@@ -237,8 +237,8 @@ get_header();
         <section class="course_map">
             <!-- googlemap -->
             <?php if (!isset($favorite) || !$favorite) : ?>
-                <div class="map" style="margin : 0 auto; width: 70%;">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d35264.57904322709!2d134.61005359751124!3d34.18094112749899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1701237150396!5m2!1sja!2sjp" width="700" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="map">
+                    <iframe src=" https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d35264.57904322709!2d134.61005359751124!3d34.18094112749899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1701237150396!5m2!1sja!2sjp" width="700" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map_fav"></iframe>
                 </div>
             <?php else : ?>
                 <div class="map" id="map"></div>
