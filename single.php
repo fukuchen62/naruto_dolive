@@ -12,9 +12,7 @@ get_header();
             <div class="card2">
                 <div class="card2_wrap">
                     <div class="card2_content">
-                        <div class="card2_img">
-                            <?php the_post_thumbnail('large'); ?>
-                        </div>
+
                         <div class="center_title">
                             <h3 class="middle_title"><?php the_title(); ?></h3>
                         </div>
