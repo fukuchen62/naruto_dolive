@@ -1,7 +1,7 @@
 <footer>
-    <p><a href="<?php echo get_permalink(759) ?>">このサイトについて</a></p>
-    <p><a href="<?php echo get_permalink(756) ?>">サイトマップ</a></p>
-    <p><a href="<?php echo get_permalink(3) ?>">プライバシーポリシー</a></p>
+    <p><a href="<?php echo home_url('naruto_dolive') ?>">このサイトについて</a></p>
+    <p><a href="<?php echo home_url('sitemap') ?>">サイトマップ</a></p>
+    <p><a href="<?php echo home_url('privacy-policy') ?>">プライバシーポリシー</a></p>
     <p class="copyright"><small>&copy; 2023 Team藍 in QLIP</small></p>
     <div>
         <p id="page_top"><a href="#"><span>Page Top</span></a></p>
