@@ -158,7 +158,7 @@ section {
 /* サムネイル画像設定 */
 .thumbnail_img img {
     border: 1px solid #000;
-    width: 280px;
+    width: 240px;
     height: 184px;
     object-fit: cover;
 }
