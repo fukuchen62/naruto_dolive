@@ -918,8 +918,7 @@ moreボタン
 /* 記事背景 */
 .main_wrap {
     background-color: #FFFDF9;
-    max-width: 90%;
-    margin: 5% auto 15%;
+    margin: 20px 18.75px;
 }
 
 /* パンくずリスト */
