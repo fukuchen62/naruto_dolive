@@ -19,25 +19,25 @@ main {
 }
 
 /* 記事背景 */
-.breadcrumb {
+/* .breadcrumb {
     padding: 20px 16px;
-}
+} */
 
-.toparea_title {
+/* .toparea_title {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 50px;
-}
+} */
 
-h3 {
+/* h3 {
     text-align: center;
-}
+} */
 
 @media only screen and (min-width:768px) {
-    .breadcrumb {
+    /* .breadcrumb {
         padding: 40px 32px;
-    }
+    } */
 }
 
 /* 区切り線 */
