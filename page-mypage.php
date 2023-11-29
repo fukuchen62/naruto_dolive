@@ -215,7 +215,7 @@ get_header();
 
 
         <div class="center_title">
-            <h3>お気に入りの【観光】</h3>
+            <h3>お気に入りの【宿泊】</h3>
         </div>
 
         <?php
