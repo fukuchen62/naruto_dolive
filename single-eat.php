@@ -76,7 +76,7 @@
                         <div class="facility_wrap2">
                             <div class="facility_txt_box">
                                 <p class="facility_txt">
-                                    <?php the_field('excerpt'); ?>
+                                    <?php the_field('text'); ?>
                                 </p><!-- facility_txt -->
                             </div><!-- facility_txt_box -->
 
@@ -214,15 +214,6 @@
                         </tr>
                     <?php endif; ?>
 
-                    <tr>
-                        <th>経度</th><!-- 必須 -->
-                        <td><?php the_field('longitude'); ?></td>
-                    </tr>
-                    <tr>
-                        <th>緯度</th><!-- 必須 -->
-                        <td><?php the_field('latitude'); ?></td>
-                    </tr>
-
                     <?php if (get_field('recommend')) : ?>
                         <tr>
                             <th>おすすめメニュー</th>
@@ -273,6 +264,7 @@
 
                         $sub_query = new WP_Query(array(
                             'post_type' => 'eat', // 呼び出す記事のカスタム投稿指定
+                            'posts_per_page' => 3, // 表示する投稿の数
                             'tax_query' => array(
                                 array(
                                     'taxonomy' => $taxonomy,
@@ -280,7 +272,7 @@
                                     'terms' => $term_slugs,
                                 ),
                             ),
-                            'posts_per_page' => 3, // 表示する投稿の数
+
                             'post__not_in' => array($post->ID), //呼び出す記事から現在のページを除外する
                         ));
 

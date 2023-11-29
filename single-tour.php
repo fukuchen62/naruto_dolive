@@ -76,7 +76,7 @@
                         <div class="facility_wrap2">
                             <div class="facility_txt_box">
                                 <p class="facility_txt">
-                                    <?php the_field('excerpt'); ?>
+                                    <?php the_field('text'); ?>
                                 </p><!-- facility_txt -->
                             </div><!-- facility_txt_box -->
 
@@ -127,16 +127,18 @@
                         <td><?php the_field('tel'); ?></td>
                     </tr>
 
-                    <tr>
-                        <th>営業時間</th><!-- 必須 -->
-                        <td><?php the_field('business_hours'); ?></td>
-                    </tr>
+                    <?php if (get_field('business_hours')) : ?>
+                        <tr>
+                            <th>営業時間</th>
+                            <td><?php the_field('business_hours'); ?></td>
+                        </tr>
+                    <?php endif; ?>
 
                     <?php if (get_field('email')) : ?>
-                        <li>
-                            <b>Email</b>
-                            <span><?php the_field('email'); ?></span>
-                        </li>
+                        <tr>
+                            <th>Email</th>
+                            <td><?php the_field('email'); ?></td>
+                        </tr>
                     <?php endif; ?>
 
 
@@ -161,14 +163,14 @@
                     <?php endif; ?>
 
                     <?php if (get_field('toilet')) : ?>
-                        <li>
-                            <b>トイレ</b>
+                        <tr>
+                            <th>トイレ</th>
                             <?php if (get_field('toilet')) : ?>
-                                <span>あり</span>
+                                <td>あり</td>
                             <?php else : ?>
-                                <span>なし</span>
+                                <td>なし</td>
                             <?php endif; ?>
-                        </li>
+                        </tr>
                     <?php endif; ?>
 
 
@@ -206,29 +208,29 @@
                     <?php endif; ?>
 
                     <?php if (get_field('company')) : ?>
-                        <li>
-                            <b>管理会社</b>
-                            <span><?php the_field('company'); ?></span>
-                        </li>
+                        <tr>
+                            <th>管理会社</th>
+                            <td><?php the_field('company'); ?></td>
+                        </tr>
                     <?php endif; ?>
 
                     <?php if (get_field('on_site')) : ?>
-                        <li>
-                            <b>常駐管理者</b>
+                        <tr>
+                            <th>常駐管理者</th>
                             <?php if (get_field('on_site')) : ?>
-                                <span>あり</span>
+                                <td>あり</td>
                             <?php else : ?>
-                                <span>なし</span>
+                                <td>なし</td>
                             <?php endif; ?>
-                        </li>
+                        </tr>
                     <?php endif; ?>
 
 
                     <?php if (get_field('fee')) : ?>
-                        <li>
-                            <b>料金</b>
-                            <span><?php the_field('fee'); ?></span>
-                        </li>
+                        <tr>
+                            <th>料金</th>
+                            <td><?php the_field('fee'); ?></td>
+                        </tr>
                     <?php endif; ?>
 
                     <?php if (get_field('payment')) : ?>
@@ -249,21 +251,11 @@
                     <?php endif; ?>
 
                     <?php if (get_field('access')) : ?>
-                        <li>
-                            <b>アクセス</b>
-                            <span><?php the_field('access'); ?></span>
-                        </li>
+                        <tr>
+                            <th>アクセス</th>
+                            <td><?php the_field('access'); ?></td>
+                        </tr>
                     <?php endif; ?>
-
-                    <tr>
-                        <th>経度</th><!-- 必須 -->
-                        <td><?php the_field('longitude'); ?></td>
-                    </tr>
-                    <tr>
-                        <th>緯度</th><!-- 必須 -->
-                        <td><?php the_field('latitude'); ?></td>
-                    </tr>
-
 
                     <?php if (get_field('cource_id')) : ?>
                         <tr>
@@ -278,11 +270,6 @@
                             <td><?php the_field('memo'); ?></td>
                         </tr>
                     <?php endif; ?>
-
-
-
-
-
                 </table>
             </div><!-- info_wrap -->
 
