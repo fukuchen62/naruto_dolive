@@ -19,15 +19,9 @@ main {
 }
 
 /* 記事背景 */
-.main_wrap {
-    background-color: #fff;
-    max-width: 90%;
-    margin: 5% auto 15%;
-}
-
 .breadcrumb {
-        padding: 20px 16px;
-    }
+    padding: 20px 16px;
+}
 
 .toparea_title {
     position: relative;
@@ -91,7 +85,8 @@ hr {
 .facility_img_list li {
     max-width: 80px;
     height: 75px;
-    border: 3px solid #000;;
+    border: 3px solid #000;
+    ;
 }
 
 .facility_img2 {
@@ -140,13 +135,13 @@ hr {
     color: #333;
 }
 
-    .facility_tag_btn:hover {
+.facility_tag_btn:hover {
     left: 0;
     top: 0;
     box-shadow: 0 0 2px #b6ecde;
-    background-color:#333;
-    color:#fff;
-    transform: translate(5px,5px);
+    background-color: #333;
+    color: #fff;
+    transform: translate(5px, 5px);
 }
 
 @media only screen and (min-width:768px) {
@@ -205,16 +200,16 @@ hr {
         height: 150px;
     }
 
-        .facility_txt_box {
+    .facility_txt_box {
         width: 600px;
         height: 400px;
     }
 
-        .facility_tag {
+    .facility_tag {
         max-width: 600px;
     }
 
-        .facility_tag_btn {
+    .facility_tag_btn {
         min-width: 150px;
         height: 50px;
     }
@@ -245,8 +240,8 @@ th, td {
 }
 
 @media only screen and (min-width:768px) {
-.info_wrap {
-    max-width: 1500px;
+    .info_wrap {
+        max-width: 1500px;
     }
 
     table {
@@ -256,11 +251,11 @@ th, td {
 }
 
 /* 営業時間と電話番号の指定 */
-tr:nth-child(2) th:nth-child(1){
+tr:nth-child(2) th:nth-child(1) {
     padding: 15px;
 }
 
-tr:nth-child(4) th:nth-child(1){
+tr:nth-child(4) th:nth-child(1) {
     padding: 15px;
 }
 
@@ -279,15 +274,15 @@ tr:nth-child(4) th:nth-child(1){
 }
 
 @media only screen and (min-width:768px) {
-.info_map {
-    max-width: 1500px;
-    height: 500px;
-    text-align: center;
-}
+    .info_map {
+        max-width: 1500px;
+        height: 500px;
+        text-align: center;
+    }
 
-.info_map_img {
-    width: 80%;
-}
+    .info_map_img {
+        width: 80%;
+    }
 }
 
 /* その他おすすめ */
@@ -377,7 +372,7 @@ tr:nth-child(4) th:nth-child(1){
 
 /* お気に入りボタン */
 
-.title_wrapper{
+.title_wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -385,28 +380,28 @@ tr:nth-child(4) th:nth-child(1){
     margin-bottom: 10px;
 }
 
-.favorite_wrapper{
+.favorite_wrapper {
     height: 50px;
     width: 50px;
     position: relative;
 }
 
-.favorite_btns{
+.favorite_btns {
     position: absolute;
     top: 0;
     left: 0;
     pointer-events: none;
 }
 
-.favorite_icon{
+.favorite_icon {
     display: none;
 }
 
-.favorited_icon{
+.favorited_icon {
     display: none;
 }
 
-.simplefavorite-button{
+.simplefavorite-button {
     height: 50px;
     width: 50px;
     position: absolute;
