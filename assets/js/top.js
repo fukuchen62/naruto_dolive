@@ -1,27 +1,30 @@
 'use strict';
 
 // ▼TOP-kvのフラッシュ画像表示▼
-var pics_src = [
-    "../assets/img/mypic1.jpg",
-    "../assets/img/mypic2.jpg",
-    "../assets/img/mypic3.jpg",
-    "../assets/img/mypic4.jpg",
-    "../assets/img/mypic5.jpg"
-];
-var num = 0;
+// var pics_src = [
+//     "./assets/img/mypic1.jpg",
+//     "./assets/img/mypic2.jpg",
+//     "./assets/img/mypic3.jpg",
+//     "./assets/img/mypic4.jpg",
+//     "./assets/img/mypic5.jpg"
+// ];
+// var num = 0;
 
-slideshow_timer();
+// slideshow_timer();
 
-function slideshow_timer() {
-    if (num >= pics_src.length) {
-        num = 0;
-    }
-    document.getElementById("mypic1").src = pics_src[num];
-    document.getElementById("mypic2").src = pics_src[num];
-    document.getElementById("mypic3").src = pics_src[num];
-    num++;
-    setTimeout(slideshow_timer, 600);
-}
+// function slideshow_timer() {
+
+//     console.log(pics_src[num]);
+
+//     if (num >= pics_src.length) {
+//         num = 0;
+//     }
+//     document.getElementById("mypic1").src = pics_src[num];
+//     document.getElementById("mypic2").src = pics_src[num];
+//     document.getElementById("mypic3").src = pics_src[num];
+//     num++;
+//     setTimeout(slideshow_timer, 600);
+// }
 // ▲TOP-kvのフラッシュ画像表示▲
 
 // ▼ドライブコース切替▼

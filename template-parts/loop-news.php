@@ -15,7 +15,7 @@
         <!-- 抜粋の出力 -->
         <div class="card3_text">
 
-            <p><a href="<?php the_permalink(); ?>"><?php echo mb_substr(get_the_excerpt(), 0, 55) . '･･･' . '[続きを読む]'; ?></a></p>
+            <p><a href="<?php the_permalink(); ?>"><?php echo mb_substr(get_the_excerpt(), 0, 55) . '･･･'; ?></a></p>
 
         </div>
     </div>

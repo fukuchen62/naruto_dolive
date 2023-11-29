@@ -66,6 +66,15 @@ function add_individual_scripts()
             array(),
             false
         );
+
+        // トップページ専用のjsの読み込み
+        wp_enqueue_script(
+            'top_script',
+            get_template_directory_uri() . '/assets/js/top.js',
+            array('my-script'),
+            '',
+            true
+        );
     } elseif (is_category()) {
         // Index.css
         wp_enqueue_style(
@@ -117,6 +126,9 @@ function add_individual_scripts()
             '',
             true
         );
+
+        // 二つ目のスクリプトを読み込む
+        wp_enqueue_script('my-script2', get_template_directory_uri() . '/assets/js/a_purpose.js', array('jquery'), null, true);
     }
     //------------------------------------
     // 食べる・遊ぶ・宿泊・観光の詳細ページ
@@ -139,6 +151,9 @@ function add_individual_scripts()
             '',
             true
         );
+
+        // 二つ目のスクリプトを読み込む
+        wp_enqueue_script('my-script2', get_template_directory_uri() . '/assets/js/a_purpose.js', array('jquery'), null, true);
     }
     //----------------------
     // コラムの一覧ページ
@@ -232,9 +247,6 @@ function my_theme_enqueue_scripts()
 
     // 一つ目のスクリプトを読み込む
     wp_enqueue_script('my-script', get_template_directory_uri() . '/assets/js/common.js', array('jquery'), null, true);
-
-    // 二つ目のスクリプトを読み込む
-    wp_enqueue_script('my-script2', get_template_directory_uri() . '/assets/js/a_purpose.js', array('jquery'), null, true);
 }
 
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
