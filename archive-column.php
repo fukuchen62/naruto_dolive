@@ -38,6 +38,7 @@ get_header();
 
         <div class="archive_col">
             <div class="card_3col">
+
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
                         <div class="card1_wrap">

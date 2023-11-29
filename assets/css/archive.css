@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /* ------------------------------------------------------------------------
 トップエリア
 ------------------------------------------------------------------------  */
@@ -32,7 +30,6 @@
 /* トップメニュー横並び */
 .menu_wrap {
     display: flex;
-    margin-bottom: 50px;
 }
 
 /* 地図外枠 */
@@ -52,7 +49,7 @@
 @media only screen and (min-width:768px) {
 
     .menu_wrap {
-        margin: 0 auto 50px;
+        margin: 0 auto;
         max-width: 80%;
     }
 
@@ -96,58 +93,36 @@ section {
     padding: 10px;
 }
 
-/* ------------------------------------------------------------------------
-3カラム
------------------------------------------------------------------------- */
-
 /* 記事幅 */
 .archive_col {
     padding: 50px;
-    margin: 0 auto;
 }
 
-/* 3カラム列 */
+/* 記事タイトル */
+.archive_col>h3 {
+    padding: 20px 20px 10px;
+    margin-bottom: 50px;
+}
+
+/* 3カラム */
 .card_3col {
     display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
     gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-/* 目的別項目ボタン装飾非表示 */
-.purpose_btn::after {
-    display: none;
-}
-
-/* 目的別項目ボタン外側 */
-.purpose_btn {
-    display: block;
-    margin-bottom: 50px;
-    background-color: #ffaaaa;
-    border: 3px solid #000;
-    border-radius: 20px;
-    box-shadow: 5px 5px 0 #000;
-}
-
-/* リンクを親要素いっぱいに広げる */
-.purpose_btn>a {
-    display: block;
-    padding: 20px 10px;
-    border-radius: 20px;
-}
-
 /* カード設計 */
 .card_wrap1 {
-    width: 280px;
+    width: 350px;
+    height: 500px;
     border: 3px solid #000;
     box-shadow: 5px 5px 0 #000;
 }
 
 /* カード内幅揃え */
 .card_wrap2 {
-    padding: 30px 30px 10px;
+    padding: 30px;
 }
 
 /* サムネイル画像真ん中並び */
@@ -158,8 +133,8 @@ section {
 /* サムネイル画像設定 */
 .thumbnail_img img {
     border: 1px solid #000;
-    width: 280px;
-    height: 184px;
+    width: 300px;
+    height: 230px;
     object-fit: cover;
 }
 
@@ -171,8 +146,7 @@ section {
 /* カード説明幅 */
 .card_text {
     border: 1px solid #000;
-    padding: 5px 10px ;
-    height: 60px;
+    padding: 10px;
 }
 
 /* アイコン欄 */
@@ -180,12 +154,11 @@ section {
     margin: 20px 0;
     padding: 10px;
     border: 1px solid #000;
-    height: 100px;
 }
 
 /* アイコンサイズ */
 .card_icon img {
-    width: 35px;
+    width: 40px;
 }
 
 /* moreボタン幅 */
@@ -193,42 +166,14 @@ section {
     margin: 50px auto;
 }
 
-
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
 
     /* 記事タイトル */
-    .purpose_btn {
+    .archive_col>h3 {
         margin: 0 50px 50px;
+        padding: 40px 40px 10px;
     }
-
-    /* カード設計 */
-    .card_wrap1 {
-        width: 350px;
-    }
-
-    /* カード内幅揃え */
-    .card_wrap2 {
-        padding: 30px;
-    }
-
-    /* サムネイル画像設定 */
-    .thumbnail_img img {
-        width: 240px;
-    }
-
-    /* カード説明幅 */
-.card_text {
-    padding: 5px 10px ;
-    height: 60px;
-}
-
-/* アイコン欄 */
-.card_icon {
-    margin: 20px 0;
-    padding: 10px;
-    height: 75px;
-}
 }
 
 /* ------------------------------------------------------------------------
@@ -245,7 +190,7 @@ section {
     margin: 0 auto;
     background-color: #aae6ff;
     border: 3px solid #000;
-    width: 250px;
+    width: 280px;
     border-radius: 20px;
     box-shadow: 5px 5px 0 #000;
 
@@ -253,32 +198,17 @@ section {
 
 /* ボタンいっぱいにリンクを広げる */
 .close_link {
-    padding: 5px 86px 0;
+    padding: 5px 106px 0;
     border-radius: 20px;
 }
 
 /* 文字設定 */
 .close {
     font-size: 1.5rem;
-    font-family: "Dela Gothic One";
+    font-family: Dela Gothic One;
 }
 
 /* closeボタン幅 */
 .close_btn {
     margin: 50px auto;
-}
-
-/* マップのCSS */
-#map {
-    width: 400px;
-    height: 400px;
-    background-color: grey;
-}
-
-@media only screen and (min-width:768px) {
-    #map {
-        width: 60%;
-        height: 550px;
-    }
-
 }

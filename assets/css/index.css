@@ -13,7 +13,7 @@ img {
 }
 
 h2.toparea {
-  height: 240px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,29 +115,34 @@ h2.toparea {
   position: absolute;
   bottom: 37%;
   right: 2px;
+  overflow: hidden;
 }
 
 .anim-box.slide-skew.is-animated {
   animation: slide-skew 0.4s cubic-bezier(0.25, 1, 0.5, 1) 2s forwards;
   transform: skew(-30deg);
+  visibility: collapse;
   opacity: 0;
 }
 
 @keyframes slide-skew {
   0% {
     transform: translate(180px, 30px) skew(-30deg);
+    visibility: collapse;
     opacity: 0;
   }
 
   50% {
     transform: translate(90px, 15px) skew(-15deg);
     /* 途中まで傾いた状態 */
+    visibility: visible;
     opacity: 1;
   }
 
   100% {
     transform: translate(0, 0) skew(0);
     /* 傾きを元に戻す */
+    visibility: visible;
     opacity: 1;
   }
 }
@@ -262,7 +267,7 @@ h2.toparea {
 
 h2.title_drivecourse {
   color: #F8C9D7;
-  height: 240px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -280,6 +285,7 @@ h2.title_drivecourse {
   text-align: center;
   border: 3px solid #000;
   box-shadow: 5px 5px 0 #000;
+  cursor: pointer;
 }
 
 .btn_course1 {
@@ -303,8 +309,12 @@ h2.title_drivecourse {
 }
 
 .btn:hover {
-  color: #fff;
+  left: 0;
+  top: 0;
+  box-shadow: 0 0 2px #b6ecde;
   background-color: #333;
+  color: #fff;
+  transform: translate(5px, 5px);
 }
 
 /* ~~~~~~~~~~~~スマホボタン表示~~~~~~~~~~~~ */
@@ -362,7 +372,7 @@ h2.title_drivecourse {
 
 h2.title_pickupcolumn {
   color: #a3a0d4;
-  height: 240px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -401,32 +411,38 @@ h2.title_pickupcolumn {
   text-align: left;
 }
 
+.purpose_delay {
+  width: 100%;
+}
+
 .purpose_delaywrap_flex {
   display: flex;
-  justify-content: center;
   flex-flow: row nowrap;
   align-items: end;
-  padding-top: 2rem;
+}
+
+.purpose_delaywrap {
+  max-width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-flow: row nowrap;
+  overflow: hidden;
 }
 
 .purpose_delaywrap_box {
+  flex: 0 0 calc(100% / 5.5);
+  max-width: calc(100% / 5.5);
   opacity: 0;
-  transition: opacity 0.5s, transform 0.5s;
+  visibility: hidden;
+  transition: opacity 1s, transform 1s;
   transform: translateX(100%);
-  margin-right: 5px;
-  max-width: 15%;
-}
-
-.purpose_delaywrap_flex img {
-  max-height: 150px;
-}
-
-.purpose_delaywrap_box img:not(.initial) {
-  max-height: 100px;
 }
 
 .show {
   opacity: 1;
+  visibility: visible;
   transform: translateX(0);
 }
 
@@ -472,8 +488,12 @@ h2.title_pickupcolumn {
   .column-text p {
     text-align: left;
   }
-}
 
+  .purpose_delaywrap_box {
+    flex: initial;
+    max-width: 100%;
+  }
+}
 
 /* ------------------------------------------------------------------------
     section_instagram
@@ -792,7 +812,7 @@ p.moving_text:hover {
 
 }
 
-.gas {
+.gas_index {
   width: 100px;
   margin-top: -20px;
   margin-left: -40%;

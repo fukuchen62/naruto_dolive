@@ -100,35 +100,34 @@ $(document).ready(function () {
 // ▲コースリンク切替▲
 
 // ▼目的別ボタン▼
-function showDelayed(element, delay) {
-    setTimeout(function () {
-        element.classList.add('show');
-    }, delay);
-}
+$(document).ready(function () {
+    var delay = 1000; // アニメーションの遅延時間（ミリ秒）
+    var duration = 1500; // アニメーションの持続時間（ミリ秒）
+    var animationTriggered = false;
 
-function isElementInViewport(element) {
-    var rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
+    $(window).scroll(function () {
+        var purposeDelayOffsetTop = $(".purpose_delay").offset().top;
+        var windowHeight = $(window).height();
+        var scrollTop = $(window).scrollTop();
 
-function handleScroll() {
-    var boxes = document.getElementsByClassName('purpose_delaywrap_box');
-    for (var i = 1; i < boxes.length; i++) {
-        var box = boxes[i];
-        if (isElementInViewport(box) && !box.classList.contains('show')) {
-            var delay = i * 1000;
-            showDelayed(box, delay);
+        if (!animationTriggered && scrollTop + windowHeight >= purposeDelayOffsetTop) {
+            setTimeout(animateImages, 1500); // 1.5秒後にanimateImages関数を呼び出す
+            animationTriggered = true;
         }
-    }
-}
+    });
 
-window.addEventListener('scroll', handleScroll);
-handleScroll();
+    function animateImages() {
+        var images = $(".purpose_delaywrap_box");
+
+        images.each(function (index) {
+            var image = $(this);
+
+            setTimeout(function () {
+                image.addClass("show");
+            }, delay * index);
+        });
+    }
+});
 // ▲目的別ボタン▲
 
 

@@ -14,6 +14,11 @@
     color: #33F3FF;
 }
 
+h2 a{
+    text-shadow: 2px 2px 0 #000;
+    -webkit-text-stroke: 2px #000;
+}
+
 /* ------------------------------------------------------------------------
 cardテンプレート
 ------------------------------------------------------------------------  */
@@ -55,7 +60,7 @@ cardテンプレート
 .news_tab {
     text-align: center;
     border-bottom: double #87ceeb;
-    width: 80px;
+    width: 100px;
 }
 
 /* 記事タイトルフォントサイズ */
@@ -112,7 +117,7 @@ cardテンプレート
 ページネーション※装飾だけなので消す
 ------------------------------------------------------------------------ */
 
-.pagenation {
+/* .pagenation {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,4 +148,4 @@ cardテンプレート
     border-bottom: 25px solid transparent;
     border-left: 43px solid #000000;
     border-right: 0;
-}
+} */

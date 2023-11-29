@@ -1,14 +1,5 @@
 <?php
-function my_theme_setup()
-{
-    // <title>タグを出力する
-    add_theme_support('title-tag');
-    // アイキャッチ画像を使用可能にする
-    add_theme_support('post-thumbnails');
-    // カスタムメニュー機能を使用可能にする
-    add_theme_support('menus');
-}
-add_action('after_setup_theme', 'my_theme_setup');
+
 
 
 //headが出力される直前に実行される
@@ -84,7 +75,6 @@ function add_individual_scripts()
             false
         );
     }
-
     //----------------------
     //  コラム詳細ページ
     //----------------------
@@ -100,7 +90,7 @@ function add_individual_scripts()
 
         wp_enqueue_script(
             's_column_script',
-            get_template_directory_uri() . '/assets/js/s_column.js',
+            get_template_directory_uri() . '/assets/js/color.js',
             '',
             '',
             true
@@ -121,7 +111,7 @@ function add_individual_scripts()
     }
 
     // 食べる詳細ページのcss
-    elseif (is_singular('eat')) {
+    elseif (is_singular('eat') || is_singular('enjoy') || is_singular('tour') || is_singular('stay')) {
         wp_enqueue_style(
             's_style',
             get_template_directory_uri() . '/assets/css/single.css',
@@ -154,10 +144,42 @@ function add_individual_scripts()
     // マイページのcssの読み込み
     elseif (is_page('mypage')) {
         wp_enqueue_style(
-            'mypage_atyle',
+            'mypage_style',
             get_template_directory_uri() . '/assets/css/mypage.css',
             array(),
             false
+        );
+    }
+    // プライバシーポリシーのcssの読み込み
+    elseif (is_page('privacy-policy')) {
+        wp_enqueue_style(
+            'privacy_style',
+            get_template_directory_uri() . '/assets/css/privacy_policy.css',
+            array(),
+            false
+        );
+    } elseif (is_page('naruto_dolive')) {
+        wp_enqueue_style(
+            'about_style',
+            get_template_directory_uri() . '/assets/css/about.css',
+            array(),
+            false
+        );
+    } elseif (is_single()) {
+        // Index.css
+        wp_enqueue_style(
+            'single-style',
+            get_template_directory_uri() . '/assets/css/s_news.css',
+            array(),
+            false
+        );
+
+        wp_enqueue_script(
+            's_column_script',
+            get_template_directory_uri() . '/assets/js/color.js',
+            '',
+            '',
+            true
         );
     }
 }
@@ -178,3 +200,31 @@ function my_theme_enqueue_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
+
+/**
+ * メインクエリの内容を変更する
+ */
+add_action('pre_get_posts', 'my_pre_get_posts');
+function my_pre_get_posts($query)
+{
+
+    //トップページの場合
+    if ($query->is_category()) {
+        $query->set('posts_per_page', 3);
+        return;
+    } elseif ($query->is_post_type_archive('column')) {
+        $query->set('posts_per_page', 6);
+        return;
+    }
+}
+
+function my_theme_setup()
+{
+    // <title>タグを出力する
+    add_theme_support('title-tag');
+    // アイキャッチ画像を使用可能にする
+    add_theme_support('post-thumbnails');
+    // カスタムメニュー機能を使用可能にする
+    add_theme_support('menus');
+}
+add_action('after_setup_theme', 'my_theme_setup');
