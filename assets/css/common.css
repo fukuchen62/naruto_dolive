@@ -932,6 +932,10 @@ moreボタン
     .breadcrumb {
         padding: 40px 0 80px 32px;
     }
+
+    .main_wrap {
+        margin: 80px 96px;
+    }
 }
 
 /* 画像横幅100％ */
