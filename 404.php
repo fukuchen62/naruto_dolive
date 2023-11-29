@@ -1,5 +1,5 @@
 <body>
-    <div id="stkr" class="sp_none"><img src="../assets/img/maincar_icon.png" alt="" class="car_img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" alt="" class="gas"></div>
+    <div id="stkr" class="sp_none"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/maincar_icon.png" alt="" class="car_img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" alt="" class="gas"></div>
     <?php get_header(); ?>
     <section id="toparea" class="toparea">
         <h2>404NotFound</h2>
