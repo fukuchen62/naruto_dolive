@@ -58,7 +58,7 @@ section {
 }
 
 /* リンクを親要素いっぱいに広げる */
-.sitemap_btn>a {
+.sitemap_btn>span,a {
     display: block;
     padding: 25px;
     border-radius: 20px;
