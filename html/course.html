@@ -24,15 +24,7 @@
 
 
 <body>
-    <!--
-        お疲れ様です！
-        この【index.html】をコピペして各ページ作成お願いします。
-        が、、、
-        まだnavのホバー時の表現やハンバーガーメニュー、レスポンシブ対応はできていません。
-        あくまでtest＆参考程度だと思って、必要に応じてclassの命名、cssの編集（各ページ毎にcssファイルを作成・追加した方がいいかも…例：common.cssは共通パーツ、TOPページ特有のcssは【index.css】を作成して記述していっています。
-        決定事項がまとまったパワポファイルが【https://docs.google.com/presentation/d/1UH-e8r4syRd-EFv8QS8rbK_M89gBjzaU/edit?usp=drive_link&ouid=114449549919721686995&rtpof=true&sd=true】にあるので参照してください！
-    -->
-
+    <div id="stkr" class="sp_none"><img src="../assets/img/maincar_icon.png" alt="" class="car_img"><img src="../assets/img/exhaust_fumes.gif" alt="" class="gas"></div>
     <header>
         <nav class="sp_nav pc_none">
             <div class="container">
@@ -46,7 +38,7 @@
                         <div class="search_box_wrap">
                             <div class="search_box">
                                 <form action="">
-                                    <input type="text" placeholder="検索" value="初期値">
+                                    <input type="text" placeholder="検索" value="">
                                     <button type="submit">
                                         <i class="fas fa-search fa-fw" style="color: white;"></i>
                                     </button>
@@ -56,11 +48,11 @@
                         <div class="link_wrap">
                             <h3 class="overlaymenu_title_course">コースで探す</h3>
                             <ul class="overlaymenu_list_course">
-                                <li><a href="#">コースA</a></li>
-                                <li><a href="#">コースB</a></li>
-                                <li><a href="#">コースC</a></li>
-                                <li><a href="#">コースD</a></li>
-                                <li><a href="#">コースE</a></li>
+                                <li><a href="#">A:鳴門海峡満喫旅</a></li>
+                                <li><a href="#">B:歴史・文化の鳴門旅</a></li>
+                                <li><a href="#">C:ぐるっと一周鳴門旅</a></li>
+                                <li><a href="#">D:鳴門おおそと一周旅</a></li>
+                                <li><a href="#">E:キッズが主役旅</a></li>
                             </ul>
                             <h3 class="overlaymenu_title_purpose">目的で探す</h3>
                             <ul class="overlaymenu_list_purpose">
@@ -132,25 +124,25 @@
                         <li><a href="#">
                                 <dl>
                                     <dt><img src="../assets/img/nav_culture.jpg" alt="歴史・文化の鳴門旅"></dt>
-                                    <dd>歴史･文化の<br>鳴門旅</dd>
+                                    <dd>歴史･文化の鳴門旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
                                     <dt><img src="../assets/img/nav_round.jpg" alt="ぐるっと一周鳴門旅"></dt>
-                                    <dd>ぐるっと一周<br>鳴門旅</dd>
+                                    <dd>ぐるっと一周鳴門旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src="../assets/img/nav_ooooo.jpg" alt="ooooo旅"></dt>
-                                    <dd>ooooo旅</dd>
+                                    <dt><img src="../assets/img/nav_largeround.jpg" alt="鳴門おおそと一周旅"></dt>
+                                    <dd>鳴門おおそと一周旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="#">
                                 <dl>
-                                    <dt><img src="../assets/img/nav_xxxxx.jpg" alt="xxxxx旅"></dt>
-                                    <dd>xxxxx旅</dd>
+                                    <dt><img src="../assets/img/nav_kids.jpg" alt="キッズが主役旅"></dt>
+                                    <dd>キッズが主役旅</dd>
                                 </dl>
                             </a></li>
                     </ul>
@@ -219,7 +211,7 @@
                     <div class="search_box_wrap">
                         <div class="search_box">
                             <form action="">
-                                <input type="text" placeholder="検索">
+                                <input type="text" placeholder="検索" value="">
                                 <button type="submit">
                                     <i class="fas fa-search fa-fw" style="color: black;"></i>
                                 </button>
@@ -231,12 +223,8 @@
         </nav>
     </header>
 
-
     <main>
-        <section id="toparea" class="toparea">
-            <h2>ドライブコース</h2>
-        </section>
-        <!-- 黄ばみシーツ -->
+        <h2 id="toparea" class="toparea_course">ドライブコース</h2>
         <div class="main_wrap">
             <h3>鳴門満喫旅</h3>
 
@@ -248,217 +236,137 @@
                 </div>
             </div>
 
-            <!-- 線1 -->
             <hr>
 
             <section class="course_text">
                 <h3>コース説明</h3>
                 <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
             </section>
-            <div class="course_spot">
-                <!-- タイトルボタン -->
-                <a href="" class="btn_course pushright">
-                    <span>鳴門満喫旅</span>
-                </a>
-            </div>
 
-            <!-- 施設コースカード -->
-            <div class="course_all">
-                <div class="course_all_flex">
-                    <div class="road_flex">
-                        <div class="car_wrapper">
-                            <span class="car_text">車</span>
-                            <div class="car">
-                                <img src="../assets/img/car.png" alt="車">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="road_wrapper">
-                                <div class="road">
-                                    <div class="line"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course_flex">
-                        <div class="card_flex card_flex1">
-                            <a href="" class="card card1">
-                                <div class="card1_wrap">
-                                    <div class="card1_content">
-                                        <div class="card1_img1">
-                                            <img src="../assets/img/sample2.jpg" alt="サムネイル">
-                                        </div>
-                                        <div>
-                                            <h4>施設名</h4>
-                                            <div class="card1_text">
-                                                <p>テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="card_flex card_flex2">
-                            <a href="" class="card card1">
-                                <div class="card1_wrap">
-                                    <div class="card1_content">
-                                        <div class="card1_img1">
-                                            <img src="../assets/img/sample2.jpg" alt="サムネイル">
-                                        </div>
-                                        <div>
-                                            <h4>施設名</h4>
-                                            <div class="card1_text">
-                                                <p>テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="card_flex card_flex3">
-                            <a href="" class="card card1">
-                                <div class="card1_wrap">
-                                    <div class="card1_content">
-                                        <div class="card1_img1">
-                                            <img src="../assets/img/sample2.jpg" alt="サムネイル">
-                                        </div>
-                                        <div>
-                                            <h4>施設名</h4>
-                                            <div class="card1_text">
-                                                <p>テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="card_flex card_flex4">
-                            <a href="" class="card card1">
-                                <div class="card1_wrap">
-                                    <div class="card1_content">
-                                        <div class="card1_img1">
-                                            <img src="../assets/img/sample2.jpg" alt="サムネイル">
-                                        </div>
-                                        <div>
-                                            <h4>施設名</h4>
-                                            <div class="card1_text">
-                                                <p>テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="card_flex card_flex5">
-                            <a href="" class="card card1">
-                                <div class="card1_wrap">
-                                    <div class="card1_content">
-                                        <div class="card1_img1">
-                                            <img src="../assets/img/sample2.jpg" alt="サムネイル">
-                                        </div>
-                                        <div>
-                                            <h4>施設名</h4>
-                                            <div class="card1_text">
-                                                <p>テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+            <div class="course_wrap">
+                <div class="travel_time_content">
+                    <div class="coordinate">
+                        <img src="../assets/img/car.png" alt="所要時間">
+                        <img src="../assets/img/bg_course_road.png" alt="コース道路">
                     </div>
                 </div>
+                <div class="course_details course_a"><!-- ←ここでcourse名追記 -->
+                    <a href="#">
+                        <div class="course_details_card">
+                            <div>
+                                <img src="https://placehold.jp/250x230.png" alt="施設写真">
+                            </div>
+                            <div>
+                                <p class="course_facility">施設名が入ります</p>
+                                <p class="course_facility_info">施設についての説明文が入ります。</p>
+                            </div>
+                        </div>
+                    </a>
 
-                <!-- 線2 -->
-                <hr>
-                <section class="recommend_noflex">
-                    <!-- タイトル -->
-                    <h3>他のおすすめコース</h3>
+                    <a href="#">
+                        <div class="course_details_card">
+                            <div>
+                                <img src="https://placehold.jp/250x230.png" alt="施設写真">
+                            </div>
+                            <div>
+                                <p class="course_facility">施設名が入ります</p>
+                                <p class="course_facility_info">施設についての説明文が入ります。</p>
+                            </div>
+                        </div>
+                    </a>
 
-                    <!-- おすすめコースカード -->
+                    <a href="#">
+                        <div class="course_details_card">
+                            <div>
+                                <img src="https://placehold.jp/250x230.png" alt="施設写真">
+                            </div>
+                            <div>
+                                <p class="course_facility">施設名が入ります</p>
+                                <p class="course_facility_info">施設についての説明文が入ります。</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
+            <!-- 線2 -->
+            <hr>
+            <section class="recommend_noflex">
+                <!-- タイトル -->
+                <h3>他のおすすめコース</h3>
+
+                <!-- おすすめコースカード -->
+                <div class="recommend_flex">
                     <!-- カード１ -->
-                    <div class="recommend_flex">
-                        <div class="recommend_card1">
-                            <a href="" class="card1">
-                                <div class="card1_wrap">
-                                    <div class="card1_content">
-                                        <a href="" class="btn_course1 pushright">
-                                            <span>歴史・文化の鳴門旅</span>
-                                        </a>
-                                        <div class="card1_img">
-                                            <img src="../assets/img/sample6.jpg" alt="サムネイル">
-                                        </div>
-                                        <div class="card1_text">
-                                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります</p>
-                                        </div>
+                    <div class="recommend_flex_box">
+                        <a href="#">
+                            <div class="card1_wrap course_b"><!-- ←ここでcourse名追記 -->
+                                <div class="card1_content">
+                                    <h4>歴史・文化の鳴門旅</h4>
+                                    <div class="card1_img">
+                                        <img src="../assets/img/sample6.jpg" alt="サムネイル">
+                                    </div>
+                                    <div class="card1_text">
+                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります</p>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
-
-                        <!-- カード２ -->
-                        <div class="recommend_card2">
-                            <a href="" class=" card1">
-                                <div class="card1_wrap">
-                                    <div class="card1_content">
-                                        <a href="" class="btn_course2 pushright">
-                                            <span>ぐるっと一周鳴門旅</span>
-                                        </a>
-                                        <div class="card1_img">
-                                            <img src="../assets/img/sample6.jpg" alt="サムネイル">
-                                        </div>
-                                        <div class="card1_text">
-                                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- カード３ -->
-                        <div class="recommend_card3">
-                            <a href="" class=" card1">
-                                <div class="card1_wrap">
-                                    <div class="card1_content">
-                                        <a href="" class="btn_course3 pushright">
-                                            <span>未定</span>
-                                        </a>
-                                        <div class="card1_img">
-                                            <img src="../assets/img/sample6.jpg" alt="サムネイル">
-                                        </div>
-                                        <div class="card1_text">
-                                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- カード４ -->
-                        <div class="recommend_card4">
-                            <a href="" class=" card1">
-                                <div class="card1_wrap">
-                                    <div class="card1_content">
-                                        <a href="" class="btn_course4 pushright">
-                                            <span>未定</span>
-                                        </a>
-                                        <div class="card1_img">
-                                            <img src="../assets/img/sample6.jpg" alt="サムネイル">
-                                        </div>
-                                        <div class="card1_text">
-                                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
-                </section>
+
+                    <!-- カード２ -->
+                    <div class="recommend_flex_box">
+                        <a href="#">
+                            <div class="card1_wrap course_c"><!-- ←ここでcourse名追記 -->
+                                <div class="card1_content">
+                                    <h4>ぐるっと一周鳴門旅</h4>
+                                    <div class="card1_img">
+                                        <img src="../assets/img/sample6.jpg" alt="サムネイル">
+                                    </div>
+                                    <div class="card1_text">
+                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- カード３ -->
+                    <div class="recommend_flex_box">
+                        <a href="#">
+                            <div class="card1_wrap course_d"><!-- ←ここでcourse名追記 -->
+                                <div class="card1_content">
+                                    <h4>鳴門おおそと一周旅</h4>
+                                    <div class="card1_img">
+                                        <img src="../assets/img/sample6.jpg" alt="サムネイル">
+                                    </div>
+                                    <div class="card1_text">
+                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- カード４ -->
+                    <div class="recommend_flex_box">
+                        <a href="#">
+                            <div class="card1_wrap course_e"><!-- ←ここでcourse名追記 -->
+                                <div class="card1_content">
+                                    <h4>キッズが主役旅</h4>
+                                    <div class="card1_img">
+                                        <img src="../assets/img/sample6.jpg" alt="サムネイル">
+                                    </div>
+                                    <div class="card1_text">
+                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
 

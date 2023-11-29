@@ -393,7 +393,7 @@ ul.overlaymenu_list_icon_list {
     }
 
     .pc_nav_logo {
-        max-width: 75px;
+        width: 75px;
         padding-left: 0.5rem;
     }
 
@@ -468,10 +468,11 @@ ul.overlaymenu_list_icon_list {
         display: block;
         position: absolute;
         top: 82px;
+        left: -75px;
         z-index: 4;
         justify-content: space-between;
         background: #555;
-        width: 55%;
+        width: calc(100% + 75px);
         display: none;
         visibility: hidden;
         opacity: 0;
@@ -785,18 +786,30 @@ footer p:first-child {
     right: 14px;
 }
 
+
+/* ページを横切る車 */
 .moving_car {
-    position: fixed;
-    /* position: absolute; */
-    width: 200px;
-    z-index: 100;
+    display: none;
 }
 
 .smoke_of_car {
-    position: fixed;
-    /* position: absolute; */
-    width: 200px;
-    z-index: 100;
+    display: none;
+}
+
+@media only screen and (min-width:768px) {
+    .moving_car {
+        position: fixed;
+        /* position: absolute; */
+        width: 200px;
+        z-index: 100;
+    }
+
+    .smoke_of_car {
+        position: fixed;
+        /* position: absolute; */
+        width: 200px;
+        z-index: 100;
+    }
 }
 
 /* ------------------------------------------------------------------------
@@ -1071,18 +1084,6 @@ h4 {
 
 #stkr img {
     width: 120px;
-}
-
-/* マウスストーカーに影響のない装飾CSS */
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html,
-body {
-    width: 100%;
-    height: 100%;
 }
 
 .car_img {

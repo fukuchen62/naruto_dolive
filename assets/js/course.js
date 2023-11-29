@@ -14,7 +14,7 @@ let card_rects = [];
 //   cardのx座標を代入する配列を用意
 let xValues = []
 // スクロール位置と要素の距離の閾値
-let offset = 200; 
+let offset = 200;
 
 //   配列にcards配列の要素それぞれの位置などを代入
 //   xValuesにcardのそれぞれのx座標マイナス50を代入
@@ -45,36 +45,36 @@ window.addEventListener("scroll", () => {
     }
     carText.textContent = labelText;
 
-        // 車の要素の位置やサイズの情報を変数に取得
-        let carWrapRect = carWrapper.getBoundingClientRect();
+    // 車の要素の位置やサイズの情報を変数に取得
+    let carWrapRect = carWrapper.getBoundingClientRect();
 
-        // コース要素の初期位置のオフセットを取得
-        // コースが親要素からどれだけ離れているかを取得
-        let coursePos = course.offsetTop;
-    
-        // スクロール位置を取得
-        let scrollPos = window.scrollY;
-        
-        // スクロール位置と要素の距離の閾値に基づいて判定
-        // トップから200pxで固定
-        if (carWrapRect.top <= offset) {
-            // 要素が閾値以下にスクロールされた場合の処理
-            carWrapper.style.position = 'fixed';
-            carWrapper.style.top = offset + 'px';
-            if(window.innerWidth >= 768){
-                carWrapper.style.left= 5.3 + "%";
-            }
-        } 
-    
-        // 初期位置を超えた場合の処理
-        // コースからはみ出ないように
-        if(coursePos >= scrollPos + 200 ){
-            carWrapper.style.position = 'absolute';
-            carWrapper.style.top = 0 + "px";
-            if(window.innerWidth >= 768){
-                carWrapper.style.left = 0 + "px";
-            }
+    // コース要素の初期位置のオフセットを取得
+    // コースが親要素からどれだけ離れているかを取得
+    let coursePos = course.offsetTop;
+
+    // スクロール位置を取得
+    let scrollPos = window.scrollY;
+
+    // スクロール位置と要素の距離の閾値に基づいて判定
+    // トップから200pxで固定
+    if (carWrapRect.top <= offset) {
+        // 要素が閾値以下にスクロールされた場合の処理
+        carWrapper.style.position = 'fixed';
+        carWrapper.style.top = offset + 'px';
+        if (window.innerWidth >= 768) {
+            carWrapper.style.left = 5.3 + "%";
         }
+    }
+
+    // 初期位置を超えた場合の処理
+    // コースからはみ出ないように
+    if (coursePos >= scrollPos + 200) {
+        carWrapper.style.position = 'absolute';
+        carWrapper.style.top = 0 + "px";
+        if (window.innerWidth >= 768) {
+            carWrapper.style.left = 0 + "px";
+        }
+    }
 });
 
 
