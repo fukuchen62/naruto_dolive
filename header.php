@@ -65,7 +65,7 @@
                             </div>
                         </div>
                         <div class="link_wrap">
-                            <h3 class="overlaymenu_title_course">コースで探す</h3>
+                            <h3 class="overlaymenu_title_course">コース別一覧</h3>
                             <ul class="overlaymenu_list_course">
                                 <li><a href="<?php echo get_permalink(324); ?>">コースA</a></li>
                                 <li><a href="<?php echo get_permalink(329); ?>">コースB</a></li>
@@ -73,7 +73,7 @@
                                 <li><a href="#">コースD</a></li>
                                 <li><a href="#">コースE</a></li>
                             </ul>
-                            <h3 class="overlaymenu_title_purpose">目的で探す</h3>
+                            <h3 class="overlaymenu_title_purpose">目的別一覧</h3>
                             <ul class="overlaymenu_list_purpose">
                                 <li><a href="<?php echo home_url('/eat'); ?>">食べる</a></li>
                                 <li><a href="<?php echo home_url('/enjoy'); ?>">遊ぶ</a></li>
@@ -138,7 +138,7 @@
             </div>
             <ul class="pc_navmenu">
                 <!-- ページ内リンク？ -->
-                <li class="has_child"><a href="#">コースで探す</a>
+                <li class="has_child"><a href="#">コース別一覧</a>
                     <ul class="child_wrap">
                         <li><a href="<?php echo get_permalink(324); ?>">
                                 <dl>
@@ -173,7 +173,7 @@
                     </ul>
                 </li>
                 <!-- ページ内リンク？ -->
-                <li class="has_child"><a href="#">目的で探す</a>
+                <li class="has_child"><a href="#">目的別一覧</a>
                     <ul class="child_wrap">
                         <li><a href="<?php echo home_url('/eat'); ?>">
                                 <dl>
