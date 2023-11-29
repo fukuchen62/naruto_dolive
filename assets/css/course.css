@@ -154,17 +154,30 @@ section.course_text p {
     margin-top: 10%;
 }
 
+.recommend_flex {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5%;
+    flex-wrap: wrap;
+}
+
+.recommend_flex_box {
+    flex-basis: 25%;
+}
+
 .recommend_flex:last-child {
     padding-bottom: 10%;
 }
 
-@media (min-width: 768px) {
-    .recommend_flex {
+@media (min-width: 1400px) {
+    .recommend_flex_box {
         display: flex;
         justify-content: space-around;
-        padding-top: 5%;
+        width: 50%;
     }
+}
 
+@media (min-width: 768px) {
     .card1_wrap {
         width: 300px;
     }
