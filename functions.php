@@ -80,7 +80,7 @@ function add_individual_scripts()
     //----------------------
     elseif (is_singular('column')) {
 
-        //コラム詳細ページのCSSとJSを読み込む
+        //コラム詳細ページ専用のCSSの読み込み
         wp_enqueue_style(
             's_column_style',
             get_template_directory_uri() . '/assets/css/s_column.css',
@@ -88,6 +88,7 @@ function add_individual_scripts()
             false
         );
 
+        // トップエリアの色の変更
         wp_enqueue_script(
             's_column_script',
             get_template_directory_uri() . '/assets/js/color.js',
@@ -101,22 +102,42 @@ function add_individual_scripts()
     //----------------------
     elseif (is_post_type_archive('eat') || is_post_type_archive('enjoy') || is_post_type_archive('stay') || is_post_type_archive('tour') || is_tax()) {
 
-        //目的別一覧ページのCSSを読み込む
+        //食べる・遊ぶ・宿泊・観光の一覧ページ専用のcssの読み込み
         wp_enqueue_style(
             'archive_purpose',
             get_template_directory_uri() . '/assets/css/a_purpose.css',
             array('common-style'),
             false // headタグ内に出力
         );
+        // トップエリアの色の変更
+        wp_enqueue_script(
+            's_column_script',
+            get_template_directory_uri() . '/assets/js/color.js',
+            '',
+            '',
+            true
+        );
     }
-
-    // 食べる詳細ページのcss
+    //------------------------------------
+    // 食べる・遊ぶ・宿泊・観光の詳細ページ
+    //------------------------------------
     elseif (is_singular('eat') || is_singular('enjoy') || is_singular('tour') || is_singular('stay')) {
+
+        // 食べる・遊ぶ・宿泊・観光の詳細ページ専用のcssの読み込み
         wp_enqueue_style(
             's_style',
             get_template_directory_uri() . '/assets/css/single.css',
             array(),
             false
+        );
+
+        // トップエリアの色の変更
+        wp_enqueue_script(
+            's_column_script',
+            get_template_directory_uri() . '/assets/js/color.js',
+            '',
+            '',
+            true
         );
     }
     //----------------------
@@ -132,7 +153,9 @@ function add_individual_scripts()
             false
         );
     }
+    //----------------------
     // Q&AのCSSの読み込み
+    //----------------------
     elseif (is_post_type_archive('q_a')) {
         wp_enqueue_style(
             'archive_q_a',
@@ -141,7 +164,9 @@ function add_individual_scripts()
             false
         );
     }
+    //----------------------
     // マイページのcssの読み込み
+    //----------------------
     elseif (is_page('mypage')) {
         wp_enqueue_style(
             'favorite_style',
@@ -150,7 +175,9 @@ function add_individual_scripts()
             false
         );
     }
+    //----------------------
     // プライバシーポリシーのcssの読み込み
+    //----------------------
     elseif (is_page('privacy-policy')) {
         wp_enqueue_style(
             'privacy_style',

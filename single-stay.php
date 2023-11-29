@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main>
     <!-- タイトル -->
-    <h2 id="toparea" class="toparea">宿泊</h2>
+    <h2 id="toparea" class="toparea page_title">宿泊</h2>
     <!-- メイン -->
     <div class="main_wrap page_title">
         <!-- パンくずリスト -->
