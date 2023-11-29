@@ -188,6 +188,8 @@ function add_individual_scripts()
             array(),
             false
         );
+    } elseif (is_404()) {
+        wp_enqueue_style('404-style', get_template_directory_uri() . '/assets/css/404.css');
     }
 }
 
