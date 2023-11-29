@@ -35,9 +35,26 @@ h2.toparea {
 }
 
 .more_btn:hover {
+  left: 0;
+  top: 0;
   color: #fff;
   background-color: #333;
+  box-shadow:0 0 2px #000;
+  transform: translate(5px,5px);
 }
+
+  /* width: 15%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  padding: 18px 30px;
+  border-radius: 25px;
+  transition: .3s;
+  text-align: center;
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0 #000;
+  cursor: pointer; */
+
 
 /* ------------------------------------------------------------------------
     section_kv
@@ -309,11 +326,9 @@ h2.title_drivecourse {
 }
 
 .btn:hover {
-  left: 0;
-  top: 0;
-  box-shadow: 0 0 2px #b6ecde;
   background-color: #333;
   color: #fff;
+  box-shadow: 0 0 1px;
   transform: translate(5px, 5px);
 }
 
@@ -613,6 +628,8 @@ p.moving_text:hover {
 
 .instagram_follow_btn:hover {
   background-color: #bc2a8d;
+  box-shadow: 0 0 2px #333;
+  transform: translate(5px,5px);
 }
 
 /* ~~~~~~~~~~~~タブレット表示~~~~~~~~~~~~ */
