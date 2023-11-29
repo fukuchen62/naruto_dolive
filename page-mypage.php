@@ -54,24 +54,12 @@ get_header();
                         );
                         ?>
 
-
-                        <a href="<?php the_permalink(); ?>" class="card1">
-                            <div class="card1_wrap">
-                                <div class="card1_content">
-                                    <div class="card1_img">
-                                        <?php
-                                        $pic1 = get_field('pic1');
-                                        //大サイズ画像のURL
-                                        $pic1_url = $pic1['sizes']['medium'];
-                                        ?>
-                                        <img src="<?php echo $pic1_url; ?>" alt="">
-                                    </div>
-                                    <h4><?php echo $facilityName; ?></h4>
-                                    <div class="card1_text"><?php the_field('excerpt'); ?></div>
-                                </div>
+                        <div class="card_3col">
+                            <div class="card1_content">
+                                <!---- １件ずつカード型で表示 ---->
+                                <?php get_template_part('template-parts/loop', 'content'); ?>
                             </div>
-                        </a>
-
+                        </div>
                     <?php endwhile; ?>
                 <?php else : ?>
                     <h4 class="no_favorite">お気に入り登録０件
@@ -122,28 +110,17 @@ get_header();
 
 
                     <div class="card_3col">
-                        <a href="<?php the_permalink(); ?>" class="card1">
-                            <div class="card1_wrap">
-                                <div class="card1_content">
-                                    <div class="card1_img">
-                                        <?php
-                                        $pic1 = get_field('pic1');
-                                        //大サイズ画像のURL
-                                        $pic1_url = $pic1['sizes']['medium'];
-                                        ?>
-                                        <img src="<?php echo $pic1_url; ?>" alt="">
-                                    </div>
-                                    <h4><?php echo $facilityName; ?></h4>
-                                    <div class="card1_text"><?php the_field('text'); ?></div>
-                                </div>
-                            </div>
-                        </a>
-                    <?php endwhile; ?>
-                <?php else : ?>
-                    <h4 class="no_favorite">お気に入り登録０件
-                    </h4>
-                <?php endif; ?>
-                <?php wp_reset_postdata(); ?>
+                        <div class="card1_content">
+                            <!---- １件ずつカード型で表示 ---->
+                            <?php get_template_part('template-parts/loop', 'content'); ?>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php else : ?>
+                <h4 class="no_favorite">お気に入り登録０件
+                </h4>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
 
         </section>
 
@@ -188,28 +165,17 @@ get_header();
 
 
                     <div class="card_3col">
-                        <a href="<?php the_permalink(); ?>" class="card1">
-                            <div class="card1_wrap">
-                                <div class="card1_content">
-                                    <div class="card1_img">
-                                        <?php
-                                        $pic1 = get_field('pic1');
-                                        //大サイズ画像のURL
-                                        $pic1_url = $pic1['sizes']['medium'];
-                                        ?>
-                                        <img src="<?php echo $pic1_url; ?>" alt="">
-                                    </div>
-                                    <h4><?php echo $facilityName; ?></h4>
-                                    <div class="card1_text"><?php the_field('text'); ?></div>
-                                </div>
-                            </div>
-                        </a>
-                    <?php endwhile; ?>
-                <?php else : ?>
-                    <h4 class="no_favorite">お気に入り登録０件
-                    </h4>
-                <?php endif; ?>
-                <?php wp_reset_postdata(); ?>
+                        <div class="card1_content">
+                            <!---- １件ずつカード型で表示 ---->
+                            <?php get_template_part('template-parts/loop', 'content'); ?>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php else : ?>
+                <h4 class="no_favorite">お気に入り登録０件
+                </h4>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
         </section>
 
 
@@ -254,28 +220,17 @@ get_header();
 
 
                     <div class="card_3col">
-                        <a href="<?php the_permalink(); ?>" class="card1">
-                            <div class="card1_wrap">
-                                <div class="card1_content">
-                                    <div class="card1_img">
-                                        <?php
-                                        $pic1 = get_field('pic1');
-                                        //大サイズ画像のURL
-                                        $pic1_url = $pic1['sizes']['medium'];
-                                        ?>
-                                        <img src="<?php echo $pic1_url; ?>" alt="">
-                                    </div>
-                                    <h4><?php echo $facilityName; ?></h4>
-                                    <div class="card1_text"><?php the_field('text'); ?></div>
-                                </div>
-                            </div>
-                        </a>
-                    <?php endwhile; ?>
-                <?php else : ?>
-                    <h4 class="no_favorite">お気に入り登録０件
-                    </h4>
-                <?php endif; ?>
-                <?php wp_reset_postdata(); ?>
+                        <div class="card1_content">
+                            <!---- １件ずつカード型で表示 ---->
+                            <?php get_template_part('template-parts/loop', 'content'); ?>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php else : ?>
+                <h4 class="no_favorite">お気に入り登録０件
+                </h4>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
         </section>
 
 
