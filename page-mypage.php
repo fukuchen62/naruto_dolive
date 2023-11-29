@@ -29,7 +29,7 @@ get_header();
             // 取得する投稿タイプの指定
             'post_type' => 'eat',
             // 1ページに表示する投稿数の指定
-            'posts_per_page' => 3
+            'posts_per_page' => -1
         );
 
         ?>
@@ -38,7 +38,7 @@ get_header();
         <?php $the_query = new WP_Query($args); ?>
         <section class="archive_col">
             <div class="card_3col">
-                <?php if ($the_query->have_posts()) : ?>
+                <?php if ($favorites && count($favorites) > 0) : ?>
                     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
                         <?php
@@ -84,7 +84,7 @@ get_header();
             // 取得する投稿タイプの指定
             'post_type' => 'enjoy',
             // 1ページに表示する投稿数の指定
-            'posts_per_page' => 3
+            'posts_per_page' => -1
         );
 
         ?>
@@ -92,7 +92,7 @@ get_header();
         <!-- 与えられた引数で新しいwp_queryオブジェクトを作成 -->
         <?php $the_query = new WP_Query($args); ?>
         <section class="archive_col">
-            <?php if ($the_query->have_posts()) : ?>
+            <?php if ($favorites && count($favorites) > 0) : ?>
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
                     <?php
@@ -139,7 +139,7 @@ get_header();
             // 取得する投稿タイプの指定
             'post_type' => 'tour',
             // 1ページに表示する投稿数の指定
-            'posts_per_page' => 3
+            'posts_per_page' => -1
         );
 
         ?>
@@ -147,7 +147,7 @@ get_header();
         <!-- 与えられた引数で新しいwp_queryオブジェクトを作成 -->
         <?php $the_query = new WP_Query($args); ?>
         <section class="archive_col">
-            <?php if ($the_query->have_posts()) : ?>
+            <?php if ($favorites && count($favorites) > 0) : ?>
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
                     <?php
@@ -194,7 +194,7 @@ get_header();
             // 取得する投稿タイプの指定
             'post_type' => 'stay',
             // 1ページに表示する投稿数の指定
-            'posts_per_page' => 3
+            'posts_per_page' => -1
         );
 
         ?>
@@ -202,7 +202,7 @@ get_header();
         <!-- 与えられた引数で新しいwp_queryオブジェクトを作成 -->
         <?php $the_query = new WP_Query($args); ?>
         <section class="archive_col">
-            <?php if ($the_query->have_posts()) : ?>
+            <?php if ($favorites && count($favorites) > 0) : ?>
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
                     <?php
@@ -236,8 +236,13 @@ get_header();
 
         <section class="course_map">
             <!-- googlemap -->
-            <div class="map" id="map">
-            </div>
+            <?php if (!isset($favorite) || !$favorite) : ?>
+                <div class="map" style="margin : 0 auto; width: 70%;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d35264.57904322709!2d134.61005359751124!3d34.18094112749899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1701237150396!5m2!1sja!2sjp" width="700" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            <?php else : ?>
+                <div class="map" id="map"></div>
+            <?php endif; ?>
         </section>
     </div>
 </main>
