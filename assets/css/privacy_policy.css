@@ -17,21 +17,21 @@
 中見出し
 ------------------------------------------------------------------------  */
 
-.breadcrumb {
+/* .breadcrumb {
     margin: auto;
     padding: 5%;
-    }
+    } */
 
 @media only screen and (min-width:540px){
-    .breadcrumb{
+    /* .breadcrumb{
         padding: 4%;
-    }
+    } */
 }
 
 @media only screen and (min-width:768px){
-    .breadcrumb{
+    /* .breadcrumb{
         padding: 3%;
-    }
+    } */
 }
 
 .text-container{
