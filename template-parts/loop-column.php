@@ -9,7 +9,7 @@
         </div>
 
         <!-- 記事名の表示 -->
-        <h4><?php the_title(); ?></h4>
+        <h4><?php echo mb_substr(get_the_title(), 0, 11) . '･･･'; ?></h4>
 
         <div class="taxonomy_box">
 

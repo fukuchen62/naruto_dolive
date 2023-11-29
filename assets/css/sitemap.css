@@ -41,7 +41,7 @@ section {
 ------------------------------------------------------------------------  */
 
 /* 項目ボタン装飾非表示 */
-.sitemap_btn::after {
+.sitemap_btn::after, .sitemap_table::after {
     display: none;
 }
 
@@ -64,12 +64,27 @@ section {
     border-radius: 20px;
 }
 
+/* 一覧タイトル（非リンク） */
+.sitemap_table {
+    display: block;
+    padding: 20px 0;
+    width: 200px;
+    border-left: 10px solid #9996ca;
+    margin: 50px auto 20px;
+}
+
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
 
     /* 項目ボタン */
     .sitemap_btn {
-        margin: 0 50px 50px;
+        margin: 0 0 40px;
+    }
+
+    /* 一覧タイトル（非リンク） */
+    .sitemap_table {
+        width: 250px;
+        margin: 50px 10% 20px;
     }
 }
 
@@ -79,7 +94,7 @@ section {
 ------------------------------------------------------------------------  */
 
 .sitemap_list {
-    margin: 20px;
+    margin: 20px 30%;
 }
 
 .sitemap_list li {
@@ -100,7 +115,7 @@ section {
     .sitemap_list {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 100px 50px;
+        margin: 20px 10%;
         gap: 20px;
         width: 100%;
         overflow: hidden;
@@ -117,8 +132,6 @@ section {
     }
 }
 
-
-
 /* ------------------------------------------------------------------------
 小見出し
 ------------------------------------------------------------------------  */
@@ -127,14 +140,15 @@ section {
 .menu_wrap>h4 {
     font-size: 1.6rem;
     font-weight: bold;
-    padding: 30px 50px 10px;
+    padding: 0 50px;
     text-align: center;
     position: relative;
+    margin-bottom: 30px;
 }
 
 /* リンク幅 */
 .menu_wrap>h4>a {
-    padding: 20px 50px;
+    padding: 10px 40px;
 }
 
 /* 下線 */
@@ -145,7 +159,7 @@ section {
     bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 50%;
+    width: 40%;
     height: 10px;
     /* 下線の高さを調整 */
     background-image: url("../img/wave_bottom.svg");
@@ -159,33 +173,19 @@ section {
 
     /* 小見出しフォント */
     .menu_wrap>h4 {
-        font-size: 1.6rem;
-        font-weight: bold;
         padding: 30px 0 10px;
         margin-bottom: 50px;
-        position: relative;
         left: -30%;
-
     }
 
     /* リンク幅 */
     .menu_wrap>h4>a {
-        padding: 20px 70px;
+        padding: 20px 60px;
     }
 
     /* 下線 */
     .menu_wrap>h4>a::after {
-        content: "";
-        position: absolute;
-        bottom: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 20%;
-        height: 10px;
-        /* 下線の高さを調整 */
-        background-image: url("../img/wave_bottom.svg");
-        background-repeat: repeat-x;
-        background-size: contain;
+        width: 15%;
     }
 }
 
