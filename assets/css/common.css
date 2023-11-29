@@ -934,13 +934,13 @@ moreボタン
 
 /* パンくずリスト */
 .breadcrumb {
-    padding: 20px 16px;
+    padding: 20px 0 40px 16px;
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
     .breadcrumb {
-        padding: 40px 32px;
+        padding: 40px 0 80px 32px;
     }
 }
 
@@ -962,7 +962,6 @@ h4 {
 /* カテゴリ枠中央寄せ */
 .aside_wrap {
     width: 300px;
-    margin: 0 auto;
     font-weight: bold;
     padding-bottom: 50px;
 
