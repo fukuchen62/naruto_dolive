@@ -38,7 +38,7 @@ get_header();
 
         <div class="archive_col">
             <div class="card_3col">
-                <?php $loop_topics = new wp_Query(array('post_type' => 'column', 'posts_per_page' => 6)); ?>
+
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
                         <div class="card1_wrap">
