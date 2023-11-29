@@ -225,3 +225,37 @@ section.course_text p {
 .course_e .card1_content {
     background-color: rgba(212, 39, 240, 0.5);
 }
+
+
+.car_wrap{
+    position: relative;
+    width: 85px;
+    height: 110px;
+} 
+
+.req_time{
+    width: 100px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    text-shadow:
+    -1px -1px 0 #000, /* 左上の縁 */
+    1px -1px 0 #000,  /* 右上の縁 */
+    -1px 1px 0 #000,  /* 左下の縁 */
+    1px 1px 0 #000; 
+}
+
+
+@media (min-width: 768px) {
+
+    .car_wrap{
+        width: 100px;
+    }
+
+    .req_time{
+        width: 100px;
+    }
+}
