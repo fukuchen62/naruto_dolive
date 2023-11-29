@@ -181,6 +181,13 @@ function add_individual_scripts()
             '',
             true
         );
+    } elseif (is_page('sitemap')) {
+        wp_enqueue_style(
+            'sitemap_atyle',
+            get_template_directory_uri() . '/assets/css/sitemap.css',
+            array(),
+            false
+        );
     }
 }
 
