@@ -1,32 +1,27 @@
-
-
-
-
 /* ページ全体 */
-.main_wrap{
+.main_wrap {
     text-align: center;
 }
 
 /* ページのh3 */
-.main_wrap h3{
-    border: 1px solid red;
+.main_wrap h3 {
     margin: 30px;
+    font-size: 1.5rem;
 }
 
 /*ヘッダー下部の帯 */
-#toparea{
-    border: 1px solid red;
+#toparea {
     background-color: #ed76bd;
 }
 
 /* 帯内のh2タイトル */
-#toparea>h2{
-color: #f8c9d7;
+.toparea_course {
+    line-height: calc(200px - 5px);
+    color: #f8c9d7;
 }
 
 /* GoogleMap */
-.course_map{
-    border: 1px solid red;
+.course_map {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -48,807 +43,172 @@ color: #f8c9d7;
     height: 100%;
 }
 
-
-/***コース説明欄***/
-/* コース説明(sp) */
-.course_text{
-    border: 1px solid red;
-    margin: 20px 10px;
+section.course_text {
+    margin-bottom: 10%;
 }
 
-.course_text p{
-    border: 1px solid red;
-    margin: 20px;
-}
-
-@media screen and (min-width:768px){
-/* コース説明(pc) */
-.course_text{
-    /* border: 1px solid red; */
-    margin: 20px 10px;
-}
-
-.course_text p{
-    /* border: 1px solid red; */
-    margin-bottom: 50px;
-
-}
-
-.card_flex .card1_wrap{
-    display: flex;
-    /* margin-bottom: 200px; */
-}
-}
-
-
-/***コースタイトルボタン***/
-/* ボタン共通設定(sp) */
-.btn_course{
-    /*影の基点とするためrelativeを指定*/
-    position: relative;
-    /*ボタンの形状*/
-    text-decoration: none;
-    display: inline-block;
-
-    text-align: center;
-    background: transparent;
-    border-radius: 25px;
-    border: solid 1px #333;
-    outline: none;
-    /*アニメーションの指定*/
-    transition: all 0.2s ease;
-    margin-bottom: 30px;
-}
-
-/*ボタンの中のテキスト*/
-.btn_course span {
-    position: relative;
-    z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
-    /*テキストの形状*/
-    display: block;
-    padding: 10px 30px;
-    background:#ff8b03;
-    border-radius: 25px;
-    color:#333;
-    /*アニメーションの指定*/
-    transition: all 0.3s ease;
-    border: 2px solid black;
-}
-
-/*== 右下に押し込まれる（立体が平面に） */
-/*影の設定*/
-.pushright:before {
-    content: "";
-    /*絶対配置で影の位置を決める*/
-    position: absolute;
-    z-index: -1;
-    top: 4px;
-    left: 4px;
-    /*影の形状*/
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    background-color: #333;
-}
-
-@media screen and (min-width:768px){
-/* コースタイトルボタン(pc) */
-/*hoverをした後のボタンの形状*/
-.btn_course:hover{
-    border-color:transparent;
-}
-
-/*hoverの際にX・Y軸に4pxずらす*/
-.pushright:hover span {
-    background-color: #333;
-    color: #fff;
-    transform: translate(4px, 4px);
-}
-}
-
-
-/***コースカード一覧***/
-/* 道路バー(sp) */
-    /* .wrapper {
-        width: 80%;
-        height: auto;
-        background-color: bisque;
-        margin: 0 auto;
-        display: flex;
-    } */
-    .road_wrapper {
-        /* position: relative; */
-        border-left: 2px solid gray;
-        border-right: 2px solid gray;
-        width: 50px;
-        margin: 0 auto;
-        box-sizing:content-box;
-        z-index: -999;
-    }
-
-    .road {
-        background-color: gray;
-        width: 50px;
-        border-left: 2px solid white;
-        border-right: 2px solid white;
-        position: relative;
-        /* overflow: hidden; */
-        margin: 0 auto;
-        text-align: center;
-    }
-    .line {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 2px;
-        height: 100%;
-
-
-        background-image: linear-gradient(
-        to bottom,
-        transparent,
-        transparent 8px,
-        #fff 4px,
-        #fff 12px
-        );
-        background-size: 100% 20px;
-        background-repeat: repeat-y;
-        background-position: left top;
-    }
-
-    .car_wrapper{
-        position: absolute;
-        top: 0px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 50px;
-        height: 50px;
-        /* border: 1px solid red; */
-        text-align: center;
-        line-height: 50px;
-        z-index: 998;
-        margin: 0 auto;
-
-    }
-    .car_text{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        z-index: 998;
-        width: 100%;
-    }
-    .car {
-        /* position: relative; */
-    }
-
-    .car img {
-        width: 100%; /* 画像を親要素に合わせる */
-        height: 100%;
-    }
-
-    .course_all{
-        position: relative;
-    }
-
-    .card_flex{
-        z-index: 999;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
-    .card_flex1{
-        top: 100px;
-    }
-
-    .card_flex2{
-        top: 700px;
-    }
-
-    .card_flex3{
-        top: 1300px;
-    }
-
-    .card_flex4{
-        top: 1900px;
-    }
-
-    .card_flex5{
-        top:2500px;
-    }
-
-    .card_flex6{
-        top: 3100px;
-    }
-
-    .card_flex7{
-        top: 3700px;
-    }
-
-    .card_flex8{
-        top: 4300px;
-    }
-
-    .card_flex9{
-        top: 4900px;
-    }
-
-
-/* 道路バー(pc) */
-@media (max-width: 768px) {
-        .left_wrapper {
-        position: absolute;
-        left: 45%;
-        }
-
-        .right_wrapper {
-        position: relative;
-        z-index: 999;
-        }
-
-        .car {
-        z-index: 10;
-        }
-    }
-
-
-
-/* コースカード(sp) */
-.course_all{
-    border: 3px solid green;
-}
-.card_flex .card1_wrap{
-    /* margin-bottom: 200px; */
-    width: 200px;
-}
-.card1_content{
-background-color: #ff8b03;
-}
-
-.card1_img1{
-    /* width: 180px; */
-    object-fit: cover;
-}
-.card1_text{
-    background-color: #fff;
-    width: 100%;
-}
-/* .course2_all{
-    display: none;
-} */
-
-
-@media (min-width: 768px){
-/* コースカード(pc) */
-/* .course_all{
-    display: none;
-} */
-/* .course2_all{
-    display: block;
-} */
-
-.car_wrapper{
-    width: 80px;
-    height: 80px;
-}
-
-.road{
-    width: 80px;
-
-}
-
-.road_wrapper{
-    box-sizing: content-box;
-
-}
-
-.course_all{
-    display: flex;
-    justify-content: flex-start;
-}
-
-.car_wrapper{
-    top: 0%;
-    left: 0%;
-    transform: translate(0%,-10%);
-}
-
-.card_flex .card1_wrap{
-    width: 80%;
-}
-
-.card_flex{
-    margin-bottom: 0px;
-}
-
-.card_flex{
-    width: 100%;
-}
-
-.card1_wrap {
-    width: 100%;
-}
-
-.card1_content{
-    width: 100%;
-}
-
-.card1_content{
-    display: flex;
-}
-
-.card1_content h4{
-    padding: 0;
-}
-
-.card1_img{
-    margin-right: 10px;
-}
-
-.card_flex1{
-    top: 100px;
-}
-
-.card_flex2{
-    top: 500px;
-}
-
-.card_flex3{
-    top: 900px;
-}
-
-.card_flex4{
-    top: 1300px;
-}
-
-.card_flex5{
-    top: 1700px;
-}
-
-.card_flex6{
-    top: 2100px;
-}
-
-.card_flex7{
-    top: 2500px;
-}
-
-.card_flex8{
-    top: 2900px;
-}
-
-.card_flex9{
-    top: 3300px;
-}
-
-
-/* .card3_wrap {
-    width: 1300px;
-    border: 5px solid #000;
-    box-shadow: 15px 20px 0 #000;
+section.course_text p {
+    width: 70%;
     margin: 0 auto;
-    margin-bottom: 150px;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .main_wrap h3 {
+        font-size: 1.8rem;
+    }
+}
+
+/* ------------------------------------------------------------------------
+    course説明欄
+------------------------------------------------------------------------  */
+.course_wrap {
     display: flex;
-    padding: 30px;
+    width: 90%;
+    margin: 0 auto;
+    gap: 5%;
+    padding-bottom: 5%;
+}
+
+.travel_time_content {
+    display: flex;
+}
+
+.coordinate {
+    position: relative;
+    width: 85px;
+}
+
+.coordinate img:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.coordinate img:nth-child(2) {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.course_details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.course_details_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #000;
+    box-shadow: 5px 5px 0 #000;
+}
+
+.course_details_card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 3%;
+}
+
+.course_facility {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.course_facility_info {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .coordinate {
+        width: 100px;
+    }
+
+    .course_details_card {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .course_details_card img {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+}
+
+/* ------------------------------------------------------------------------
+    おすすめコース欄
+------------------------------------------------------------------------  */
+.card1_text {
+    background-color: #fff;
+    margin-top: 10%;
+}
+
+.recommend_flex:last-child {
+    padding-bottom: 10%;
+}
+
+@media (min-width: 768px) {
+    .recommend_flex {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 5%;
+    }
+
+    .card1_wrap {
+        width: 300px;
+    }
+}
+
+/* ------------------------------------------------------------------------
+    共通カラー指定s
+------------------------------------------------------------------------  */
+.course_a .course_details_card {
     background-color: #ff8b03;
 }
 
-.card3_content {
-    padding: 20px;
-    display: flex;
-} */
-
-/* 記事画像サイズ */
-/* .card3_img {
-    width: 100px;
+.course_a .card1_content {
+    background-color: rgba(255, 139, 3, 0.5);
 }
 
-.card3_img img {
-    border: 1px solid #000;
-    object-fit: cover;
-} */
-
-    /* 記事画像サイズ */
-    /* .card3_img {
-        min-width: 150px;
-        width: 50%;
-    } */
-
-    /* 記事本文表示 */
-    /* .card3_text {
-        display: block;
-        border: 1px solid #000;
-        padding: 10px;
-        margin: 30px 30px;
-        background-color: #fff;
-    } */
-
+.course_b .course_details_card {
+    background-color: #996633;
 }
 
-
-
-/***おすすめコースタイトルボタン***/
-/* おすすめコースボタン(sp) */
-/* 1 */
-/* ボタン共通設定 */
-.btn_course1{
-    /*影の基点とするためrelativeを指定*/
-    position: relative;
-    /*ボタンの形状*/
-    text-decoration: none;
-    display: inline-block;
-
-    text-align: center;
-    background: transparent;
-    border-radius: 25px;
-    border: solid 1px #333;
-    outline: none;
-    /*アニメーションの指定*/
-    transition: all 0.2s ease;
-    margin-bottom: 30px;
+.course_b .card1_content {
+    background-color: rgba(153, 102, 51, 0.5);
 }
 
-/*ボタンの中のテキスト*/
-.btn_course1 span {
-    position: relative;
-    z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
-    /*テキストの形状*/
-    display: block;
-    padding: 10px 30px;
-    background:#996633;
-    border-radius: 25px;
-    color:#333;
-    /*アニメーションの指定*/
-    transition: all 0.3s ease;
-    border: 2px solid black;
+.course_c .course_details_card {
+    background-color: #ff1e1e;
 }
 
-/*影の設定*/
-.pushright:before {
-    content: "";
-    /*絶対配置で影の位置を決める*/
-    position: absolute;
-    z-index: -1;
-    top: 4px;
-    left: 4px;
-    /*影の形状*/
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    background-color: #333;
+.course_c .card1_content {
+    background-color: rgba(255, 30, 30, 0.5);
 }
 
-/* 2 */
-/* ボタン共通設定 */
-.btn_course2{
-    /*影の基点とするためrelativeを指定*/
-    position: relative;
-    /*ボタンの形状*/
-    text-decoration: none;
-    display: inline-block;
-
-    text-align: center;
-    background: transparent;
-    border-radius: 25px;
-    border: solid 1px #333;
-    outline: none;
-    /*アニメーションの指定*/
-    transition: all 0.2s ease;
-    margin-bottom: 30px;
+.course_d .course_details_card {
+    background-color: #11cd7e;
 }
 
-/*ボタンの中のテキスト*/
-.btn_course2 span {
-    position: relative;
-    z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
-    /*テキストの形状*/
-    display: block;
-    padding: 10px 30px;
-    background:#ff1e1e;
-    border-radius: 25px;
-    color:#333;
-    /*アニメーションの指定*/
-    transition: all 0.3s ease;
-    border: 2px solid black;
+.course_d .card1_content {
+    background-color: rgba(17, 205, 126, 0.5);
 }
 
-/*影の設定*/
-.pushright:before {
-    content: "";
-    /*絶対配置で影の位置を決める*/
-    position: absolute;
-    z-index: -1;
-    top: 4px;
-    left: 4px;
-    /*影の形状*/
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    background-color: #333;
+.course_e .course_details_card {
+    background-color: #d427f0;
 }
 
-/* 3 */
-/* ボタン共通設定 */
-.btn_course3{
-    /*影の基点とするためrelativeを指定*/
-    position: relative;
-    /*ボタンの形状*/
-    text-decoration: none;
-    display: inline-block;
-
-    text-align: center;
-    background: transparent;
-    border-radius: 25px;
-    border: solid 1px #333;
-    outline: none;
-    /*アニメーションの指定*/
-    transition: all 0.2s ease;
-    margin-bottom: 30px;
-}
-
-/*ボタンの中のテキスト*/
-.btn_course3 span {
-    position: relative;
-    z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
-    /*テキストの形状*/
-    display: block;
-    padding: 10px 30px;
-    background:#11cd7e;
-    border-radius: 25px;
-    color:#333;
-    /*アニメーションの指定*/
-    transition: all 0.3s ease;
-    border: 2px solid black;
-}
-
-/*影の設定*/
-.pushright:before {
-    content: "";
-    /*絶対配置で影の位置を決める*/
-    position: absolute;
-    z-index: -1;
-    top: 4px;
-    left: 4px;
-    /*影の形状*/
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    background-color: #333;
-}
-
-/* 4 */
-/* ボタン共通設定 */
-.btn_course4{
-    /*影の基点とするためrelativeを指定*/
-    position: relative;
-    /*ボタンの形状*/
-    text-decoration: none;
-    display: inline-block;
-
-    text-align: center;
-    background: transparent;
-    border-radius: 25px;
-    border: solid 1px #333;
-    outline: none;
-    /*アニメーションの指定*/
-    transition: all 0.2s ease;
-    margin-bottom: 30px;
-}
-
-/*ボタンの中のテキスト*/
-.btn_course4 span {
-    position: relative;
-    z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
-    /*テキストの形状*/
-    display: block;
-    padding: 10px 30px;
-    background:#d427f0;
-    border-radius: 25px;
-    color:#333;
-    /*アニメーションの指定*/
-    transition: all 0.3s ease;
-    border: 2px solid black;
-}
-
-/*影の設定*/
-.pushright:before {
-    content: "";
-    /*絶対配置で影の位置を決める*/
-    position: absolute;
-    z-index: -1;
-    top: 4px;
-    left: 4px;
-    /*影の形状*/
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    background-color: #333;
-}
-
-/* 5 */
-/* ボタン共通設定 */
-.btn_course5{
-    /*影の基点とするためrelativeを指定*/
-    position: relative;
-    /*ボタンの形状*/
-    text-decoration: none;
-    display: inline-block;
-
-    text-align: center;
-    background: transparent;
-    border-radius: 25px;
-    border: solid 1px #333;
-    outline: none;
-    /*アニメーションの指定*/
-    transition: all 0.2s ease;
-    margin-bottom: 30px;
-}
-
-/*ボタンの中のテキスト*/
-.btn_course5 span {
-    position: relative;
-    z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
-    /*テキストの形状*/
-    display: block;
-    padding: 10px 30px;
-    background:#ff8b03;
-    border-radius: 25px;
-    color:#333;
-    /*アニメーションの指定*/
-    transition: all 0.3s ease;
-    border: 2px solid black;
-}
-
-/*影の設定*/
-.pushright:before {
-    content: "";
-    /*絶対配置で影の位置を決める*/
-    position: absolute;
-    z-index: -1;
-    top: 4px;
-    left: 4px;
-    /*影の形状*/
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    background-color: #333;
-}
-
-@media screen and (min-width:768px){
-/* おすすめコースボタン(pc) */
-/* 1 */
-/*hoverをした後のボタンの形状*/
-.btn_course1:hover{
-    border-color:transparent;
-}
-
-/*hoverの際にX・Y軸に4pxずらす*/
-.pushright:hover span {
-    background-color: #333;
-    color: #fff;
-    transform: translate(4px, 4px);
-}
-
-/* 2 */
-/*hoverをした後のボタンの形状*/
-.btn_course2:hover{
-    border-color:transparent;
-}
-
-/*hoverの際にX・Y軸に4pxずらす*/
-.pushright:hover span {
-    background-color: #333;
-    color: #fff;
-    transform: translate(4px, 4px);
-}
-
-/* 3 */
-/*hoverをした後のボタンの形状*/
-.btn_course3:hover{
-    border-color:transparent;
-}
-
-/*hoverの際にX・Y軸に4pxずらす*/
-.pushright:hover span {
-    background-color: #333;
-    color: #fff;
-    transform: translate(4px, 4px);
-}
-
-/* 4 */
-/*hoverをした後のボタンの形状*/
-.btn_course4:hover{
-    border-color:transparent;
-}
-
-/*hoverの際にX・Y軸に4pxずらす*/
-.pushright:hover span {
-    background-color: #333;
-    color: #fff;
-    transform: translate(4px, 4px);
-}
-.recommend_flex{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
-}
-/* 5 */
-/*hoverをした後のボタンの形状*/
-.btn_course5:hover{
-    border-color:transparent;
-}
-
-/*hoverの際にX・Y軸に4pxずらす*/
-.pushright:hover span {
-    background-color: #333;
-    color: #fff;
-    transform: translate(4px, 4px);
-}
-}
-
-
-/***おすすめコースカード***/
-/* おすすめコースカード(sp) */
-.card1_text{
-    margin-top: 10px;
-}
-
-/* おすすめコースカードの背景 */
-.recommend_card1 .card1_content{
-background-color: #99663380;
-}
-
-.recommend_card2 .card1_content{
-background-color: #ff1e1e80;
-}
-
-.recommend_card3 .card1_content{
-    background-color: #11cd7e80;
-}
-
-.recommend_card4 .card1_content{
-    background-color: #d427f080;
-}
-
-.recommend_card5 .card1_content{
-    background-color: #ff8b0380;
-}
-
-.recommend_card1,
-.recommend_card2,
-.recommend_card3,
-.recommend_card4
-{
-    min-width: 300px;
-    max-width: 350px;
-    margin: 0 auto;
-}
-
-
-@media screen and (min-width:768px){
-/* おすすめコースカード(pc) */
-/* .recommend_flex{
-    display: flex;
-    justify-content: space-between;
-    margin: 30px 30px;
-} */
-.recommend_flex .card1_content{
-    display: block;
-}
-.recommend_card1,
-.recommend_card2,
-.recommend_card3,
-.recommend_card4
-{
-    min-width: 300px;
-    max-width: 300px;
-}
-}
-
-@media screen and (max-width:1360px){
-    .recommend_flex{
-        display: initial;
-    }
+.course_e .card1_content {
+    background-color: rgba(212, 39, 240, 0.5);
 }

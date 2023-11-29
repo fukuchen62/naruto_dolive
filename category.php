@@ -18,6 +18,14 @@ get_header();
                     <?php while (have_posts()) : the_post(); ?>
                         <div class="card3_wrap">
                             <div class="card3_content">
+                                <div class="card3_img">
+                                    <!-- サムネあれば出力 -->
+                                    <?php if (has_post_thumbnail()) : ?>
+                                        <?php the_post_thumbnail('thumbnail'); ?>
+                                    <?php else : ?>
+                                        <!-- 実装するか未定 -->
+                                    <?php endif; ?>
+                                </div>
                                 <?php get_template_part('template-parts/loop', 'news'); ?>
                             </div>
                         </div>
