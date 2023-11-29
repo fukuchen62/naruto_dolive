@@ -2,7 +2,7 @@
 <main>
     <!---- トップエリアタイトル ---->
     <section id="toparea" class="toparea">
-        <h2>目的別一覧：食べる</h2>
+        <h2 class="page_title">目的別一覧：食べる</h2>
     </section><!-- id="toparea" class="toparea" -->
 
     <div class="main_wrap">

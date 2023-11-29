@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main>
     <!-- タイトル -->
-    <h2 id="toparea" class="toparea page_title"">食べる</h2>
+    <h2 id="toparea" class="toparea page_title">食べる</h2>
     <!-- メイン -->
     <div class=" main_wrap">
         <!-- パンくずリスト -->
@@ -374,6 +374,6 @@
                 });
             </script>
         </section><!-- id="recommend" class="section_recommend" -->
-        </div><!-- main_wrap -->
+    </div><!-- main_wrap -->
 </main>
 <?php get_footer() ?>
