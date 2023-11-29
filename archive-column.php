@@ -44,14 +44,6 @@ get_header();
                         <div class="card1_wrap">
                             <?php get_template_part('template-parts/loop', 'column'); ?>
 
-                            <?php if (has_post_thumbnail()) : ?>
-                                <a href="<?php the_permalink(); ?>"></a>
-
-                            <?php else : ?>
-                                <img src="<?php echo esc_url(home_url('/')); ?>img/ファイル名" alt="<?php the_title(); ?>">
-
-                            <?php endif; ?>
-
                         </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
