@@ -113,6 +113,7 @@ section {
 
 /* 記事幅 */
 .archive_col {
+    display: flex;
     padding: 50px;
 }
 
