@@ -144,8 +144,8 @@ function add_individual_scripts()
     // マイページのcssの読み込み
     elseif (is_page('mypage')) {
         wp_enqueue_style(
-            'mypage_style',
-            get_template_directory_uri() . '/assets/css/mypage.css',
+            'favorite_style',
+            get_template_directory_uri() . '/assets/css/archive_favorite.css',
             array(),
             false
         );
