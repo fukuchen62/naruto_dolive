@@ -14,33 +14,32 @@ get_header();
     <div class="main_wrap">
         <div class="breadcrumb">HOME > サイトマップ</div>
         <div class="menu_wrap">
-            <h3 class="sitemap_btn"><span>TOP</span></h3>
+            <h3 class="sitemap_btn"> <a href="<?php echo home_url('/') ?>">TOP</a></h3>
             <h3 class="sitemap_btn"><span>コースで探す</span></h3>
             <ul class="sitemap_list">
                 <?php
                 $args = array(
-                    'post_type' => 'cource',
-                    'posts_per_page' => -1 // 全ての投稿を表示
+                    'post_type' => 'course',
+                    'posts_per_page' => -1,
+                    'orderby' => 'name', 'order' => 'asc'
                 );
 
-                $the_query = new WP_Query($args);
+                // WP_Queryインスタンスを作成
+                $course_query = new WP_Query($args);
 
-                if ($the_query->have_posts()) {
-                    echo '<ul>';
-                    while ($the_query->have_posts()) {
-                        $the_query->the_post();
-                        echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
-                    }
-                    echo '</ul>';
-                }
-
+                // ループ開始
+                if ($course_query->have_posts()) :
+                    while ($course_query->have_posts()) :
+                        $course_query->the_post();
                 ?>
+                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> <!-- タイトルをリンクとして表示 -->
+                <?php
+                    endwhile;
+                endif;
 
-                <li><a href="">Aコース</a></li>
-                <li><a href="#">Bコース</a></li>
-                <li><a href="#">Cコース</a></li>
-                <li><a href="#">Dコース</a></li>
-                <li><a href="#">Eコース</a></li>
+                // ポストデータをリセット
+                wp_reset_postdata();
+                ?>
             </ul>
             <h3 class="sitemap_btn"><span>目的で探す</span></h3>
             <h4><a href="<?php echo home_url('/eat') ?>">食べる</a></h4>
@@ -79,7 +78,12 @@ get_header();
                 <li><a href="#">寺院・神社</a></li>
                 <li><a href="#">公園</a></li> -->
         </ul>
-        <h3 class="sitemap_btn"><span>新着情報</span></h3>
+        <h3 class="sitemap_btn"> <?php
+                                    $news = get_term_by('slug', 'news', 'category');
+                                    $news_link = get_term_link($news, 'category');
+                                    ?>
+            <a href="<?php echo $news_link; ?>">新着情報</a>
+        </h3>
         <ul class="sitemap_list">
             <?php
             $categories = get_categories(array(
@@ -96,7 +100,7 @@ get_header();
                 <?php endforeach; ?>
         </ul>
     <?php endif; ?>
-    <h3 class="sitemap_btn"><span>コラム</span></h3>
+    <h3 class="sitemap_btn"><a href="<?php echo home_url('/column') ?>">コラム</a></h3>
     <ul class="sitemap_list">
 
         <?php $column_types = get_terms(array('taxonomy' => 'column_type', 'orderby' => 'name', 'order' => 'desc'));
@@ -113,7 +117,7 @@ get_header();
 
 
 <ul class="sitemap_list u_content">
-    <li><a href="https://www.instagram.com/narutodolive/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D">インスタ</a></li>
+    <li><a href="https://www.instagram.com/narutodolive/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank">インスタ</a></li>
     <li><a href="<?php echo home_url('/mypage') ?>">マイページ</a></li>
     <li><a href="<?php echo home_url('/q_a') ?>">Q &amp; A</a></li>
 </ul>
