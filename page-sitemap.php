@@ -5,7 +5,6 @@ get_header();
 
 ?>
 
-<?php get_template_part('template-parts/breadcrumb'); ?>
 
 
 <main>
@@ -114,7 +113,7 @@ get_header();
 
 
 <ul class="sitemap_list u_content">
-    <li><a href="#">インスタ</a></li>
+    <li><a href="https://www.instagram.com/narutodolive/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D">インスタ</a></li>
     <li><a href="<?php echo home_url('/mypage') ?>">マイページ</a></li>
     <li><a href="<?php echo home_url('/q_a') ?>">Q &amp; A</a></li>
 </ul>
@@ -123,12 +122,6 @@ get_header();
 
     </div>
 </main>
-<footer>
-    <p><a href="#">このサイトについて</a></p>
-    <p><a href="#">サイトマップ</a></p>
-    <p><a href="#">プライバシーポリシー</a></p>
-    <p class="copyright"><small>&copy; 2023 Team藍 in QLIP</small></p>
-</footer>
 <div class="button">
 </div>
 <script src="../assets/js/common.js"></script>
