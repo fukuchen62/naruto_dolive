@@ -51,6 +51,7 @@ cardテンプレート
 .card3_img img {
     border: 1px solid #000;
     object-fit: cover;
+    height: 120px;
 }
 
 .article_wrap {
