@@ -54,37 +54,31 @@ $news_link = get_term_link($news, 'category');
 
 <section>
     <h2>コラム記事</h2>
-    <!-- カスタム投稿タイプの指定と、表示件数の指定=3件 -->
-    <?php $loop_topics = new wp_Query(array('post_type' => 'column', 'posts_per_page' => 3)); ?>
-    <div class="">
-        <!-- 3件まで投稿記事があれば表示していく -->
-        <?php while ($loop_topics->have_posts()) : $loop_topics->the_post(); ?>
-            <div>
 
-                <!-- 投稿の個別のページのURLを表示する -->
-                <a href="<?php the_permalink(); ?>">
-                    <!-- サムネイルの表示 -->
+    <?php while (have_posts()) : the_post(); ?>
+        <div>
+            <!-- 投稿の個別のページのURLを表示する -->
+            <a href="<?php the_permalink(); ?>">
+                <!-- サムネイルの表示 -->
 
-                    <!-- サムネイルがあれば、ある分だけ中サイズでループして表示する -->
-                    <?php if (has_post_thumbnail()) : ?>
-                        <figure class="column-pic">
-                            <?php the_post_thumbnail('medium'); ?>
+                <!-- サムネイルがあれば、ある分だけ中サイズでループして表示する -->
+                <?php if (has_post_thumbnail()) : ?>
+                    <figure class="column-pic">
+                        <?php the_post_thumbnail('medium'); ?>
 
-                        </figure>
-                    <?php endif; ?>
-                </a>
+                    </figure>
+                <?php endif; ?>
+            </a>
 
-                <!-- タイトルの取得 -->
-                <p><span><?php echo get_the_title(); ?></span></p>
+            <!-- タイトルの取得 -->
+            <p><span><?php echo get_the_title(); ?></span></p>
 
-                <div class="news_desc">
-                    <p><?php echo mb_substr(get_the_excerpt(), 0, 25) . '…'; ?></p>
-                    <p><a href="<?php the_permalink(); ?>">[続きを読む]</a></p>
-                </div>
+            <div class="news_desc">
+                <p><?php echo mb_substr(get_the_excerpt(), 0, 25) . '…'; ?></p>
+                <p><a href="<?php the_permalink(); ?>">[続きを読む]</a></p>
             </div>
-
-        <?php endwhile; ?>
-    </div>
+        </div>
+    <?php endwhile; ?>
 
     <div class="button">
         <p class="more"><a href="<?php echo home_url('/column') ?>">すべてのコラムを見る</a></p>
