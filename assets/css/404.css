@@ -25,20 +25,21 @@
 
 @media only screen and (min-width:768px){
     .center_title{
-        text-align: initial;
-        padding-left: 32px;
+        text-align: center;
+        padding-left: 30px;
     }
 }
 
-.middle_title {
+/* タイトルの長さの関係でcommonじゃなく、独自cssで制御する */
+.center_title h3{
     font-weight: bolder;
     font-size: 1.8rem;
     display: inline-block;
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: center;
-    text-decoration: #333 wavy underline;
-    line-height: 120%;
+    text-decoration: underline wavy #333;
+    line-height: 2rem;
 }
 
 
@@ -49,13 +50,13 @@ section {
 
 .image-container{
     margin: auto;
-    width: 45%;
+    width: 80%;
     padding: 30px;
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px){
     .image-container{
-        width: 35%;
+        width: 20%;
     }
 }
