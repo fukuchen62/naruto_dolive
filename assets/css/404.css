@@ -16,20 +16,19 @@
 /* 外枠中央配置 */
 .center_title {
     text-align: center;
-    padding: 20px;
 }
 
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:768px){
-    .center_title{
+@media only screen and (min-width:768px) {
+    .center_title {
         text-align: center;
         padding-left: 30px;
     }
 }
 
 /* タイトルの長さの関係でcommonじゃなく、独自cssで制御する */
-.center_title h3{
+.center_title h3 {
     font-weight: bolder;
     font-size: 1.8rem;
     display: inline-block;
@@ -46,15 +45,15 @@ section {
     padding: 10px;
 }
 
-.image-container{
+.image-container {
     margin: auto;
     width: 50%;
-    padding: 30px;
+    padding-top: 30px;
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:768px){
-    .image-container{
+@media only screen and (min-width:768px) {
+    .image-container {
         width: 30%;
     }
 }
