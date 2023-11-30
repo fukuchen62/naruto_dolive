@@ -152,22 +152,22 @@
                                     <dd>歴史･文化の<br>鳴門旅</dd>
                                 </dl>
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="<?php echo get_permalink(812); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_round.jpg" alt="ぐるっと一周鳴門旅"></dt>
                                     <dd>ぐるっと一周<br>鳴門旅</dd>
                                 </dl>
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="<?php echo get_permalink(817); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_○○○○○.jpg" alt="○○○○○旅"></dt>
-                                    <dd>○○○○○旅</dd>
+                                    <dd>鳴門おおそと一周旅</dd>
                                 </dl>
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="<?php echo get_permalink(822); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_×××××.jpg" alt="×××××旅" alt=""></dt>
-                                    <dd>×××××旅</dd>
+                                    <dd>キッズが主役旅</dd>
                                 </dl>
                             </a></li>
                     </ul>

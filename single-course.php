@@ -10,7 +10,7 @@
             <!-- googlemap -->
             <div class="map">
                 <p>GoogleMAP</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d154140.7141983337!2d134.48998549788942!3d34.18674494036548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35537004b8db8063%3A0xbfd0dc7e9484a6ae!2z5b6z5bO255yM6bO06ZaA5biC!5e0!3m2!1sja!2sjp!4v1700445370859!5m2!1sja!2sjp" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <?php the_field('iframe'); ?>
             </div>
         </div>
 
@@ -19,7 +19,7 @@
         <section class="course_text">
             <h3>コース説明</h3>
             <p>
-                <?php the_content(); ?>
+                <?php the_field('excerpt'); ?>
             </p>
         </section>
 
@@ -284,11 +284,16 @@
                                     <div class="card1_content">
                                         <h4><?php the_title() ?></h4>
                                         <div class="card1_img">
-                                            <img src="../assets/img/sample6.jpg" alt="サムネイル" />
+                                            <?php
+                                            $thum = get_field('thumnail');
+                                            //大サイズ画像のURL
+                                            $thum_url = $thum['sizes']['medium'];
+                                            ?>
+                                            <img src="<?php echo $thum_url ?>" alt="サムネイル">
                                         </div>
                                         <div class="card1_text">
                                             <p>
-                                                <?php the_content(); ?>
+                                                <?php the_field('excerpt'); ?>
                                             </p>
                                         </div>
                                     </div>
