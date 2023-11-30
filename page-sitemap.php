@@ -15,7 +15,7 @@ get_header();
         <div class="breadcrumb">HOME > サイトマップ</div>
         <div class="menu_wrap">
             <h3 class="sitemap_btn"> <a href="<?php echo home_url('/') ?>">TOP</a></h3>
-            <h3 class="sitemap_table">コース別一覧</h3>
+            <h4 class="sitemap_table">コース別一覧</h4>
             <ul class="sitemap_list">
                 <?php
                 $args = array(
@@ -41,8 +41,8 @@ get_header();
                 wp_reset_postdata();
                 ?>
             </ul>
-            <h3 class="sitemap_table">目的別一覧</h3>
-            <h4><a href="#">食べる</a></h4>
+            <h4 class="sitemap_table">目的別一覧</h4>
+            <h5><a href="#">食べる</a></h5>
             <?php $eat_types = get_terms(array('taxonomy' => 'eat_type'));
             if (!empty($eat_types)) : ?>
                 <ul class="sitemap_list">
@@ -58,19 +58,20 @@ get_header();
                 </ul>
             <?php endif; ?>
             </ul>
-            <h4><a href="<?php echo home_url('/enjoy') ?>">遊ぶ</a></h4>
-            <h4><a href="<?php echo home_url('/tour') ?>">観光</a></h4>
+            <h5><a href="<?php echo home_url('/enjoy') ?>">遊ぶ</a></h5>
+            <h5><a href="<?php echo home_url('/tour') ?>">観光</a></h5>
             <ul class="sitemap_list">
                 <?php $tour_types = get_terms(array('taxonomy' => 'tour_type'));
                 if (!empty($tour_types)) : ?>
                     <?php foreach ($tour_types as $tour_type) : ?>
                         <li><a href="<?php echo esc_url(get_term_link($tour_type)); ?>"><?php echo esc_html($tour_type->name); ?></a></li>
-                        <h4><a href="<?php echo home_url('/stay') ?>">宿泊</a></h4>
+
 
 
                     <?php endforeach; ?>
             </ul>
         <?php endif; ?>
+        <h5><a href="<?php echo home_url('/stay') ?>">宿泊</a></h5>
         <!-- <li><a href="#">自然</a></li>
                 <li><a href="#">アート・カルチャー</a></li>
                 <li><a href="#">歴史・文化</a></li>
