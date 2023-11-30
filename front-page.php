@@ -52,23 +52,23 @@ get_header();
         </div>
     </div>
 
-    <!-- 新着情報のループ -->
     <div class="teloparea marquee">
-        <div class="marquee_container">
-    <?php if (have_posts()) : $count = 0; ?>
-        <?php while (have_posts()) : the_post(); $count++; ?>
-            <!-- 抜粋の出力 -->
-            <div class="marquee_container <?php echo ($count % 2 === 0) ? 'even' : 'odd'; ?>">
-                <p><a href="<?php the_permalink(); ?>"><?php echo the_excerpt(); ?></a></p>
-            </div>
-        <?php endwhile; ?>
-    <?php endif; ?>
-</div>
-
-        <div class="more_btn">
-            <a href="<?php echo home_url('/category/news') ?>" class="more_link"><span class="more">more</span></a>
-        </div>
+    <div class="marquee_container">
+        <?php if (have_posts()) : $count = 0; ?>
+            <?php while (have_posts()) : the_post(); $count++; ?>
+                <!-- 抜粋の出力 -->
+                <a href="<?php the_permalink(); ?>">
+                    <div class="marquee_news <?php echo ($count % 2 === 0) ? 'even' : 'odd'; ?>">
+                        <p><?php echo the_excerpt(); ?></p>
+                    </div>
+                </a>
+            <?php endwhile; ?>
+        <?php endif; ?>
     </div>
+    <div class="more_btn">
+        <a href="<?php echo home_url('/category/news/') ?>" class="more_link"><span class="more">more</span></a>
+    </div>
+</div>
 
 
     <section id="map" class="section_map">
@@ -12662,53 +12662,48 @@ get_header();
                 </div>
                 <div class="purpose_delaywrap_flex delayScroll">
                     <div class="purpose_delaywrap_box"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_car.png" alt="車"></div>
-                    <div class="purpose_delaywrap_box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_eat.png" alt="食べる"></a></div>
-                    <div class="purpose_delaywrap_box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_enjoy.png" alt="遊ぶ"></a></div>
-                    <div class="purpose_delaywrap_box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_tourism.png" alt="観光"></a></div>
-                    <div class="purpose_delaywrap_box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_lodging.png" alt="宿泊"></a></div>
+                    <div class="purpose_delaywrap_box"><a href="<?php echo home_url('eat/') ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_eat.png" alt="食べる"></a></div>
+                    <div class="purpose_delaywrap_box"><a href="<?php echo home_url('enjoy/') ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_enjoy.png" alt="遊ぶ"></a></div>
+                    <div class="purpose_delaywrap_box"><a href="<?php echo home_url('tour/') ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_tourism.png" alt="観光"></a></div>
+                    <div class="purpose_delaywrap_box"><a href="<?php echo home_url('stay/') ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_lodging.png" alt="宿泊"></a></div>
                 </div>
             </div>
         </div>
 <section id="column" class="section_column">
             <h2 class="title_pickupcolumn">ピックアップコラム</h2>
             <div class="column-flexbox">
-                <a href="#">
-                    <div class=column-container>
-                        <div class="column_imgbox">
-                            <img src=https://placehold.jp/300x300.png alt=記事1の画像 class=column-image>
-                        </div>
-                        <div class=column-text>
-                            <h3>タイトルが入ります。タイトルが入ります。</h3>
-                            <p>テキストが入ります。テキストが入ります。テキストが</p>
-                        </div>
+    <?php
+    $args = array(
+        'post_type' => 'your_custom_post_type', // カスタム投稿タイプを指定
+        'taxonomy' => 'column_type', // タクソノミーを指定
+    );
+    $query = new WP_Query($args);
+    if ($query->have_posts()) :
+        while ($query->have_posts()) : $query->the_post();
+    ?>
+            <a href="<?php the_permalink(); ?>">
+                <div class="column-container">
+                    <div class="column_imgbox">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail('medium'); ?>
+                        <?php endif; ?>
                     </div>
-                </a>
-                <a href="#">
-                    <div class=column-container>
-                        <div class="column_imgbox">
-                            <img src=https://placehold.jp/300x300.png alt=記事2の画像 class=column-image>
-                        </div>
-                        <div class=column-text>
-                            <h3>タイトルが入ります。タイトルが入ります。</h3>
-                            <p>テキストが入ります。テキストが入ります。テキストが</p>
-                        </div>
+                    <div class="column-text">
+                        <h3><?php echo mb_substr(get_the_title(), 0, 11) . '･･･'; ?></h3>
+                        <div class="taxonomy_box"></div>
+                        <p><?php echo mb_substr(get_the_excerpt(), 0, 55) . '･･･'; ?></p>
                     </div>
-                </a>
-                <a href="#">
-                    <div class=column-container>
-                        <div class="column_imgbox">
-                            <img src=https://placehold.jp/300x300.png alt=記事3の画像 class=column-image>
-                        </div>
-                        <div class=column-text>
-                            <h3>タイトルが入ります。タイトルが入ります。</h3>
-                            <p>テキストが入ります。テキストが入ります。テキストが</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                </div>
+            </a>
+    <?php
+        endwhile;
+    endif;
+    wp_reset_postdata(); // クエリのリセット
+    ?>
+</div>
             <div class="more_btn_container">
                 <div class="more_btn">
-                    <a href="#" class="more_link"><span class="more">more</span></a>
+                    <a href="<?php echo home_url('/column') ?>" class="more_link"><span class="more">more</span></a>
                 </div>
             </div>
         </section>

@@ -248,12 +248,20 @@ h2.toparea {
   }
 }
 
-.marquee_container a:nth-child(odd) {
+/* .marquee_container a:nth-child(odd) {
   color: #00B9C5;
 }
 
 .marquee_container a:nth-child(even) {
   color: #FF27F6;
+} */
+
+.marquee_container .even p  {
+  color: #FF27F6;
+}
+
+.marquee_container .odd p  {
+  color: #00B9C5;
 }
 
 .marquee_container a:first-child {
