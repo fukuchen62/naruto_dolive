@@ -321,6 +321,7 @@ h3.overlaymenu_title_purpose {
     padding: 1.5rem;
     margin-top: 3rem;
     margin-bottom: 0;
+    text-decoration: none;
 }
 
 h3.overlaymenu_title_purpose::after {
