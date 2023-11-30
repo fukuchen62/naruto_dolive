@@ -19,11 +19,6 @@ h2 a{
 cardテンプレート
 ------------------------------------------------------------------------  */
 
-/* 記事幅 */
-.archive_col {
-    padding: 10px;
-}
-
 /* ▼card3カラムカード▼ */
 
 .card3_wrap {
@@ -76,8 +71,10 @@ cardテンプレート
     /* メニュー横並び */
     .archive_col {
         display: flex;
+        justify-content: space-between;
         max-width: 1200px;
         margin: 0 auto;
+        gap: 5%;
     }
 
     /* 記事左側サイズ */
