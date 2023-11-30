@@ -52,23 +52,23 @@ get_header();
         </div>
     </div>
 
-    <!-- 新着情報のループ -->
     <div class="teloparea marquee">
-        <div class="marquee_container">
-    <?php if (have_posts()) : $count = 0; ?>
-        <?php while (have_posts()) : the_post(); $count++; ?>
-            <!-- 抜粋の出力 -->
-            <div class="marquee_container <?php echo ($count % 2 === 0) ? 'even' : 'odd'; ?>">
-                <p><a href="<?php the_permalink(); ?>"><?php echo the_excerpt(); ?></a></p>
-            </div>
-        <?php endwhile; ?>
-    <?php endif; ?>
-</div>
-
-        <div class="more_btn">
-            <a href="<?php echo home_url('/category/news') ?>" class="more_link"><span class="more">more</span></a>
-        </div>
+    <div class="marquee_container">
+        <?php if (have_posts()) : $count = 0; ?>
+            <?php while (have_posts()) : the_post(); $count++; ?>
+                <!-- 抜粋の出力 -->
+                <a href="<?php the_permalink(); ?>">
+                    <div class="marquee_news <?php echo ($count % 2 === 0) ? 'even' : 'odd'; ?>">
+                        <p><?php echo the_excerpt(); ?></p>
+                    </div>
+                </a>
+            <?php endwhile; ?>
+        <?php endif; ?>
     </div>
+    <div class="more_btn">
+        <a href="<?php echo home_url('/category/news/') ?>" class="more_link"><span class="more">more</span></a>
+    </div>
+</div>
 
 
     <section id="map" class="section_map">
@@ -12662,99 +12662,159 @@ get_header();
                 </div>
                 <div class="purpose_delaywrap_flex delayScroll">
                     <div class="purpose_delaywrap_box"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_car.png" alt="車"></div>
-                    <div class="purpose_delaywrap_box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_eat.png" alt="食べる"></a></div>
-                    <div class="purpose_delaywrap_box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_enjoy.png" alt="遊ぶ"></a></div>
-                    <div class="purpose_delaywrap_box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_tourism.png" alt="観光"></a></div>
-                    <div class="purpose_delaywrap_box"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_lodging.png" alt="宿泊"></a></div>
+                    <div class="purpose_delaywrap_box"><a href="<?php echo home_url('eat/') ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_eat.png" alt="食べる"></a></div>
+                    <div class="purpose_delaywrap_box"><a href="<?php echo home_url('enjoy/') ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_enjoy.png" alt="遊ぶ"></a></div>
+                    <div class="purpose_delaywrap_box"><a href="<?php echo home_url('tour/') ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_tourism.png" alt="観光"></a></div>
+                    <div class="purpose_delaywrap_box"><a href="<?php echo home_url('stay/') ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/delaywrap_lodging.png" alt="宿泊"></a></div>
                 </div>
             </div>
         </div>
-<section id="column" class="section_column">
-            <h2 class="title_pickupcolumn">ピックアップコラム</h2>
-            <div class="column-flexbox">
-                <a href="#">
-                    <div class=column-container>
-                        <div class="column_imgbox">
-                            <img src=https://placehold.jp/300x300.png alt=記事1の画像 class=column-image>
+    <section id="column" class="section_column">
+        <h2 class="title_pickupcolumn">ピックアップコラム</h2>
+        <div class="column-flexbox">
+
+    <?php $args = array(
+        'post_type' => 'column', // カスタム投稿タイプを指定
+
+
+    );
+    $query = new WP_Query($args);
+    if ($query->have_posts()) :
+        while ($query->have_posts()) : $query->the_post(); ?>
+            <a href="<?php the_permalink(); ?>">
+
+                <div class="column-container">
+                    <div class="column_imgbox">
+                        <div class="column-image">
+                            <?php if (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail('medium'); ?>
+                            <?php endif; ?>
                         </div>
-                        <div class=column-text>
-                            <h3>タイトルが入ります。タイトルが入ります。</h3>
-                            <p>テキストが入ります。テキストが入ります。テキストが</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class=column-container>
-                        <div class="column_imgbox">
-                            <img src=https://placehold.jp/300x300.png alt=記事2の画像 class=column-image>
-                        </div>
-                        <div class=column-text>
-                            <h3>タイトルが入ります。タイトルが入ります。</h3>
-                            <p>テキストが入ります。テキストが入ります。テキストが</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class=column-container>
-                        <div class="column_imgbox">
-                            <img src=https://placehold.jp/300x300.png alt=記事3の画像 class=column-image>
-                        </div>
-                        <div class=column-text>
-                            <h3>タイトルが入ります。タイトルが入ります。</h3>
-                            <p>テキストが入ります。テキストが入ります。テキストが</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="more_btn_container">
+                    </div><!-- column_imgbox -->
+
+                    <div class="column-text">
+                        <h3>
+                            <?php echo mb_substr(get_the_title(), 0, 11) . '･･･'; ?>
+                        </h3>
+                        <div class="taxonomy_box"></div>
+                        <p>
+                            <?php echo mb_substr(get_the_excerpt(), 0, 25) . '･･･'; ?>
+                        </p>
+                    </div><!-- column-text -->
+                </div><!-- column-container -->
+            </a><!--  -->
+    <?php endwhile; ?>
+    <?php endif; ?>
+    <?php wp_reset_postdata(); ?>
+</div><!-- column-flexbox -->
+
+
+        <div class="more_btn_container">
                 <div class="more_btn">
-                    <a href="#" class="more_link"><span class="more">more</span></a>
+                    <a href="<?php echo home_url('/column') ?>" class="more_link"><span class="more">more</span></a>
                 </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
     <!-- おすすめキーワードを出す関数、第一引数にulを囲むタグ、第二引数に閉じタグ、第さん引数に表示数 -->
     <h2>おすすめキーワード</h2>
     <?php sm_list_popular_searches('<div class="test">', '</div>', 3); ?>
-    <section>
-        <h2>コラム記事</h2>
 
-        <?php while (have_posts()) : the_post(); ?>
-            <div>
-                <!-- 投稿の個別のページのURLを表示する -->
-                <a href="<?php the_permalink(); ?>">
-                    <!-- サムネイルの表示 -->
 
-                    <!-- サムネイルがあれば、ある分だけ中サイズでループして表示する -->
-                    <?php if (has_post_thumbnail()) : ?>
-                        <figure class="column-pic">
-                            <?php the_post_thumbnail('medium'); ?>
+<section id="instagram" class="section_instagram">
+        <h2 class="toparea">インスタグラム</h2>
 
-                        </figure>
-                    <?php endif; ?>
-                </a>
 
-                <!-- タイトルの取得 -->
-                <p><span><?php echo get_the_title(); ?></span></p>
+        <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
 
-                <div class="news_desc">
-                    <p><?php echo mb_substr(get_the_excerpt(), 0, 25) . '…'; ?></p>
-                    <p><a href="<?php the_permalink(); ?>">[続きを読む]</a></p>
+</section>
+    <div class="teloparea scroll_car">
+            <div class="scroll-infinity">
+                <div class="scroll-infinity__wrap">
+                    <ul class="scroll-infinity__list scroll-infinity__list--left">
+                        <li class="scroll-infinity__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/car_1.png" class="car" alt="車"></li>
+                        <li class="scroll-infinity__item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" class="gas_index" alt="ガス">
+                        </li>
+                        <li class="scroll-infinity__item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/car_2.png" class="car" alt="車">
+                        </li>
+                        <li class="scroll-infinity__item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" class="gas_index" alt="ガス">
+                        </li>
+                        <li class="scroll-infinity__item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/car_3.png" class="car" alt="車">
+                        </li>
+                        <li class="scroll-infinity__item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" class="gas_index" alt="ガス">
+                        </li>
+                    </ul>
+                    <ul class="scroll-infinity__list scroll-infinity__list--left">
+                        <li class="scroll-infinity__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/car_1.png" class="car" alt="車"></li>
+                        <li class="scroll-infinity__item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" class="gas_index" alt="ガス">
+                        </li>
+                        <li class="scroll-infinity__item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/car_2.png" class="car" alt="車">
+                        </li>
+                        <li class="scroll-infinity__item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" class="gas_index" alt="ガス">
+                        </li>
+                        <li class="scroll-infinity__item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/car_3.png" class="car" alt="車">
+                        </li>
+                        <li class="scroll-infinity__item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" class="gas_index" alt="ガス">
+                        </li>
+                    </ul>
+                    <ul class="scroll-infinity__list scroll-infinity__list--left">
+                        <li class="scroll-infinity__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/car_1.png" class="car" alt="車"></li>
+                        <li class="scroll-infinity__item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" class="gas_index" alt="ガス">
+                        </li>
+                        <li class="scroll-infinity__item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/car_2.png" class="car" alt="車">
+                        </li>
+                        <li class="scroll-infinity__item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" class="gas_index" alt="ガス">
+                        </li>
+                        <li class="scroll-infinity__item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/car_3.png" class="car" alt="車">
+                        </li>
+                        <li class="scroll-infinity__item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" class="gas_index" alt="ガス">
+                        </li>
+                    </ul>
                 </div>
             </div>
-        <?php endwhile; ?>
-
-        <div class="button">
-            <p class="more"><a href="<?php echo home_url('/column') ?>">すべてのコラムを見る</a></p>
         </div>
-    </section>
-    <hr>
+        <section id="pdf" class="section_pdf">
+            <h2 class="toparea">PDF</h2>
+            <div class="pdf_wrap_sp pc_none">
+                <div class="card1_wrap">
+                    <div class="card1_content">
+                        <div class="card1_img">
+                            <img class="pdf_anim" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp_guruttonarutodedorive.jpg" alt="ぐるっと鳴門deドライブモデルコース">
+                        </div>
+                        <div class="card1_text">
+                            <a href="<?php echo get_template_directory_uri(); ?>/assets/img/guruttonarutodedorive.pdf" class="card1" rel="noopener" target="_blank"><i class="far fa-file-pdf"></i>&ensp;PDFはこちらをタップ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="instagram-article">
-        <?php echo do_shortcode('[]'); ?>
-    </div>
+            <div class="pdf_wrap_pc sp_none">
+                <div class="pdf_page2">
+                    <a href="<?php echo get_template_directory_uri(); ?>/assets/img/guruttonarutodedorive.pdf" rel="noopener" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guruttonarutodedorive-2.jpg" alt="ぐるっと鳴門deドライブモデルコース-2">
+                    </a>
+                    <div class="pdf_page1">
 
-    <hr>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guruttonarutodedorive.jpg" alt="ぐるっと鳴門deドライブモデルコース-1">
+                    </div>
+                </div>
+            </div>
+        </section>
 </main>
 
 <script>

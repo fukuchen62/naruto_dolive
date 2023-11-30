@@ -12,12 +12,7 @@
 /*ヘッダー下部の帯 */
 #toparea {
     background-color: #ed76bd;
-}
-
-/* 帯内のh2タイトル */
-.toparea_course {
-    line-height: calc(200px - 5px);
-    color: #f8c9d7;
+        color: #f8c9d7;
 }
 
 /* GoogleMap */
@@ -186,7 +181,7 @@ section.course_text p {
 /* ------------------------------------------------------------------------
     共通カラー指定s
 ------------------------------------------------------------------------  */
-.course_a .course_details_card {
+/* .course_a .course_details_card {
     background-color: #ff8b03;
 }
 
@@ -224,6 +219,26 @@ section.course_text p {
 
 .course_e .card1_content {
     background-color: rgba(212, 39, 240, 0.5);
+} */
+
+.course_sea{
+    background-color: #ff8b03;
+}
+
+.course_history{
+    background-color: #996633;
+}
+
+.course_around{
+    background-color: #11cd7e;
+}
+
+.course_gurutto{
+    background-color: #ff1e1e;
+}
+
+.course_kids{
+    background-color: #d427f0;
 }
 
 
@@ -231,7 +246,7 @@ section.course_text p {
     position: relative;
     width: 85px;
     height: 110px;
-} 
+}
 
 .req_time{
     width: 100px;
@@ -245,7 +260,7 @@ section.course_text p {
     -1px -1px 0 #000, /* 左上の縁 */
     1px -1px 0 #000,  /* 右上の縁 */
     -1px 1px 0 #000,  /* 左下の縁 */
-    1px 1px 0 #000; 
+    1px 1px 0 #000;
 }
 
 

@@ -46,3 +46,8 @@ if (pageTitle === "ニュース") {
     pageH2.style.color = "#FF93C8";
     topArea.style.backgroundColor = "#FF188A";
 }
+
+
+// コースの色変更
+
+console.log("test");
