@@ -28,7 +28,7 @@
                 <div class="coordinate">
                     <div class="car_wrap">
                         <img class="car" src="<?php echo get_template_directory_uri(); ?>/assets/img/car.png" alt="所要時間" />
-                        <h4 class="req_time">スタート</h4>
+                        <h4 class="req_time"></h4>
                     </div>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bg_course_road.png" alt="コース道路" />
                 </div>
@@ -345,5 +345,27 @@
         </section>
     </div>
 </main>
+
+<script>
+    // PHPの変数をJavaScriptに渡す
+    const start_time = <?php echo json_encode($start_time); ?>;
+    const move_time2 = <?php echo json_encode($move_time2); ?>;
+    const move_time3 = <?php echo json_encode($move_time3); ?>;
+    const move_time4 = <?php echo json_encode($move_time4); ?>;
+    const move_time5 = <?php echo json_encode($move_time5); ?>;
+    const move_time6 = <?php echo json_encode($move_time6); ?>;
+    const move_time7 = <?php echo json_encode($move_time7); ?>;
+    const move_time8 = <?php echo json_encode($move_time8); ?>;
+    const move_time9 = <?php echo json_encode($move_time9); ?>;
+    const stay_time1 = <?php echo json_encode($stay_time1); ?>;
+    const stay_time2 = <?php echo json_encode($stay_time2); ?>;
+    const stay_time3 = <?php echo json_encode($stay_time3); ?>;
+    const stay_time4 = <?php echo json_encode($stay_time4); ?>;
+    const stay_time5 = <?php echo json_encode($stay_time5); ?>;
+    const stay_time6 = <?php echo json_encode($stay_time6); ?>;
+    const stay_time7 = <?php echo json_encode($stay_time7); ?>;
+    const stay_time8 = <?php echo json_encode($stay_time8); ?>;
+    const stay_time9 = <?php echo json_encode($stay_time9); ?>;
+</script>
 
 <?php get_footer() ?>
