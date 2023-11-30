@@ -23,6 +23,7 @@ h2.toparea {
 .teloparea {
   height: 150px;
   background-color: #fff;
+  overflow: hidden;
 }
 
 .more_btn_container {
@@ -752,7 +753,9 @@ p.moving_text:hover {
 /* ------------------------------------------------------------------------
 車が左に流れるアニメーション ------------------------------------------------------------------------  */
 .scroll_car {
-  padding: 20px 0;
+display: flex;
+align-items: center;
+/* border: 1px solid red; */
 }
 
 @keyframes infinity-scroll-left {
@@ -776,11 +779,11 @@ p.moving_text:hover {
 }
 
 .scroll-infinity__list--left {
-  animation: infinity-scroll-left 5s infinite linear 0.5s both;
+  animation: infinity-scroll-left 4s infinite linear 0.5s both;
 }
 
 .scroll-infinity__item {
-  width: calc(100vw / 12);
+  width:140px;
   animation: katakata 6s infinite ease-in-out alternate;
 }
 
