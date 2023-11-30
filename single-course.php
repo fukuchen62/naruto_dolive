@@ -4,7 +4,7 @@
 <main>
     <h2 id="toparea" class="toparea_course">ドライブコース</h2>
     <div class="main_wrap">
-        <h3><?php the_title() ?></h3>
+        <h3 class="course_title"><?php the_title() ?></h3>
 
         <div class="course_map">
             <!-- googlemap -->
@@ -38,7 +38,10 @@
                 <!-- ←ここでcourse名追記 -->
 
                 <!-- 1枚目のカード -->
-
+                <?php
+                $start_time = get_field('start_time');
+                $stay_time1 = get_field('stay_time1');
+                ?>
                 <a href="<?php echo get_field('page_link'); ?>">
                     <div class="course_details_card">
                         <div>
@@ -57,7 +60,10 @@
                 </a>
 
                 <!-- 2枚目のカード -->
-
+                <?php
+                $move_time2 = get_field('move_time2');
+                $stay_time2 = get_field('stay_time2');
+                ?>
                 <a href="<?php echo get_field('page_link2'); ?>">
                     <div class="course_details_card">
                         <div>
@@ -81,6 +87,9 @@
                 $spot3_thum = get_field('spot3_thum');
                 $spot3_title = get_field('spot3_title');
                 $spot3_excerpt = get_field('spot3_excerpt');
+                $move_time3 = get_field('move_time3');
+                $stay_time3 = get_field('stay_time3');
+
 
                 if ($page_link3 && $spot3_thum && $spot3_title && $spot3_excerpt) {
                     $pic3_url = $spot3_thum['sizes']['medium'];
@@ -106,6 +115,8 @@
                 $spot4_thum = get_field('spot4_thum');
                 $spot4_title = get_field('spot4_title');
                 $spot4_excerpt = get_field('spot4_excerpt');
+                $move_time4 = get_field('move_time4');
+                $stay_time4 = get_field('stay_time4');
 
                 if ($page_link4 && $spot4_thum && $spot4_title && $spot4_excerpt) {
                     $pic1_url = $spot4_thum['sizes']['medium'];
@@ -131,6 +142,8 @@
                 $spot5_thum = get_field('spot5_thum');
                 $spot5_title = get_field('spot5_title');
                 $spot5_excerpt = get_field('spot5_excerpt');
+                $move_time5 = get_field('move_time5');
+                $stay_time5 = get_field('stay_time5');
 
                 if ($page_link5 && $spot5_thum && $spot5_title && $spot5_excerpt) {
                     $pic5_url = $spot5_thum['sizes']['medium'];
@@ -156,6 +169,8 @@
                 $spot6_thum = get_field('spot6_thum');
                 $spot6_title = get_field('spot6_title');
                 $spot6_excerpt = get_field('spot6_excerpt');
+                $move_time6 = get_field('move_time6');
+                $stay_time6 = get_field('stay_time6');
 
                 if ($page_link6 && $spot6_thum && $spot6_title && $spot6_excerpt) {
                     $pic6_url = $spot6_thum['sizes']['medium'];
@@ -181,6 +196,8 @@
                 $spot7_thum = get_field('spot7_thum');
                 $spot7_title = get_field('spot7_title');
                 $spot7_excerpt = get_field('spot7_excerpt');
+                $move_time7 = get_field('move_time7');
+                $stay_time7 = get_field('stay_time7');
 
                 if ($page_link7 && $spot7_thum && $spot7_title && $spot7_excerpt) {
                     $pic7_url = $spot7_thum['sizes']['medium'];
@@ -205,6 +222,8 @@
                 $spot8_thum = get_field('spot8_thum');
                 $spot8_title = get_field('spot8_title');
                 $spot8_excerpt = get_field('spot8_excerpt');
+                $move_time8 = get_field('move_time8');
+                $stay_time8 = get_field('stay_time8');
 
                 if ($page_link8 && $spot8_thum && $spot8_title && $spot8_excerpt) {
                     $pic8_url = $spot8_thum['sizes']['medium'];
@@ -230,6 +249,8 @@
                 $spot9_thum = get_field('spot9_thum');
                 $spot9_title = get_field('spot9_title');
                 $spot9_excerpt = get_field('spot9_excerpt');
+                $move_time9 = get_field('move_time9');
+                $stay_time9 = get_field('stay_time9');
 
                 if ($page_link9 && $spot9_thum && $spot9_title && $spot9_excerpt) {
                     $pic9_url = $spot9_thum['sizes']['medium'];
@@ -268,21 +289,32 @@
                     'post__not_in'   => array($current_post_id) // 現在の投稿を除外
                 );
                 $related_posts = new WP_Query($args);
-
                 // 関連する投稿がある場合にのみ表示
                 if ($related_posts->have_posts()) {
                 ?>
-
                     <?php
                     while ($related_posts->have_posts()) {
-                        $related_posts->the_post();
-                    ?>
+                        $related_posts->the_post(); ?>
                         <div class="recommend_flex_box">
                             <a href="<?php echo the_permalink(); ?>">
                                 <div class="card1_wrap course_b">
                                     <!-- ←ここでcourse名追記 -->
-                                    <div class="card1_content">
-                                        <h4><?php the_title() ?></h4>
+                                    <div class="card1_content
+                                    <?php
+                                    if (get_the_title() === "キッズが主役旅") {
+                                        echo 'course_kids';
+                                    } else if (get_the_title() === "鳴門海峡満喫旅") {
+                                        echo 'course_sea';
+                                    } else if (get_the_title() === "鳴門おおそと一周旅") {
+                                        echo 'course_around';
+                                    } else if (get_the_title() === "ぐるっと一周鳴門旅") {
+                                        echo 'course_gurutto';
+                                    } else if (get_the_title() === "歴史・文化の鳴門旅") {
+                                        echo 'course_history';
+                                    }
+                                    ?>
+                                    ">
+                                        <h4 class="rec_title"><?php the_title(); ?></h4>
                                         <div class="card1_img">
                                             <?php
                                             $thum = get_field('thumnail');
@@ -308,6 +340,7 @@
                     wp_reset_postdata();
                 }
                 ?>
+
             </div>
         </section>
     </div>
