@@ -15,8 +15,8 @@
 ------------------------------------------------------------------------  */
 
 /* 外枠中央配置 */
-.center_title {
-    margin-top: 150px;
+.center_title h3{
+    /* margin-top: 150px; */
     text-align: center;
 }
 

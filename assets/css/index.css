@@ -39,11 +39,11 @@ h2.toparea {
   top: 0;
   color: #fff;
   background-color: #333;
-  box-shadow:0 0 2px #000;
-  transform: translate(5px,5px);
+  box-shadow: 0 0 2px #000;
+  transform: translate(5px, 5px);
 }
 
-  /* width: 15%;
+/* width: 15%;
   font-size: 16px;
   font-weight: bold;
   color: #333;
@@ -256,11 +256,11 @@ h2.toparea {
   color: #FF27F6;
 } */
 
-.marquee_container .even p  {
+.marquee_container .even p {
   color: #FF27F6;
 }
 
-.marquee_container .odd p  {
+.marquee_container .odd p {
   color: #00B9C5;
 }
 
@@ -420,7 +420,7 @@ h2.title_pickupcolumn {
   padding: 1%;
 }
 
-.column-image {
+.column_imgbox>img {
   width: 100%;
   min-width: 140px;
   border-radius: 3%;
@@ -491,7 +491,7 @@ h2.title_pickupcolumn {
     padding: 0;
   }
 
-  .column-image {
+  .column_imgbox>img {
     width: 80%;
     border-radius: 5%;
     margin: 3% 0;
@@ -637,7 +637,7 @@ p.moving_text:hover {
 .instagram_follow_btn:hover {
   background-color: #bc2a8d;
   box-shadow: 0 0 2px #333;
-  transform: translate(5px,5px);
+  transform: translate(5px, 5px);
 }
 
 /* ~~~~~~~~~~~~タブレット表示~~~~~~~~~~~~ */
