@@ -12685,16 +12685,16 @@ get_header();
 
                 <div class="column-container">
                     <div class="column_imgbox">
-                        <div class="column-image">
+
                             <?php if (has_post_thumbnail()) : ?>
                             <?php the_post_thumbnail('medium'); ?>
                             <?php endif; ?>
-                        </div>
+
                     </div><!-- column_imgbox -->
 
                     <div class="column-text">
                         <h3>
-                            <?php echo mb_substr(get_the_title(), 0, 11) . '･･･'; ?>
+                            <?php echo mb_substr(get_the_title(), 0, 15) ; ?>
                         </h3>
                         <div class="taxonomy_box"></div>
                         <p>
@@ -12717,8 +12717,8 @@ get_header();
     </section>
 
     <!-- おすすめキーワードを出す関数、第一引数にulを囲むタグ、第二引数に閉じタグ、第さん引数に表示数 -->
-    <h2>おすすめキーワード</h2>
-    <?php sm_list_popular_searches('<div class="test">', '</div>', 3); ?>
+
+    <?php sm_list_popular_searches('<div id="recommended_keywords" class="teloparea recommended_keywords">', '</div>', 5); ?>
 
 
 <section id="instagram" class="section_instagram">
@@ -12844,6 +12844,12 @@ function slideshow_timer() {
     setTimeout(slideshow_timer, 600);
 }
 // ▲TOP-kvのフラッシュ画像表示▲
+
+const lis = document.querySelector('.recommended_keywords');
+    const liElements = lis.querySelectorAll('li');
+    liElements.forEach((li, index) => {
+        li.classList.add("moving_text");
+    });
 </script>
 <?php
 get_footer();
