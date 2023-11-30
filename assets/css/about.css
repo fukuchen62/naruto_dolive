@@ -13,12 +13,12 @@
 中見出し
 ------------------------------------------------------------------------  */
 
-.text-container{
+.text-container {
     text-align: center;
 }
 
-@media only screen and (min-width:768px){
-    .text-container{
+@media only screen and (min-width:768px) {
+    .text-container {
         text-align: initial;
     }
 }
@@ -28,44 +28,51 @@
     line-height: 2.5rem;
 }
 
-@media only screen and (min-width:768px){
-    .title{
+@media only screen and (min-width:768px) {
+    .title {
         margin: initial;
         padding-left: 32px;
     }
 }
 
-/* .breadcrumb {
-    margin: auto;
-    padding: 5%;
-    } */
-
-@media only screen and (min-width:540px){
-    .breadcrumb{
+@media only screen and (min-width:540px) {
+    .breadcrumb {
         padding: 4%;
     }
 }
 
-@media only screen and (min-width:768px){
-    .breadcrumb{
+@media only screen and (min-width:768px) {
+    .breadcrumb {
         padding: 3%;
     }
 }
 
-.text-container>p{
+.text-container>p {
     margin: auto;
     padding: 5%;
 }
 
-@media only screen and (min-width:540px){
-    .text-container>p{
+.text-container>p:last-child {
+    padding-bottom: 0;
+}
+
+@media only screen and (min-width:540px) {
+    .text-container>p {
         padding: 4%;
+    }
+
+    .text-container>p:last-child {
+        padding-bottom: 0;
     }
 }
 
-@media only screen and (min-width:768px){
-    .text-container>p{
+@media only screen and (min-width:768px) {
+    .text-container>p {
         padding: 3%;
+    }
+
+    .text-container>p:last-child {
+        padding-bottom: 0;
     }
 }
 
@@ -75,15 +82,15 @@ section {
     padding: 10px;
 }
 
-.image-container{
+.image-container {
     margin: auto;
     width: 70%;
     padding: 30px;
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:768px){
-    .image-container{
+@media only screen and (min-width:768px) {
+    .image-container {
         width: 50%;
     }
 }
