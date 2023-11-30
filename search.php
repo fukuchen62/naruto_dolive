@@ -36,8 +36,8 @@
                                 get_template_part('template-parts/loop', 'content');
                     ?>
                     <?php
-                            } // while ループの終了
-                        } // if ($query->have_posts()) の終了
+                            }
+                        }
                         wp_reset_postdata();
                     ?>
                 <?php
@@ -73,8 +73,8 @@
                                 get_template_part('template-parts/loop', 'content');
                     ?>
                     <?php
-                            } // while ループの終了
-                        } // if ($query->have_posts()) の終了
+                            }
+                        }
                         wp_reset_postdata();
                     ?>
                 <?php
@@ -109,8 +109,8 @@
                                 get_template_part('template-parts/loop', 'content');
                     ?>
                     <?php
-                            } // while ループの終了
-                        } // if ($query->have_posts()) の終了
+                            }
+                        }
                         wp_reset_postdata();
                     ?>
                 <?php
@@ -144,8 +144,8 @@
                                     get_template_part('template-parts/loop', 'content');
                         ?>
                         <?php
-                                } // while ループの終了
-                            } // if ($query->have_posts()) の終了
+                                }
+                            }
                             wp_reset_postdata();
                         ?>
                     <?php
@@ -154,7 +154,7 @@
                     </div>
                 </div>
     </main>
-    <script src="../assets/js/common.js"></script>
+    <!-- <script src="../assets/js/common.js"></script> -->
 </body>
 
 </html>
