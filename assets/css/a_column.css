@@ -18,6 +18,7 @@
 .menu_wrap {
     display: flex;
     justify-content: space-around;
+    gap: 5%;
 }
 
 /* トップ画像非表示 */
@@ -48,9 +49,8 @@
 /* 3カラム列 */
 .card_3col {
     display: flex;
-    gap: 10.5%;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .taxonomy_box {
