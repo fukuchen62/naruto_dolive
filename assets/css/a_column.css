@@ -28,12 +28,6 @@
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
 
-    /* トップメニュー幅調整 */
-    .menu_wrap {
-        margin: 0 auto;
-        max-width: 80%;
-    }
-
     /* トップ外枠 */
     .top_img {
         display: block;
