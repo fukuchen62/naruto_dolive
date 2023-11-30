@@ -7,10 +7,6 @@
 /* 帯色 */
 #toparea {
     background-color: #01ADB9;
-}
-
-/* 帯タイトルカラー */
-#toparea>h2 {
     color: #33F3FF;
 }
 
