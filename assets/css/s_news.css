@@ -112,3 +112,13 @@ cardテンプレート
     display: flex;
     flex-direction: column;
 }
+
+.n_arrow_wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.p_arrow_wrapper {
+    display: flex;
+    justify-content: flex-start;
+}

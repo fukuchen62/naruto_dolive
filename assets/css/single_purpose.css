@@ -364,6 +364,7 @@ tr:nth-child(4) th:nth-child(1) {
     height: 50px;
     width: 50px;
     position: relative;
+    margin-bottom: 4rem;
 }
 
 .favorite_btns {

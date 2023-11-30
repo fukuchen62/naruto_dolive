@@ -99,15 +99,6 @@ h4 {
         padding: 20px 0;
     }
 
-    .n_arrow_wrapper {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .p_arrow_wrapper {
-        display: flex;
-        justify-content: flex-start;
-    }
 }
 
 /* ▲card2カラムカード▲ */
@@ -128,4 +119,14 @@ h4 {
 .p_before, .p_next {
     display: flex;
     flex-direction: column;
+}
+
+.n_arrow_wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.p_arrow_wrapper {
+    display: flex;
+    justify-content: flex-start;
 }
