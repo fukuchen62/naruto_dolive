@@ -12,12 +12,7 @@
 /*ヘッダー下部の帯 */
 #toparea {
     background-color: #ed76bd;
-}
-
-/* 帯内のh2タイトル */
-.toparea_course {
-    line-height: calc(200px - 5px);
-    color: #f8c9d7;
+        color: #f8c9d7;
 }
 
 /* GoogleMap */
@@ -231,7 +226,7 @@ section.course_text p {
     position: relative;
     width: 85px;
     height: 110px;
-} 
+}
 
 .req_time{
     width: 100px;
@@ -245,7 +240,7 @@ section.course_text p {
     -1px -1px 0 #000, /* 左上の縁 */
     1px -1px 0 #000,  /* 右上の縁 */
     -1px 1px 0 #000,  /* 左下の縁 */
-    1px 1px 0 #000; 
+    1px 1px 0 #000;
 }
 
 

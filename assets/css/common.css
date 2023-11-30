@@ -910,13 +910,9 @@ moreボタン
 
 /* 帯全体左右中央 */
 #toparea {
-    height: 200px;
+    height: 150px;
     text-align: center;
-}
-
-/* 帯上下中央 */
-#toparea>h2 {
-    line-height: calc(200px - 5px);
+    line-height: 150px;
 }
 
 /* 記事背景 */
@@ -932,6 +928,11 @@ moreボタン
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
+    #toparea {
+        height: 200px;
+        line-height: 200px;
+    }
+
     .breadcrumb {
         padding: 40px 0 80px 32px;
     }
@@ -960,8 +961,6 @@ h4 {
 .aside_wrap {
     width: 300px;
     font-weight: bold;
-    padding-bottom: 50px;
-
 }
 
 /* タイトル表示 */
