@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<!-- パンくずリスト -->
-<?php get_template_part('template-parts/breadcrumb'); ?>
 
 <main>
     <h2 id="toparea" class="toparea_course">ドライブコース</h2>
