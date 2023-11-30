@@ -52,7 +52,7 @@
     padding: 5%;
 }
 
-.text-container>p:last-child {
+.text-container p>:last-child {
     padding-bottom: 0;
 }
 
@@ -61,7 +61,7 @@
         padding: 4%;
     }
 
-    .text-container>p:last-child {
+    .text-container p>:last-child {
         padding-bottom: 0;
     }
 }
@@ -71,7 +71,7 @@
         padding: 3%;
     }
 
-    .text-container>p:last-child {
+    .text-container p>:last-child {
         padding-bottom: 0;
     }
 }

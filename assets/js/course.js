@@ -47,7 +47,6 @@ window.addEventListener("scroll", ()=>{
     if(course.offsetTop >= window.pageYOffset + 250){
         carWrapper.style.position = 'relative';
         carWrapper.style.top = 0 + 'px';
-        console.log("trest");
     }
 
     console.log(course.offsetTop);

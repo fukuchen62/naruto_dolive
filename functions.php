@@ -105,6 +105,14 @@ function add_individual_scripts()
             '',
             true
         );
+        // コースの色変更
+        wp_enqueue_script(
+            'course_color_script',
+            get_template_directory_uri() . '/assets/js/course_color.js',
+            '',
+            '',
+            true
+        );
     }
     //----------------------
     //  コラム詳細ページ
@@ -285,7 +293,7 @@ function my_pre_get_posts($query)
         $query->set('posts_per_page', 3);
         return;
     } elseif ($query->is_post_type_archive('column')) {
-        $query->set('posts_per_page', 6);
+        $query->set('posts_per_page', 3);
         return;
     }
 }
