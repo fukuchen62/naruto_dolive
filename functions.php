@@ -168,7 +168,7 @@ function add_individual_scripts()
         // 食べる・遊ぶ・宿泊・観光の詳細ページ専用のcssの読み込み
         wp_enqueue_style(
             's_style',
-            get_template_directory_uri() . '/assets/css/single.css',
+            get_template_directory_uri() . '/assets/css/single_purpose.css',
             array(),
             false
         );
