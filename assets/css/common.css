@@ -690,6 +690,19 @@ ul.overlaymenu_list_icon_list {
 }
 
 /* ▲1カラムカード▲ */
+/* ▼3カラムカード▼ */
+@media (min-width:768px) {
+    a.card1 {
+        flex-basis: 33.33%;
+    }
+
+    .card_3col {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
 /* ------------------------------------------------------------------------
     footer
 ------------------------------------------------------------------------  */
