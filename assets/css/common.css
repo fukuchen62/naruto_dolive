@@ -24,7 +24,7 @@ footer {
 
 h2 {
     font-family: 'Dela Gothic One', sans-serif;
-    font-size: 2.2rem;
+    font-size: clamp(1.2rem, calc(1.2rem + 0.7vw), 2.2rem);
     text-shadow: 2px 2px 0 #000;
     -webkit-text-stroke: 2px #000;
 }
