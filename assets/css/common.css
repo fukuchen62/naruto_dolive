@@ -959,9 +959,7 @@ h4 {
 /* カテゴリ枠中央寄せ */
 .aside_wrap {
     width: 300px;
-    font-weight: bold;
-    padding-bottom: 50px;
-
+    margin: 0 auto;
 }
 
 /* タイトル表示 */
@@ -969,6 +967,7 @@ h4 {
     padding: 30px 0;
     text-align: center;
     font-size: 1.8rem;
+    white-space: nowrap;
 }
 
 /* li要素下線 */
@@ -998,7 +997,18 @@ h4 {
     height: 50px;
 }
 
+
+
+/* ~~~~~~~~~~~~ページネーションpc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+
+.aside_wrap{
+    margin: 0;
+}
+}
 /* ------------------
+
+
 
 /* ------------------------------------------------------------------------
 ページネーション
