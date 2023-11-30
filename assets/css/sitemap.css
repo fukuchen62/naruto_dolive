@@ -133,7 +133,7 @@ section {
 ------------------------------------------------------------------------  */
 
 /* 小見出しフォント */
-.menu_wrap>h4 {
+.menu_wrap>h5 {
     font-size: 1.6rem;
     font-weight: bold;
     padding: 0 50px;
@@ -143,12 +143,12 @@ section {
 }
 
 /* リンク幅 */
-.menu_wrap>h4>a {
+.menu_wrap>h5>a {
     padding: 10px 40px;
 }
 
 /* 下線 */
-.menu_wrap>h4>a::after {
+.menu_wrap>h5>a::after {
     content: "";
     display: inline-block;
     position: absolute;
@@ -175,12 +175,12 @@ section {
     }
 
     /* リンク幅 */
-    .menu_wrap>h4>a {
+    .menu_wrap>h5>a {
         padding: 20px 60px;
     }
 
     /* 下線 */
-    .menu_wrap>h4>a::after {
+    .menu_wrap>h5>a::after {
         width: 15%;
     }
 }
