@@ -67,6 +67,7 @@ section {
     width: 200px;
     border-left: 10px solid #9996ca;
     margin: 50px auto 20px;
+    font-size: 1.8rem;
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
@@ -137,32 +138,15 @@ section {
     font-size: 1.6rem;
     font-weight: bold;
     padding: 0 50px;
-    text-align: center;
     position: relative;
     margin-bottom: 30px;
+    text-decoration: underline wavy #333;
 }
 
 /* リンク幅 */
 .menu_wrap>h5>a {
     padding: 10px 40px;
 }
-
-/* 下線 */
-.menu_wrap>h5>a::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40%;
-    height: 10px;
-    /* 下線の高さを調整 */
-    background-image: url("../img/wave_bottom.svg");
-    background-repeat: repeat-x;
-    background-size: contain;
-}
-
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
@@ -177,11 +161,6 @@ section {
     /* リンク幅 */
     .menu_wrap>h5>a {
         padding: 20px 60px;
-    }
-
-    /* 下線 */
-    .menu_wrap>h5>a::after {
-        width: 15%;
     }
 }
 
