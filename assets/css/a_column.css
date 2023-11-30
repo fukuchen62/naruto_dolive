@@ -46,13 +46,6 @@
     }
 }
 
-/* 3カラム列 */
-.card_3col {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 .taxonomy_box {
     border: 1px solid #000;
     margin-bottom: 20px;
