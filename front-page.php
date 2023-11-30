@@ -83,9 +83,9 @@ get_header();
             <ul class="container courses sp_none">
                 <li class="course1 course_button btn btn_course1 pc_button" data-link="<?php echo get_permalink(324); ?>"><span>鳴門海峡満喫旅</span></li>
                 <li class="course2 course_button btn btn_course2 pc_button" data-link="<?php echo get_permalink(329); ?>"><span>歴史・文化の鳴門旅</span></li>
-                <li class="course3 course_button btn btn_course3 pc_button" data-link="<?php echo get_permalink(520); ?>"><span>ぐるっと一周鳴門旅</span></li>
-                <li class="course4 course_button btn btn_course4 pc_button" data-link="https://www.apple.com/"><span>鳴門おおそと一周旅</span></li>
-                <li class="course5 course_button btn btn_course5 pc_button" data-link="https://www.amazon.co.jp/"><span>キッズが主役旅</span></li>
+                <li class="course3 course_button btn btn_course3 pc_button" data-link="<?php echo get_permalink(812); ?>"><span>ぐるっと一周鳴門旅</span></li>
+                <li class="course4 course_button btn btn_course4 pc_button" data-link="<?php echo get_permalink(817); ?>"><span>鳴門おおそと一周旅</span></li>
+                <li class="course5 course_button btn btn_course5 pc_button" data-link="<?php echo get_permalink(822); ?>"><span>キッズが主役旅</span></li>
             </ul>
             <div class="map_container">
                 <div class="map">
