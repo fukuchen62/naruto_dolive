@@ -85,6 +85,28 @@ function add_individual_scripts()
         );
     }
     //----------------------
+    //  コース詳細ページ
+    //----------------------
+
+    elseif (is_singular('course')) {
+
+        //コースのCSSの読み込み
+        wp_enqueue_style(
+            'course_style',
+            get_template_directory_uri() . '/assets/css/course.css',
+            array(),
+            false
+        );
+        // コースのscriptの読み込み
+        wp_enqueue_script(
+            'course_script',
+            get_template_directory_uri() . '/assets/js/course.js',
+            '',
+            '',
+            true
+        );
+    }
+    //----------------------
     //  コラム詳細ページ
     //----------------------
     elseif (is_singular('column')) {

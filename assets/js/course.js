@@ -21,11 +21,11 @@ window.addEventListener("scroll", ()=>{
     let carWrapperPos = carWrapper.getBoundingClientRect();
     let coursePos = course.getBoundingClientRect();
     let car_x = carWrapperPos.left + window.pageYOffset;
-    let labelText = "車";
+    let labelText = "スタート";
 
-    for (let i = 0; i < cardXValues.length; i++) {
+    for (let i = 0; i < cardXValues.length - 1; i++) {
         // 車のx座標がcardのそれぞれのx座標よりも大きくなればラベルを変える
-        if (car_x >= cardXValues[i]+ 120) {
+        if (car_x >= cardXValues[i] + 50 ) {
             labelText = "時間" + (i + 1);
         } else {
             break; // 車のx座標がcardのx座標より小さい場合にループを抜ける
@@ -34,19 +34,23 @@ window.addEventListener("scroll", ()=>{
     reqTime.textContent = labelText;
 
         // したで止める
-    if(window.pageYOffset >= (course.offsetTop + course.offsetHeight - 550)){
+    if(window.pageYOffset >= (course.offsetTop + course.offsetHeight - 500)){
         carWrapper.style.position = 'relative';
         carWrapper.style.top = (course.offsetHeight - 250) + 'px';
         // 上で止める
-    }else if ((window.innerWidth <= 768 && window.pageYOffset <= (coursePos.top + 550))
-    || (window.innerWidth > 768 && window.pageYOffset <= (coursePos.top + 750))) {
-        carWrapper.style.position = 'relative';
-            carWrapper.style.top = 70 + 'px';
-        // fixedにする
-    }else if(window.pageYOffset >= (coursePos.top + 550)){
+    } else if(window.pageYOffset >= (coursePos.top + 300)){
         carWrapper.style.position = 'fixed';
         carWrapper.style.top = 300 + 'px';
         carWrapper.style.zIndex = 999;
     }
+
+    if(course.offsetTop >= window.pageYOffset + 250){
+        carWrapper.style.position = 'relative';
+        carWrapper.style.top = 0 + 'px';
+        console.log("trest");
+    }
+
+    console.log(course.offsetTop);
+    console.log(window.pageYOffset + 200);
 });
 
