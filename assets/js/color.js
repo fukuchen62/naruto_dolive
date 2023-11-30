@@ -3,6 +3,7 @@
 // コラム個別色
 const pageH2 = document.querySelector(".page_title");
 const topArea = document.querySelector(".toparea");
+const purposeBtns = document.querySelectorAll(".purpose_btn");
 const pageTitle = pageH2.textContent;
 if (pageTitle === "名物" || pageTitle === "カテゴリ別：名物") {
     pageH2.style.color = "#FEB59B";
@@ -21,6 +22,10 @@ if (pageTitle === "名物" || pageTitle === "カテゴリ別：名物") {
     // 赤
     pageH2.style.color = "#F8A59B";
     topArea.style.backgroundColor = "#d13a2b";
+    // ボタンの色を変更する
+    purposeBtns.forEach((purposeBtn) => {
+        purposeBtn.style.backgroundColor = " #F8A59B";
+    });
 } else if (pageTitle === "遊ぶ" || pageTitle === "目的別一覧：遊ぶ") {
     // 黄色
     pageH2.style.color = " #F2A430";
@@ -29,6 +34,11 @@ if (pageTitle === "名物" || pageTitle === "カテゴリ別：名物") {
     // 青
     pageH2.style.color = "#1D8BCE";
     topArea.style.backgroundColor = " #6DB1D8";
+    // ボタンの色を変更する
+    purposeBtns.forEach((purposeBtn) => {
+        purposeBtn.style.backgroundColor = " #6DB1D8";
+    });
+
 } else if (pageTitle === "宿泊" || pageTitle === "目的別一覧：宿泊") {
     // 茶色
     pageH2.style.color = "#CF7D51 ";
