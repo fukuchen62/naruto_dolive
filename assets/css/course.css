@@ -181,7 +181,7 @@ section.course_text p {
 /* ------------------------------------------------------------------------
     共通カラー指定s
 ------------------------------------------------------------------------  */
-.course_a .course_details_card {
+/* .course_a .course_details_card {
     background-color: #ff8b03;
 }
 
@@ -219,6 +219,26 @@ section.course_text p {
 
 .course_e .card1_content {
     background-color: rgba(212, 39, 240, 0.5);
+} */
+
+.course_sea{
+    background-color: #ff8b03;
+}
+
+.course_history{
+    background-color: #996633;
+}
+
+.course_around{
+    background-color: #11cd7e;
+}
+
+.course_gurutto{
+    background-color: #ff1e1e;
+}
+
+.course_kids{
+    background-color: #d427f0;
 }
 
 
