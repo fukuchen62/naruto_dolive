@@ -12685,9 +12685,11 @@ get_header();
 
                 <div class="column-container">
                     <div class="column_imgbox">
-                        <?php if (has_post_thumbnail()) : ?>
+                        <div class="column-image">
+                            <?php if (has_post_thumbnail()) : ?>
                             <?php the_post_thumbnail('medium'); ?>
-                        <?php endif; ?>
+                            <?php endif; ?>
+                        </div>
                     </div><!-- column_imgbox -->
 
                     <div class="column-text">
@@ -12696,7 +12698,7 @@ get_header();
                         </h3>
                         <div class="taxonomy_box"></div>
                         <p>
-                            <?php echo mb_substr(get_the_excerpt(), 0, 55) . '･･･'; ?>
+                            <?php echo mb_substr(get_the_excerpt(), 0, 25) . '･･･'; ?>
                         </p>
                     </div><!-- column-text -->
                 </div><!-- column-container -->
