@@ -21,15 +21,35 @@ window.addEventListener("scroll", ()=>{
     let carWrapperPos = carWrapper.getBoundingClientRect();
     let coursePos = course.getBoundingClientRect();
     let car_x = carWrapperPos.left + window.pageYOffset;
-    let labelText = "スタート";
+    let labelText = "スタート"+start_time;
 
     for (let i = 0; i < cardXValues.length - 1; i++) {
-        // 車のx座標がcardのそれぞれのx座標よりも大きくなればラベルを変える
-        if (car_x >= cardXValues[i] + 50 ) {
-            labelText = "時間" + (i + 1);
-        } else {
-            break; // 車のx座標がcardのx座標より小さい場合にループを抜ける
+        if (car_x >= cardXValues[0] + 50 ) {
+            labelText = "移動時間\n"+ move_time2;
+        } 
+        if(car_x >= cardXValues[1] + 50){
+            labelText =  "移動時間\n"+ move_time3;
         }
+        if(car_x >= cardXValues[2] + 50){
+            labelText =  "移動時間\n"+ move_time4;
+        }
+        if(car_x >= cardXValues[3] + 50){
+            labelText = "移動時間\n"+ move_time5;
+        }
+        if(car_x >= cardXValues[4] + 50){
+            labelText = "移動時間\n"+ move_time6;
+        }
+        if(car_x >= cardXValues[5] + 50){
+            labelText = "移動時間\n"+ move_time7;
+        }
+        if(car_x >= cardXValues[6] + 50){
+            labelText = "移動時間\n"+ move_time8;
+        }
+        if(car_x >= cardXValues[7] + 50){
+            labelText = "移動時間\n"+ move_time9;
+        }
+
+
     }
     reqTime.textContent = labelText;
 
@@ -37,6 +57,7 @@ window.addEventListener("scroll", ()=>{
     if(window.pageYOffset >= (course.offsetTop + course.offsetHeight - 500)){
         carWrapper.style.position = 'relative';
         carWrapper.style.top = (course.offsetHeight - 250) + 'px';
+        
         // 上で止める
     } else if(window.pageYOffset >= (coursePos.top + 300)){
         carWrapper.style.position = 'fixed';
@@ -52,4 +73,8 @@ window.addEventListener("scroll", ()=>{
     console.log(course.offsetTop);
     console.log(window.pageYOffset + 200);
 });
+
+
+
+// 以下はPHPの変数
 
