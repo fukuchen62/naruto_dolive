@@ -3,8 +3,9 @@
 <body>
     <div id="stkr" class="sp_none"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/maincar_icon.png" alt="" class="car_img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" alt="" class="gas"></div>
     <main>
+        <?php $search_term = get_search_query(); ?>
         <section id="toparea" class="toparea">
-            <h2>文字列：の検索結果</h2>
+            <h2><?= $search_term ?>：の検索結果</h2>
         </section>
         <div class="main_wrap">
             <div class="breadcrumb"><?php get_template_part('template-parts/breadcrumb'); ?></div>
@@ -42,85 +43,6 @@
                 <?php
                     }
                 ?>
-                <!-- <a href="single_eat.html" class="card_item">
-                <div class="card_wrap1">
-                    <div class="card_wrap2">
-                        <div class="thumbnail_img">
-                            <img src="../assets/img/eat_sample_img.jpg" alt="サムネイル">
-                        </div>
-                        <h4>麺王</h4>
-                        <div class="card_text">600～1000円・昼夜・年齢制限なし</div>
-                        <div class="card_icon">
-                            <img src="../assets/img/noon_ico.png" alt="昼アイコン">
-                            <img src="../assets/img/night_ico.png" alt="夜アイコン">
-                            <img src="../assets/img/parking_ico.png" alt="駐車場アイコン">
-                            <img src="../assets/img/smoking_ico.png" alt="喫煙所アイコン">
-                            <img src="../assets/img/reservation_ico.png" alt="予約アイコン">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="single_eat.html" class="card_item">
-                <div class="card_wrap1">
-                    <div class="card_wrap2">
-                        <div class="thumbnail_img">
-                            <img src="../assets/img/eat_sample_img.jpg" alt="サムネイル">
-                        </div>
-                        <h4>麺王</h4>
-                        <div class="card_text">600～1000円・昼夜・年齢制限なし</div>
-                        <div class="card_icon">
-                            <img src="../assets/img/noon_ico.png" alt="昼アイコン">
-                            <img src="../assets/img/night_ico.png" alt="夜アイコン">
-                            <img src="../assets/img/parking_ico.png" alt="駐車場アイコン">
-                            <img src="../assets/img/smoking_ico.png" alt="喫煙所アイコン">
-                            <img src="../assets/img/reservation_ico.png" alt="予約アイコン">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </a>
-            <a href="single_eat.html" class="card_item">
-                <div class="card_wrap1">
-                    <div class="card_wrap2">
-                        <div class="thumbnail_img">
-                            <img src="../assets/img/eat_sample_img.jpg" alt="サムネイル">
-                        </div>
-                        <h4>麺王</h4>
-                        <div class="card_text">600～1000円・昼夜・年齢制限なし</div>
-                        <div class="card_icon">
-                            <img src="../assets/img/noon_ico.png" alt="昼アイコン">
-                            <img src="../assets/img/night_ico.png" alt="夜アイコン">
-                            <img src="../assets/img/parking_ico.png" alt="駐車場アイコン">
-                            <img src="../assets/img/smoking_ico.png" alt="喫煙所アイコン">
-                            <img src="../assets/img/reservation_ico.png" alt="予約アイコン">
-                        </div>
-                    </div>
-            }
-        }
-        if (!$found_posts && !have_posts()) {
-            echo '<p>"<strong>' . esc_html($search_term) . '</strong>"で検索した結果、該当する記事がありませんでした。</p>';
-            echo '<p><a href="' . get_home_url() . '">トップページに戻る</a></p>';
-        }
-        ?>
-
-            <a href="single_eat.html" class="card_item">
-                <div class="card_wrap1">
-                    <div class="card_wrap2">
-                        <div class="thumbnail_img">
-                            <img src="../assets/img/eat_sample_img.jpg" alt="サムネイル">
-                        </div>
-                        <h4>麺王</h4>
-                        <div class="card_text">600～1000円・昼夜・年齢制限なし</div>
-                        <div class="card_icon">
-                            <img src="../assets/img/noon_ico.png" alt="昼アイコン">
-                            <img src="../assets/img/night_ico.png" alt="夜アイコン">
-                            <img src="../assets/img/parking_ico.png" alt="駐車場アイコン">
-                            <img src="../assets/img/smoking_ico.png" alt="喫煙所アイコン">
-                            <img src="../assets/img/reservation_ico.png" alt="予約アイコン">
-                        </div>
-                    </div>
-                </div>
-            </a> -->
                 </div>
             </div>
             <div class="archive_col">
@@ -158,24 +80,6 @@
                 <?php
                     }
                 ?>
-                <!-- <a href="single_eat.html" class="card_item">
-                <div class="card_wrap1">
-                    <div class="card_wrap2">
-                        <div class="thumbnail_img">
-                            <img src="../assets/img/eat_sample_img.jpg" alt="サムネイル">
-                        </div>
-                        <h4>麺王</h4>
-                        <div class="card_text">600～1000円・昼夜・年齢制限なし</div>
-                        <div class="card_icon">
-                            <img src="../assets/img/noon_ico.png" alt="昼アイコン">
-                            <img src="../assets/img/night_ico.png" alt="夜アイコン">
-                            <img src="../assets/img/parking_ico.png" alt="駐車場アイコン">
-                            <img src="../assets/img/smoking_ico.png" alt="喫煙所アイコン">
-                            <img src="../assets/img/reservation_ico.png" alt="予約アイコン">
-                        </div>
-                    </div>
-                </div>
-            </a> -->
                 </div>
             </div>
             <div class="archive_col">
