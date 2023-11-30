@@ -105,6 +105,14 @@ function add_individual_scripts()
             '',
             true
         );
+        // コースの色変更
+        wp_enqueue_script(
+            'course_color_script',
+            get_template_directory_uri() . '/assets/js/course_color.js',
+            '',
+            '',
+            true
+        );
     }
     //----------------------
     //  コラム詳細ページ
