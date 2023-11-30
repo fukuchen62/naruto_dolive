@@ -285,7 +285,7 @@ function my_pre_get_posts($query)
         $query->set('posts_per_page', 3);
         return;
     } elseif ($query->is_post_type_archive('column')) {
-        $query->set('posts_per_page', 6);
+        $query->set('posts_per_page', 3);
         return;
     }
 }
