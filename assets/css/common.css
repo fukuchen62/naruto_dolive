@@ -56,6 +56,10 @@ main:not(.section_kv):not(.teloparea) {
     width: 100%;
 }
 
+.content_wrap {
+    padding: 0px 5.5% 14.5% 5.5%;
+}
+
 @media only screen and (max-width: 767px) {
     .sp_none {
         display: none !important;
