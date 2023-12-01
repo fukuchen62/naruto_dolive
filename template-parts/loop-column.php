@@ -12,6 +12,7 @@
         <h4><?php echo mb_substr(get_the_title(), 0, 11) . '･･･'; ?></h4>
 
         <div class="taxonomy_box">
+
             <?php
             $taxonomies = get_taxonomies(); // すべてのタクソノミーを取得
 
@@ -26,6 +27,7 @@
                 }
             }
             ?>
+
         </div>
 
         <!-- 抜粋の表示 -->

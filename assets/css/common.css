@@ -641,6 +641,19 @@ ul.overlaymenu_list_icon_list {
     height: 100px;
 }
 
+
+.taxonomy_box {
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    height: 45px;
+    border-radius: 20px;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    overflow: hidden;
+}
+
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media (min-width:768px) {
     .card1_wrap {
