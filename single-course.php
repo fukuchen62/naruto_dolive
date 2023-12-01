@@ -53,7 +53,8 @@
                             <img src="<?php echo $pic1_url ?>" alt="掲載写真">
                         </div>
                         <div>
-                            <p class="course_facility"><?php the_field('spot1_title'); ?></p>
+                            <p class="course_facility"><?php the_field('spot1_title');
+                                                        echo '：' . $stay_time1; ?></p>
                             <p class="course_facility_info"><?php the_field('spot1_excerpt'); ?></p>
                         </div>
                     </div>
@@ -75,7 +76,8 @@
                             <img src="<?php echo $pic2_url ?>" alt="掲載写真">
                         </div>
                         <div>
-                            <p class="course_facility"><?php the_field('spot2_title'); ?></p>
+                            <p class="course_facility"><?php the_field('spot2_title');
+                                                        echo '：' . $stay_time2; ?></p>
                             <p class="course_facility_info"><?php the_field('spot2_excerpt'); ?></p>
                         </div>
                     </div>
@@ -100,7 +102,8 @@
                                 <img src="<?php echo $pic3_url ?>" alt="掲載写真">
                             </div>
                             <div>
-                                <p class="course_facility"><?php echo $spot3_title ?></p>
+                                <p class="course_facility"><?php the_field('spot3_title');
+                                                            echo '：' . $stay_time3; ?></p>
                                 <p class="course_facility_info"><?php echo $spot3_excerpt ?></p>
                             </div>
                         </div>
@@ -127,7 +130,8 @@
                                 <img src="<?php echo $pic1_url ?>" alt="掲載写真">
                             </div>
                             <div>
-                                <p class="course_facility"><?php echo $spot4_title ?></p>
+                                <p class="course_facility"><?php the_field('spot4_title');
+                                                            echo '：' . $stay_time4; ?></p>
                                 <p class="course_facility_info"><?php echo $spot4_excerpt ?></p>
                             </div>
                         </div>
@@ -154,7 +158,8 @@
                                 <img src="<?php echo $pic5_url ?>" alt="掲載写真">
                             </div>
                             <div>
-                                <p class="course_facility"><?php echo $spot5_title ?></p>
+                                <p class="course_facility"><?php the_field('spot5_title');
+                                                            echo '：' . $stay_time5; ?></p>
                                 <p class="course_facility_info"><?php echo $spot5_excerpt ?></p>
                             </div>
                         </div>
@@ -181,7 +186,8 @@
                                 <img src="<?php echo $pic6_url ?>" alt="掲載写真">
                             </div>
                             <div>
-                                <p class="course_facility"><?php echo $spot6_title ?></p>
+                                <p class="course_facility"><?php the_field('spot6_title');
+                                                            echo '：' . $stay_time6; ?></p>
                                 <p class="course_facility_info"><?php echo $spot6_excerpt ?></p>
                             </div>
                         </div>
@@ -208,7 +214,8 @@
                                 <img src="<?php echo $pic7_url ?>" alt="掲載写真">
                             </div>
                             <div>
-                                <p class="course_facility"><?php echo $spot7_title ?></p>
+                                <p class="course_facility"><?php the_field('spot7_title');
+                                                            echo '：' . $stay_time7; ?></p>
                                 <p class="course_facility_info"><?php echo $spot7_excerpt ?></p>
                             </div>
                         </div>
@@ -234,7 +241,8 @@
                                 <img src="<?php echo $pic8_url ?>" alt="掲載写真">
                             </div>
                             <div>
-                                <p class="course_facility"><?php echo $spot8_title ?></p>
+                                <p class="course_facility"><?php the_field('spot8_title');
+                                                            echo '：' . $stay_time8; ?></p>
                                 <p class="course_facility_info"><?php echo $spot8_excerpt ?></p>
                             </div>
                         </div>
@@ -261,7 +269,8 @@
                                 <img src="<?php echo $pic9_url ?>" alt="掲載写真">
                             </div>
                             <div>
-                                <p class="course_facility"><?php echo $spot9_title ?></p>
+                                <p class="course_facility"><?php the_field('spot9_title');
+                                                            echo '：' . $stay_time9; ?></p>
                                 <p class="course_facility_info"><?php echo $spot9_excerpt ?></p>
                             </div>
                         </div>
