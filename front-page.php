@@ -12696,7 +12696,7 @@ get_header();
                         <h3>
                             <?php echo mb_substr(get_the_title(), 0, 15) ; ?>
                         </h3>
-                        <div class="taxonomy_box"></div>
+
                         <p>
                             <?php echo mb_substr(get_the_excerpt(), 0, 25) . '･･･'; ?>
                         </p>
@@ -12721,13 +12721,12 @@ get_header();
     <?php sm_list_popular_searches('<div id="recommended_keywords" class="teloparea recommended_keywords">', '</div>', 5); ?>
 
 
-<section id="instagram" class="section_instagram">
+    <section id="instagram" class="section_instagram">
         <h2 class="toparea">インスタグラム</h2>
 
 
-            <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
-
-</section>
+        <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+    </section>
     <div class="teloparea scroll_car">
             <div class="scroll-infinity">
                 <div class="scroll-infinity__wrap">
