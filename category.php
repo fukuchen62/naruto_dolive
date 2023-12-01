@@ -6,7 +6,7 @@ get_header();
 <main>
 
     <section id="toparea" class="toparea">
-        <h2>カテゴリ別：<?php the_category('news'); ?></h2>
+        <h2><?php the_category('news'); ?>一覧</h2>
     </section>
 
     <div class="main_wrap">
