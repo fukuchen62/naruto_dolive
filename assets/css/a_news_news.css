@@ -103,7 +103,7 @@ cardテンプレート
     }
 
     .aside_wrap {
-        margin: 0 auto;
+        margin: 0 auto !important;
     }
 }
 
