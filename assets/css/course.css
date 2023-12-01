@@ -145,24 +145,12 @@ section.course_text p {
 /* ------------------------------------------------------------------------
     おすすめコース欄
 ------------------------------------------------------------------------  */
+
 .card1_text {
     background-color: #fff;
     margin-top: 10%;
 }
 
-.recommend_flex {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 5%;
-    flex-wrap: wrap;
-}
-
-.recommend_flex2 {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 5%;
-    flex-wrap: wrap;
-}
 
 .recommend_flex_box {
     flex-basis: 25%;
@@ -172,17 +160,32 @@ section.course_text p {
     padding-bottom: 10%;
 }
 
+
+@media (min-width: 768px) {
+
+    .recommend_flex {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.recommend_flex2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+}
+
+
 @media (min-width: 1400px) {
     .recommend_flex_box {
         display: flex;
         justify-content: space-around;
         width: 50%;
-    }
-}
-
-@media (min-width: 768px) {
-    .card1_wrap {
-        width: 300px;
     }
 }
 
