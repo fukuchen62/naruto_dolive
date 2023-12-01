@@ -139,8 +139,7 @@ function add_individual_scripts()
     //----------------------
     //  食べる・遊ぶ・宿泊・観光の一覧ページ
     //----------------------
-    elseif (is_post_type_archive('eat') || is_post_type_archive('enjoy') || is_post_type_archive('stay') || is_post_type_archive('tour') || is_tax()) {
-
+    elseif (is_post_type_archive('eat') || is_post_type_archive('enjoy') || is_post_type_archive('stay') || is_post_type_archive('tour')) {
         //食べる・遊ぶ・宿泊・観光の一覧ページ専用のcssの読み込み
         wp_enqueue_style(
             'archive_purpose',
@@ -164,23 +163,20 @@ function add_individual_scripts()
             '',
             true
         );
-
-        // 二つ目のスクリプトを読み込む
+        // a_purpose.jsを読み込む
         wp_enqueue_script('my-script2', get_template_directory_uri() . '/assets/js/a_purpose.js', array('jquery'), null, true);
     }
-    //------------------------------------
-    // 食べる・遊ぶ・宿泊・観光の詳細ページ
-    //------------------------------------
-    elseif (is_singular('eat') || is_singular('enjoy') || is_singular('tour') || is_singular('stay')) {
-
-        // 食べる・遊ぶ・宿泊・観光の詳細ページ専用のcssの読み込み
+    //----------------------
+    //  食べる・遊ぶ・宿泊・観光のタクソノミーページ
+    //----------------------
+    elseif (is_tax()) {
+        //食べる・遊ぶ・宿泊・観光の一覧ページ専用のcssの読み込み
         wp_enqueue_style(
-            's_style',
-            get_template_directory_uri() . '/assets/css/single_purpose.css',
-            array(),
-            false
+            'archive_purpose',
+            get_template_directory_uri() . '/assets/css/a_purpose.css',
+            array('common-style'),
+            false // headタグ内に出力
         );
-
         // トップエリアの色の変更
         wp_enqueue_script(
             's_column_script',
@@ -189,7 +185,34 @@ function add_individual_scripts()
             '',
             true
         );
-
+        // マップのjsの読み込み
+        wp_enqueue_script(
+            'map_script',
+            get_template_directory_uri() . '/assets/js/map.js',
+            '',
+            '',
+            true
+        );
+    }
+    //------------------------------------
+    // 食べる・遊ぶ・宿泊・観光の詳細ページ
+    //------------------------------------
+    elseif (is_singular('eat') || is_singular('enjoy') || is_singular('tour') || is_singular('stay')) {
+        // 食べる・遊ぶ・宿泊・観光の詳細ページ専用のcssの読み込み
+        wp_enqueue_style(
+            's_style',
+            get_template_directory_uri() . '/assets/css/single_purpose.css',
+            array(),
+            false
+        );
+        // トップエリアの色の変更
+        wp_enqueue_script(
+            's_column_script',
+            get_template_directory_uri() . '/assets/js/color.js',
+            '',
+            '',
+            true
+        );
         // 二つ目のスクリプトを読み込む
         wp_enqueue_script(
             'my-script2',
