@@ -65,6 +65,10 @@ cardテンプレート
     display: none;
 }
 
+.aside_wrap {
+    margin: 0 auto;
+}
+
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media (min-width:1200px) {
 
@@ -100,10 +104,6 @@ cardテンプレート
     .card3_text {
         display: block;
         padding: 20px 10px;
-    }
-
-    .aside_wrap {
-        margin: 0 auto !important;
     }
 }
 
