@@ -105,42 +105,43 @@ cardテンプレート
     .aside_wrap {
         margin: 0 auto;
     }
+}
 
-    /* ▲card3カラムカード▲ */
+/* ▲card3カラムカード▲ */
 
-    /* ------------------------------------------------------------------------
+/* ------------------------------------------------------------------------
 ページネーション※装飾だけなので消す
 ------------------------------------------------------------------------ */
 
-    .pagenation {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        margin: 30px auto;
-    }
+.pagenation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px auto;
+}
 
-    .pagenation img {
-        width: 40px;
-        object-fit: cover;
-    }
+.pagenation img {
+    width: 40px;
+    object-fit: cover;
+}
 
-    .left_tri {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-top: 25px solid transparent;
-        border-bottom: 25px solid transparent;
-        border-right: 43px solid #000000;
-        border-left: 0;
-    }
+.left_tri {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-right: 43px solid #000000;
+    border-left: 0;
+}
 
-    .right_tri {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-top: 25px solid transparent;
-        border-bottom: 25px solid transparent;
-        border-left: 43px solid #000000;
-        border-right: 0;
-    }
+.right_tri {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 43px solid #000000;
+    border-right: 0;
+}
