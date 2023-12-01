@@ -49,6 +49,8 @@
                                         $pic2_url = $pic2['sizes']['thumbnail'];
                                         ?>
                                         <img class="facility_img2" src="<?php echo $pic2_url; ?>" alt="">
+                                    <?php else : ?>
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/running_around.png" alt="no-image">
                                     <?php endif; ?>
                                 </li>
                                 <li><?php if (get_field('pic3')) : ?>
@@ -58,6 +60,8 @@
                                         $pic3_url = $pic3['sizes']['thumbnail'];
                                         ?>
                                         <img class="facility_img2" src="<?php echo $pic3_url; ?>" alt="">
+                                    <?php else : ?>
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/running_around.png" alt="no-image">
                                     <?php endif; ?>
                                 </li>
                                 <li><?php if (get_field('pic4')) : ?>
@@ -67,6 +71,8 @@
                                         $pic4_url = $pic4['sizes']['thumbnail'];
                                         ?>
                                         <img class="facility_img2" src="<?php echo $pic4_url; ?>" alt="">
+                                    <?php else : ?>
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/running_around.png" alt="no-image">
                                     <?php endif; ?>
                                 </li>
                             </ul><!-- facility_img_list -->
@@ -356,6 +362,8 @@
                                 <div class="card1_img">
                                     <?php if (has_post_thumbnail()) : ?>
                                         <?php the_post_thumbnail('medium'); ?>
+                                    <?php else : ?>
+                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/running_around.png" alt="no-image">
                                     <?php endif; ?>
                                 </div><!-- card1_img -->
 
