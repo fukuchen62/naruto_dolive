@@ -328,13 +328,15 @@ add_action('after_setup_theme', 'my_theme_setup');
 
 
 // サイト内検索でカスタムフィールドの内容も検索結果に含める
-add_filter('posts_search', 'custom_search_eat', 10, 2);
+add_filter('posts_search', 'custom_search', 10, 2);
 
-function custom_search_eat($search, $wp_query)
+function custom_search($search, $wp_query)
 {
     global $wpdb;
+
     if (!$wp_query->is_search)
         return $search;
+
     if (!isset($wp_query->query_vars))
         return $search;
 
@@ -342,7 +344,8 @@ function custom_search_eat($search, $wp_query)
 
     if (count($search_words) > 0) {
         $search = '';
-        $search .= "AND post_type = 'eat'";
+        $search .= "AND (post_type = 'eat' OR post_type = 'tour' OR post_type = 'enjoy' OR post_type = 'stay')";
+
         foreach ($search_words as $word) {
             if (!empty($word)) {
                 $search_word = '%' . esc_sql($word) . '%';
@@ -350,107 +353,14 @@ function custom_search_eat($search, $wp_query)
                     {$wpdb->posts}.post_title LIKE '{$search_word}'
                     OR {$wpdb->posts}.post_content LIKE '{$search_word}'
                     OR {$wpdb->posts}.ID IN (
-                    SELECT distinct post_id
-                    FROM {$wpdb->postmeta}
-                    WHERE meta_value LIKE '{$search_word}')) ";
+                        SELECT distinct post_id
+                        FROM {$wpdb->postmeta}
+                        WHERE meta_value LIKE '{$search_word}'
+                    )
+                ) ";
             }
         }
     }
+
     return $search;
 }
-
-// // サイト内検索でカスタムフィールドの内容も検索結果に含める
-// add_filter('posts_search', 'custom_search_enjoy', 10, 2);
-
-// function custom_search_enjoy($search, $wp_query)
-// {
-//     global $wpdb;
-//     if (!$wp_query->is_search)
-//         return $search;
-//     if (!isset($wp_query->query_vars))
-//         return $search;
-
-//     $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
-
-//     if (count($search_words) > 0) {
-//         $search = '';
-//         $search .= "AND post_type = 'enjoy'";
-//         foreach ($search_words as $word) {
-//             if (!empty($word)) {
-//                 $search_word = '%' . esc_sql($word) . '%';
-//                 $search .= " AND (
-//                     {$wpdb->posts}.post_title LIKE '{$search_word}'
-//                     OR {$wpdb->posts}.post_content LIKE '{$search_word}'
-//                     OR {$wpdb->posts}.ID IN (
-//                     SELECT distinct post_id
-//                     FROM {$wpdb->postmeta}
-//                     WHERE meta_value LIKE '{$search_word}')) ";
-//             }
-//         }
-//     }
-//     return $search;
-// }
-
-// // サイト内検索でカスタムフィールドの内容も検索結果に含める
-// add_filter('posts_search', 'custom_search_tour', 10, 2);
-
-// function custom_search_tour($search, $wp_query)
-// {
-//     global $wpdb;
-//     if (!$wp_query->is_search)
-//         return $search;
-//     if (!isset($wp_query->query_vars))
-//         return $search;
-
-//     $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
-
-//     if (count($search_words) > 0) {
-//         $search = '';
-//         $search .= "AND post_type = 'tour'";
-//         foreach ($search_words as $word) {
-//             if (!empty($word)) {
-//                 $search_word = '%' . esc_sql($word) . '%';
-//                 $search .= " AND (
-//                     {$wpdb->posts}.post_title LIKE '{$search_word}'
-//                     OR {$wpdb->posts}.post_content LIKE '{$search_word}'
-//                     OR {$wpdb->posts}.ID IN (
-//                     SELECT distinct post_id
-//                     FROM {$wpdb->postmeta}
-//                     WHERE meta_value LIKE '{$search_word}')) ";
-//             }
-//         }
-//     }
-//     return $search;
-// }
-
-// // サイト内検索でカスタムフィールドの内容も検索結果に含める
-// add_filter('posts_search', 'custom_search_stay', 10, 2);
-
-// function custom_search_stay($search, $wp_query)
-// {
-//     global $wpdb;
-//     if (!$wp_query->is_search)
-//         return $search;
-//     if (!isset($wp_query->query_vars))
-//         return $search;
-
-//     $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
-
-//     if (count($search_words) > 0) {
-//         $search = '';
-//         $search .= "AND post_type = 'stay'";
-//         foreach ($search_words as $word) {
-//             if (!empty($word)) {
-//                 $search_word = '%' . esc_sql($word) . '%';
-//                 $search .= " AND (
-//                     {$wpdb->posts}.post_title LIKE '{$search_word}'
-//                     OR {$wpdb->posts}.post_content LIKE '{$search_word}'
-//                     OR {$wpdb->posts}.ID IN (
-//                     SELECT distinct post_id
-//                     FROM {$wpdb->postmeta}
-//                     WHERE meta_value LIKE '{$search_word}')) ";
-//             }
-//         }
-//     }
-//     return $search;
-// }

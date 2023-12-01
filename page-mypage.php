@@ -266,10 +266,11 @@ get_header();
             zoom: 12,
             // 地図の初期値 これは緯度と経度を中心にしている。本番は鳴門を中心にする予定
             center: {
-                lat: <?php echo $latitude; ?>,
-                lng: <?php echo $longitude; ?>
+                lat: 34.1848,
+                lng: 134.6150
             }
         });
+
 
         // 普通に変数に入れるとjsに適しておらず代入できない。そのためJSON形式にして配列を渡している
         let favorite = <?php echo json_encode($favorite); ?>;
