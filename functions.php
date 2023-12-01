@@ -183,7 +183,13 @@ function add_individual_scripts()
         );
 
         // 二つ目のスクリプトを読み込む
-        wp_enqueue_script('my-script2', get_template_directory_uri() . '/assets/js/a_purpose.js', array('jquery'), null, true);
+        wp_enqueue_script(
+            'my-script2',
+            get_template_directory_uri() . '/assets/js/single.js',
+            array('jquery'),
+            null,
+            true
+        );
     }
     //----------------------
     // コラムの一覧ページ
