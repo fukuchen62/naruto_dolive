@@ -342,7 +342,7 @@ function custom_search_eat($search, $wp_query)
 
     if (count($search_words) > 0) {
         $search = '';
-        $search .= "AND post_type = 'eat','tour'";
+        $search .= "AND post_type = 'eat'";
         foreach ($search_words as $word) {
             if (!empty($word)) {
                 $search_word = '%' . esc_sql($word) . '%';

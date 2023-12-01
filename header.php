@@ -58,10 +58,8 @@
                     <div class="header_menu">
                         <div class="search_box_wrap">
                             <div class="search_box">
-                                <input type="text" placeholder="検索">
-                                <button type="submit">
-                                    <i class="fas fa-search fa-fw" style="color: white;"></i>
-                                </button>
+                                <?php get_search_form(); ?>
+                                <i class="fas fa-search fa-fw" style="color: white;"></i>
                             </div>
                         </div>
                         <div class="link_wrap">
