@@ -27,6 +27,7 @@
     width: 100%;
     position: relative;
     padding-top: 56.25%;
+    height: 250px;
 }
 
 /* iframe */
@@ -150,6 +151,13 @@ section.course_text p {
 }
 
 .recommend_flex {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5%;
+    flex-wrap: wrap;
+}
+
+.recommend_flex2 {
     display: flex;
     justify-content: space-around;
     padding-top: 5%;
