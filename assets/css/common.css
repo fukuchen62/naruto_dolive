@@ -99,6 +99,8 @@ main:not(.section_kv):not(.teloparea) {
 .sp_nav {
     height: 100px;
     background-image: url(../img/bg_road.png);
+    z-index: 999999;
+    position: relative;
 }
 
 .sp_nav .container {
@@ -106,8 +108,8 @@ main:not(.section_kv):not(.teloparea) {
 }
 
 .sp_nav_logo img {
-    max-width: 75px;
-    margin: 12px;
+    width: 90px;
+    margin-left: 1.5rem;
 }
 
 .header_inner {
@@ -118,7 +120,7 @@ main:not(.section_kv):not(.teloparea) {
     justify-content: space-between;
     flex-flow: row nowrap;
     align-items: flex-end;
-    margin-top: 0.5rem;
+    margin-top: 10px;
 }
 
 .header_logo {
@@ -388,8 +390,8 @@ ul.overlaymenu_list_icon_list {
     }
 
     .pc_nav_logo {
-        width: 75px;
-        padding-left: 0.5rem;
+        width: 90px;
+        padding-left: 1.5rem;
     }
 
     .pc_navmenu a {
@@ -463,11 +465,11 @@ ul.overlaymenu_list_icon_list {
         display: block;
         position: absolute;
         top: 82px;
-        left: -75px;
+        left: -90px;
         z-index: 4;
         justify-content: space-between;
         background: #555;
-        width: calc(100% + 75px);
+        width: calc(100% + 90px);
         display: none;
         visibility: hidden;
         opacity: 0;
