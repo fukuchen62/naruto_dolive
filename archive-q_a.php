@@ -5,6 +5,9 @@
         <h2>Q&A</h2>
     </section>
     <div class="main_wrap">
+        <!---- パンくずリスト ---->
+
+        <?php get_template_part('template-parts/breadcrumb'); ?>
         <section class="menu_wrap">
             <!-- <aside class="aside_wrap aside_top">
                 </aside> -->
