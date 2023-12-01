@@ -13,7 +13,16 @@ get_header();
                 <div class="card2">
                     <div class="card2_wrap">
                         <div class="card2_content">
+                            <div class="card2_img">
 
+                                <!-- サムネあれば出力 -->
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <?php the_post_thumbnail('medium'); ?>
+                                <?php else : ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/running_around.png" alt="no-image">
+                                <?php endif; ?>
+
+                            </div>
                             <div class="center_title">
                                 <h3 class="middle_title"><?php the_title(); ?></h3>
                             </div>
