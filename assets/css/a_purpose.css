@@ -162,7 +162,7 @@ section {
 /* カード説明幅 */
 .card_text {
     border: 1px solid #000;
-    padding: 5px 10px ;
+    padding: 5px 10px;
     height: 60px;
 }
 
@@ -209,17 +209,17 @@ section {
     }
 
     /* カード説明幅 */
-.card_text {
-    padding: 5px 10px ;
-    height: 60px;
-}
+    .card_text {
+        padding: 5px 10px;
+        height: 60px;
+    }
 
-/* アイコン欄 */
-.card_icon {
-    margin: 20px 0;
-    padding: 10px;
-    height: 75px;
-}
+    /* アイコン欄 */
+    .card_icon {
+        margin: 20px 0;
+        padding: 10px;
+        height: 75px;
+    }
 }
 
 /* ------------------------------------------------------------------------
@@ -227,8 +227,13 @@ section {
 ------------------------------------------------------------------------ */
 
 /* more,closeボタンにホバー */
-.more_btn, .close_btn:hover {
+.more_btn:hover,
+.close_btn:hover {
     cursor: pointer;
+    transform: translate(5px, 5px);
+    transition: .3s;
+    opacity: .6;
+    box-shadow: 0 0 0 #000;
 }
 
 /* closeボタン外側・中央揃え・整形 */
@@ -272,4 +277,16 @@ section {
         height: 550px;
     }
 
+}
+
+/*
+------------------------------------------------------------------------
+ホバー時アニメーション
+------------------------------------------------------------------------*/
+.purpose_btn:hover,
+.card_wrap1:hover {
+    transform: translate(5px, 5px);
+    transition: .3s;
+    opacity: .6;
+    box-shadow: 0 0 0 #000;
 }
