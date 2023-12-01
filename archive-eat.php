@@ -83,7 +83,13 @@
                 <?php $test_class = 'sec' . sprintf('%02d', $test); ?>
                 <section class="archive_col <?php echo $test_class; ?>">
                     <!---- タクソノミー別タイトル ---->
-                    <h3 class="purpose_btn"><?php echo '<a href="' . get_term_link($eat_type) . '">' . $eat_type->name . '</a>'; ?>
+                    <h3 class="purpose_btn">
+                        <a href="
+                        <?php echo get_term_link($eat_type); ?>
+                        ">
+                            <?php echo $eat_type->name; ?>(
+                            <?php echo $eat_type->count; ?>
+                            )</a>
                     </h3><!---- purpose_btn ---->
                     <div class="card_3col">
 
