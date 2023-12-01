@@ -118,7 +118,7 @@ cardテンプレート
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin: 30px auto;
+    margin: 30px auto 50px auto;
 }
 
 .pagenation img {
