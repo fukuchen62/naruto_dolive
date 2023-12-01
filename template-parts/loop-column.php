@@ -6,11 +6,9 @@
             <?php if (has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail('medium'); ?>
             <?php else : ?>
-                <img src="<?php echo get_template_directory_uri() ?>/assets/img/running_around.png" alt="no-image">
+                <img src="<?php get_template_directory_uri() ?>/assets/img/running_around.png" alt="no-image">
             <?php endif; ?>
         </div>
-
-        <!-- 記事名の表示 -->
         <h4><?php echo mb_substr(get_the_title(), 0, 11) . '･･･'; ?></h4>
 
         <div class="taxonomy_box">
@@ -23,7 +21,7 @@
                 if ($terms && !is_wp_error($terms)) {
                     echo '<ul>';
                     foreach ($terms as $term) {
-                        echo '<li><a href="' . get_term_link($term) . '">' . $term->name . '</a></li>';
+                        echo '<li>' . $term->name . '</li>';
                     }
                     echo '</ul>';
                 }

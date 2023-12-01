@@ -42,6 +42,7 @@ get_header();
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
                         <div class="card1_wrap">
+
                             <?php get_template_part('template-parts/loop', 'column'); ?>
 
                         </div>

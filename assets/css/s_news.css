@@ -67,7 +67,7 @@ cardテンプレート
 
 /* 記事本文 */
 .card2_text {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     padding: 10px;
 }
 

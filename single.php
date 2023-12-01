@@ -3,16 +3,20 @@ get_header();
 
 ?>
 <main>
-    <section id="toparea" class="toparea">
-        <h2 class="page_title"><?php the_category('news'); ?></h2>
-    </section>
+    <h2 id="toparea" class="toparea">
+        <?php the_category('news'); ?>
+    </h2>
     <div class="main_wrap">
         <?php get_template_part('template-parts/breadcrumb'); ?>
         <div class="content_wrap">
+            <h3 class="h3_center"><?php the_title(); ?></h3>
             <div class="archive_col">
                 <div class="card2">
                     <div class="card2_wrap">
+
                         <div class="card2_content">
+                            <h4></h4>
+                            <br>
                             <div class="card2_img">
 
                                 <!-- サムネあれば出力 -->
@@ -23,9 +27,7 @@ get_header();
                                 <?php endif; ?>
 
                             </div>
-                            <div class="center_title">
-                                <h3 class="middle_title"><?php the_title(); ?></h3>
-                            </div>
+
                             <div class="card2_text"><?php the_content(); ?></div>
                         </div>
                     </div>
