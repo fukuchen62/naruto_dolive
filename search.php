@@ -5,7 +5,7 @@
     <main>
         <?php $search_term = get_search_query(); ?>
         <section id="toparea" class="toparea">
-            <h2><?= $search_term ?>：の検索結果</h2>
+            <h2> 『 <?= $search_term ?> 』 の検索結果</h2>
         </section>
         <div class="main_wrap">
             <div class="breadcrumb"><?php get_template_part('template-parts/breadcrumb'); ?></div>
@@ -26,7 +26,7 @@
                         $enjoy_hits = $enjoy_query->found_posts;
                         $total_enjoy_hits += $enjoy_hits;
                         $enjoy_post_type_obj = get_post_type_object($post_type); ?>
-                        <h3 class="middle_title">遊ぶの結果(<?= $enjoy_hits ?>)</h3>
+                        <h3 class="middle_title">遊ぶの結果 ( <?= $enjoy_hits ?> 件)</h3>
                 </div>
                 <div class="card_3col">
                     <?php if ($enjoy_query->have_posts()) {
@@ -63,7 +63,7 @@
                         $eat_total_hits += $eat_hits;
                         $eat_post_type_obj = get_post_type_object($eat_post_type);
                     ?>
-                        <h3 class="middle_title">食べるの結果(<?= $eat_hits ?>)</h3>
+                        <h3 class="middle_title">食べるの結果 ( <?= $eat_hits ?> 件)</h3>
                 </div>
                 <div class="card_3col">
                     <?php if ($eat_query->have_posts()) {
@@ -99,7 +99,7 @@
                         $tour_hits = $tour_query->found_posts;
                         $tour_total_hits += $tour_hits;
                         $tour_post_type_obj = get_post_type_object($tour_post_type); ?>
-                        <h3 class="middle_title">観光の結果(<?= $tour_hits ?>)</h3>
+                        <h3 class="middle_title">観光の結果 ( <?= $tour_hits ?> 件)</h3>
                 </div>
                 <div class="card_3col">
                     <?php if ($tour_query->have_posts()) {
@@ -134,7 +134,7 @@
                             $stay_hits = $stay_query->found_posts;
                             $stay_total_hits += $stay_hits;
                             $stay_post_type_obj = get_post_type_object($stay_post_type); ?>
-                            <h3 class="middle_title">宿泊の結果(<?= $stay_hits ?>)</h3>
+                            <h3 class="middle_title">宿泊の結果 ( <?= $stay_hits ?> 件)</h3>
                     </div>
                     <div class="card_3col">
                         <?php if ($stay_query->have_posts()) {
