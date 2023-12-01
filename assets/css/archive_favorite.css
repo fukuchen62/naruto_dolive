@@ -54,6 +54,9 @@
     height: 100%;
 }
 
+.card_3col{
+    justify-content: center;
+}
 
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */

@@ -12724,7 +12724,6 @@ get_header();
     <section id="instagram" class="section_instagram">
         <h2 class="toparea">インスタグラム</h2>
 
-
         <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
     </section>
     <div class="teloparea scroll_car">

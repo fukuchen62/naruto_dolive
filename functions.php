@@ -156,6 +156,14 @@ function add_individual_scripts()
             '',
             true
         );
+        // マップのjsの読み込み
+        wp_enqueue_script(
+            'map_script',
+            get_template_directory_uri() . '/assets/js/map.js',
+            '',
+            '',
+            true
+        );
 
         // 二つ目のスクリプトを読み込む
         wp_enqueue_script('my-script2', get_template_directory_uri() . '/assets/js/a_purpose.js', array('jquery'), null, true);
