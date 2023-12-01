@@ -77,7 +77,7 @@ cardテンプレート
 
     /* 記事左側サイズ */
     .card3_left {
-        width: 65%;
+        max-width: 66.6%;
     }
 
     .card3_wrap {
