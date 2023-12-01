@@ -1012,7 +1012,7 @@ h4 {
 
 /* タイトル表示 */
 .aside_title {
-    padding: 0 30px 20px 30px;
+    padding-bottom: 30px;
     text-align: center;
     font-size: 1.8rem;
     white-space: nowrap;
