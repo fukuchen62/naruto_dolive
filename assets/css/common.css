@@ -579,7 +579,7 @@ ul.overlaymenu_list_icon_list {
     width: 280px;
     border: 3px solid #000;
     box-shadow: 5px 5px 0 #000;
-    margin-bottom: 25px;
+    margin: 0 auto 25px auto;
 }
 
 .card1_content {
