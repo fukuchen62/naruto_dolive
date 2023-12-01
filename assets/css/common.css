@@ -714,7 +714,8 @@ ul.overlaymenu_list_icon_list {
     .card_3col {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 2.5%;
     }
 }
 
