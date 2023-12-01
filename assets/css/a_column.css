@@ -17,7 +17,7 @@
 /* トップメニュー横並び */
 .menu_wrap {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     gap: 5%;
 }
 
