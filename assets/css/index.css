@@ -13,11 +13,15 @@ img {
 }
 
 h2.toparea {
-  height: 200px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
+}
+
+h2 {
+  font-size: 2.2rem;
 }
 
 .teloparea {
@@ -44,6 +48,16 @@ h2.toparea {
   transform: translate(5px, 5px);
 }
 
+@media only screen and (min-width:768px) {
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  h2.toparea {
+    height: 200px;
+  }
+}
+
 /* width: 15%;
   font-size: 16px;
   font-weight: bold;
@@ -66,12 +80,12 @@ h2.toparea {
 
 .kv_left, .kv_main, .kv_right {
   position: relative;
-  padding: 17vh 0;
+  padding: 8vh 0;
 }
 
 .logo {
   position: absolute;
-  top: 15%;
+  top: 1vh;
   width: 90%;
   left: 5%;
 }
@@ -167,6 +181,19 @@ h2.toparea {
 
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+/* タブレット用スタイル */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logo {
+    top: -1vh;
+  }
+
+  .kv_left, .kv_main, .kv_right {
+    width: 46%;
+    min-width: 46%;
+    padding: 5vh 0;
+  }
+}
+
 @media only screen and (min-width:768px) {
   .kv_img_wrap {
     position: relative;
@@ -192,7 +219,7 @@ h2.toparea {
   }
 
   .logo {
-    top: 3%;
+    top: 3vh;
   }
 
   .catchcopy {
@@ -301,8 +328,8 @@ h2.title_drivecourse {
 }
 
 .btn {
-  width: 15%;
-  font-size: 16px;
+  width: 18%;
+  font-size: 20px;
   font-weight: bold;
   color: #333;
   padding: 18px 30px;
@@ -358,7 +385,7 @@ h2.title_drivecourse {
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
   .map_container {
-    width: 90%;
+    width: 75%;
   }
 }
 
@@ -580,7 +607,7 @@ p.moving_text:hover {
   padding-bottom: 100%;
   border: 3px solid #000;
   box-shadow: 5px 5px 0 #000;
-  background-color:#000;
+  background-color: #000;
 }
 
 .instagram_grid_item img {
@@ -596,6 +623,7 @@ p.moving_text:hover {
   height: 100%;
   object-fit: cover;
 }
+
 .instagram_follow {
   text-align: center;
   padding-bottom: 10%;
@@ -747,7 +775,7 @@ p.moving_text:hover {
 @media (min-width: 768px) {
   .pdf_wrap_pc {
     padding: 0 10% 10% 10%;
-    width: 80%;
+    width: 72%;
     margin: 0 auto;
   }
 
@@ -789,9 +817,9 @@ p.moving_text:hover {
 /* ------------------------------------------------------------------------
 車が左に流れるアニメーション ------------------------------------------------------------------------  */
 .scroll_car {
-display: flex;
-align-items: center;
-/* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
 }
 
 @keyframes infinity-scroll-left {
@@ -819,7 +847,7 @@ align-items: center;
 }
 
 .scroll-infinity__item {
-  width:140px;
+  width: 140px;
   animation: katakata 6s infinite ease-in-out alternate;
 }
 
