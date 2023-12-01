@@ -10,7 +10,7 @@
     color: #33F3FF;
 }
 
-h2 a{
+h2 a {
     text-shadow: 2px 2px 0 #000;
     -webkit-text-stroke: 2px #000;
 }
@@ -72,8 +72,6 @@ cardテンプレート
     .archive_col {
         display: flex;
         justify-content: space-between;
-        max-width: 1200px;
-        margin: 0 auto;
         gap: 5%;
     }
 
