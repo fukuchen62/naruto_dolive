@@ -6,6 +6,8 @@
             <div class="thumbnail_img">
                 <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail('medium'); ?>
+                <?php else : ?>
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/running_around.png" alt="no-image">
                 <?php endif; ?>
             </div>
 

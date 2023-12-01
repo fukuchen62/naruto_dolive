@@ -230,7 +230,7 @@
                             </a></li>
                     </ul>
                 </li>
-                <li><a href="#">インスタ</a></li>
+                <li><a href="#instagram">インスタグラム</a></li>
                 <li><a href="<?php echo get_permalink(239) ?>">マイページ</a></li>
                 <li><a href="<?php echo home_url('/q_a') ?>">Q&A</a></li>
                 <li class="search_box_li">

@@ -23,7 +23,7 @@ get_header();
                                         <?php if (has_post_thumbnail()) : ?>
                                             <?php the_post_thumbnail('thumbnail'); ?>
                                         <?php else : ?>
-                                            <!-- 実装するか未定 -->
+                                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/running_around.png" alt="no-image">
                                         <?php endif; ?>
                                     </div>
                                     <?php get_template_part('template-parts/loop', 'news'); ?>
