@@ -15,7 +15,7 @@ get_header();
                     <div class="card2_wrap">
 
                         <div class="card2_content">
-                            <h4>subtitle</h4>
+                            <h4></h4>
                             <br>
                             <div class="card2_img">
 
@@ -28,7 +28,7 @@ get_header();
 
                             </div>
 
-                            <div class="card1_text"><?php the_content(); ?></div>
+                            <div class="card2_text"><?php the_content(); ?></div>
                         </div>
                     </div>
                     <div class="pageturn">
