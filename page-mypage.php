@@ -10,245 +10,247 @@ get_header();
     </section>
     <div class="main_wrap">
         <div class="breadcrumb"><?php get_template_part('template-parts/breadcrumb'); ?></div>
-        <section class="menu_wrap">
-            <!-- <aside class="aside_wrap aside_top">
+        <div class="content_wrap">
+            <section class="menu_wrap">
+                <!-- <aside class="aside_wrap aside_top">
                 </aside> -->
-        </section>
+            </section>
 
-        <div class="center_title">
-            <h3>お気に入りの【食べる】</h3>
-        </div>
+            <div class="center_title">
+                <h3>お気に入りの【食べる】</h3>
+            </div>
 
-        <?php
-        // お気に入りの投稿を変数に代入
-        $favorites = get_user_favorites();
-        // クエリのための引数を設定するための配列 $args を作成
-        $args = array(
-            // 投稿のIDを取得
-            'post__in' => $favorites,
-            // 取得する投稿タイプの指定
-            'post_type' => 'eat',
-            // 1ページに表示する投稿数の指定
-            'posts_per_page' => -1
-        );
+            <?php
+            // お気に入りの投稿を変数に代入
+            $favorites = get_user_favorites();
+            // クエリのための引数を設定するための配列 $args を作成
+            $args = array(
+                // 投稿のIDを取得
+                'post__in' => $favorites,
+                // 取得する投稿タイプの指定
+                'post_type' => 'eat',
+                // 1ページに表示する投稿数の指定
+                'posts_per_page' => -1
+            );
 
-        ?>
+            ?>
 
-        <!-- 与えられた引数で新しいwp_queryオブジェクトを作成 -->
-        <?php $the_query = new WP_Query($args); ?>
-        <section class="archive_col">
-            <div class="card_3col">
-                <?php if ($favorites && count($favorites) > 0) : ?>
-                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+            <!-- 与えられた引数で新しいwp_queryオブジェクトを作成 -->
+            <?php $the_query = new WP_Query($args); ?>
+            <section class="archive_col">
+                <div class="card_3col">
+                    <?php if ($favorites && count($favorites) > 0) : ?>
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-                        <?php
-                        // 緯度と経度、タイトルを取得し、配列に代入
-                        $latitude = get_post_meta(get_the_ID(), 'latitude', true);
-                        $longitude = get_post_meta(get_the_ID(), 'longitude', true);
-                        $facilityName = get_the_title();
-                        // $argsに代入したそれぞれの施設の情報を配列に追加
-                        $favorite[] = array(
-                            'lat' => $latitude,
-                            'lng' => $longitude,
-                            'facilityName' => $facilityName
-                        );
-                        ?>
+                            <?php
+                            // 緯度と経度、タイトルを取得し、配列に代入
+                            $latitude = get_post_meta(get_the_ID(), 'latitude', true);
+                            $longitude = get_post_meta(get_the_ID(), 'longitude', true);
+                            $facilityName = get_the_title();
+                            // $argsに代入したそれぞれの施設の情報を配列に追加
+                            $favorite[] = array(
+                                'lat' => $latitude,
+                                'lng' => $longitude,
+                                'facilityName' => $facilityName
+                            );
+                            ?>
 
-                        <div class="card_3col">
-                            <div class="card1_content">
-                                <!---- １件ずつカード型で表示 ---->
-                                <?php get_template_part('template-parts/loop', 'content'); ?>
+                            <div class="card_3col">
+                                <div class="card1_content">
+                                    <!---- １件ずつカード型で表示 ---->
+                                    <?php get_template_part('template-parts/loop', 'content'); ?>
+                                </div>
                             </div>
-                        </div>
-                    <?php endwhile; ?>
-                <?php else : ?>
-                    <h4 class="no_favorite">お気に入り登録０件
-                    </h4>
-                <?php endif; ?>
-                <div>
+                        <?php endwhile; ?>
+                    <?php else : ?>
+                        <h4 class="no_favorite">お気に入り登録０件
+                        </h4>
+                    <?php endif; ?>
+                    <div>
+                        <?php wp_reset_postdata(); ?>
+            </section>
+
+
+            <div class="center_title">
+                <h3>お気に入りの【遊ぶ】</h3>
+            </div>
+
+            <?php
+            // お気に入りの投稿を変数に代入
+            $favorites = get_user_favorites();
+            // クエリのための引数を設定するための配列 $args を作成
+            $args = array(
+                // 投稿のIDを取得
+                'post__in' => $favorites,
+                // 取得する投稿タイプの指定
+                'post_type' => 'enjoy',
+                // 1ページに表示する投稿数の指定
+                'posts_per_page' => -1
+            );
+
+            ?>
+
+            <!-- 与えられた引数で新しいwp_queryオブジェクトを作成 -->
+            <?php $the_query = new WP_Query($args); ?>
+            <section class="archive_col">
+                <div class="card_3col">
+                    <?php if ($favorites && count($favorites) > 0) : ?>
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+
+                            <?php
+                            // 緯度と経度、タイトルを取得し、配列に代入
+                            $latitude = get_post_meta(get_the_ID(), 'latitude', true);
+                            $longitude = get_post_meta(get_the_ID(), 'longitude', true);
+                            $facilityName = get_the_title();
+                            // $argsに代入したそれぞれの施設の情報を配列に追加
+                            $favorite[] = array(
+                                'lat' => $latitude,
+                                'lng' => $longitude,
+                                'facilityName' => $facilityName
+                            );
+                            ?>
+
+
+                            <div class="card_3col">
+                                <div class="card1_content">
+                                    <!---- １件ずつカード型で表示 ---->
+                                    <?php get_template_part('template-parts/loop', 'content'); ?>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php else : ?>
+                        <h4 class="no_favorite">お気に入り登録０件
+                        </h4>
+                    <?php endif; ?>
                     <?php wp_reset_postdata(); ?>
-        </section>
-
-
-        <div class="center_title">
-            <h3>お気に入りの【遊ぶ】</h3>
-        </div>
-
-        <?php
-        // お気に入りの投稿を変数に代入
-        $favorites = get_user_favorites();
-        // クエリのための引数を設定するための配列 $args を作成
-        $args = array(
-            // 投稿のIDを取得
-            'post__in' => $favorites,
-            // 取得する投稿タイプの指定
-            'post_type' => 'enjoy',
-            // 1ページに表示する投稿数の指定
-            'posts_per_page' => -1
-        );
-
-        ?>
-
-        <!-- 与えられた引数で新しいwp_queryオブジェクトを作成 -->
-        <?php $the_query = new WP_Query($args); ?>
-        <section class="archive_col">
-            <div class="card_3col">
-                <?php if ($favorites && count($favorites) > 0) : ?>
-                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-
-                        <?php
-                        // 緯度と経度、タイトルを取得し、配列に代入
-                        $latitude = get_post_meta(get_the_ID(), 'latitude', true);
-                        $longitude = get_post_meta(get_the_ID(), 'longitude', true);
-                        $facilityName = get_the_title();
-                        // $argsに代入したそれぞれの施設の情報を配列に追加
-                        $favorite[] = array(
-                            'lat' => $latitude,
-                            'lng' => $longitude,
-                            'facilityName' => $facilityName
-                        );
-                        ?>
-
-
-                        <div class="card_3col">
-                            <div class="card1_content">
-                                <!---- １件ずつカード型で表示 ---->
-                                <?php get_template_part('template-parts/loop', 'content'); ?>
-                            </div>
-                        </div>
-                    <?php endwhile; ?>
-                <?php else : ?>
-                    <h4 class="no_favorite">お気に入り登録０件
-                    </h4>
-                <?php endif; ?>
-                <?php wp_reset_postdata(); ?>
-            </div>
-        </section>
-
-
-        <div class="center_title">
-            <h3>お気に入りの【観光】</h3>
-        </div>
-
-        <?php
-        // お気に入りの投稿を変数に代入
-        $favorites = get_user_favorites();
-        // クエリのための引数を設定するための配列 $args を作成
-        $args = array(
-            // 投稿のIDを取得
-            'post__in' => $favorites,
-            // 取得する投稿タイプの指定
-            'post_type' => 'tour',
-            // 1ページに表示する投稿数の指定
-            'posts_per_page' => -1
-        );
-
-        ?>
-
-        <!-- 与えられた引数で新しいwp_queryオブジェクトを作成 -->
-        <?php $the_query = new WP_Query($args); ?>
-        <section class="archive_col">
-            <div class="card_3col">
-                <?php if ($favorites && count($favorites) > 0) : ?>
-                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-
-                        <?php
-                        // 緯度と経度、タイトルを取得し、配列に代入
-                        $latitude = get_post_meta(get_the_ID(), 'latitude', true);
-                        $longitude = get_post_meta(get_the_ID(), 'longitude', true);
-                        $facilityName = get_the_title();
-                        // $argsに代入したそれぞれの施設の情報を配列に追加
-                        $favorite[] = array(
-                            'lat' => $latitude,
-                            'lng' => $longitude,
-                            'facilityName' => $facilityName
-                        );
-                        ?>
-
-
-                        <div class="card_3col">
-                            <div class="card1_content">
-                                <!---- １件ずつカード型で表示 ---->
-                                <?php get_template_part('template-parts/loop', 'content'); ?>
-                            </div>
-                        </div>
-                    <?php endwhile; ?>
-                <?php else : ?>
-                    <h4 class="no_favorite">お気に入り登録０件
-                    </h4>
-                <?php endif; ?>
-                <?php wp_reset_postdata(); ?>
-            </div>
-        </section>
-
-
-
-        <div class="center_title">
-            <h3>お気に入りの【宿泊】</h3>
-        </div>
-
-        <?php
-        // お気に入りの投稿を変数に代入
-        $favorites = get_user_favorites();
-        // クエリのための引数を設定するための配列 $args を作成
-        $args = array(
-            // 投稿のIDを取得
-            'post__in' => $favorites,
-            // 取得する投稿タイプの指定
-            'post_type' => 'stay',
-            // 1ページに表示する投稿数の指定
-            'posts_per_page' => -1
-        );
-
-        ?>
-
-        <!-- 与えられた引数で新しいwp_queryオブジェクトを作成 -->
-        <?php $the_query = new WP_Query($args); ?>
-        <section class="archive_col">
-            <div class="card_3col">
-                <?php if ($favorites && count($favorites) > 0) : ?>
-                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-
-                        <?php
-                        // 緯度と経度、タイトルを取得し、配列に代入
-                        $latitude = get_post_meta(get_the_ID(), 'latitude', true);
-                        $longitude = get_post_meta(get_the_ID(), 'longitude', true);
-                        $facilityName = get_the_title();
-                        // $argsに代入したそれぞれの施設の情報を配列に追加
-                        $favorite[] = array(
-                            'lat' => $latitude,
-                            'lng' => $longitude,
-                            'facilityName' => $facilityName
-                        );
-                        ?>
-
-
-                        <div class="card_3col">
-                            <div class="card1_content">
-                                <!---- １件ずつカード型で表示 ---->
-                                <?php get_template_part('template-parts/loop', 'content'); ?>
-                            </div>
-                        </div>
-                    <?php endwhile; ?>
-                <?php else : ?>
-                    <h4 class="no_favorite">お気に入り登録０件
-                    </h4>
-                <?php endif; ?>
-                <?php wp_reset_postdata(); ?>
-            </div>
-        </section>
-
-
-        <section class="course_map">
-            <!-- googlemap -->
-            <?php if (!isset($favorite) || !$favorite) : ?>
-                <div class="map">
-                    <iframe src=" https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d35264.57904322709!2d134.61005359751124!3d34.18094112749899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1701237150396!5m2!1sja!2sjp" width="700" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map_fav"></iframe>
                 </div>
-            <?php else : ?>
-                <div class="map" id="map"></div>
-            <?php endif; ?>
-        </section>
+            </section>
+
+
+            <div class="center_title">
+                <h3>お気に入りの【観光】</h3>
+            </div>
+
+            <?php
+            // お気に入りの投稿を変数に代入
+            $favorites = get_user_favorites();
+            // クエリのための引数を設定するための配列 $args を作成
+            $args = array(
+                // 投稿のIDを取得
+                'post__in' => $favorites,
+                // 取得する投稿タイプの指定
+                'post_type' => 'tour',
+                // 1ページに表示する投稿数の指定
+                'posts_per_page' => -1
+            );
+
+            ?>
+
+            <!-- 与えられた引数で新しいwp_queryオブジェクトを作成 -->
+            <?php $the_query = new WP_Query($args); ?>
+            <section class="archive_col">
+                <div class="card_3col">
+                    <?php if ($favorites && count($favorites) > 0) : ?>
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+
+                            <?php
+                            // 緯度と経度、タイトルを取得し、配列に代入
+                            $latitude = get_post_meta(get_the_ID(), 'latitude', true);
+                            $longitude = get_post_meta(get_the_ID(), 'longitude', true);
+                            $facilityName = get_the_title();
+                            // $argsに代入したそれぞれの施設の情報を配列に追加
+                            $favorite[] = array(
+                                'lat' => $latitude,
+                                'lng' => $longitude,
+                                'facilityName' => $facilityName
+                            );
+                            ?>
+
+
+                            <div class="card_3col">
+                                <div class="card1_content">
+                                    <!---- １件ずつカード型で表示 ---->
+                                    <?php get_template_part('template-parts/loop', 'content'); ?>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php else : ?>
+                        <h4 class="no_favorite">お気に入り登録０件
+                        </h4>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
+                </div>
+            </section>
+
+
+
+            <div class="center_title">
+                <h3>お気に入りの【宿泊】</h3>
+            </div>
+
+            <?php
+            // お気に入りの投稿を変数に代入
+            $favorites = get_user_favorites();
+            // クエリのための引数を設定するための配列 $args を作成
+            $args = array(
+                // 投稿のIDを取得
+                'post__in' => $favorites,
+                // 取得する投稿タイプの指定
+                'post_type' => 'stay',
+                // 1ページに表示する投稿数の指定
+                'posts_per_page' => -1
+            );
+
+            ?>
+
+            <!-- 与えられた引数で新しいwp_queryオブジェクトを作成 -->
+            <?php $the_query = new WP_Query($args); ?>
+            <section class="archive_col">
+                <div class="card_3col">
+                    <?php if ($favorites && count($favorites) > 0) : ?>
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+
+                            <?php
+                            // 緯度と経度、タイトルを取得し、配列に代入
+                            $latitude = get_post_meta(get_the_ID(), 'latitude', true);
+                            $longitude = get_post_meta(get_the_ID(), 'longitude', true);
+                            $facilityName = get_the_title();
+                            // $argsに代入したそれぞれの施設の情報を配列に追加
+                            $favorite[] = array(
+                                'lat' => $latitude,
+                                'lng' => $longitude,
+                                'facilityName' => $facilityName
+                            );
+                            ?>
+
+
+                            <div class="card_3col">
+                                <div class="card1_content">
+                                    <!---- １件ずつカード型で表示 ---->
+                                    <?php get_template_part('template-parts/loop', 'content'); ?>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php else : ?>
+                        <h4 class="no_favorite">お気に入り登録０件
+                        </h4>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
+                </div>
+            </section>
+
+
+            <section class="course_map">
+                <!-- googlemap -->
+                <?php if (!isset($favorite) || !$favorite) : ?>
+                    <div class="map">
+                        <iframe src=" https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d35264.57904322709!2d134.61005359751124!3d34.18094112749899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1701237150396!5m2!1sja!2sjp" width="700" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map_fav"></iframe>
+                    </div>
+                <?php else : ?>
+                    <div class="map" id="map"></div>
+                <?php endif; ?>
+            </section>
+        </div>
     </div>
 </main>
 
