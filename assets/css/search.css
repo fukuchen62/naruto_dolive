@@ -23,7 +23,7 @@ section {
 /* 外枠中央配置 */
 .center_title {
     text-align: center;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
 }
 
 /* 中見出し幅 →commonに合わせる(消す？)*/
@@ -37,9 +37,9 @@ section {
 ------------------------------------------------------------------------ */
 
 /* 記事幅 */
-.archive_col {
+/* .archive_col {
     padding: 50px;
-}
+} */
 
 /* 記事タイトル */
 .archive_col>h3 {
