@@ -913,7 +913,9 @@ footer p:first-child {
 main a>.column-container:hover,
 main a>.course_details_card:hover,
 main a>.card1_wrap:hover,
-main a>.card3_wrap:hover {
+main a>.card_wrap1:hover,
+main a>.card3_wrap:hover,
+.sitemap_btn:hover {
     transform: translate(5px, 5px);
     transition: .3s;
     opacity: .6;

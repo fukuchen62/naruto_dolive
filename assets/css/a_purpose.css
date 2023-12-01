@@ -228,7 +228,8 @@ section {
 
 /* more,closeボタンにホバー */
 .more_btn:hover,
-.close_btn:hover {
+.close_btn:hover,
+.purpose_btn:hover {
     cursor: pointer;
     transform: translate(5px, 5px);
     transition: .3s;
@@ -277,16 +278,4 @@ section {
         height: 550px;
     }
 
-}
-
-/*
-------------------------------------------------------------------------
-ホバー時アニメーション
-------------------------------------------------------------------------*/
-.purpose_btn:hover,
-.card_wrap1:hover {
-    transform: translate(5px, 5px);
-    transition: .3s;
-    opacity: .6;
-    box-shadow: 0 0 0 #000;
 }
