@@ -19,12 +19,6 @@ section {
 /* ------------------------------------------------------------------------
 cardテンプレート
 ------------------------------------------------------------------------  */
-
-/* 記事幅 */
-.archive_col {
-    padding: 50px;
-}
-
 /* ▼card2カラムカード▼ */
 
 .card2_wrap {
@@ -56,12 +50,8 @@ cardテンプレート
 
 /* 中見出し幅 */
 .middle_title {
-    margin: 40px;
-    padding: 10px 0;
     display: flex;
     justify-content: center;
-    width: auto;
-    font-size: 2rem;
     text-decoration: underline wavy;
 }
 
@@ -81,18 +71,28 @@ h4 {
     padding: 10px;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+    .card2 {
+        width: 100%;
+    }
+
+    .aside_wrap {
+        margin: 0 auto;
+    }
+}
+
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media (min-width:768px) {
+@media (min-width:1024px) {
 
     /* メニュー横並び */
     .archive_col {
         display: flex;
-        max-width: 1200px;
-        margin: 0 auto;
+        justify-content: space-between;
+        gap: 5%;
     }
 
     .card2 {
-        max-width: 60%;
+        max-width: 66.6%;
     }
 
     .card2_content h3 {
