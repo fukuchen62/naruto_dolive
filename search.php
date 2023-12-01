@@ -9,6 +9,46 @@
         </section>
         <div class="main_wrap">
             <div class="breadcrumb"><?php get_template_part('template-parts/breadcrumb'); ?></div>
+
+            <!-- ここから食べるです -->
+            <div class="archive_col">
+                <div class="center_title">
+                    <?php
+                    $search_term = get_search_query();
+                    $eat_post_types = array('eat');
+                    $eat_found_posts = false;
+                    $eat_total_hits = 0;
+                    foreach ($eat_post_types as $eat_post_type) {
+                        $args = array(
+                            'post_type' => $eat_post_type,
+                            's' => $search_term,
+                            'posts_per_page' => -1
+                        );
+                        $eat_query = new WP_Query($args);
+                        $eat_hits = $eat_query->found_posts;
+                        $eat_total_hits += $eat_hits;
+                        $eat_post_type_obj = get_post_type_object($eat_post_type); ?>
+                        <h3 class="middle_title">食べるの結果 ( <?= $eat_hits ?> 件)</h3>
+                </div><!-- center_title -->
+                <div class="card_3col">
+                    <?php if ($eat_query->have_posts()) {
+                            $eat_found_posts = true;
+                            while ($eat_query->have_posts()) {
+                                $eat_query->the_post();
+                                get_template_part('template-parts/loop', 'content'); ?>
+                    <?php
+                            }
+                        }
+                        wp_reset_postdata();
+                    ?>
+                <?php
+                    }
+                ?>
+                </div><!-- card_3col -->
+            </div><!-- archive_col -->
+
+
+            <!-- ここから遊ぶです -->
             <div class="archive_col">
                 <div class="center_title">
                     <?php
@@ -27,61 +67,22 @@
                         $total_enjoy_hits += $enjoy_hits;
                         $enjoy_post_type_obj = get_post_type_object($post_type); ?>
                         <h3 class="middle_title">遊ぶの結果 ( <?= $enjoy_hits ?> 件)</h3>
-                </div>
+                </div><!-- center_title -->
                 <div class="card_3col">
                     <?php if ($enjoy_query->have_posts()) {
                             $found_posts = true;
                             while ($enjoy_query->have_posts()) {
                                 $enjoy_query->the_post();
-                                get_template_part('template-parts/loop', 'content');
-                    ?>
-                    <?php
-                            }
+                                get_template_part('template-parts/loop', 'content'); ?>
+                    <?php }
                         }
-                        wp_reset_postdata();
-                    ?>
-                <?php
-                    }
-                ?>
-                </div>
-            </div>
-            <div class="archive_col">
-                <div class="center_title">
-                    <?php
-                    $search_term = get_search_query();
-                    $eat_post_types = array('eat');
-                    $eat_found_posts = false;
-                    $eat_total_hits = 0;
-                    foreach ($eat_post_types as $eat_post_type) {
-                        $args = array(
-                            'post_type' => $eat_post_type,
-                            's' => $search_term,
-                            'posts_per_page' => -1
-                        );
-                        $eat_query = new WP_Query($args);
-                        $eat_hits = $eat_query->found_posts;
-                        $eat_total_hits += $eat_hits;
-                        $eat_post_type_obj = get_post_type_object($eat_post_type);
-                    ?>
-                        <h3 class="middle_title">食べるの結果 ( <?= $eat_hits ?> 件)</h3>
-                </div>
-                <div class="card_3col">
-                    <?php if ($eat_query->have_posts()) {
-                            $eat_found_posts = true;
-                            while ($eat_query->have_posts()) {
-                                $eat_query->the_post();
-                                get_template_part('template-parts/loop', 'content');
-                    ?>
-                    <?php
-                            }
-                        }
-                        wp_reset_postdata();
-                    ?>
-                <?php
-                    }
-                ?>
-                </div>
-            </div>
+                        wp_reset_postdata(); ?>
+                <?php } ?>
+                </div><!-- card_3col -->
+            </div><!-- archive_col -->
+
+
+            <!-- ここから観光です -->
             <div class="archive_col">
                 <div class="center_title">
                     <?php
@@ -100,14 +101,13 @@
                         $tour_total_hits += $tour_hits;
                         $tour_post_type_obj = get_post_type_object($tour_post_type); ?>
                         <h3 class="middle_title">観光の結果 ( <?= $tour_hits ?> 件)</h3>
-                </div>
+                </div><!-- center_title -->
                 <div class="card_3col">
                     <?php if ($tour_query->have_posts()) {
                             $tour_found_posts = true;
                             while ($tour_query->have_posts()) {
                                 $tour_query->the_post();
-                                get_template_part('template-parts/loop', 'content');
-                    ?>
+                                get_template_part('template-parts/loop', 'content'); ?>
                     <?php
                             }
                         }
@@ -116,43 +116,47 @@
                 <?php
                     }
                 ?>
-                </div>
-                <div class="archive_col">
-                    <div class="center_title">
-                        <?php
-                        $search_term = get_search_query();
-                        $stay_post_types = array('stay');
-                        $stay_found_posts = false;
-                        $stay_total_hits = 0;
-                        foreach ($stay_post_types as $stay_post_type) {
-                            $args = array(
-                                'post_type' => $stay_post_type,
-                                's' => $search_term,
-                                'posts_per_page' => -1
-                            );
-                            $stay_query = new WP_Query($args);
-                            $stay_hits = $stay_query->found_posts;
-                            $stay_total_hits += $stay_hits;
-                            $stay_post_type_obj = get_post_type_object($stay_post_type); ?>
-                            <h3 class="middle_title">宿泊の結果 ( <?= $stay_hits ?> 件)</h3>
-                    </div>
-                    <div class="card_3col">
-                        <?php if ($stay_query->have_posts()) {
-                                $stay_found_posts = true;
-                                while ($stay_query->have_posts()) {
-                                    $stay_query->the_post();
-                                    get_template_part('template-parts/loop', 'content');
-                        ?>
-                        <?php
-                                }
-                            }
-                            wp_reset_postdata();
-                        ?>
+                </div><!-- card_3col -->
+            </div><!-- archive_col -->
+
+
+            <!-- ここから宿泊です -->
+            <div class="archive_col">
+                <div class="center_title">
                     <?php
+                    $search_term = get_search_query();
+                    $stay_post_types = array('stay');
+                    $stay_found_posts = false;
+                    $stay_total_hits = 0;
+                    foreach ($stay_post_types as $stay_post_type) {
+                        $args = array(
+                            'post_type' => $stay_post_type,
+                            's' => $search_term,
+                            'posts_per_page' => -1
+                        );
+                        $stay_query = new WP_Query($args);
+                        $stay_hits = $stay_query->found_posts;
+                        $stay_total_hits += $stay_hits;
+                        $stay_post_type_obj = get_post_type_object($stay_post_type); ?>
+                        <h3 class="middle_title">宿泊の結果 ( <?= $stay_hits ?> 件)</h3>
+                </div><!-- center_title -->
+                <div class="card_3col">
+                    <?php if ($stay_query->have_posts()) {
+                            $stay_found_posts = true;
+                            while ($stay_query->have_posts()) {
+                                $stay_query->the_post();
+                                get_template_part('template-parts/loop', 'content'); ?>
+                    <?php
+                            }
                         }
+                        wp_reset_postdata();
                     ?>
-                    </div>
-                </div>
+                <?php
+                    }
+                ?>
+                </div><!-- card_3col -->
+            </div><!-- archive_col -->
+
     </main>
     <!-- <script src="../assets/js/common.js"></script> -->
 </body>
