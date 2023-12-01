@@ -65,7 +65,7 @@
                         $enjoy_query = new WP_Query($args);
                         $enjoy_hits = $enjoy_query->found_posts;
                         $total_enjoy_hits += $enjoy_hits;
-                        $enjoy_post_type_obj = get_post_type_object($post_type); ?>
+                        $enjoy_post_type_obj = get_post_type_object($enjoy_post_type); ?>
                         <h3 class="middle_title">遊ぶの結果 ( <?= $enjoy_hits ?> )</h3>
                 </div><!-- center_title -->
                 <div class="card_3col">
