@@ -40,6 +40,11 @@ h3 {
     text-decoration: underline wavy #333;
 }
 
+.h3_center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 h3>p {
     display: inline-block;
     position: relative;
