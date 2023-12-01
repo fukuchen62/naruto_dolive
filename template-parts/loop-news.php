@@ -1,9 +1,6 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('news'); ?>>
+<article href="<?php the_permalink(); ?>">
 
     <div class="article_wrap">
-
-
-
         <!-- カテゴリーの出力 -->
         <div class="news_tab"><?php the_category(); ?> </div>
         <a href="<?php the_permalink(); ?>">
@@ -19,7 +16,7 @@
             <!-- 抜粋の出力 -->
             <div class="card3_text">
 
-                <p><?php echo mb_substr(get_the_excerpt(), 0, 55) . '･･･'; ?></p>
+                <p><?php echo mb_substr(get_the_excerpt(), 0, 60) . '･･･'; ?></p>
 
             </div>
         </a>
