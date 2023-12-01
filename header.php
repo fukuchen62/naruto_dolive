@@ -92,7 +92,7 @@
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
-                                        <a href="#">
+                                        <a href="<?php if (is_front_page()) : ?>#instagram<?php else : ?><?php echo esc_url(home_url('/')); ?>#instagram<?php endif; ?>">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram_icon.svg" width="45" height="45" alt="インスタへのリンク" decoding="async" loading="lazy" />
                                         </a>
                                     </li>
@@ -230,7 +230,7 @@
                             </a></li>
                     </ul>
                 </li>
-                <li><a href="#instagram">インスタグラム</a></li>
+                <li><a href="<?php if (is_front_page()) : ?>#instagram<?php else : ?><?php echo esc_url(home_url('/')); ?>#instagram<?php endif; ?>">インスタグラム</a></li>
                 <li><a href="<?php echo get_permalink(239) ?>">マイページ</a></li>
                 <li><a href="<?php echo home_url('/q_a') ?>">Q&A</a></li>
                 <li class="search_box_li">
