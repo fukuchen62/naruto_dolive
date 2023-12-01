@@ -28,7 +28,7 @@ section {
 
 /* 中見出し幅 →commonに合わせる(消す？)*/
 .middle_title {
-    /* padding: 50px 10px 10px; */
+    padding: 50px 10px 10px;
 }
 
 
@@ -100,6 +100,8 @@ section {
     margin: 20px 0;
     padding: 10px;
     border: 1px solid #000;
+        text-align: center;
+    line-height: 45px;
 }
 
 /* アイコンサイズ */
