@@ -165,10 +165,6 @@ section {
 }
 
 /* 下部コンテンツ */
-.u_content {
-    padding: 40px 0 60px;
-}
-
 .u_content li {
     font-size: 1.8rem;
 }
@@ -176,7 +172,6 @@ section {
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
     .u_content {
-        padding: 50px 0 250px;
-
+        margin: 20px 0 0 10%;
     }
 }

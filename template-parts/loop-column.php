@@ -13,6 +13,21 @@
 
         <div class="taxonomy_box">
 
+            <?php
+            $taxonomies = get_taxonomies(); // すべてのタクソノミーを取得
+
+            foreach ($taxonomies as $taxonomy) {
+                $terms = get_the_terms(get_the_ID(), $taxonomy);
+                if ($terms && !is_wp_error($terms)) {
+                    echo '<ul>';
+                    foreach ($terms as $term) {
+                        echo '<li><a href="' . get_term_link($term) . '">' . $term->name . '</a></li>';
+                    }
+                    echo '</ul>';
+                }
+            }
+            ?>
+
         </div>
 
         <!-- 抜粋の表示 -->
