@@ -28,7 +28,7 @@
 }
 
 /* PC時のスタイル */
-@media (min-width:1300px) {
+@media (min-width:1410px) {
     .archive_col {
         display: flex;
         justify-content: center;
