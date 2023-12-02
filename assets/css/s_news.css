@@ -10,10 +10,6 @@
     color: #ffb357;
 }
 
-h2 a{
-    text-shadow: 2px 2px 0 #000;
-    -webkit-text-stroke: 2px #000;
-}
 /* セクション幅 */
 section {
     padding: 10px;
@@ -23,11 +19,6 @@ section {
 /* ------------------------------------------------------------------------
 cardテンプレート
 ------------------------------------------------------------------------  */
-
-/* 記事幅 */
-.archive_col {
-    /* padding: 50px; */
-}
 
 /* ▼card2カラムカード▼ */
 
@@ -51,46 +42,42 @@ cardテンプレート
     width: 90%;
     height: 90%;
     object-fit: cover;
-}
-
-/* 見出し中央配置 */
-.center_title {
-    text-align: center;
-}
-
-/* 中見出し幅 */
-.middle_title {
-    margin: 40px;
-    padding: 10px 0;
-    text-decoration: none;
+    margin: 5% 0;
 }
 
 /* 記事本文 */
 .card2_text {
-    /* border: 1px solid #000; */
     padding: 10px;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+    .card2 {
+        width: 100%;
+    }
+
+    .aside_wrap {
+        margin: 0 auto;
+    }
+}
+
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media (min-width:768px) {
+@media (min-width:1024px) {
 
     /* メニュー横並び */
     .archive_col {
         display: flex;
-        max-width: 1200px;
-        margin: 0 auto;
-        justify-content: space-around;
+        justify-content: space-between;
         gap: 5%;
     }
 
     .card2 {
-        max-width: 60%;
+        max-width: 66.6%;
     }
 
     .card2_content h3 {
         padding: 20px 0;
-        text-decoration: none;
     }
+
 }
 
 /* ▲card2カラムカード▲ */
