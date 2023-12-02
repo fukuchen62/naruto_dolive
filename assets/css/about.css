@@ -17,6 +17,11 @@
     line-height: 2.5rem;
 }
 
+.content_wrap {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
 @media only screen and (min-width:768px) {
     .title {
         margin: initial;
