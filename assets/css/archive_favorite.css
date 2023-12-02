@@ -116,6 +116,7 @@ section {
 /* 小見出し幅 */
 .card1_content>h4 {
     padding: 20px 20px;
+    border-left: none;
 }
 
 
