@@ -57,11 +57,11 @@ h4 {
     padding: 0.25rem 0.5rem 0.5rem 0.5rem;
     background: transparent;
     border-left: solid 5px #555;
-    font-size: 2rem;
+    font-size: clamp(1.1rem, 0.882rem + 0.93vw, 2rem);
 }
 
 h5 {
-    font-size: 1.7rem;
+    font-size: clamp(1.1rem, 0.954rem + 0.62vw, 1.7rem);
     font-weight: bold;
     text-decoration: underline wavy #333;
 }
