@@ -15,6 +15,10 @@ main {
     color: #F8A59B;
 }
 
+h4 {
+    border-left: none;
+}
+
 /* 区切り線 */
 hr {
     width: 80%;
@@ -109,7 +113,7 @@ hr {
         margin: 0 auto;
     }
 
-        .facility_tag_btn {
+    .facility_tag_btn {
         min-width: 150px;
         height: 50px;
     }
