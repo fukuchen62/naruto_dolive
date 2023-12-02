@@ -32,56 +32,43 @@ section {
 /* ------------------------------------------------------------------------
 ボタン設定
 ------------------------------------------------------------------------  */
-.menu_wrap>h3 {
-    text-decoration: none;
-}
-
-/* 項目ボタン装飾非表示 */
-.sitemap_btn::after, .sitemap_table::after {
-    display: none;
-}
 
 /* 項目ボタン外側 */
-.sitemap_btn {
+h3 {
     display: block;
     width: 280px;
     height: 80px;
-    margin: 40px auto 40px;
     background-color: #FFFCAA;
     border: 3px solid #000;
     border-radius: 20px;
     box-shadow: 5px 5px 0 #000;
+    text-decoration: none;
 }
 
 /* リンクを親要素いっぱいに広げる */
-.sitemap_btn>a {
+h3>a {
     display: block;
     padding: 25px;
     border-radius: 20px;
 }
 
+h3:not(:first-of-type) {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
 /* 一覧タイトル（非リンク） */
-.sitemap_table {
-    display: block;
-    padding: 20px 0;
-    width: 200px;
+h4 {
     border-left: 10px solid #9996ca;
-    margin: 50px auto 20px;
-    font-size: 1.8rem;
+    margin-left: 1rem;
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
 
-    /* 項目ボタン */
-    .sitemap_btn {
-        margin: 0 0 40px;
-    }
-
     /* 一覧タイトル（非リンク） */
-    .sitemap_table {
-        width: 250px;
-        margin: 50px 10% 20px;
+    h4 {
+        margin: 50px 0 20px 1rem;
     }
 }
 
@@ -91,13 +78,12 @@ section {
 ------------------------------------------------------------------------  */
 
 .sitemap_list {
-    margin: 20px 30%;
+    margin: 21px 0 35px 2rem;
 }
 
 .sitemap_list li {
     font-weight: bold;
-    font-size: 1.4rem;
-    margin: 15px 0;
+    margin: 15px 0 15px 3rem;
 }
 
 .sitemap_list a {
@@ -134,34 +120,8 @@ section {
 ------------------------------------------------------------------------  */
 
 /* 小見出しフォント */
-.menu_wrap>h5 {
-    font-size: 1.6rem;
-    font-weight: bold;
-    padding: 0 50px;
-    position: relative;
-    margin-bottom: 30px;
-    text-decoration: underline wavy #333;
-}
-
-/* リンク幅 */
-.menu_wrap>h5>a {
-    padding: 10px 40px;
-}
-
-/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:768px) {
-
-    /* 小見出しフォント */
-    .menu_wrap>h4 {
-        padding: 30px 0 10px;
-        margin-bottom: 50px;
-        left: -30%;
-    }
-
-    /* リンク幅 */
-    .menu_wrap>h5>a {
-        padding: 20px 60px;
-    }
+h5 {
+    margin: 1rem 0 28px 3rem;
 }
 
 /* 下部コンテンツ */
