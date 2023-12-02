@@ -110,13 +110,6 @@ main:not(.section_kv):not(.teloparea) {
     h3 {
         margin-bottom: 4rem;
     }
-
-    .content_wrap {
-        /* ↓試験用！ */
-        /* max-width: 1320px;
-        margin: 0 auto; */
-        /* ↑試験用！ */
-    }
 }
 
 /* ------------------------------------------------------------------------
