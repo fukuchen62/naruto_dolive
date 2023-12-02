@@ -97,7 +97,7 @@ cardテンプレート
     /* 記事タイトル整列 */
     .news_title {
         display: flex;
-        justify-content: space-around;
+        gap: 5%;
     }
 
     /* 記事本文表示 */
