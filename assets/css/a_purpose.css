@@ -157,6 +157,7 @@ section {
 /* 小見出し幅 */
 .card_wrap2>h4 {
     padding: 20px 0;
+    border-left: none;
 }
 
 /* カード説明幅 */
