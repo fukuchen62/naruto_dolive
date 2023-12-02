@@ -36,41 +36,41 @@ Q&A アコーディオンメニュー
 }
 
 .title {
-    padding: 1em;
+    padding: 0.7rem;
     display: block;
     color: #333;
     font-weight: bold;
-    font-size: 1.5rem;
     background-color: #FFF6E2;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
-
 .q_aimg {
-    width: 50px;
+    width: 30px;
     height: auto;
-    margin: 0px 20px 0px 20px;
     object-fit: cover;
+    position: absolute;
+    top: 7px;
+    left: 7px;
 }
 
 .answer_wrap img {
-    width: 55px;
-    height: 60px;
-    margin-left: 37px;
+    top: 3px;
+    left: 3px;
 }
-
 
 .title::after,
 .title::before {
     content: "";
     position: absolute;
-    right: 1.25em;
-    top: 1.25em;
+    right: 21px;
+    top: 14px;
     width: 2px;
     height: 0.75em;
     background-color: #999;
     transition: all 0.3s;
+    font-size: 1.5rem;
 }
 
 .title::after {
@@ -82,6 +82,7 @@ Q&A アコーディオンメニュー
     border: 6px solid #ccc;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 
@@ -90,16 +91,14 @@ Q&A アコーディオンメニュー
     overflow: hidden;
 }
 
-.question_span {
-    margin-right: 30px;
+.question_p {
+    margin-top: 35px;
 }
 
 .content p {
-    margin: 0;
-    padding: 0.5em 1em 1em;
-    font-size: 1.5rem;
+    margin-top: 35px;
     line-height: 1.5;
-    padding: 30px 60px 30px 0;
+    padding: 0.7rem;
 }
 
 .toggle:checked+.title+.content {
@@ -109,4 +108,30 @@ Q&A アコーディオンメニュー
 
 .toggle:checked+.title::before {
     transform: rotate(90deg) !important;
+}
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media only screen and (min-width:768px) {
+    .q_aimg {
+        width: 50px;
+        height: auto;
+        margin: 0px 20px 0px 20px;
+        object-fit: cover;
+        position: initial;
+    }
+
+    .question_p {
+        margin-top: initial;
+    }
+
+    .answer_wrap img {
+        width: 55px;
+        height: auto;
+    }
+
+    .content p {
+        margin: 0;
+        padding: 0.5em 1em 1em;
+        padding: 30px 60px 30px 0;
+    }
 }
