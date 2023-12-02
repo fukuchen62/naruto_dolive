@@ -1,99 +1,81 @@
 @charset "UTF-8";
 
-/* ------------------------------------------------------------------------
-トップエリア
-------------------------------------------------------------------------  */
-
 /* 帯色 */
 #toparea {
     background-color: #b5766d;
     color: #ec7f69;
 }
 
-/* ------------------------------------------------------------------------
-中見出し
-------------------------------------------------------------------------  */
-
-/* トップメニュー横並び */
-.menu_wrap {
-    display: flex;
-    justify-content: center;
-    gap: 5%;
-}
-
-/* トップ画像非表示 */
-.top_img {
-    display: none;
-}
-
-/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:768px) {
-
-    /* トップ外枠 */
-    .top_img {
-        display: block;
-        border: 3px solid #000;
-        width: 60%;
-    }
-
-    /* トップ画像 */
-    .top_img img {
-        min-width: 300px;
-        min-height: 350px;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-
-/* ------------------------------------------------------------------------
-サイドバー
------------------------------------------------------------------------- */
-
 /* 上部サイドバー非表示 */
 .aside_top {
     display: none;
 }
 
-/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:768px) {
+.card_2col {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    gap: 5%;
+}
 
-    /* 下部サイドバー非表示 */
+.card1 {
+    margin-bottom: 20px;
+    max-width: 330px;
+}
+
+.aside_bottom {
+    margin: 1.5rem auto 0 auto;
+}
+
+/* PC時のスタイル */
+@media (min-width:1300px) {
+    .archive_col {
+        display: flex;
+        justify-content: center;
+        gap: 3%;
+        width: 100%;
+    }
+
+    .card_2col {
+        gap: 3%;
+    }
+
+    .card1_wrap {
+        width: 330px;
+    }
+
     .aside_bottom {
         display: none;
     }
 
-    /* 上部サイドバー表示 */
     .aside_top {
         display: block;
     }
 
-    /* 記事幅 */
-    .archive_col {
-        padding: 50px 0;
+    /* セクション幅 */
+    section {
+        padding: 10px;
     }
-}
 
-/* セクション幅 */
-section {
-    padding: 10px;
+    .pagenation {
+        width: 66.6%;
+    }
 }
 
 /* ------------------------------------------------------------------------
 ページネーション※装飾だけなので消す
 ------------------------------------------------------------------------ */
 
-/* .pagenation {
+.pagenation {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 30px auto;
-
+    margin-bottom: 48px;
+    justify-content: center;
 }
 
 .pagenation img {
-    width: 40px;
+    width: 50px;
     object-fit: cover;
 }
 
@@ -115,4 +97,4 @@ section {
     border-bottom: 25px solid transparent;
     border-left: 43px solid #000000;
     border-right: 0;
-} */
+}
