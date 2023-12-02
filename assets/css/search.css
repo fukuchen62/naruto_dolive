@@ -15,39 +15,18 @@ section {
     padding: 10px;
 }
 
-
-/* ------------------------------------------------------------------------
-中見出し
-------------------------------------------------------------------------  */
-
-/* 外枠中央配置 */
-.center_title {
-    text-align: center;
-    /* padding-bottom: 100px; */
+.archive_col:not(:first-child) h3 {
+    margin-top: 70px;
 }
 
-/* 中見出し幅 →commonに合わせる(消す？)*/
-.middle_title {
-    padding: 50px 10px 10px;
+h4 {
+    padding: 20px 0;
+    border-left: none;
 }
-
 
 /* ------------------------------------------------------------------------
 3カラム
 ------------------------------------------------------------------------ */
-
-/* 記事幅 */
-/* .archive_col {
-    padding: 50px;
-} */
-
-/* 記事タイトル */
-.archive_col>h3 {
-    padding: 20px 20px 10px;
-    margin-bottom: 50px;
-
-}
-
 /* 3カラム列 */
 .card_3col {
     display: flex;
@@ -57,7 +36,6 @@ section {
     flex-wrap: wrap;
     justify-content: center;
 }
-
 
 /* カード設計 */
 .card_wrap1 {
@@ -84,11 +62,6 @@ section {
     object-fit: cover;
 }
 
-/* 小見出し幅 */
-.card_wrap2>h4 {
-    padding: 20px 0;
-}
-
 /* カード説明幅 */
 .card_text {
     border: 1px solid #000;
@@ -100,7 +73,7 @@ section {
     margin: 20px 0;
     padding: 10px;
     border: 1px solid #000;
-        text-align: center;
+    text-align: center;
     line-height: 45px;
 }
 
@@ -111,12 +84,6 @@ section {
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
-
-    /* 記事タイトル */
-    .archive_col>h3 {
-        margin: 0 50px 50px;
-        padding: 40px 40px 10px;
-    }
 
     /* カード設計 */
     .card_wrap1 {
