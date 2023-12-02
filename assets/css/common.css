@@ -113,8 +113,8 @@ main:not(.section_kv):not(.teloparea) {
 
     .content_wrap {
         /* ↓試験用！ */
-        max-width: 1320px;
-        margin: 0 auto;
+        /* max-width: 1320px;
+        margin: 0 auto; */
         /* ↑試験用！ */
     }
 }
