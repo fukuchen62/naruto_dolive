@@ -463,6 +463,29 @@ h2.title_pickupcolumn {
   text-align: left;
 }
 
+.slider-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  align-items: baseline;
+  position: absolute;
+}
+
+.slider-image {
+  position: relative;
+}
+
+.slider-image1 {
+  width: 70px;
+  height: 70px;
+}
+
+.slider-image2 {
+  width: auto;
+  height: 50px;
+}
+
 .purpose_delay {
   width: 100%;
 }
