@@ -343,6 +343,7 @@ h3.overlaymenu_title_purpose {
     margin-top: 3rem;
     margin-bottom: 0;
     text-decoration: none;
+    border-bottom: solid 2px #FF9900;
 }
 
 h3.overlaymenu_title_purpose::after {
