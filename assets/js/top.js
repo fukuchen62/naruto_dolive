@@ -206,3 +206,18 @@ $(document).ready(function () {
     });
 })();
 // ▲おススメキーワード枠▲
+
+// ▼目的別ボタン案内スライダー▼
+$(document).ready(function () {
+    animateSlider();
+
+    function animateSlider() {
+        $(".slider-image").animate({
+            left: "-100%" // スライドアウトする位置（左端の外側）
+        }, 8000, function () {
+            $(this).css("left", "100%"); // スライドインの位置（右端の外側）に戻す
+            animateSlider(); // スライダーアニメーションを繰り返す
+        });
+    }
+});
+// ▲目的別ボタン案内スライダー▲

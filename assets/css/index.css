@@ -492,6 +492,14 @@ h2.title_pickupcolumn {
   transform: translateX(100%);
 }
 
+.purpose_delaywrap_box a img {
+  transition: transform 0.3s ease;
+}
+
+.purpose_delaywrap_box a:hover img {
+  transform: scale(1.1);
+}
+
 .show {
   opacity: 1;
   visibility: visible;
