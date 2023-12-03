@@ -488,6 +488,7 @@ h2.title_pickupcolumn {
 
 .purpose_delay {
   width: 100%;
+  position: relative;
 }
 
 .purpose_delaywrap_flex {
