@@ -38,6 +38,17 @@ get_header();
                 <div class="card_3col">
                     <?php if ($favorites && count($favorites) > 0) : ?>
                         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                            <?php
+                            $latitude = get_post_meta(get_the_ID(), 'latitude', true);
+                            $longitude = get_post_meta(get_the_ID(), 'longitude', true);
+                            $facilityName = get_the_title();
+
+                            $favorite[] = array(
+                                'lat' => $latitude,
+                                'lng' => $longitude,
+                                'facilityName' => $facilityName
+                            );
+                            ?>
                             <a href="<?php the_permalink(); ?>" class="card1">
                                 <div class="card1_wrap">
                                     <div class="card1_content">
@@ -90,6 +101,17 @@ get_header();
                 <div class="card_3col">
                     <?php if ($favorites && count($favorites) > 0) : ?>
                         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                            <?php
+                            $latitude = get_post_meta(get_the_ID(), 'latitude', true);
+                            $longitude = get_post_meta(get_the_ID(), 'longitude', true);
+                            $facilityName = get_the_title();
+
+                            $favorite[] = array(
+                                'lat' => $latitude,
+                                'lng' => $longitude,
+                                'facilityName' => $facilityName
+                            );
+                            ?>
                             <a href="<?php the_permalink(); ?>" class="card1">
                                 <div class="card1_wrap">
                                     <div class="card1_content">
@@ -142,6 +164,17 @@ get_header();
                 <div class="card_3col">
                     <?php if ($favorites && count($favorites) > 0) : ?>
                         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                            <?php
+                            $latitude = get_post_meta(get_the_ID(), 'latitude', true);
+                            $longitude = get_post_meta(get_the_ID(), 'longitude', true);
+                            $facilityName = get_the_title();
+
+                            $favorite[] = array(
+                                'lat' => $latitude,
+                                'lng' => $longitude,
+                                'facilityName' => $facilityName
+                            );
+                            ?>
                             <a href="<?php the_permalink(); ?>" class="card1">
                                 <div class="card1_wrap">
                                     <div class="card1_content">
@@ -195,6 +228,17 @@ get_header();
                 <div class="card_3col">
                     <?php if ($favorites && count($favorites) > 0) : ?>
                         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                            <?php
+                            $latitude = get_post_meta(get_the_ID(), 'latitude', true);
+                            $longitude = get_post_meta(get_the_ID(), 'longitude', true);
+                            $facilityName = get_the_title();
+
+                            $favorite[] = array(
+                                'lat' => $latitude,
+                                'lng' => $longitude,
+                                'facilityName' => $facilityName
+                            );
+                            ?>
                             <a href="<?php the_permalink(); ?>" class="card1">
                                 <div class="card1_wrap">
                                     <div class="card1_content">
