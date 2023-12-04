@@ -462,6 +462,11 @@ h2.title_pickupcolumn {
   margin-top: 1%;
 }
 
+.column-text {
+  flex: 1;
+  text-align: left;
+}
+
 .column-text h3 {
   font-size: 18px;
   text-align: left;
