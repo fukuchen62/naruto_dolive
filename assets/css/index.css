@@ -471,7 +471,7 @@ h2.title_pickupcolumn {
 .column-text h3 {
   font-size: 18px;
   text-align: left;
-  margin: 1rem;
+  margin: 1rem 0;
 }
 
 .slider-container {
