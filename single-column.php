@@ -4,7 +4,7 @@ get_header();
 
 <main>
     <!-- h1に変わるかも  -->
-    <h2 id="toparea" class="toparea">
+    <h2 id="toparea" class="toparea page_title">
         <!-- ターム取得 -->
         <?php
         $current_page_id = get_the_ID();
