@@ -4,7 +4,11 @@ get_header();
 ?>
 <main>
     <h2 id="toparea" class="toparea">
-        <?php the_category('news'); ?>
+        <?php $category = get_the_category();
+        if (!empty($category)) {
+            echo esc_html($category[0]->name);
+        }
+        ?>
     </h2>
     <div class="main_wrap">
         <?php get_template_part('template-parts/breadcrumb'); ?>
