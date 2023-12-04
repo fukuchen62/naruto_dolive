@@ -57,20 +57,20 @@
                 </aside><!-- aside_wrap aside_top-->
             </div><!-- archive_col -->
 
+            <div class="pagination">
+                <?php the_posts_pagination(
+                    array(
+                        'mid_size'      => 1, // 現在ページの左右に表示するページ番号の数
+                        'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
+                        'prev_text'     => ('◀'), // 「前へ」リンクのテキスト
+                        'next_text'     => ('▶'), // 「次へ」リンクのテキスト
+                        'type'          => 'plain', // 戻り値の指定 (plain/list)
+                    )
+
+                ); ?>
+            </div>
         </div>
 
-        <div class="pagination">
-            <?php the_posts_pagination(
-                array(
-                    'mid_size'      => 1, // 現在ページの左右に表示するページ番号の数
-                    'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
-                    'prev_text'     => ('◀'), // 「前へ」リンクのテキスト
-                    'next_text'     => ('▶'), // 「次へ」リンクのテキスト
-                    'type'          => 'plain', // 戻り値の指定 (plain/list)
-                )
-
-            ); ?>
-        </div>
         <!---- pc版カテゴリ別サイドバー ---->
         <aside class="aside_wrap aside_bottom">
             <div class="aside_title">━━ カテゴリ別 ━━
