@@ -38,7 +38,7 @@
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:1031px) {
+@media only screen and (min-width:1032px) {
 
     .menu_wrap {
         margin: 0 auto 50px;
@@ -61,7 +61,7 @@
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:1031px) {
+@media only screen and (min-width:1032px) {
 
     /* 下部サイドバー非表示 */
     .aside_bottom {
