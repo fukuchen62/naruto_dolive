@@ -5,7 +5,7 @@
         <h2>404NotFound</h2>
     </section>
     <div class="main_wrap">
-        <div class="breadcrumb">HOME > 404</div>
+        <div class="breadcrumb"><?php get_template_part('template-parts/breadcrumb'); ?></div>
         <div class="content_wrap">
             <div class="center_title">
                 <p class="middle_title">お探しのページが見つかりません...</p>
