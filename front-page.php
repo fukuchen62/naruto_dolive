@@ -12656,6 +12656,10 @@ get_header();
         </section>
 
     <div class="teloparea purpose_delay">
+            <div class="slider-container">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider_bike.gif" alt="バイク" class="slider-image slider-image1">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider_text.png" alt="目的別ボタン" class="slider-image slider-image2">
+            </div>
             <div class="purpose_delaywrap">
                 <div>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/traffic_light.png" alt="信号機">
