@@ -4,7 +4,7 @@ get_header();
 
 <main>
     <!-- h1に変わるかも  -->
-    <h2 id="toparea" class="toparea">
+    <h2 id="toparea" class="toparea page_title">
         <!-- ターム取得 -->
         <?php
         $current_page_id = get_the_ID();
@@ -25,7 +25,6 @@ get_header();
                 <div class="card2">
                     <div class="card2_wrap">
                         <div class="card2_content">
-                            <h4></h4>
                             <br>
 
                             <div class="card2_text"><?php the_content(); ?></div>

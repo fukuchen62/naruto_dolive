@@ -5,50 +5,49 @@ get_header();
 
 <main>
 
-    <section id="toparea" class="toparea">
-        <h2>コラム記事一覧</h2>
-    </section>
+    <h2 id="toparea" class="toparea">
+        コラム記事一覧
+    </h2>
     <div class="main_wrap">
         <?php get_template_part('template-parts/breadcrumb'); ?>
+        <div class="content_wrap">
+            <div class="archive_col">
+                <div class="card_2col">
 
-        <div class="menu_wrap">
-            <div class="top_img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sample5.jpg" alt="トップ画像"></div>
+                    <?php if (have_posts()) : ?>
+                        <?php while (have_posts()) : the_post(); ?>
+                            <div class="card1_wrap">
 
-            <div class="aside_wrap aside_top">
+                                <?php get_template_part('template-parts/loop', 'column'); ?>
 
-                <div class="aside_title">━━ カテゴリ別 ━━</div>
-                <ul>
-                    <?php
-                    $categories = get_categories(array(
-                        'taxonomy' => 'column_type',
-                        'orderby' => 'name',
-                        'order' => 'DESC',
-                        'hide_empty' => false,
-                    ));
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
 
-                    foreach ($categories as $category) {
-                        $category_link = get_category_link($category->term_id);
-                        $post_count = $category->count;
-                        echo '<li><a href="' . $category_link . '">' . $category->name . ' (' . $post_count . ')</a></li>';
-                    }
-                    ?>
-                </ul>
+
+                <aside class="aside_wrap aside_top">
+
+                    <div class="aside_title">━━ カテゴリ別 ━━</div>
+                    <ul>
+                        <?php
+                        $categories = get_categories(array(
+                            'taxonomy' => 'column_type',
+                            'orderby' => 'name',
+                            'order' => 'DESC',
+                            'hide_empty' => false,
+                        ));
+
+                        foreach ($categories as $category) {
+                            $category_link = get_category_link($category->term_id);
+                            $post_count = $category->count;
+                            echo '<li><a href="' . $category_link . '">' . $category->name . ' (' . $post_count . ')</a></li>';
+                        }
+                        ?>
+                    </ul>
+                </aside>
             </div>
-        </div>
 
-        <div class="archive_col">
-            <div class="card_3col">
-
-                <?php if (have_posts()) : ?>
-                    <?php while (have_posts()) : the_post(); ?>
-                        <div class="card1_wrap">
-
-                            <?php get_template_part('template-parts/loop', 'column'); ?>
-
-                        </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>
-            </div>
             <div class="pagination">
                 <?php the_posts_pagination(
                     array(
@@ -61,9 +60,9 @@ get_header();
 
                 ); ?>
             </div>
-
         </div>
         <!-- サイドバー -->
+        <!-- ページナビゲーションの設定 -->
         <!-- <h2>以下サイドバーです</h2> -->
         <aside class="aside_wrap aside_bottom">
 
@@ -73,7 +72,7 @@ get_header();
                 $categories = get_categories(array(
                     'taxonomy' => 'column_type',
                     'orderby' => 'name',
-                    'order' => 'ASC',
+                    'order' => 'DESC',
                     'hide_empty' => false,
                 ));
 
@@ -87,7 +86,6 @@ get_header();
         </aside>
     </div>
 
-    <!-- ページナビゲーションの設定 -->
 
 
 </main>

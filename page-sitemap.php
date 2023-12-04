@@ -129,7 +129,6 @@ get_header();
 </main>
 <div class="button">
 </div>
-<script src="../assets/js/common.js"></script>
 </body>
 
 </html>

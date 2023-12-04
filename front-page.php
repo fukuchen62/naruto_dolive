@@ -12656,6 +12656,10 @@ get_header();
         </section>
 
     <div class="teloparea purpose_delay">
+            <div class="slider-container">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider_bike.gif" alt="バイク" class="slider-image slider-image1">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider_text.png" alt="目的別ボタン" class="slider-image slider-image2">
+            </div>
             <div class="purpose_delaywrap">
                 <div>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/traffic_light.png" alt="信号機">
@@ -12844,10 +12848,11 @@ function slideshow_timer() {
 // ▲TOP-kvのフラッシュ画像表示▲
 
 const lis = document.querySelector('.recommended_keywords');
-    const liElements = lis.querySelectorAll('li');
-    liElements.forEach((li, index) => {
-        li.classList.add("moving_text");
-    });
+const liElements = lis.querySelectorAll('a');
+liElements.forEach((li, index) => {
+    li.classList.add("moving_text");
+});
+
 </script>
 <?php
 get_footer();

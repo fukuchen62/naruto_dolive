@@ -135,6 +135,15 @@ function add_individual_scripts()
             '',
             true
         );
+    } elseif (is_tax('column_type')) {
+
+        //コラムタクソノミーページ専用のCSSの読み込み
+        wp_enqueue_style(
+            'column_style',
+            get_template_directory_uri() . '/assets/css/a_column.css',
+            array(),
+            false
+        );
     }
     //----------------------
     //  食べる・遊ぶ・宿泊・観光の一覧ページ
@@ -168,7 +177,7 @@ function add_individual_scripts()
     }
     //----------------------
     //  食べる・遊ぶ・宿泊・観光のタクソノミーページ
-    //----------------------
+    //------------is_tax----------
     elseif (is_tax()) {
         //食べる・遊ぶ・宿泊・観光の一覧ページ専用のcssの読み込み
         wp_enqueue_style(
