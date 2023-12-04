@@ -78,21 +78,11 @@
 
             <!-- ひとつ前のページに戻るボタン -->
             <div class="close_btn">
-                <!-- 目的別（食べる）ページの場合 -->
-                <?php if (is_tax('eat_type', 'japanese_food') || is_tax('eat_type', 'west_food') || is_tax('eat_type', 'chinese_food') || is_tax('eat_type', 'sweet_food') || is_tax('eat_type', 'others_food')) : ?>
-
-                    <a href="<?php echo home_url('/eat') ?>">
-
-                        <!-- 目的別（観光）ページの場合 -->
-                    <?php elseif (is_tax('tour_type', 'art') || is_tax('tour_type', 'park') || is_tax('tour_type', 'temple') || is_tax('tour_type', 'history') || is_tax('tour_type', 'nature')) : ?>
-
-                        <a href="<?php echo home_url('/tour') ?>">
-                        <?php endif; ?>
-
-                        <div class="close_link">
-                            <span class="close">back</span>
-                        </div><!-- close_link -->
-                        </a>
+                <a href="<?php echo home_url('/eat') ?>">
+                    <div class="close_link">
+                        <span class="close">back</span>
+                    </div><!-- close_link -->
+                </a>
             </div><!-- close_btn -->
         </div><!-- archive_col -->
         <!-- スマホ版カテゴリ別サイドバー -->
