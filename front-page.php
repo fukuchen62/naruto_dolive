@@ -12848,10 +12848,11 @@ function slideshow_timer() {
 // ▲TOP-kvのフラッシュ画像表示▲
 
 const lis = document.querySelector('.recommended_keywords');
-    const liElements = lis.querySelectorAll('li');
-    liElements.forEach((li, index) => {
-        li.classList.add("moving_text");
-    });
+const liElements = lis.querySelectorAll('a');
+liElements.forEach((li, index) => {
+    li.classList.add("moving_text");
+});
+
 </script>
 <?php
 get_footer();
