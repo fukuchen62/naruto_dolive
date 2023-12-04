@@ -5,7 +5,7 @@
 <main>
     <!---- トップエリアタイトル ---->
     <section id="toparea" class="toparea">
-        <h2><?php single_term_title(''); ?>一覧</h2>
+        <h2 class="page_title"><?php single_term_title(''); ?>一覧</h2>
     </section><!-- id="toparea" class="toparea" -->
 
     <div class="main_wrap">
