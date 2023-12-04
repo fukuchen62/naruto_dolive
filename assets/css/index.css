@@ -448,14 +448,14 @@ h2.title_pickupcolumn {
 
 .column_imgbox,
 .column-text {
-  flex-basis: 48%;
+  /* flex-basis: 48%; */
   padding: 1%;
 }
 
 .column_imgbox img {
-  width: 50%;
-  min-width: 140px;
-  height: auto;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 3%;
   margin-left: 3%;
   margin-bottom: 1%;
@@ -465,6 +465,7 @@ h2.title_pickupcolumn {
 .column-text h3 {
   font-size: 18px;
   text-align: left;
+  margin: 1rem;
 }
 
 .slider-container {
@@ -560,9 +561,6 @@ h2.title_pickupcolumn {
   .column_imgbox img {
     width: 300px;
     height: 300px;
-    object-fit: cover;
-    border-radius: 5%;
-    margin: 3% 0;
   }
 
   .column-text h3 {
