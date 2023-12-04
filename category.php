@@ -16,11 +16,11 @@ get_header();
                 <div class="card3_left">
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="card3_wrap">
 
-                            <div class="card3_wrap">
+                                    <div class="card3_content">
 
-                                <div class="card3_content">
-                                    <a href="<?php the_permalink(); ?>">
                                         <div class="card3_img">
 
                                             <!-- サムネあれば出力 -->
@@ -32,11 +32,11 @@ get_header();
 
                                         </div>
                                         <?php get_template_part('template-parts/loop', 'news'); ?>
-                                    </a>
+
+                                    </div>
+
                                 </div>
-
-                            </div>
-
+                            </a>
                         <?php endwhile; ?>
                     <?php endif; ?>
                     <div class="pagination">
