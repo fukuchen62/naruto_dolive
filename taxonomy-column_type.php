@@ -4,22 +4,22 @@
 
 <main>
     <!---- トップエリアタイトル ---->
-    <section id="toparea" class="toparea">
-        <h2 class="page_title"><?php single_term_title(''); ?>一覧</h2>
-    </section><!-- id="toparea" class="toparea" -->
+    <h2 id="toparea" class="toparea">
+        <?php single_term_title(''); ?>一覧
+    </h2><!-- id="toparea" class="toparea" -->
 
     <div class="main_wrap">
         <!-- パンくずリスト -->
         <?php get_template_part('template-parts/breadcrumb'); ?>
         <!-- 選択したタクソノミーをタイトルで表示 -->
         <div class="center_title">
-            <h3 class="middle_title"><?php single_term_title(''); ?></h3>
+            <h3 class="h3_center"><?php single_term_title(''); ?></h3>
         </div><!-- center_title -->
 
         <div class="content_wrap">
 
             <div class="archive_col">
-                <div class="card_3col">
+                <div class="card_2col">
                     <!-- 記事がある分表示させる -->
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
@@ -36,8 +36,6 @@
                         <?php endwhile; ?>
                     <?php endif ?>
                 </div><!-- card_3col -->
-
-
 
                 <!---- pc版カテゴリ別サイドバー ---->
                 <aside class="aside_wrap aside_top">
@@ -72,17 +70,14 @@
 
                 ); ?>
             </div>
+
         </div>
-
-
-
-        <!-- スマホ版カテゴリ別サイドバー -->
+        <!---- pc版カテゴリ別サイドバー ---->
         <aside class="aside_wrap aside_bottom">
-
-            <div class="aside_title">━━ カテゴリ別 ━━</div>
+            <div class="aside_title">━━ カテゴリ別 ━━
+            </div><!-- aside_title-->
             <ul>
-                <?php
-                $categories = get_categories(array(
+                <?php $categories = get_categories(array(
                     'taxonomy' => 'column_type',
                     'orderby' => 'name',
                     'order' => 'DESC',
@@ -93,10 +88,10 @@
                     $category_link = get_category_link($category->term_id);
                     $post_count = $category->count;
                     echo '<li><a href="' . $category_link . '">' . $category->name . ' (' . $post_count . ')</a></li>';
-                }
-                ?>
+                } ?>
+
             </ul>
-        </aside>
+        </aside><!-- aside_wrap aside_bottom-->
     </div><!-- main_wrap -->
 </main>
 <?php get_footer(); ?>
