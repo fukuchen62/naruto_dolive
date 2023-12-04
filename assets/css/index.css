@@ -551,6 +551,7 @@ h2.title_pickupcolumn {
 
   .column-container {
     width: 350px;
+    height: 550px;
     display: block;
     text-align: center;
     padding: 7% 0;
