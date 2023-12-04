@@ -13,7 +13,7 @@ get_header();
         <h2>サイトマップ</h2>
     </section>
     <div class="main_wrap">
-        <div class="breadcrumb">HOME > サイトマップ</div>
+        <div class="breadcrumb"><?php get_template_part('template-parts/breadcrumb'); ?></div>
         <div class="content_wrap">
             <div class="menu_wrap">
                 <h3 class="sitemap_btn"> <a href="<?php echo home_url('/') ?>">TOP</a></h3>
