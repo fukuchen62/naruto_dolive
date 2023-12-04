@@ -117,6 +117,7 @@ get_header();
         </ul>
     <?php endif; ?>
 
+    <hr>
 
     <ul class="sitemap_list u_content">
         <li><a href="https://www.instagram.com/narutodolive/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank">インスタ</a></li>
