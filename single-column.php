@@ -25,7 +25,7 @@ get_header();
                 <div class="card2">
                     <div class="card2_wrap">
                         <div class="card2_content">
-                            <h4></h4>
+                            <h4><?php the_excerpt(); ?></h4>
                             <br>
 
                             <div class="card2_text"><?php the_content(); ?></div>
