@@ -4,9 +4,7 @@
 
 <main>
     <!---- トップエリアタイトル ---->
-    <h2 id="toparea" class="toparea page_title">
-        <?php single_term_title(''); ?>一覧
-    </h2><!-- id="toparea" class="toparea" -->
+    <h2 id="toparea" class="toparea page_title"><?php single_term_title(''); ?>一覧</h2><!-- id="toparea" class="toparea" -->
 
     <div class="main_wrap">
         <!-- パンくずリスト -->
