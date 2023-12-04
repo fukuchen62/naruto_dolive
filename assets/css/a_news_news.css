@@ -26,27 +26,24 @@ cardテンプレート
     box-shadow: 5px 5px 0 #000;
     margin: 0 auto;
     margin-bottom: 25px;
-    display: flex;
 }
 
 .card3_content {
     padding: 10px;
     display: flex;
-}
-
-/* 記事画像サイズ */
-.card3_img {
-    width: 80px;
+    align-items: center;
 }
 
 .card3_img img {
     border: 1px solid #000;
     object-fit: cover;
-    height: 120px;
+    width: 230px;
+    height: 170px;
 }
 
 .article_wrap {
-    padding-left: 10px;
+    margin-left: 1.5rem;
+    flex: 1;
 }
 
 .news_tab {
@@ -63,6 +60,10 @@ cardテンプレート
 /* 記事本文非表示 */
 .card3_text {
     display: none;
+}
+
+.card1_text {
+    height: initial;
 }
 
 .aside_wrap {
@@ -91,13 +92,18 @@ cardテンプレート
     /* 記事画像サイズ */
     .card3_img {
         min-width: 150px;
-        width: 50%;
+        width: 230px;
     }
 
     /* 記事タイトル整列 */
     .news_title {
         display: flex;
+        flex-direction: column;
         gap: 5%;
+    }
+
+    .card1_text {
+        height: 100px;
     }
 
     /* 記事本文表示 */
