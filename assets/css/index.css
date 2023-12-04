@@ -452,7 +452,7 @@ h2.title_pickupcolumn {
   padding: 1%;
 }
 
-.column_imgbox>img {
+.column_imgbox img {
   width: 100%;
   min-width: 140px;
   height: auto;
