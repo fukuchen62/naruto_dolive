@@ -44,7 +44,7 @@
 
                                 <!-- 小さい画像３枚の出力 -->
                                 <ul class="facility_img_list">
-                                    <?php if (get_field('pic1')) : ?>
+                                    <?php if (get_field('pic1') && (get_field('pic2') || get_field('pic3') || get_field('pic4'))) : ?>
                                         <li>
                                             <?php
                                             $pic1 = get_field('pic1');
@@ -52,42 +52,41 @@
                                             $pic1_url = $pic1['sizes']['large'];
                                             ?>
                                             <img class="facility_img2" src="<?php echo $pic1_url; ?>" alt="">
-                                        <?php endif; ?>
                                         </li>
+                                    <?php endif; ?>
 
-                                        <?php if (get_field('pic2')) : ?>
-                                            <li>
-                                                <?php
-                                                $pic2 = get_field('pic2');
-                                                //小サイズ画像のURL
-                                                $pic2_url = $pic2['sizes']['large'];
-                                                ?>
-                                                <img class="facility_img2" src="<?php echo $pic2_url; ?>" alt="">
+                                    <?php if (get_field('pic2')) : ?>
+                                        <li>
+                                            <?php
+                                            $pic2 = get_field('pic2');
+                                            //小サイズ画像のURL
+                                            $pic2_url = $pic2['sizes']['large'];
+                                            ?>
+                                            <img class="facility_img2" src="<?php echo $pic2_url; ?>" alt="">
+                                        </li>
+                                    <?php endif; ?>
 
-                                            <?php endif; ?>
-                                            </li>
+                                    <?php if (get_field('pic3')) : ?>
+                                        <li>
+                                            <?php
+                                            $pic3 = get_field('pic3');
+                                            //小サイズ画像のURL
+                                            $pic3_url = $pic3['sizes']['large'];
+                                            ?>
+                                            <img class="facility_img2" src="<?php echo $pic3_url; ?>" alt="">
+                                        </li>
+                                    <?php endif; ?>
 
-                                            <?php if (get_field('pic3')) : ?>
-                                                <li>
-                                                    <?php
-                                                    $pic3 = get_field('pic3');
-                                                    //小サイズ画像のURL
-                                                    $pic3_url = $pic3['sizes']['large'];
-                                                    ?>
-                                                    <img class="facility_img2" src="<?php echo $pic3_url; ?>" alt="">
-                                                <?php endif; ?>
-                                                </li>
-
-                                                <?php if (get_field('pic4')) : ?>
-                                                    <li>
-                                                        <?php
-                                                        $pic4 = get_field('pic4');
-                                                        //小サイズ画像のURL
-                                                        $pic4_url = $pic4['sizes']['large'];
-                                                        ?>
-                                                        <img class="facility_img2" src="<?php echo $pic4_url; ?>" alt="">
-                                                    <?php endif; ?>
-                                                    </li>
+                                    <?php if (get_field('pic4')) : ?>
+                                        <li>
+                                            <?php
+                                            $pic4 = get_field('pic4');
+                                            //小サイズ画像のURL
+                                            $pic4_url = $pic4['sizes']['large'];
+                                            ?>
+                                            <img class="facility_img2" src="<?php echo $pic4_url; ?>" alt="">
+                                        </li>
+                                    <?php endif; ?>
                                 </ul><!-- facility_img_list -->
                             </div><!-- facility_wrap1 -->
 
