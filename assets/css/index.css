@@ -560,13 +560,8 @@ h2.title_pickupcolumn {
     width: 300px;
     height: 300px;
     object-fit: cover;
-  }
-
-  .column_imgbox>img {
-    width: 80%;
     border-radius: 5%;
     margin: 3% 0;
-    height: 50%;
   }
 
   .column-text h3 {
