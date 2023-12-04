@@ -5,14 +5,14 @@ get_header();
 
 <main>
 
-    <section id="toparea" class="toparea">
-        <h2>コラム記事一覧</h2>
-    </section>
+    <h2 id="toparea" class="toparea">
+        コラム記事一覧
+    </h2>
     <div class="main_wrap">
         <?php get_template_part('template-parts/breadcrumb'); ?>
         <div class="content_wrap">
             <div class="archive_col">
-                <div class="card_3col">
+                <div class="card_2col">
 
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
@@ -62,6 +62,7 @@ get_header();
             </div>
         </div>
         <!-- サイドバー -->
+        <!-- ページナビゲーションの設定 -->
         <!-- <h2>以下サイドバーです</h2> -->
         <aside class="aside_wrap aside_bottom">
 
@@ -85,7 +86,6 @@ get_header();
         </aside>
     </div>
 
-    <!-- ページナビゲーションの設定 -->
 
 
 </main>

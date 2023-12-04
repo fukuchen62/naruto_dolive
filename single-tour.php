@@ -76,6 +76,17 @@
                                                     <img class="facility_img2" src="<?php echo $pic3_url; ?>" alt="">
                                                 <?php endif; ?>
                                                 </li>
+
+                                                <?php if (get_field('pic4')) : ?>
+                                                    <li>
+                                                        <?php
+                                                        $pic4 = get_field('pic4');
+                                                        //小サイズ画像のURL
+                                                        $pic4_url = $pic4['sizes']['large'];
+                                                        ?>
+                                                        <img class="facility_img2" src="<?php echo $pic4_url; ?>" alt="">
+                                                    <?php endif; ?>
+                                                    </li>
                                 </ul><!-- facility_img_list -->
                             </div><!-- facility_wrap1 -->
 
