@@ -100,12 +100,6 @@ cardテンプレート
     flex-direction: column;
 }
 
-.n_arrow_wrapper {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.p_arrow_wrapper {
-    display: flex;
-    justify-content: flex-start;
+.p_next {
+    align-items: flex-end;
 }
