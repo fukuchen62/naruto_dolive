@@ -22,6 +22,10 @@
     max-width: 350px;
 }
 
+h4 {
+    border-left: none;
+}
+
 /* PC時のスタイル */
 @media (min-width:1410px) {
     .archive_col {
