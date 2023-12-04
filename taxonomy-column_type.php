@@ -33,7 +33,7 @@
                     <?php $categories = get_categories(array(
                         'taxonomy' => 'column_type',
                         'orderby' => 'name',
-                        'order' => 'ASC',
+                        'order' => 'DESC',
                         'hide_empty' => false,
                     ));
 
