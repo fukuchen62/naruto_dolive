@@ -928,9 +928,10 @@ footer p:first-child {
 ------------------------------------------------------------------------*/
 main a>.column-container:hover,
 main a>.course_details_card:hover,
-main a>.card1_wrap:hover,
 main a>.card_wrap1:hover,
 main a>.card3_wrap:hover,
+.card1_wrap:hover,
+.card3_content a:hover,
 .sitemap_btn:hover {
     transform: translate(5px, 5px);
     transition: .3s;
@@ -963,6 +964,13 @@ moreボタン
     font-size: 1.5rem;
     font-family: Dela Gothic One;
 }
+
+.more_btn:hover {
+    transform: translate(5px, 5px);
+    transition: .3s;
+    box-shadow: 0 0 0 #000;
+}
+
 
 /* ------------------------------------------------------------------------
 帯

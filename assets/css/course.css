@@ -274,6 +274,9 @@ section.course_text p {
     1px 1px 0 #000;
 }
 
+.req_time{
+    border-left: none;
+}
 
 @media (min-width: 768px) {
 
@@ -282,6 +285,6 @@ section.course_text p {
     }
 
     .req_time{
-        width: 100px;
+        width: 140%;
     }
 }

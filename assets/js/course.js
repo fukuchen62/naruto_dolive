@@ -21,7 +21,7 @@ window.addEventListener("scroll", ()=>{
     let carWrapperPos = carWrapper.getBoundingClientRect();
     let coursePos = course.getBoundingClientRect();
     let car_x = carWrapperPos.left + window.pageYOffset;
-    let labelText = "スタート"+start_time;
+    let labelText = "スタート\n"+start_time;
 
     for (let i = 0; i < cardXValues.length - 1; i++) {
         if (car_x >= cardXValues[0] + 50 ) {
