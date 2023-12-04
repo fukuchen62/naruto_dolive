@@ -3,6 +3,10 @@
 /* ------------------------------------------------------------------------
     all
 ------------------------------------------------------------------------  */
+main {
+    background-color: #FFF6E2;
+}
+
 /* トップエリア */
 /* height見直し */
 
@@ -115,7 +119,7 @@ hr {
     }
 }
 
-@media only screen and (min-width:1200px) {
+@media only screen and (max-width:1200px) {
     .facility_wrap {
         display: initial;
     }
