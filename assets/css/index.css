@@ -609,9 +609,11 @@ h2.title_pickupcolumn {
   box-sizing: border-box;
 }
 
-p.moving_text:hover {
+.recommended_keywords a:hover {
   background-image: url(../img/bg_keyword2.png);
 }
+
+
 
 .section_instagram h2.toparea {
   color: #0b5ce2;
