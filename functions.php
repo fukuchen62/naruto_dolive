@@ -135,7 +135,7 @@ function add_individual_scripts()
             '',
             true
         );
-    } elseif (('column_type')) {
+    } elseif (is_tax('column_type')) {
 
         //コラムタクソノミーページ専用のCSSの読み込み
         wp_enqueue_style(
