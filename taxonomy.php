@@ -2,7 +2,7 @@
 <main>
     <!---- トップエリアタイトル ---->
     <section id="toparea" class="toparea">
-        <h2>カテゴリ別：<?php single_term_title(''); ?></h2>
+        <h2 class="page_title">カテゴリ別：<?php single_term_title(''); ?></h2>
     </section><!-- id="toparea" class="toparea" -->
 
     <div class="main_wrap">
