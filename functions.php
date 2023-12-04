@@ -135,15 +135,6 @@ function add_individual_scripts()
             '',
             true
         );
-    } elseif (('column_type')) {
-
-        //コラムタクソノミーページ専用のCSSの読み込み
-        wp_enqueue_style(
-            'column_style',
-            get_template_directory_uri() . '/assets/css/a_column.css',
-            array(),
-            false
-        );
     }
     //----------------------
     //  食べる・遊ぶ・宿泊・観光の一覧ページ
@@ -178,7 +169,7 @@ function add_individual_scripts()
     //----------------------
     //  食べる・遊ぶ・宿泊・観光のタクソノミーページ
     //------------is_tax----------
-    elseif (is_tax()) {
+    elseif (is_tax('eat_type') || is_tax('tour_type')) {
         //食べる・遊ぶ・宿泊・観光の一覧ページ専用のcssの読み込み
         wp_enqueue_style(
             'archive_purpose',
@@ -222,7 +213,7 @@ function add_individual_scripts()
             '',
             true
         );
-        // 二つ目のスクリプトを読み込む
+        // single.jsの読み込み
         wp_enqueue_script(
             'my-script2',
             get_template_directory_uri() . '/assets/js/single.js',
@@ -243,7 +234,28 @@ function add_individual_scripts()
             array(),
             false
         );
+        //----------------------
+        // タクソノミーコラムページ
+        //----------------------
+    } elseif (is_tax('column_type')) {
+
+        //コラムタクソノミーページ専用のCSSの読み込み
+        wp_enqueue_style(
+            'a_column.css',
+            get_template_directory_uri() . '/assets/css/a_column.css',
+            array(),
+            false
+        );
+        // トップエリアの色の変更
+        wp_enqueue_script(
+            's_column_script',
+            get_template_directory_uri() . '/assets/js/color.js',
+            '',
+            '',
+            true
+        );
     }
+
     //----------------------
     // Q&AのCSSの読み込み
     //----------------------

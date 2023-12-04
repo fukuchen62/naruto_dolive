@@ -435,13 +435,13 @@ h2.title_pickupcolumn {
 }
 
 .column-container {
-  width: 90%;
+  width: 80%;
   display: flex;
   margin: auto;
   margin-bottom: 5%;
   background-color: #fff;
   gap: 3%;
-  align-items: flex-start;
+  align-items: center;
   border: 3px solid #000;
   box-shadow: 5px 5px 0 #000;
 }
@@ -452,8 +452,8 @@ h2.title_pickupcolumn {
   padding: 1%;
 }
 
-.column_imgbox>img {
-  width: 100%;
+.column_imgbox img {
+  width: 50%;
   min-width: 140px;
   height: auto;
   border-radius: 3%;
@@ -535,7 +535,7 @@ h2.title_pickupcolumn {
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:1300px) {
   .column-flexbox {
     display: flex;
     padding-bottom: 5%;
@@ -544,6 +544,7 @@ h2.title_pickupcolumn {
   }
 
   .column-container {
+    width: 350px;
     display: block;
     text-align: center;
     padding: 7% 0;
@@ -556,11 +557,12 @@ h2.title_pickupcolumn {
     padding: 0;
   }
 
-  .column_imgbox>img {
-    width: 80%;
+  .column_imgbox img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
     border-radius: 5%;
     margin: 3% 0;
-    height: 50%;
   }
 
   .column-text h3 {
@@ -576,7 +578,9 @@ h2.title_pickupcolumn {
   .column-text p {
     text-align: left;
   }
+}
 
+@media only screen and (min-width:768px) {
   .purpose_delaywrap_box {
     flex: initial;
     max-width: 100%;
