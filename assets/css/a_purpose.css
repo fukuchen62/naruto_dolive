@@ -47,7 +47,7 @@
 
     /* 地図外枠 */
     .map_content {
-        width: 60%;
+        width: 50%;
     }
 }
 
@@ -92,7 +92,7 @@ section {
 /* 3カラム列 */
 .card_3col {
     display: flex;
-    max-width: 1200px;
+    max-width: 500px;
     margin: 0 auto;
     gap: 40px;
     flex-wrap: wrap;
@@ -181,7 +181,12 @@ section {
 
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width:1032px) {
+
+    /* 3カラム列 */
+    .card_3col {
+        max-width: 1200px;
+    }
 
     /* 記事タイトル */
     .purpose_btn {
@@ -211,7 +216,7 @@ section {
 
     /* アイコン欄 */
     .card_icon {
-        border: 1px solid red;
+        border: 1px solid #000;
         height: 60px;
     }
 }
@@ -269,7 +274,7 @@ section {
 @media only screen and (min-width:1032px) {
     #map {
         width: 60%;
-        height: 550px;
+        height: 400px;
     }
 
 }
