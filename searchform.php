@@ -1,6 +1,6 @@
 <form class="search_box_wrap" action=" <?php echo home_url('/'); ?>" method="get" class="header_search">
 
-    <input type="text" name="s" value="<?php the_search_query(); ?>" placeholder="検索" maxlength="10">
+    <input type="text" name="s" value="<?php the_search_query(); ?>" placeholder="検索" maxlength="10" autocomplete="off">
     <button type="submit">
         <i class="fas fa-search fa-fw" style="color: black;"></i>
     </button>

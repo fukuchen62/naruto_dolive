@@ -74,11 +74,11 @@ get_header();
     <section id="map" class="section_map">
             <h2 class="title_drivecourse">ドライブコース</h2>
             <ul class="container courses pc_none">
-                <li class="course1 course_button btn btn_course1 sp_button" data-link="https://goo.gl/9n0Qk"><span>A</span></li>
-                <li class="course2 course_button btn btn_course2 sp_button" data-link="https://www.google.co.jp/"><span>B</span></li>
-                <li class="course3 course_button btn btn_course3 sp_button" data-link="https://www.android.com/"><span>C</span></li>
-                <li class="course4 course_button btn btn_course4 sp_button" data-link="https://www.apple.com/"><span>D</span></li>
-                <li class="course5 course_button btn btn_course5 sp_button" data-link="https://www.amazon.co.jp/"><span>E</span></li>
+                <li class="course1 course_button btn btn_course1 sp_button" data-link="<?php echo get_permalink(324); ?>"><span>A</span></li>
+                <li class="course2 course_button btn btn_course2 sp_button" data-link="<?php echo get_permalink(329); ?>/"><span>B</span></li>
+                <li class="course3 course_button btn btn_course3 sp_button" data-link="<?php echo get_permalink(812); ?>"><span>C</span></li>
+                <li class="course4 course_button btn btn_course4 sp_button" data-link="<?php echo get_permalink(817); ?>"><span>D</span></li>
+                <li class="course5 course_button btn btn_course5 sp_button" data-link="<?php echo get_permalink(822); ?>"><span>E</span></li>
             </ul>
             <ul class="container courses sp_none">
                 <li class="course1 course_button btn btn_course1 pc_button" data-link="<?php echo get_permalink(324); ?>"><span>鳴門海峡満喫旅</span></li>
