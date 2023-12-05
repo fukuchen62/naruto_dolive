@@ -39,7 +39,7 @@
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:1032px) {
+@media only screen and (min-width:1226px) {
 
     .menu_wrap {
         margin: 0 auto 50px;
@@ -48,7 +48,7 @@
 
     /* 地図外枠 */
     .map_content {
-        width: 50%;
+        width: 80%;
     }
 }
 
@@ -62,7 +62,7 @@
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:1032px) {
+@media only screen and (min-width:1226px) {
 
     /* 下部サイドバー非表示 */
     .aside_bottom {
@@ -93,7 +93,7 @@ section {
 /* 3カラム列 */
 .card_3col {
     display: flex;
-    max-width: 500px;
+    max-width: 1200px;
     margin: 0 auto;
     gap: 40px;
     flex-wrap: wrap;
@@ -182,7 +182,7 @@ section {
 
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:1032px) {
+@media only screen and (min-width:1462px) {
 
     /* 3カラム列 */
     .card_3col {
@@ -267,14 +267,14 @@ section {
 
 /* マップのCSS */
 #map {
-    width: 400px;
+    width: 80%;
     height: 400px;
     background-color: grey;
 }
 
-@media only screen and (min-width:1032px) {
+@media only screen and (min-width:1226px) {
     #map {
-        width: 60%;
+        width: 80%;
         height: 400px;
     }
 
