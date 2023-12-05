@@ -436,6 +436,7 @@ h2.title_pickupcolumn {
 
 .column-container {
   width: 80%;
+  height: 190px;
   display: flex;
   margin: auto;
   margin-bottom: 5%;
@@ -462,10 +463,15 @@ h2.title_pickupcolumn {
   margin-top: 1%;
 }
 
+.column-text {
+  flex: 1;
+  text-align: left;
+}
+
 .column-text h3 {
   font-size: 18px;
   text-align: left;
-  margin: 1rem;
+  margin: 1rem 0;
 }
 
 .slider-container {
@@ -536,16 +542,17 @@ h2.title_pickupcolumn {
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:1300px) {
+@media only screen and (min-width:1350px) {
   .column-flexbox {
     display: flex;
     padding-bottom: 5%;
-    gap: 5%;
+    gap: 2%;
     justify-content: center;
   }
 
   .column-container {
-    width: 350px;
+    width: 300px;
+    height: 500px;
     display: block;
     text-align: center;
     padding: 7% 0;
@@ -559,8 +566,8 @@ h2.title_pickupcolumn {
   }
 
   .column_imgbox img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
   }
 
   .column-text h3 {

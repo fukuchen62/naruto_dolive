@@ -12702,7 +12702,7 @@ get_header();
                         </h3>
 
                         <p>
-                            <?php echo mb_substr(get_the_excerpt(), 0, 25) . '･･･'; ?>
+                            <?php echo mb_substr(get_the_excerpt(), 0, 20) . '･･･'; ?>
                         </p>
                     </div><!-- column-text -->
                 </div><!-- column-container -->

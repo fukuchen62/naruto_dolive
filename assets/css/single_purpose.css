@@ -27,6 +27,10 @@ hr {
     padding-bottom: 34px;
 }
 
+.facility_wrap1 {
+    min-width: 50%;
+}
+
 .facility_img1_box {
     border: 3px solid #000;
 }

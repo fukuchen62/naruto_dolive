@@ -23,6 +23,7 @@
 .menu_wrap {
     display: flex;
     margin-bottom: 50px;
+    gap: 5%;
 }
 
 /* 地図外枠 */
@@ -38,7 +39,7 @@
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:1032px) {
+@media only screen and (min-width:1226px) {
 
     .menu_wrap {
         margin: 0 auto 50px;
@@ -47,7 +48,7 @@
 
     /* 地図外枠 */
     .map_content {
-        width: 60%;
+        width: 80%;
     }
 }
 
@@ -61,7 +62,7 @@
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:1032px) {
+@media only screen and (min-width:1226px) {
 
     /* 下部サイドバー非表示 */
     .aside_bottom {
@@ -162,10 +163,11 @@ section {
 
 /* アイコン欄 */
 .card_icon {
-    margin: 20px 0;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 50px;
     border: 1px solid #000;
-    height: 100px;
+    padding: 10px;
 }
 
 /* アイコンサイズ */
@@ -180,7 +182,12 @@ section {
 
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:1462px) {
+
+    /* 3カラム列 */
+    .card_3col {
+        max-width: 1200px;
+    }
 
     /* 記事タイトル */
     .purpose_btn {
@@ -210,9 +217,8 @@ section {
 
     /* アイコン欄 */
     .card_icon {
-        margin: 20px 0;
-        padding: 10px;
-        height: 75px;
+        border: 1px solid #000;
+        height: 60px;
     }
 }
 
@@ -261,15 +267,15 @@ section {
 
 /* マップのCSS */
 #map {
-    width: 400px;
+    width: 80%;
     height: 400px;
     background-color: grey;
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:1226px) {
     #map {
-        width: 60%;
-        height: 550px;
+        width: 80%;
+        height: 400px;
     }
 
 }
