@@ -45,14 +45,15 @@ if (pageTitle === "名物" || pageTitle === "名物一覧" || pageTitle === "カ
     topArea.style.backgroundColor = " #DBB197";
 }
 
+
 // 新着情報個別色
-if (pageTitle === "ニュース") {
+if (pageTitle === "ニュース" || pageTitle === "ニュース一覧") {
     pageH2.style.color = "#33F3FF";
     topArea.style.backgroundColor = "#01ADB9";
-} else if (pageTitle === "アップデート") {
+} else if (pageTitle === "アップデート" || pageTitle === "アップデート一覧") {
     pageH2.style.color = "#FFB357";
     topArea.style.backgroundColor = "#F6EA00";
-} else if (pageTitle === "イベント") {
+} else if (pageTitle === "イベント" || pageTitle === "イベント一覧") {
     pageH2.style.color = "#FF93C8";
     topArea.style.backgroundColor = "#FF188A";
 }

@@ -9,7 +9,7 @@
                 <img src="<?php get_template_directory_uri() ?>/assets/img/running_around.png" alt="no-image">
             <?php endif; ?>
         </div>
-        <h4><?php echo mb_substr(get_the_title(), 0, 13); ?></h4>
+        <h4><?php echo get_the_title(); ?></h4>
 
         <div class="taxonomy_box">
 

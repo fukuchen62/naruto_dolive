@@ -3,13 +3,11 @@ get_header();
 
 ?>
 <main>
-    <h2 id="toparea" class="toparea">
-        <?php $category = get_the_category();
-        if (!empty($category)) {
-            echo esc_html($category[0]->name);
-        }
-        ?>
-    </h2>
+    <h2 id="toparea" class="toparea page_title"><?php $category = get_the_category();
+                                                if (!empty($category)) {
+                                                    echo esc_html($category[0]->name);
+                                                }
+                                                ?></h2>
     <div class="main_wrap">
         <?php get_template_part('template-parts/breadcrumb'); ?>
         <div class="content_wrap">

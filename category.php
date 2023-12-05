@@ -6,7 +6,7 @@ get_header();
 <main>
 
     <section id="toparea" class="toparea">
-        <h2><?php echo get_category_by_slug('news')->name; ?>一覧</h2>
+        <h2 class="page_title"><?php the_category('news'); ?>一覧</h2>
     </section>
 
     <div class="main_wrap">
