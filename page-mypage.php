@@ -60,7 +60,8 @@ get_header();
                                         </div>
                                         <h4><?php the_title(); ?></h4>
                                         <div class="card1_text">
-                                            <?php the_content(); ?>
+                                            <?php $text =  get_field('text'); ?>
+                                            <?php echo mb_substr($text, 0, 78) . '…'; ?>
                                         </div>
                                     </div>
                                 </div>
@@ -123,7 +124,8 @@ get_header();
                                         </div>
                                         <h4><?php the_title(); ?></h4>
                                         <div class="card1_text">
-                                            <?php the_content(); ?>
+                                            <?php $text =  get_field('text'); ?>
+                                            <?php echo mb_substr($text, 0, 78) . '…'; ?>
                                         </div>
                                     </div>
                                 </div>
@@ -186,7 +188,8 @@ get_header();
                                         </div>
                                         <h4><?php the_title(); ?></h4>
                                         <div class="card1_text">
-                                            <?php the_content(); ?>
+                                            <?php $text =  get_field('text'); ?>
+                                            <?php echo mb_substr($text, 0, 78) . '…'; ?>
                                         </div>
                                     </div>
                                 </div>
@@ -250,7 +253,8 @@ get_header();
                                         </div>
                                         <h4><?php the_title(); ?></h4>
                                         <div class="card1_text">
-                                            <?php the_content(); ?>
+                                            <?php $text =  get_field('text'); ?>
+                                            <?php echo mb_substr($text, 0, 78) . '…'; ?>
                                         </div>
                                     </div>
                                 </div>
