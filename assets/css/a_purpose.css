@@ -23,6 +23,7 @@
 .menu_wrap {
     display: flex;
     margin-bottom: 50px;
+    gap: 5%;
 }
 
 /* 地図外枠 */
