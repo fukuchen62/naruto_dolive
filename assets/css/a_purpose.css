@@ -152,6 +152,8 @@ section {
 .card_wrap2>h4 {
     padding: 20px 0;
     border-left: none;
+    height: clamp(4.5rem, 3.529rem + 4.14vw, 8.5rem);
+    line-height: 1.1;
 }
 
 /* カード説明幅 */
@@ -180,6 +182,11 @@ section {
     margin: 50px auto;
 }
 
+@media (min-width: 676px) and (max-width: 1461px) {
+    .card_text {
+        height: 80px;
+    }
+}
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:1462px) {
