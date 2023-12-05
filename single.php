@@ -19,8 +19,6 @@ get_header();
                     <div class="card2_wrap">
 
                         <div class="card2_content">
-                            <h4></h4>
-                            <br>
                             <div class="card2_img">
 
                                 <!-- サムネあれば出力 -->
