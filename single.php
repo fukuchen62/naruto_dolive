@@ -19,6 +19,8 @@ get_header();
                     <div class="card2_wrap">
 
                         <div class="card2_content">
+
+                            <div class="card2_text"><?php the_content(); ?></div>
                             <div class="card2_img">
 
                                 <!-- サムネあれば出力 -->
@@ -29,8 +31,6 @@ get_header();
                                 <?php endif; ?>
 
                             </div>
-
-                            <div class="card2_text"><?php the_content(); ?></div>
                         </div>
                     </div>
                     <div class="pageturn">
