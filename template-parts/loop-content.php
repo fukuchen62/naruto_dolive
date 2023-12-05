@@ -12,7 +12,7 @@
             </div>
 
             <!-- 店名の表示 -->
-            <h4><?php echo mb_substr(get_the_title(), 0, 8) . '…'; ?></h4>
+            <h4><?php echo mb_substr(get_the_title(), 0, 8) . ''; ?></h4>
 
             <!-- 抜粋の表示 -->
             <!-- 字数制限 -->
