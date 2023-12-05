@@ -29,8 +29,13 @@
     max-width: 350px;
 }
 
+.card1_content h4 {
+    height: 6rem;
+}
+
 h4 {
     border-left: none;
+    line-height: 1.1;
 }
 
 /* PC時のスタイル */
@@ -67,11 +72,12 @@ h4 {
     }
 }
 
+
 /* ------------------------------------------------------------------------
 ページネーション※装飾だけなので消す
 ------------------------------------------------------------------------ */
 
-.pagenation {
+/* .pagenation {
     display: flex;
     width: 100%;
     align-items: center;
@@ -103,4 +109,4 @@ h4 {
     border-bottom: 25px solid transparent;
     border-left: 43px solid #000000;
     border-right: 0;
-}
+} */

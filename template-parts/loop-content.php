@@ -12,7 +12,7 @@
             </div>
 
             <!-- 店名の表示 -->
-            <h4><?php echo mb_substr(get_the_title(), 0, 8) . '…'; ?></h4>
+            <h4><?php echo mb_substr(get_the_title(), 0, 8) . ''; ?></h4>
 
             <!-- 抜粋の表示 -->
             <!-- 字数制限 -->
@@ -43,7 +43,9 @@
                 <?php endif; ?>
 
                 <!-- 喫煙のアイコンの出力 -->
-                <?php if (get_field('smoking')) : ?>
+
+                <?php $smoking = get_field('smoking'); ?>
+                <?php if ($smoking !== '' && $smoking !== 'なし') : ?>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/smoking_ico.png" />
                 <?php endif; ?>
 

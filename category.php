@@ -6,7 +6,7 @@ get_header();
 <main>
 
     <section id="toparea" class="toparea">
-        <h2><?php the_category('news'); ?>一覧</h2>
+        <h2><?php echo get_category_by_slug('news')->name; ?>一覧</h2>
     </section>
 
     <div class="main_wrap">
@@ -16,11 +16,11 @@ get_header();
                 <div class="card3_left">
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="card3_wrap">
 
-                            <div class="card3_wrap">
+                                    <div class="card3_content">
 
-                                <div class="card3_content">
-                                    <a href="<?php the_permalink(); ?>">
                                         <div class="card3_img">
 
                                             <!-- サムネあれば出力 -->
@@ -32,11 +32,11 @@ get_header();
 
                                         </div>
                                         <?php get_template_part('template-parts/loop', 'news'); ?>
-                                    </a>
+
+                                    </div>
+
                                 </div>
-
-                            </div>
-
+                            </a>
                         <?php endwhile; ?>
                     <?php endif; ?>
                     <div class="pagination">

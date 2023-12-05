@@ -21,9 +21,6 @@
                 <section>
                     <div class="container">
                         <div>
-                            <!-- ここに地図とボタンが入る -->
-                        </div>
-                        <div>
                             <!-- ここに一覧が入る -->
                             <!-- 記事があればある分だけループさせる -->
                             <?php if (have_posts()) : ?>
@@ -35,9 +32,9 @@
                                             <input type="checkbox" id="<?php echo $toggle_id; ?>" class="toggle">
                                             <label class="title" for="<?php echo $toggle_id; ?>">
                                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/q.png" alt="q" class="q_aimg">
-                                                <span class="question_span">
+                                                <p class="question_p">
                                                     <?php the_field('question'); ?>
-                                                </span>
+                                                </p>
                                             </label>
 
                                             <div class="content">

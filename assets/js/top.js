@@ -204,6 +204,13 @@ $(document).ready(function () {
         containerWidth = container.clientWidth;
         containerHeight = container.clientHeight;
     });
+
+
+    const lis = document.querySelector('.recommended_keywords');
+    const liElements = lis.querySelectorAll('a');
+    liElements.forEach((li, index) => {
+        li.classList.add("moving_text");
+    });
 })();
 // ▲おススメキーワード枠▲
 

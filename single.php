@@ -4,7 +4,11 @@ get_header();
 ?>
 <main>
     <h2 id="toparea" class="toparea">
-        <?php the_category('news'); ?>
+        <?php $category = get_the_category();
+        if (!empty($category)) {
+            echo esc_html($category[0]->name);
+        }
+        ?>
     </h2>
     <div class="main_wrap">
         <?php get_template_part('template-parts/breadcrumb'); ?>
@@ -15,8 +19,8 @@ get_header();
                     <div class="card2_wrap">
 
                         <div class="card2_content">
-                            <h4></h4>
-                            <br>
+
+                            <div class="card2_text"><?php the_content(); ?></div>
                             <div class="card2_img">
 
                                 <!-- サムネあれば出力 -->
@@ -27,8 +31,6 @@ get_header();
                                 <?php endif; ?>
 
                             </div>
-
-                            <div class="card2_text"><?php the_content(); ?></div>
                         </div>
                     </div>
                     <div class="pageturn">
