@@ -542,16 +542,16 @@ h2.title_pickupcolumn {
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:1300px) {
+@media only screen and (min-width:1350px) {
   .column-flexbox {
     display: flex;
     padding-bottom: 5%;
-    gap: 5%;
+    gap: 2%;
     justify-content: center;
   }
 
   .column-container {
-    width: 350px;
+    width: 300px;
     height: 550px;
     display: block;
     text-align: center;
@@ -566,8 +566,8 @@ h2.title_pickupcolumn {
   }
 
   .column_imgbox img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
   }
 
   .column-text h3 {
