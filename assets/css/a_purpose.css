@@ -162,10 +162,11 @@ section {
 
 /* アイコン欄 */
 .card_icon {
-    margin: 20px 0;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 50px;
     border: 1px solid #000;
-    height: 100px;
+    padding: 10px;
 }
 
 /* アイコンサイズ */
@@ -180,7 +181,7 @@ section {
 
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:1024px) {
 
     /* 記事タイトル */
     .purpose_btn {
@@ -210,9 +211,8 @@ section {
 
     /* アイコン欄 */
     .card_icon {
-        margin: 20px 0;
-        padding: 10px;
-        height: 75px;
+        border: 1px solid red;
+        height: 60px;
     }
 }
 
@@ -266,7 +266,7 @@ section {
     background-color: grey;
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:1032px) {
     #map {
         width: 60%;
         height: 550px;
