@@ -24,7 +24,7 @@
     <!-- 抜粋の出力 -->
     <div class="card1_text">
 
-        <p><?php echo mb_substr(get_the_excerpt(), 0, 60) . '･･･'; ?></p>
+        <p><?php echo mb_substr(get_the_excerpt(), 0, 60); ?></p>
 
     </div>
 
