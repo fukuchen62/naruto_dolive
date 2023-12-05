@@ -31,7 +31,6 @@ cardテンプレート
 .card3_content {
     padding: 10px;
     display: flex;
-    align-items: center;
 }
 
 .card3_img img {
@@ -55,6 +54,10 @@ cardテンプレート
 /* 記事タイトルフォントサイズ */
 .news_title {
     font-weight: bold;
+}
+
+.news_title p {
+    padding-top: 7px;
 }
 
 /* 記事本文非表示 */
