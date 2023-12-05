@@ -347,11 +347,11 @@ function my_pre_get_posts($query)
     if ($query->is_category()) {
         $query->set('posts_per_page', 3);
         return;
-    } elseif ($query->is_post_type_archive('column') || is_tax('column_type')) {
-        $query->set('posts_per_page', 3);
-        return;
     } elseif ($query->is_front_page('column')) {
         $query->set('posts_per_page', 3);
+        return;
+    } elseif ($query->is_post_type_archive('column') || is_tax('column_type')) {
+        $query->set('posts_per_page', 4);
         return;
     }
 }
