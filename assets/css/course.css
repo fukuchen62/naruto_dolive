@@ -163,6 +163,7 @@ section.course_text p {
 
 h4 {
     border-left: none;
+    font-size: clamp(1.4rem, 1.279rem + 0.52vw, 1.9rem);
 }
 
 @media (min-width: 768px) {
