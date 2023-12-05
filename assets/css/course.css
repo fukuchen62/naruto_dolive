@@ -12,7 +12,7 @@
 /*ヘッダー下部の帯 */
 #toparea {
     background-color: #ed76bd;
-        color: #f8c9d7;
+    color: #f8c9d7;
 }
 
 /* GoogleMap */
@@ -160,24 +160,27 @@ section.course_text p {
     padding-bottom: 10%;
 }
 
+h4 {
+    border-left: none;
+}
 
 @media (min-width: 768px) {
 
     .recommend_flex {
-    display: flex;
-    justify-content: center;
-    padding-top: 5%;
-    flex-wrap: wrap;
-    gap: 100px;
-}
+        display: flex;
+        justify-content: center;
+        padding-top: 5%;
+        flex-wrap: wrap;
+        gap: 100px;
+    }
 
-.recommend_flex2 {
-    display: flex;
-    justify-content: center;
-    padding-top: 5%;
-    flex-wrap: wrap;
-    gap: 100px;
-}
+    .recommend_flex2 {
+        display: flex;
+        justify-content: center;
+        padding-top: 5%;
+        flex-wrap: wrap;
+        gap: 100px;
+    }
 }
 
 
@@ -232,59 +235,62 @@ section.course_text p {
     background-color: rgba(212, 39, 240, 0.5);
 } */
 
-.course_sea{
+.course_sea {
     background-color: #ff8b03;
 }
 
-.course_history{
+.course_history {
     background-color: #996633;
 }
 
-.course_around{
+.course_around {
     background-color: #11cd7e;
 }
 
-.course_gurutto{
+.course_gurutto {
     background-color: #ff1e1e;
 }
 
-.course_kids{
+.course_kids {
     background-color: #d427f0;
 }
 
 
-.car_wrap{
+.car_wrap {
     position: relative;
     width: 85px;
     height: 110px;
 }
 
-.req_time{
+.req_time {
     width: 100px;
     color: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 999;
     text-shadow:
-    -1px -1px 0 #000, /* 左上の縁 */
-    1px -1px 0 #000,  /* 右上の縁 */
-    -1px 1px 0 #000,  /* 左下の縁 */
-    1px 1px 0 #000;
+        -1px -1px 0 #000,
+        /* 左上の縁 */
+        1px -1px 0 #000,
+        /* 右上の縁 */
+        -1px 1px 0 #000,
+        /* 左下の縁 */
+        1px 1px 0 #000;
 }
 
-.req_time{
+.req_time {
     border-left: none;
 }
 
 @media (min-width: 768px) {
 
-    .car_wrap{
+    .car_wrap {
         width: 100px;
     }
 
-    .req_time{
+    .req_time {
         width: 140%;
     }
 }
