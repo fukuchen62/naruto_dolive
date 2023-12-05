@@ -274,7 +274,7 @@ section {
 @media only screen and (min-width:1032px) {
     #map {
         width: 60%;
-        height: 50%;
+        height: 400px;
     }
 
 }
