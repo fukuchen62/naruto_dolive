@@ -64,10 +64,18 @@ cardテンプレート
 
 .card1_text {
     height: initial;
+    display: none;
 }
 
 .aside_wrap {
     margin: 0 auto;
+}
+
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media (min-width:768px) {
+    .card1_text {
+        display: block;
+    }
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
