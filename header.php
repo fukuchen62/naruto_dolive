@@ -150,7 +150,7 @@
                             </a></li>
                         <li><a href="<?php echo get_permalink(822); ?>">
                                 <dl>
-                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_×××××.jpg" alt="キッズが主役旅" alt=""></dt>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_kids.jpg" alt="キッズが主役旅"></dt>
                                     <dd>キッズが主役旅</dd>
                                 </dl>
                             </a></li>
