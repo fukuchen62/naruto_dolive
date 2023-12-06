@@ -5,7 +5,6 @@ const pageH2 = document.querySelector(".page_title");
 const topArea = document.querySelector(".toparea");
 const pageTitle = pageH2.textContent;
 const purposeBtns = document.querySelectorAll(".purpose_btn");
-console.log(pageTitle);
 
 // コラムの色変更
 
@@ -23,8 +22,6 @@ if (pageTitle === "名物" || pageTitle === "名物一覧" || pageTitle === "カ
 } else if (pageTitle === "その他" || pageTitle === "その他一覧" || pageTitle === "カテゴリ別：その他") {
     pageH2.style.color = "#B042BD ";
     topArea.style.backgroundColor = "#A271C8";
-} else{
-    console.log("test3");
 }
 
 // 目的別の色変更
