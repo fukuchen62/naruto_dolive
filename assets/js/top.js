@@ -30,54 +30,64 @@
 // ▼ドライブコース切替▼
 $(document).ready(function () {
 
+    // 2023/12/06 fukushima start
+    // コースの切り替えをSVGからpngに変更修正
+
+    clear_all();
     // 1つ目のコース以外のコースを非表示させる
+    // $('#narutokaikyoumankitu').attr('display', "block");
     // 鳴門海峡満喫旅
-    $('#narutokaikyoumankitu').attr('display', "block");
-    // ぐるっと一周鳴門旅
-    $('#guruttoissyuunaruto').attr('display', "none");
-    // 歴史・文化の鳴門旅
-    $('#rekishibunkanonaruto').attr('display', "none");
-    // 鳴門おおそと一周旅
-    $('#narutooosotoissyuu').attr('display', "none");
-    // キッズが主役旅
-    $('#kizzugasyuyaku').attr('display', "none");
+    $('#narutokaikyoumankitu').removeClass('hide');
 
-
+    // コース切り替えボタンのクリックイベント
     jQuery('.course1').on('click', function () {
         clear_all();
-        $('#narutokaikyoumankitu').attr('display', "block");
+        // $('#narutokaikyoumankitu').attr('display', "block");
+        $('#narutokaikyoumankitu').removeClass('hide');
     });
     jQuery('.course2').on('click', function () {
         clear_all();
-        $('#guruttoissyuunaruto').attr('display', "block");
+        // $('#guruttoissyuunaruto').attr('display', "block");
+        $('#guruttoissyuunaruto').removeClass('hide');
     });
     jQuery('.course3').on('click', function () {
         clear_all();
-        $('#rekishibunkanonaruto').attr('display', "block");
+        // $('#rekishibunkanonaruto').attr('display', "block")
+        $('#rekishibunkanonaruto').removeClass('hide');;
     });
     jQuery('.course4').on('click', function () {
         clear_all();
-        $('#narutooosotoissyuu').attr('display', "block");
+        // $('#narutooosotoissyuu').attr('display', "block");
+        $('#narutooosotoissyuu').removeClass('hide');
     });
     jQuery('.course5').on('click', function () {
         clear_all();
-        $('#kizzugasyuyaku').attr('display', "block");
+        // $('#kizzugasyuyaku').attr('display', "block");
+        $('#kizzugasyuyaku').removeClass('hide');
     });
 });
 
 function clear_all() {
 
+    // 2023/12/06 fukushima start
+    // コースの切り替えをSVGからpngに変更修正
+
     // 全てのコース以外のコースを非表示させる
     // 鳴門海峡満喫旅
-    $('#narutokaikyoumankitu').attr('display', "none");
+    // $('#narutokaikyoumankitu').attr('display', "none");
+    $('#narutokaikyoumankitu').addClass('hide');
     // ぐるっと一周鳴門旅
-    $('#guruttoissyuunaruto').attr('display', "none");
+    // $('#guruttoissyuunaruto').attr('display', "none");
+    $('#guruttoissyuunaruto').addClass('hide');
     // 歴史・文化の鳴門旅
-    $('#rekishibunkanonaruto').attr('display', "none");
+    // $('#rekishibunkanonaruto').attr('display', "none");
+    $('#rekishibunkanonaruto').addClass('hide');
     // 鳴門おおそと一周旅
-    $('#narutooosotoissyuu').attr('display', "none");
+    // $('#narutooosotoissyuu').attr('display', "none");
+    $('#narutooosotoissyuu').addClass('hide');
     // キッズが主役旅
-    $('#kizzugasyuyaku').attr('display', "none");
+    // $('#kizzugasyuyaku').attr('display', "none");
+    $('#kizzugasyuyaku').addClass('hide');
 }
 // ▲ドライブコース切替▲
 
