@@ -129,6 +129,10 @@
                             <th>電話番号</th><!-- 必須 -->
                             <td><?php the_field('tel'); ?></td>
                         </tr>
+                        <tr>
+                            <th>席数</th><!-- 必須 -->
+                            <td><?php the_field('chair'); ?></td>
+                        </tr>
 
 
 
@@ -138,7 +142,7 @@
                             <tr>
                                 <th>ホームページ</th>
                                 <td>
-                                    <a href="<?php the_field('url'); ?>">
+                                    <a href="<?php the_field('url'); ?>" target="_blank">
                                         <?php the_field('url'); ?>
                                     </a>
                                 </td>
