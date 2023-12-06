@@ -43,7 +43,7 @@
                 ?>
                 <a href="<?php echo get_field('page_link'); ?>">
                     <div class="course_details_card">
-                        <div>
+                        <div class="course_imgbox">
                             <?php
                             $pic1 = get_field('spot1_thum');
                             //大サイズ画像のURL
@@ -65,7 +65,7 @@
                 ?>
                 <a href="<?php echo get_field('page_link2'); ?>">
                     <div class="course_details_card">
-                        <div>
+                        <div class="course_imgbox">
                             <?php
                             $pic2 = get_field('spot2_thum');
                             //大サイズ画像のURL
