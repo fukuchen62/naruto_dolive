@@ -244,6 +244,7 @@ a.card1 {
 .card1_content>h4 {
     margin: 20px auto;
     padding: 0;
+    height: clamp(2.5rem, 1.529rem + 4.14vw, 6.5rem);
 }
 
 .card1_text {
