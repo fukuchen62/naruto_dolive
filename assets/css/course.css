@@ -60,10 +60,11 @@ section.course_text p {
 ------------------------------------------------------------------------  */
 .course_wrap {
     display: flex;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
-    gap: 5%;
+    gap: 3%;
     padding-bottom: 5%;
+    justify-content: center;
 }
 
 .travel_time_content {
@@ -91,7 +92,6 @@ section.course_text p {
 }
 
 .course_details {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
@@ -107,38 +107,75 @@ section.course_text p {
     box-shadow: 5px 5px 0 #000;
 }
 
+.course_imgbox {
+    width: 180px;
+    height: 165px;
+}
+
 .course_details_card img {
     width: 100%;
     max-width: 250px;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     margin-bottom: 10px;
     border-radius: 3%;
 }
 
 .course_facility {
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin: 1rem auto;
 }
 
 .course_facility_info {
-    font-size: 14px;
+    text-align: left;
+    padding: 0 .5rem 1rem .5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
     .coordinate {
         width: 100px;
+    }
+
+    .course_wrap {
+        gap: 5%;
+        justify-content: center;
+    }
+
+    .course_details {
+        flex-grow: 1;
     }
 
     .course_details_card {
         flex-direction: row;
         align-items: flex-start;
         text-align: left;
+        gap: 3%;
+    }
+
+    .course_imgbox {
+        flex: 0 0 250px;
+        height: 230px;
     }
 
     .course_details_card img {
         margin-right: 10px;
         margin-bottom: 0;
+    }
+
+    .course_textbox {
+        width: 80%;
+        padding: 1rem;
+    }
+
+    .course_facility {
+        font-size: 1.5rem;
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .course_facility_info {
+        font-size: 1.2rem;
+        padding: 0;
     }
 }
 
@@ -256,7 +293,6 @@ h4 {
 .course_kids {
     background-color: #d427f080;
 }
-
 
 .car_wrap {
     position: relative;
