@@ -94,10 +94,10 @@ get_header();
             <img id="narutokaikyoumankitu" class="map" src="<?php echo get_template_directory_uri();?>/assets/img/map_a.png" alt="鳴門海峡満喫旅">
 
             <!-- 歴史・文化の鳴門旅 -->
-            <img id="guruttoissyuunaruto" class="map" src="<?php echo get_template_directory_uri();?>/assets/img/map_b.png" alt="歴史・文化の鳴門旅">
+            <img id="rekishibunkanonaruto" class="map" src="<?php echo get_template_directory_uri();?>/assets/img/map_b.png" alt="歴史・文化の鳴門旅">
 
             <!-- ぐるっと一周鳴門旅 -->
-            <img id="rekishibunkanonaruto" class="map" src="<?php echo get_template_directory_uri();?>/assets/img/map_c.png" alt="ぐるっと一周鳴門旅">
+            <img id="guruttoissyuunaruto" class="map" src="<?php echo get_template_directory_uri();?>/assets/img/map_c.png" alt="ぐるっと一周鳴門旅">
 
             <!-- 鳴門おおそと一周旅 -->
             <img id="narutooosotoissyuu" class="map" src="<?php echo get_template_directory_uri();?>/assets/img/map_d.png" alt="鳴門おおそと一周旅">
