@@ -174,7 +174,7 @@ section {
 
 /* アイコンサイズ */
 .card_icon img {
-    width: 35px;
+    width: 30px;
 }
 
 /* moreボタン幅 */
@@ -226,6 +226,11 @@ section {
     .card_icon {
         border: 1px solid #000;
         height: 60px;
+    }
+
+    /* アイコンサイズ */
+    .card_icon img {
+        width: 35px;
     }
 }
 
