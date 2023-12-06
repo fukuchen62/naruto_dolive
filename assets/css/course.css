@@ -46,7 +46,7 @@ section.course_text {
 section.course_text p {
     width: 70%;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
 }
 
 @media (min-width: 768px) {

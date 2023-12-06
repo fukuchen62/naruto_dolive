@@ -55,14 +55,15 @@ get_header();
     <div class="teloparea marquee">
         <div class="marquee_container">
             <?php if (have_posts()) : $count = 0; ?>
-            <?php while (have_posts()) : the_post(); $count++; ?>
-            <!-- 抜粋の出力 -->
-            <a href="<?php the_permalink(); ?>">
-                <div class="marquee_news <?php echo ($count % 2 === 0) ? 'even' : 'odd'; ?>">
-                    <p><?php echo the_excerpt(); ?></p>
-                </div>
-            </a>
-            <?php endwhile; ?>
+                <?php while (have_posts()) : the_post();
+                    $count++; ?>
+                    <!-- 抜粋の出力 -->
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="marquee_news <?php echo ($count % 2 === 0) ? 'even' : 'odd'; ?>">
+                            <p>[<?php echo get_the_category()[0]->name; ?>]<?php echo get_the_time('m/d'); ?> <?php the_title(); ?></p>
+                        </div>
+                    </a>
+                <?php endwhile; ?>
             <?php endif; ?>
         </div>
         <div class="more_btn">
@@ -91,19 +92,19 @@ get_header();
             コースの切り替えをSVGからpngに変更修正 -->
 
             <!-- 鳴門海峡満喫旅 -->
-            <img id="narutokaikyoumankitu" class="map" src="<?php echo get_template_directory_uri();?>/assets/img/map_a.png" alt="鳴門海峡満喫旅">
+            <img id="narutokaikyoumankitu" class="map" src="<?php echo get_template_directory_uri(); ?>/assets/img/map_a.png" alt="鳴門海峡満喫旅">
 
             <!-- 歴史・文化の鳴門旅 -->
-            <img id="rekishibunkanonaruto" class="map" src="<?php echo get_template_directory_uri();?>/assets/img/map_b.png" alt="歴史・文化の鳴門旅">
+            <img id="rekishibunkanonaruto" class="map" src="<?php echo get_template_directory_uri(); ?>/assets/img/map_b.png" alt="歴史・文化の鳴門旅">
 
             <!-- ぐるっと一周鳴門旅 -->
-            <img id="guruttoissyuunaruto" class="map" src="<?php echo get_template_directory_uri();?>/assets/img/map_c.png" alt="ぐるっと一周鳴門旅">
+            <img id="guruttoissyuunaruto" class="map" src="<?php echo get_template_directory_uri(); ?>/assets/img/map_c.png" alt="ぐるっと一周鳴門旅">
 
             <!-- 鳴門おおそと一周旅 -->
-            <img id="narutooosotoissyuu" class="map" src="<?php echo get_template_directory_uri();?>/assets/img/map_d.png" alt="鳴門おおそと一周旅">
+            <img id="narutooosotoissyuu" class="map" src="<?php echo get_template_directory_uri(); ?>/assets/img/map_d.png" alt="鳴門おおそと一周旅">
 
             <!-- キッズが主役旅 -->
-            <img id="kizzugasyuyaku" class="map" src="<?php echo get_template_directory_uri();?>/assets/img/map_e.png" alt="キッズが主役旅">
+            <img id="kizzugasyuyaku" class="map" src="<?php echo get_template_directory_uri(); ?>/assets/img/map_e.png" alt="キッズが主役旅">
 
             <!-- 2023/12/06 fukushima end -->
         </div>
@@ -138,36 +139,36 @@ get_header();
         <div class="column-flexbox">
 
             <?php $args = array(
-        'post_type' => 'column', // カスタム投稿タイプを指定
+                'post_type' => 'column', // カスタム投稿タイプを指定
 
 
-    );
-    $query = new WP_Query($args);
-    if ($query->have_posts()) :
-        while ($query->have_posts()) : $query->the_post(); ?>
-            <a href="<?php the_permalink(); ?>">
+            );
+            $query = new WP_Query($args);
+            if ($query->have_posts()) :
+                while ($query->have_posts()) : $query->the_post(); ?>
+                    <a href="<?php the_permalink(); ?>">
 
-                <div class="column-container">
-                    <div class="column_imgbox">
+                        <div class="column-container">
+                            <div class="column_imgbox">
 
-                        <?php if (has_post_thumbnail()) : ?>
-                        <?php the_post_thumbnail('medium'); ?>
-                        <?php endif; ?>
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <?php the_post_thumbnail('medium'); ?>
+                                <?php endif; ?>
 
-                    </div><!-- column_imgbox -->
+                            </div><!-- column_imgbox -->
 
-                    <div class="column-text">
-                        <h3>
-                            <?php echo mb_substr(get_the_title(), 0, 15) ; ?>
-                        </h3>
+                            <div class="column-text">
+                                <h3>
+                                    <?php echo mb_substr(get_the_title(), 0, 15); ?>
+                                </h3>
 
-                        <p>
-                            <?php echo mb_substr(get_the_excerpt(), 0, 20) . '･･･'; ?>
-                        </p>
-                    </div><!-- column-text -->
-                </div><!-- column-container -->
-            </a><!--  -->
-            <?php endwhile; ?>
+                                <p>
+                                    <?php echo mb_substr(get_the_excerpt(), 0, 20) . '･･･'; ?>
+                                </p>
+                            </div><!-- column-text -->
+                        </div><!-- column-container -->
+                    </a><!--  -->
+                <?php endwhile; ?>
             <?php endif; ?>
             <?php wp_reset_postdata(); ?>
         </div><!-- column-flexbox -->
@@ -280,36 +281,36 @@ get_header();
 </main>
 
 <script>
-// ▼TOP-kvのフラッシュ画像表示▼
-var pics_src = [
-    "<?php echo get_template_directory_uri();?>/assets/img/mypic1.jpg",
-    "<?php echo get_template_directory_uri();?>/assets/img/mypic2.jpg",
-    "<?php echo get_template_directory_uri();?>/assets/img/mypic3.jpg",
-    "<?php echo get_template_directory_uri();?>/assets/img/mypic4.jpg",
-    "<?php echo get_template_directory_uri();?>/assets/img/mypic5.jpg"
-];
-var num = 0;
+    // ▼TOP-kvのフラッシュ画像表示▼
+    var pics_src = [
+        "<?php echo get_template_directory_uri(); ?>/assets/img/mypic1.jpg",
+        "<?php echo get_template_directory_uri(); ?>/assets/img/mypic2.JPG",
+        "<?php echo get_template_directory_uri(); ?>/assets/img/mypic3.jpg",
+        "<?php echo get_template_directory_uri(); ?>/assets/img/mypic4.jpg",
+        "<?php echo get_template_directory_uri(); ?>/assets/img/mypic5.jpg"
+    ];
+    var num = 0;
 
-slideshow_timer();
+    slideshow_timer();
 
-function slideshow_timer() {
+    function slideshow_timer() {
 
-    if (num >= pics_src.length) {
-        num = 0;
+        if (num >= pics_src.length) {
+            num = 0;
+        }
+        document.getElementById("mypic1").src = pics_src[num];
+        document.getElementById("mypic2").src = pics_src[num];
+        document.getElementById("mypic3").src = pics_src[num];
+        num++;
+        setTimeout(slideshow_timer, 600);
     }
-    document.getElementById("mypic1").src = pics_src[num];
-    document.getElementById("mypic2").src = pics_src[num];
-    document.getElementById("mypic3").src = pics_src[num];
-    num++;
-    setTimeout(slideshow_timer, 600);
-}
-// ▲TOP-kvのフラッシュ画像表示▲
+    // ▲TOP-kvのフラッシュ画像表示▲
 
-const lis = document.querySelector('.recommended_keywords');
-const liElements = lis.querySelectorAll('a');
-liElements.forEach((li, index) => {
-    li.classList.add("moving_text");
-});
+    const lis = document.querySelector('.recommended_keywords');
+    const liElements = lis.querySelectorAll('a');
+    liElements.forEach((li, index) => {
+        li.classList.add("moving_text");
+    });
 </script>
 <?php
 get_footer();
