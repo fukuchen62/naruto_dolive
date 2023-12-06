@@ -316,20 +316,11 @@ function add_individual_scripts()
             array(),
             false
         );
-
-
         //----------------------
         //  ニュース詳細ページにcssの読み込み
         //----------------------
-    } elseif (is_category()) {
-        wp_enqueue_script(
-            'category-script',
-            get_template_directory_uri() . '/assets/js/color.js',
-            array(),
-            false,
-            true
-        );
-    } elseif (is_single('news')) {
+
+    } elseif (is_single()) {
         // トップエリアの色の変更
         wp_enqueue_script(
             's_news_script',
@@ -338,6 +329,13 @@ function add_individual_scripts()
             '',
             true
         );
+        wp_enqueue_style(
+            's_news_style',
+            get_template_directory_uri() . '/assets/css/s_news.css',
+            array(),
+            false
+        );
+
         //----------------------
         //  サイトマップページのcssの読み込み
         //----------------------

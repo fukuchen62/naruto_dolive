@@ -3,8 +3,9 @@
 // コラム個別色
 const pageH2 = document.querySelector(".page_title");
 const topArea = document.querySelector(".toparea");
-const purposeBtns = document.querySelectorAll(".purpose_btn");
 const pageTitle = pageH2.textContent;
+const purposeBtns = document.querySelectorAll(".purpose_btn");
+console.log(pageTitle);
 
 // コラムの色変更
 
@@ -14,12 +15,16 @@ if (pageTitle === "名物" || pageTitle === "名物一覧" || pageTitle === "カ
 } else if (pageTitle === "過ごし方" || pageTitle === "過ごし方一覧" || pageTitle === "カテゴリ別：過ごし方") {
     pageH2.style.color = "#6AB0A3";
     topArea.style.backgroundColor = "#3B645F";
+    console.log("test1");
 } else if (pageTitle === "鳴門について" || pageTitle === "鳴門について一覧" || pageTitle === "カテゴリ別：鳴門について") {
     pageH2.style.color = "#5E83EA";
     topArea.style.backgroundColor = "#9AC4F7";
+    console.log("test2");
 } else if (pageTitle === "その他" || pageTitle === "その他一覧" || pageTitle === "カテゴリ別：その他") {
     pageH2.style.color = "#B042BD ";
     topArea.style.backgroundColor = "#A271C8";
+} else{
+    console.log("test3");
 }
 
 // 目的別の色変更
@@ -66,7 +71,3 @@ if (pageTitle === "ニュース" || pageTitle === "ニュース一覧") {
     topArea.style.backgroundColor = "#FF188A";
 }
 
-
-// コースの色変更
-
-console.log("test");
