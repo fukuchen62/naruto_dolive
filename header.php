@@ -4,10 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鳴門DoLive | 愛車で四国の右上攻略！</title>
-    <meta name="description" content="鳴門DoLive！」は鳴門を走るドライバーたちに魅力あるスポットの提案を効率的に探すことができるサイトです。">
-    <meta name="keywords" content="徳島、鳴門、ドライブ、渦、四国、関西、観光、車、阿波踊り、食、グルメ、穴場、釣り場、大塚、デート、バイク、コース、地図">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
 
+
+    <style>
+        /* #map {
+            width: 400px;
+            height: 400px;
+            background-color: grey;
+        }
+
+        @media only screen and (min-width:768px) {
+            #map {
+                width: 60%;
+                height: 550px;
+            }
+
+        } */
+    </style>
 </head>
 <?php wp_head(); ?>
 
@@ -29,6 +44,10 @@
     <!--
         決定事項がまとまったパワポファイルが【https://docs.google.com/presentation/d/1UH-e8r4syRd-EFv8QS8rbK_M89gBjzaU/edit?usp=drive_link&ouid=114449549919721686995&rtpof=true&sd=true】にあるので参照してください！
     -->
+    <div id="stkr" class="sp_none">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/maincar_icon.png" alt="" class="car_img">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" alt="" class="gas">
+    </div>
 
     <header>
         <nav class="sp_nav pc_none">
@@ -183,7 +202,7 @@
                             </a></li>
                     </ul>
                 </li>
-                <li><a href="<?php echo $news_link; ?>">新着情報</a></li>
+                <li><a href="<?php echo $news_link; ?>">新着情報</a>
                 <li class="has_child"><a href="<?php echo home_url('/column'); ?>">コラム</a>
                     <ul class="child_wrap">
                         <li><a href="<?php echo get_term_link('about_naruto', 'column_type'); ?>">

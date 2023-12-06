@@ -27,6 +27,14 @@ hr {
     padding-bottom: 34px;
 }
 
+.facility_wrap1 {
+        width: 100%;
+    }
+
+    .facility_wrap2 {
+        width: 100%;
+    }
+
 .facility_img1_box {
     border: 3px solid #000;
 }

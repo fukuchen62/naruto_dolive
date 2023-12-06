@@ -60,30 +60,31 @@ get_header();
 
                 ); ?>
             </div>
+
+            <!-- サイドバー -->
+            <!-- ページナビゲーションの設定 -->
+            <!-- <h2>以下サイドバーです</h2> -->
+            <aside class="aside_wrap aside_bottom">
+
+                <div class="aside_title">━━ カテゴリ別 ━━</div>
+                <ul>
+                    <?php
+                    $categories = get_categories(array(
+                        'taxonomy' => 'column_type',
+                        'orderby' => 'name',
+                        'order' => 'DESC',
+                        'hide_empty' => false,
+                    ));
+
+                    foreach ($categories as $category) {
+                        $category_link = get_category_link($category->term_id);
+                        $post_count = $category->count;
+                        echo '<li><a href="' . $category_link . '">' . $category->name . ' (' . $post_count . ')</a></li>';
+                    }
+                    ?>
+                </ul>
+            </aside>
         </div>
-        <!-- サイドバー -->
-        <!-- ページナビゲーションの設定 -->
-        <!-- <h2>以下サイドバーです</h2> -->
-        <aside class="aside_wrap aside_bottom">
-
-            <div class="aside_title">━━ カテゴリ別 ━━</div>
-            <ul>
-                <?php
-                $categories = get_categories(array(
-                    'taxonomy' => 'column_type',
-                    'orderby' => 'name',
-                    'order' => 'DESC',
-                    'hide_empty' => false,
-                ));
-
-                foreach ($categories as $category) {
-                    $category_link = get_category_link($category->term_id);
-                    $post_count = $category->count;
-                    echo '<li><a href="' . $category_link . '">' . $category->name . ' (' . $post_count . ')</a></li>';
-                }
-                ?>
-            </ul>
-        </aside>
     </div>
 
 
