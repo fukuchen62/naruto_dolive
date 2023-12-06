@@ -57,6 +57,7 @@ h4 {
     padding: 1.5rem 0.5rem 0.5rem 0.5rem;
     border-left: solid 5px #555;
     font-size: clamp(1.1rem, 0.882rem + 0.93vw, 2rem);
+    line-height: 1.1;
 }
 
 h5 {
