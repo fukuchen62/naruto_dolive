@@ -272,7 +272,7 @@ a.card1 {
 @media only screen and (min-width:520px) {
     .card1_wrap {
         width: 350px;
-        height: clamp(30rem, 29.122rem + 2.7vw, 32.5rem);
+        height: clamp(30.938rem, 29.73rem + 3.72vw, 34.375rem);
     }
 
     .card1_img img {
