@@ -6,7 +6,10 @@ get_header();
 <main>
 
     <section id="toparea" class="toparea">
-        <h2 class="page_title"><?php the_category('news'); ?>一覧</h2>
+        <h2 class="page_title"><?php $cat = get_the_category();
+                                $cat = $cat[0]; {
+                                    echo $cat->cat_name;
+                                } ?>一覧</h2>
     </section>
 
     <div class="main_wrap">
