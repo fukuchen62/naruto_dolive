@@ -60,7 +60,7 @@ get_header();
                     <!-- 抜粋の出力 -->
                     <a href="<?php the_permalink(); ?>">
                         <div class="marquee_news <?php echo ($count % 2 === 0) ? 'even' : 'odd'; ?>">
-                            <p><?php echo the_excerpt(); ?></p>
+                            <p>[<?php echo get_the_category()[0]->name; ?>]<?php echo get_the_time('m/d'); ?> <?php the_title(); ?></p>
                         </div>
                     </a>
                 <?php endwhile; ?>
