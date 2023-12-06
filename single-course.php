@@ -9,7 +9,6 @@
         <div class="course_map">
             <!-- googlemap -->
             <div class="map">
-                <p>GoogleMAP</p>
                 <?php the_field('iframe'); ?>
             </div>
         </div>
