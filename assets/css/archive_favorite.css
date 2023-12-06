@@ -120,6 +120,9 @@ section {
     height: clamp(4.5rem, 3.577rem + 3.94vw, 8.5rem);
 }
 
+.card1_text {
+    height: 165px;
+}
 
 /* アイコン欄 */
 .card_icon {
