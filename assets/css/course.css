@@ -40,13 +40,14 @@
 }
 
 section.course_text {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 section.course_text p {
     width: 70%;
     margin: 0 auto;
     text-align: center;
+    font-size: 1.3rem;
 }
 
 @media (min-width: 768px) {
@@ -293,6 +294,7 @@ h4 {
 .course_kids {
     background-color: #d427f080;
 }
+
 
 .car_wrap {
     position: relative;
