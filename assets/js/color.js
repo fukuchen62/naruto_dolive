@@ -5,6 +5,9 @@ const pageH2 = document.querySelector(".page_title");
 const topArea = document.querySelector(".toparea");
 const purposeBtns = document.querySelectorAll(".purpose_btn");
 const pageTitle = pageH2.textContent;
+
+// コラムの色変更
+
 if (pageTitle === "名物" || pageTitle === "名物一覧" || pageTitle === "カテゴリ別：名物") {
     pageH2.style.color = "#FEB59B";
     topArea.style.backgroundColor = "#FF7162";
@@ -17,7 +20,11 @@ if (pageTitle === "名物" || pageTitle === "名物一覧" || pageTitle === "カ
 } else if (pageTitle === "その他" || pageTitle === "その他一覧" || pageTitle === "カテゴリ別：その他") {
     pageH2.style.color = "#B042BD ";
     topArea.style.backgroundColor = "#A271C8";
-} else if (pageTitle === "食べる" || pageTitle === "目的別一覧：食べる" || pageTitle === "カテゴリ別：和食" || pageTitle === "カテゴリ別：洋食" || pageTitle === "カテゴリ別：中華" || pageTitle === "カテゴリ別：スイーツ" || pageTitle === "カテゴリ別：その他") {
+}
+
+// 目的別の色変更
+
+ if (pageTitle === "食べる" || pageTitle === "目的別一覧：食べる" || pageTitle === "カテゴリ別：和食" || pageTitle === "カテゴリ別：洋食" || pageTitle === "カテゴリ別：中華" || pageTitle === "カテゴリ別：スイーツ" || pageTitle === "カテゴリ別：その他") {
     // 目的別色
     // 赤
     pageH2.style.color = "#F8A59B";
@@ -44,6 +51,7 @@ if (pageTitle === "名物" || pageTitle === "名物一覧" || pageTitle === "カ
     pageH2.style.color = "#CF7D51 ";
     topArea.style.backgroundColor = " #DBB197";
 }
+
 
 
 // 新着情報個別色

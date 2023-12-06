@@ -87,6 +87,14 @@ function add_individual_scripts()
             array(),
             false
         );
+
+        wp_enqueue_script(
+            'color_script',
+            get_template_directory_uri() . '/assets/js/color.js',
+            '',
+            '',
+            true
+        );
     }
     //----------------------
     //  コース詳細ページ
@@ -319,22 +327,6 @@ function add_individual_scripts()
             get_template_directory_uri() . '/assets/js/color.js',
             array(),
             false,
-            true
-        );
-    } elseif (is_single()) {
-        // Index.css
-        wp_enqueue_style(
-            'single-style',
-            get_template_directory_uri() . '/assets/css/s_news.css',
-            array(),
-            false
-        );
-        // トップエリアの色の変更
-        wp_enqueue_script(
-            's_column_script',
-            get_template_directory_uri() . '/assets/js/color.js',
-            '',
-            '',
             true
         );
     } elseif (is_single('news')) {
