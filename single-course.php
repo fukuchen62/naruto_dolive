@@ -96,7 +96,7 @@
                 ?>
                     <a href="<?php echo $page_link3 ?>">
                         <div class="course_details_card">
-                            <div>
+                            <div class="course_imgbox">
                                 <img src="<?php echo $pic3_url ?>" alt="掲載写真">
                             </div>
                             <div>
@@ -124,7 +124,7 @@
                 ?>
                     <a href="<?php echo $page_link4 ?>">
                         <div class="course_details_card">
-                            <div>
+                            <div class="course_imgbox">
                                 <img src="<?php echo $pic1_url ?>" alt="掲載写真">
                             </div>
                             <div>
@@ -152,7 +152,7 @@
                 ?>
                     <a href="<?php echo $page_link5 ?>">
                         <div class="course_details_card">
-                            <div>
+                            <div class="course_imgbox">
                                 <img src="<?php echo $pic5_url ?>" alt="掲載写真">
                             </div>
                             <div>
@@ -180,7 +180,7 @@
                 ?>
                     <a href="<?php echo $page_link6 ?>">
                         <div class="course_details_card">
-                            <div>
+                            <div class="course_imgbox">
                                 <img src="<?php echo $pic6_url ?>" alt="掲載写真">
                             </div>
                             <div>
@@ -208,7 +208,7 @@
                 ?>
                     <a href="<?php echo $page_link7 ?>">
                         <div class="course_details_card">
-                            <div>
+                            <div class="course_imgbox">
                                 <img src="<?php echo $pic7_url ?>" alt="掲載写真">
                             </div>
                             <div>
@@ -235,7 +235,7 @@
                 ?>
                     <a href="<?php echo $page_link8 ?>">
                         <div class="course_details_card">
-                            <div>
+                            <div class="course_imgbox">
                                 <img src="<?php echo $pic8_url ?>" alt="掲載写真">
                             </div>
                             <div>
@@ -263,7 +263,7 @@
                 ?>
                     <a href="<?php echo $page_link9 ?>">
                         <div class="course_details_card">
-                            <div>
+                            <div class="course_imgbox">
                                 <img src="<?php echo $pic9_url ?>" alt="掲載写真">
                             </div>
                             <div>
