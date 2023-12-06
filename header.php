@@ -133,13 +133,13 @@
                         <li><a href="<?php echo get_permalink(329); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_culture.jpg" alt="歴史・文化の鳴門旅"></dt>
-                                    <dd>歴史･文化の<br>鳴門旅</dd>
+                                    <dd>歴史･文化の鳴門旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="<?php echo get_permalink(812); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_round.jpg" alt="ぐるっと一周鳴門旅"></dt>
-                                    <dd>ぐるっと一周<br>鳴門旅</dd>
+                                    <dd>ぐるっと一周鳴門旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="<?php echo get_permalink(817); ?>">
