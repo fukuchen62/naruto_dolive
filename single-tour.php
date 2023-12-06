@@ -166,7 +166,7 @@
                             <tr>
                                 <th>ホームページ</th>
                                 <td>
-                                    <a href="<?php the_field('url'); ?>">
+                                    <a href="<?php the_field('url'); ?>" target="blank">
                                         <?php the_field('url'); ?>
                                     </a>
                                 </td>
