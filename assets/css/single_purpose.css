@@ -271,7 +271,7 @@ a.card1 {
 @media only screen and (min-width:520px) {
     .card1_wrap {
         width: 350px;
-        height: 530px;
+        height: clamp(30rem, 29.122rem + 2.7vw, 32.5rem);
     }
 
     .card1_img img {
