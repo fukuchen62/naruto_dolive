@@ -203,7 +203,7 @@
 
                         <?php if (get_field('parking_area')) : ?>
                             <tr>
-                                <th>駐車場詳細</b>
+                                <th>駐車場詳細</th>
                                 <td><?php the_field('parking_area'); ?></td>
                             </tr>
                         <?php endif; ?>
