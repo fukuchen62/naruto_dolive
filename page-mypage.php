@@ -12,6 +12,16 @@ get_header();
         <div class="breadcrumb"><?php get_template_part('template-parts/breadcrumb'); ?></div>
         <div class="content_wrap">
 
+            <div class="mypage_text">
+                <p>1. 本マイページはこのサイトにてご紹介した『遊ぶ』『泊る』『食べる』の施設等を ブックマークし参照することができます。</p>
+
+                <p>2. 訪れた場所をgoogleマップで参照できます。</p>
+
+                <p>3.ブックマークにはCookieを使用しています。</p>
+
+                <p>4.Cookieの削除に伴いブックマークした情報も削除されます</p>
+            </div>
+
             <section class="archive_col">
                 <div class="center_title">
                     <h3>お気に入りの【食べる】</h3>
