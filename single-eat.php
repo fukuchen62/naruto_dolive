@@ -129,11 +129,12 @@
                             <th>電話番号</th><!-- 必須 -->
                             <td><?php the_field('tel'); ?></td>
                         </tr>
-                        <tr>
-                            <th>席数</th><!-- 必須 -->
-                            <td><?php the_field('chair'); ?></td>
-                        </tr>
-
+                        <?php if (get_field('chair')) : ?>
+                            <tr>
+                                <th>席数</th>
+                                <td><?php the_field('chair'); ?></td>
+                            </tr>
+                        <?php endif; ?>
 
 
 
