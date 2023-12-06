@@ -4,13 +4,10 @@ get_header();
 ?>
 
 <main>
-
-    <section id="toparea" class="toparea">
-        <h2 class="page_title"><?php $cat = get_the_category();
-                                $cat = $cat[0]; {
-                                    echo $cat->cat_name;
-                                } ?>一覧</h2>
-    </section>
+    <h2 id="toparea" class="toparea page_title"><?php $cat = get_the_category();
+                                                $cat = $cat[0]; {
+                                                    echo $cat->cat_name;
+                                                } ?>一覧</h2>
 
     <div class="main_wrap">
         <?php get_template_part('template-parts/breadcrumb'); ?>
