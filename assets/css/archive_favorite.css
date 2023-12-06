@@ -117,6 +117,7 @@ section {
 .card1_content>h4 {
     padding: 20px 20px;
     border-left: none;
+    height: clamp(4.5rem, 3.577rem + 3.94vw, 8.5rem);
 }
 
 
@@ -147,7 +148,7 @@ section {
     }
 }
 
-.mypage_text{
+.mypage_text {
     margin-bottom: 100px;
     text-align: center;
 }
