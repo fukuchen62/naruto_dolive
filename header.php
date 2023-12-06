@@ -70,9 +70,9 @@
                             <ul class="overlaymenu_list_course">
                                 <li><a href="<?php echo get_permalink(324); ?>">A:鳴門海峡満喫旅</a></li>
                                 <li><a href="<?php echo get_permalink(329); ?>">B:歴史・文化の鳴門旅</a></li>
-                                <li><a href="#">C:ぐるっと一周鳴門旅</a></li>
-                                <li><a href="#">D:鳴門おおそと一周旅</a></li>
-                                <li><a href="#">E:キッズが主役旅</a></li>
+                                <li><a href="<?php echo get_permalink(812); ?>">C:ぐるっと一周鳴門旅</a></li>
+                                <li><a href="<?php echo get_permalink(817); ?>">D:鳴門おおそと一周旅</a></li>
+                                <li><a href="<?php echo get_permalink(822); ?>">E:キッズが主役旅</a></li>
                             </ul>
                             <h3 class="overlaymenu_title_purpose">目的で探す</h3>
                             <ul class="overlaymenu_list_purpose">
