@@ -66,15 +66,15 @@
                             </div>
                         </div>
                         <div class="link_wrap">
-                            <h3 class="overlaymenu_title_course">コース別一覧</h3>
+                            <h3 class="overlaymenu_title_course">コースで探す</h3>
                             <ul class="overlaymenu_list_course">
-                                <li><a href="<?php echo get_permalink(324); ?>">コースA</a></li>
-                                <li><a href="<?php echo get_permalink(329); ?>">コースB</a></li>
-                                <li><a href="#">コースC</a></li>
-                                <li><a href="#">コースD</a></li>
-                                <li><a href="#">コースE</a></li>
+                                <li><a href="<?php echo get_permalink(324); ?>">A:鳴門海峡満喫旅</a></li>
+                                <li><a href="<?php echo get_permalink(329); ?>">B:歴史・文化の鳴門旅</a></li>
+                                <li><a href="#">C:ぐるっと一周鳴門旅</a></li>
+                                <li><a href="#">D:鳴門おおそと一周旅</a></li>
+                                <li><a href="#">E:キッズが主役旅</a></li>
                             </ul>
-                            <h3 class="overlaymenu_title_purpose">目的別一覧</h3>
+                            <h3 class="overlaymenu_title_purpose">目的で探す</h3>
                             <ul class="overlaymenu_list_purpose">
                                 <li><a href="<?php echo home_url('/eat'); ?>">食べる</a></li>
                                 <li><a href="<?php echo home_url('/enjoy'); ?>">遊ぶ</a></li>
@@ -161,13 +161,13 @@
                             </a></li>
                         <li><a href="<?php echo get_permalink(817); ?>">
                                 <dl>
-                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_○○○○○.jpg" alt="○○○○○旅"></dt>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_○○○○○.jpg" alt="鳴門おおそと一周旅"></dt>
                                     <dd>鳴門おおそと一周旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="<?php echo get_permalink(822); ?>">
                                 <dl>
-                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_×××××.jpg" alt="×××××旅" alt=""></dt>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_×××××.jpg" alt="キッズが主役旅" alt=""></dt>
                                     <dd>キッズが主役旅</dd>
                                 </dl>
                             </a></li>
