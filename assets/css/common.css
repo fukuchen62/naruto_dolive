@@ -1249,3 +1249,8 @@ img {
     margin-top: 140px;
     margin-left: -20px;
 }
+
+/* 非表示 fukushima add 2023/12/06 */
+.hide {
+    display: none;
+}
