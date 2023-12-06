@@ -71,6 +71,16 @@
                                 </div>
                                 <ul class="overlaymenu_list_icon_list">
                                     <li class="overlaymenu_list_icon_item">
+                                        <!-- 新着情報一覧へのリンク取得 -->
+                                        <?php
+                                        $news = get_term_by('slug', 'news', 'category');
+                                        $news_link = get_term_link($news, 'category');
+                                        ?>
+                                        <a href="<?php echo $news_link; ?>">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/news_icon.svg" width="45" height="45" alt="新着情報一覧へのリンク" decoding="async" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li class="overlaymenu_list_icon_item">
                                         <a href="<?php echo home_url('/column'); ?>">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/column_icon.svg" width="45" height="45" alt="コラム一覧へのリンク" decoding="async" loading="lazy" />
                                         </a>
@@ -83,16 +93,6 @@
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="<?php echo get_permalink(239) ?>">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mypage_icon.svg" width="45" height="45" alt="マイページへのリンク" decoding="async" loading="lazy" />
-                                        </a>
-                                    </li>
-                                    <li class="overlaymenu_list_icon_item">
-                                        <!-- 新着情報一覧へのリンク取得 -->
-                                        <?php
-                                        $news = get_term_by('slug', 'news', 'category');
-                                        $news_link = get_term_link($news, 'category');
-                                        ?>
-                                        <a href="<?php echo $news_link; ?>">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/news_icon.svg" width="45" height="45" alt="新着情報一覧へのリンク" decoding="async" loading="lazy" />
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
