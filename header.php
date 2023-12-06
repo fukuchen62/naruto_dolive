@@ -183,7 +183,7 @@
                             </a></li>
                     </ul>
                 </li>
-                <li><a href="<?php echo $news_link; ?>">新着情報</a>
+                <li><a href="<?php echo $news_link; ?>">新着情報</a></li>
                 <li class="has_child"><a href="<?php echo home_url('/column'); ?>">コラム</a>
                     <ul class="child_wrap">
                         <li><a href="<?php echo get_term_link('about_naruto', 'column_type'); ?>">
