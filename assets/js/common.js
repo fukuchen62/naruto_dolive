@@ -126,7 +126,7 @@ $(mouseTarget).hover(function (e) {
 
 // ▼画面上を走行する車▼
 // 車が表示されているかの判定 falseは非表示
-let carDisplayed = false;
+let carDisplayed = true;
 
 function createCar() {
     // carDisplayedがtrueの場合 つまり車が表示されている間は車の生成をスキップする。車が複数台表示されることを防ぐため
