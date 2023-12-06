@@ -33,7 +33,13 @@ h2 {
   background-color: #fff;
   overflow: hidden;
 }
-
+.news_tab {
+  text-align: center;
+  border-bottom: double #87ceeb;
+  width: 100px;
+  color: black;
+  font-size: large;
+}
 .more_btn_container {
   padding-bottom: 10%;
 }

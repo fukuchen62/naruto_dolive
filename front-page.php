@@ -60,7 +60,7 @@ get_header();
                     <!-- 抜粋の出力 -->
                     <a href="<?php the_permalink(); ?>">
                         <div class="marquee_news <?php echo ($count % 2 === 0) ? 'even' : 'odd'; ?>">
-                            <p>[<?php echo get_the_category()[0]->name; ?>]<?php echo get_the_time('m/d'); ?> <?php the_title(); ?></p>
+                            <p><span class="news_tab"><?php echo get_the_category()[0]->name; ?></span> <?php echo get_the_time('m/d'); ?> <?php the_title(); ?></p>
                         </div>
                     </a>
                 <?php endwhile; ?>
@@ -284,7 +284,7 @@ get_header();
     // ▼TOP-kvのフラッシュ画像表示▼
     var pics_src = [
         "<?php echo get_template_directory_uri(); ?>/assets/img/mypic1.jpg",
-        "<?php echo get_template_directory_uri(); ?>/assets/img/mypic2.JPG",
+        "<?php echo get_template_directory_uri(); ?>/assets/img/mypic2.jpg",
         "<?php echo get_template_directory_uri(); ?>/assets/img/mypic3.jpg",
         "<?php echo get_template_directory_uri(); ?>/assets/img/mypic4.jpg",
         "<?php echo get_template_directory_uri(); ?>/assets/img/mypic5.jpg"
