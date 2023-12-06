@@ -120,17 +120,19 @@ hr {
     }
 }
 
-@media only screen and (max-width:1200px) {
-    .facility_wrap {
-        display: initial;
-    }
-
+@media only screen and (min-width:1200px) {
     .facility_wrap1 {
         width: 50%;
     }
 
     .facility_wrap2 {
         width: 50%;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .facility_wrap {
+        display: initial;
     }
 }
 
@@ -149,6 +151,14 @@ table {
     width: 100%;
 }
 
+th {
+    width: 20%;
+}
+
+td {
+    width: 80%;
+}
+
 th, td {
     height: 100px;
     vertical-align: middle;
@@ -157,14 +167,14 @@ th, td {
     padding: 10px;
 }
 
-/* 営業時間と電話番号の指定 */
+/* 営業時間と電話番号の指定
 tr:nth-child(2) th:nth-child(1) {
     padding: 15px;
 }
 
 tr:nth-child(4) th:nth-child(1) {
     padding: 15px;
-}
+} */
 
 /* マップ */
 .info_map {
