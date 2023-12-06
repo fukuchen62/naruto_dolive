@@ -167,6 +167,7 @@ main:not(.section_kv):not(.teloparea) {
     left: auto;
     height: 100%;
     overflow-y: auto;
+    position: fixed;
 }
 
 .search_box_wrap {
