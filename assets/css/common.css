@@ -126,6 +126,21 @@ main:not(.section_kv):not(.teloparea) {
     overflow: hidden;
 }
 
+.sp_nav_logo a {
+    width: 100%;
+    overflow: hidden;
+}
+
+.sp_nav_logo img,
+.overlaymenu_list_icon_item img {
+    transition: ease 0.3s;
+}
+
+.sp_nav_logo a:hover img,
+.overlaymenu_list_icon_item a:hover img {
+    transform: scale(1.2);
+}
+
 .sp_nav_logo img {
     width: 90px;
     margin-left: 1.5rem;
@@ -629,6 +644,7 @@ ul.overlaymenu_list_icon_list {
 
 .card1_content h4 {
     padding: 10px 0;
+    line-height: 1.1;
 }
 
 .card1_text {
