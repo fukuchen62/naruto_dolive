@@ -284,7 +284,7 @@ get_header();
     // ▼TOP-kvのフラッシュ画像表示▼
     var pics_src = [
         "<?php echo get_template_directory_uri(); ?>/assets/img/mypic1.jpg",
-        "<?php echo get_template_directory_uri(); ?>/assets/img/mypic2.JPG",
+        "<?php echo get_template_directory_uri(); ?>/assets/img/mypic2.jpg",
         "<?php echo get_template_directory_uri(); ?>/assets/img/mypic3.jpg",
         "<?php echo get_template_directory_uri(); ?>/assets/img/mypic4.jpg",
         "<?php echo get_template_directory_uri(); ?>/assets/img/mypic5.jpg"
