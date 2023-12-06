@@ -3,21 +3,33 @@
 // コラム個別色
 const pageH2 = document.querySelector(".page_title");
 const topArea = document.querySelector(".toparea");
-const purposeBtns = document.querySelectorAll(".purpose_btn");
 const pageTitle = pageH2.textContent;
+const purposeBtns = document.querySelectorAll(".purpose_btn");
+console.log(pageTitle);
+
+// コラムの色変更
+
 if (pageTitle === "名物" || pageTitle === "名物一覧" || pageTitle === "カテゴリ別：名物") {
     pageH2.style.color = "#FEB59B";
     topArea.style.backgroundColor = "#FF7162";
 } else if (pageTitle === "過ごし方" || pageTitle === "過ごし方一覧" || pageTitle === "カテゴリ別：過ごし方") {
     pageH2.style.color = "#6AB0A3";
     topArea.style.backgroundColor = "#3B645F";
+    console.log("test1");
 } else if (pageTitle === "鳴門について" || pageTitle === "鳴門について一覧" || pageTitle === "カテゴリ別：鳴門について") {
     pageH2.style.color = "#5E83EA";
     topArea.style.backgroundColor = "#9AC4F7";
+    console.log("test2");
 } else if (pageTitle === "その他" || pageTitle === "その他一覧" || pageTitle === "カテゴリ別：その他") {
     pageH2.style.color = "#B042BD ";
     topArea.style.backgroundColor = "#A271C8";
-} else if (pageTitle === "食べる" || pageTitle === "目的別一覧：食べる" || pageTitle === "カテゴリ別：和食" || pageTitle === "カテゴリ別：洋食" || pageTitle === "カテゴリ別：中華" || pageTitle === "カテゴリ別：スイーツ" || pageTitle === "カテゴリ別：その他") {
+} else{
+    console.log("test3");
+}
+
+// 目的別の色変更
+
+ if (pageTitle === "食べる" || pageTitle === "目的別一覧：食べる" || pageTitle === "カテゴリ別：和食" || pageTitle === "カテゴリ別：洋食" || pageTitle === "カテゴリ別：中華" || pageTitle === "カテゴリ別：スイーツ" || pageTitle === "カテゴリ別：その他") {
     // 目的別色
     // 赤
     pageH2.style.color = "#F8A59B";
@@ -46,6 +58,7 @@ if (pageTitle === "名物" || pageTitle === "名物一覧" || pageTitle === "カ
 }
 
 
+
 // 新着情報個別色
 if (pageTitle === "ニュース" || pageTitle === "ニュース一覧") {
     pageH2.style.color = "#33F3FF";
@@ -58,7 +71,3 @@ if (pageTitle === "ニュース" || pageTitle === "ニュース一覧") {
     topArea.style.backgroundColor = "#FF188A";
 }
 
-
-// コースの色変更
-
-console.log("test");

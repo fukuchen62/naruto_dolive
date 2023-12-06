@@ -3,19 +3,17 @@ get_header();
 ?>
 
 <main>
+    <!-- ターム取得 -->
+    <?php
+    $current_page_id = get_the_ID();
+    $taxonomy = 'column_type';
+    $terms = get_the_terms($current_page_id, $taxonomy);
+    if (!empty($terms) && !is_wp_error($terms)) {
+        $term = $terms[0]->name;
+    }
+    ?>
     <!-- h1に変わるかも  -->
-    <h2 id="toparea" class="toparea page_title">
-        <!-- ターム取得 -->
-        <?php
-        $current_page_id = get_the_ID();
-        $taxonomy = 'column_type';
-        $terms = get_the_terms($current_page_id, $taxonomy);
-        if (!empty($terms) && !is_wp_error($terms)) {
-            $term = $terms[0]->name;
-        }
-        ?>
-        <?php echo $term; ?>
-    </h2>
+    <h2 id="toparea" class="toparea page_title"><?php echo $term; ?></h2>
 
     <div class="main_wrap">
         <?php get_template_part('template-parts/breadcrumb'); ?>
