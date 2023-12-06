@@ -53,8 +53,7 @@
                             <img src="<?php echo $pic1_url ?>" alt="掲載写真">
                         </div>
                         <div>
-                            <p class="course_facility"><?php the_field('spot1_title');
-                                                        echo '：' . $stay_time1; ?></p>
+                            <p class="course_facility"><?php the_field('spot1_title'); ?></p>
                             <p class="course_facility_info"><?php the_field('spot1_excerpt'); ?></p>
                         </div>
                     </div>
@@ -382,3 +381,5 @@
 </script>
 
 <?php get_footer() ?>
+
+<a href="https://www.naruto-mon.jp/" target="_blank"></a>
