@@ -27,23 +27,6 @@
 <?php wp_head(); ?>
 
 <body>
-    <!-- カード型(1カラムver)テンプレートパーツ化しました
-    <div>
-        <a href="" class="card1">
-            <div class="card1_wrap">
-                <div class="card1_content">
-                    <div class="card1_img">
-                        <img src="" alt="サムネイル">
-                    </div>
-                    <h4></h4>
-                    <div class="card1_text"></div>
-                </div>
-            </div>
-        </a>
-    </div> -->
-    <!--
-        決定事項がまとまったパワポファイルが【https://docs.google.com/presentation/d/1UH-e8r4syRd-EFv8QS8rbK_M89gBjzaU/edit?usp=drive_link&ouid=114449549919721686995&rtpof=true&sd=true】にあるので参照してください！
-    -->
     <div id="stkr" class="sp_none">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/maincar_icon.png" alt="" class="car_img">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" alt="" class="gas">
@@ -161,7 +144,7 @@
                             </a></li>
                         <li><a href="<?php echo get_permalink(817); ?>">
                                 <dl>
-                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_○○○○○.jpg" alt="鳴門おおそと一周旅"></dt>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_largeround.jpg" alt="鳴門おおそと一周旅"></dt>
                                     <dd>鳴門おおそと一周旅</dd>
                                 </dl>
                             </a></li>
