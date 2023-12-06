@@ -44,7 +44,7 @@ get_header();
                     ?>
                 </ul>
                 <h4 class="sitemap_table">目的別一覧</h4>
-                <h5><a href="#">食べる</a></h5>
+                <h5><a href="<?php echo home_url('/eat') ?>">食べる</a></h5>
                 <?php $eat_types = get_terms(array('taxonomy' => 'eat_type'));
                 if (!empty($eat_types)) : ?>
                     <ul class="sitemap_list">
