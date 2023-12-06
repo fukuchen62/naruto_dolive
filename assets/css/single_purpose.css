@@ -274,6 +274,10 @@ a.card1 {
         height: 500px;
     }
 
+    .card1_img img {
+        width: 300px;
+    }
+
     .card1_text {
         height: 100px;
     }
