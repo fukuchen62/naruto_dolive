@@ -691,6 +691,10 @@ h2.title_pickupcolumn {
   object-fit: cover;
 }
 
+div#sbi_load {
+  display: none;
+}
+
 .instagram_follow {
   text-align: center;
   padding-bottom: 10%;
@@ -752,6 +756,10 @@ h2.title_pickupcolumn {
   background-color: #bc2a8d;
   box-shadow: 0 0 2px #333;
   transform: translate(5px, 5px);
+}
+
+div#sb_instagram {
+  padding-bottom: 0 !important;
 }
 
 /* ~~~~~~~~~~~~タブレット表示~~~~~~~~~~~~ */
