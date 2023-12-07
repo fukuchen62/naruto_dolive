@@ -611,6 +611,10 @@ h2.title_pickupcolumn {
   position: relative;
   height: 150px;
   overflow: hidden;
+  background-image: url(../img/animated.svg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 500px auto;
 }
 
 .moving_text {
@@ -752,7 +756,7 @@ h2.title_pickupcolumn {
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media (min-width: 1024px) {
+@media (min-width: 1350px) {
   .instagram_grid {
     grid-template-columns: repeat(4, 1fr);
     margin-left: calc(100% / 6);
