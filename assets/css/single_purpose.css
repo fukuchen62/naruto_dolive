@@ -167,6 +167,10 @@ th, td {
     padding: 10px;
 }
 
+td a:hover {
+    color: orange;
+}
+
 /* 営業時間と電話番号の指定
 tr:nth-child(2) th:nth-child(1) {
     padding: 15px;
@@ -205,29 +209,24 @@ tr:nth-child(4) th:nth-child(1) {
 /* 3カラム */
 .card_3col {
     display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
     gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 /* ▼1カラムカード▼ */
-a.card1 {
-    flex-basis: auto;
-}
 
 .card1_wrap {
-    height: 450px;
-    margin: 0 auto;
+    width: 280px;
     border: 3px solid #000;
     box-shadow: 5px 5px 0 #000;
 }
 
-.card1:hover {
-    transform: translate(3px, 3px);
-}
-
 .card1_content {
-    padding: 25px;
+    padding: 30px 30px 10px;
+
 }
 
 .card1_img {
@@ -235,25 +234,23 @@ a.card1 {
 }
 
 .card1_img img {
-    border: 3px solid #000;
+    border: 1px solid #000;
     width: 240px;
     height: 184px;
     object-fit: cover;
 }
 
 .card1_content>h4 {
-    margin: 20px auto;
-    padding: 0;
-    height: clamp(2.5rem, 1.529rem + 4.14vw, 6.5rem);
+    padding: 20px 0;
+    border-left: none;
+    height: clamp(4.5rem, 3.529rem + 4.14vw, 8.5rem);
+    line-height: 1.1;
 }
 
 .card1_text {
-    display: flex;
-    align-items: center;
-    height: 80px;
     border: 1px solid #000;
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 5px 10px;
+    height: 60px;
 }
 
 .card1_tag {
@@ -262,25 +259,38 @@ a.card1 {
     height: 50px;
     border: 1px solid #000;
     padding: 10px;
+    margin: 20px 0;
 }
 
 .card1_tag img {
     width: 30px;
-    height: 30px;
 }
 
-@media only screen and (min-width:520px) {
+@media (min-width: 676px) and (max-width: 1461px) {
+    .card1_text {
+        height: 80px;
+    }
+}
+
+@media only screen and (min-width:1462px) {
+
+    /* 3カラム列 */
+    .card_3col {
+        max-width: 1200px;
+    }
+
     .card1_wrap {
         width: 350px;
         height: clamp(30.938rem, 29.73rem + 3.72vw, 34.375rem);
     }
 
     .card1_img img {
-        width: 300px;
+        width: 280px;
     }
 
     .card1_text {
-        height: 100px;
+        padding: 5px 10px;
+        height: 60px;
     }
 
     .card1_tag {
@@ -289,7 +299,6 @@ a.card1 {
 
     .card1_tag img {
         width: 35px;
-        height: 35px;
     }
 
 }

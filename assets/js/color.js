@@ -12,7 +12,7 @@ if (pageTitle === "名物" || pageTitle === "名物一覧" || pageTitle === "カ
     pageH2.style.color = "#FEB59B";
     topArea.style.backgroundColor = "#FF7162";
 } else if (pageTitle === "過ごし方" || pageTitle === "過ごし方一覧" || pageTitle === "カテゴリ別：過ごし方") {
-    pageH2.style.color = "#6AB0A3";
+    pageH2.style.color = "#97F7E5";
     topArea.style.backgroundColor = "#3B645F";
     console.log("test1");
 } else if (pageTitle === "鳴門について" || pageTitle === "鳴門について一覧" || pageTitle === "カテゴリ別：鳴門について") {
@@ -26,7 +26,7 @@ if (pageTitle === "名物" || pageTitle === "名物一覧" || pageTitle === "カ
 
 // 目的別の色変更
 
- if (pageTitle === "食べる" || pageTitle === "目的別一覧：食べる" || pageTitle === "カテゴリ別：和食" || pageTitle === "カテゴリ別：洋食" || pageTitle === "カテゴリ別：中華" || pageTitle === "カテゴリ別：スイーツ" || pageTitle === "カテゴリ別：その他") {
+if (pageTitle === "食べる" || pageTitle === "目的別一覧：食べる" || pageTitle === "カテゴリ別：和食" || pageTitle === "カテゴリ別：洋食" || pageTitle === "カテゴリ別：中華" || pageTitle === "カテゴリ別：スイーツ" || pageTitle === "カテゴリ別：その他") {
     // 目的別色
     // 赤
     pageH2.style.color = "#F8A59B";
@@ -67,4 +67,3 @@ if (pageTitle === "ニュース" || pageTitle === "ニュース一覧") {
     pageH2.style.color = "#FF93C8";
     topArea.style.backgroundColor = "#FF188A";
 }
-

@@ -322,7 +322,9 @@ h4 {
 
 .req_time {
     border-left: none;
+    width: 120px;
 }
+
 
 @media (min-width: 768px) {
 
@@ -333,4 +335,5 @@ h4 {
     .req_time {
         width: 140%;
     }
+
 }
