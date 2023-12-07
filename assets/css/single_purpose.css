@@ -167,6 +167,10 @@ th, td {
     padding: 10px;
 }
 
+td a:hover{
+    color: orange;
+}
+
 /* 営業時間と電話番号の指定
 tr:nth-child(2) th:nth-child(1) {
     padding: 15px;

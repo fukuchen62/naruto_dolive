@@ -47,13 +47,13 @@ $(document).ready(function () {
     });
     jQuery('.course2').on('click', function () {
         clear_all();
-        // $('#guruttoissyuunaruto').attr('display', "block");
-        $('#guruttoissyuunaruto').removeClass('hide');
+        // $('#rekishibunkanonaruto').attr('display', "block")
+        $('#rekishibunkanonaruto').removeClass('hide');
     });
     jQuery('.course3').on('click', function () {
         clear_all();
-        // $('#rekishibunkanonaruto').attr('display', "block")
-        $('#rekishibunkanonaruto').removeClass('hide');;
+        // $('#guruttoissyuunaruto').attr('display', "block");
+        $('#guruttoissyuunaruto').removeClass('hide');
     });
     jQuery('.course4').on('click', function () {
         clear_all();
@@ -76,12 +76,12 @@ function clear_all() {
     // 鳴門海峡満喫旅
     // $('#narutokaikyoumankitu').attr('display', "none");
     $('#narutokaikyoumankitu').addClass('hide');
-    // ぐるっと一周鳴門旅
-    // $('#guruttoissyuunaruto').attr('display', "none");
-    $('#guruttoissyuunaruto').addClass('hide');
     // 歴史・文化の鳴門旅
     // $('#rekishibunkanonaruto').attr('display', "none");
     $('#rekishibunkanonaruto').addClass('hide');
+    // ぐるっと一周鳴門旅
+    // $('#guruttoissyuunaruto').attr('display', "none");
+    $('#guruttoissyuunaruto').addClass('hide');
     // 鳴門おおそと一周旅
     // $('#narutooosotoissyuu').attr('display', "none");
     $('#narutooosotoissyuu').addClass('hide');

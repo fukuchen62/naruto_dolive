@@ -67,8 +67,12 @@ h4 {
 }
 
 /* 記事本文 */
-.card2_text {
+.card2_text a {
     padding: 10px;
+}
+
+.card2_text a:hover{
+    color: orange;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
