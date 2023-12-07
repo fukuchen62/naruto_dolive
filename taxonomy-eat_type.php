@@ -8,23 +8,99 @@
     <div class="main_wrap">
         <!-- パンくずリスト -->
         <?php get_template_part('template-parts/breadcrumb'); ?>
+        <div class="content_wrap">
 
-        <!-- 選択したタクソノミーをタイトルで表示 -->
-        <div class="center_title">
-            <h3 class="middle_title"><?php single_term_title(''); ?></h3>
-        </div><!-- center_title -->
+            <!-- 選択したタクソノミーをタイトルで表示 -->
+            <div class="center_title">
+                <h3 class="middle_title"><?php single_term_title(''); ?></h3>
+            </div><!-- center_title -->
 
-        <!---- 地図とカテゴリ別サイドバー ---->
-        <div class="menu_wrap">
-            <!---- 地図 ---->
-            <div class="map_content" id="map">
+            <!---- 地図とカテゴリ別サイドバー ---->
+            <div class="menu_wrap">
+                <!---- 地図 ---->
+                <div class="map_content" id="map">
 
-            </div><!-- class="map_content" id="map"-->
+                </div><!-- class="map_content" id="map"-->
 
-            <!---- pc版カテゴリ別サイドバー ---->
-            <aside class="aside_wrap aside_top">
+                <!---- pc版カテゴリ別サイドバー ---->
+                <aside class="aside_wrap aside_top">
+                    <div class="aside_title">━━ カテゴリ別 ━━
+                    </div><!-- aside_title-->
+                    <ul>
+                        <li>
+                            <a href="<?php echo home_url('/eat') ?>">食べる(
+                                <?php
+                                $count_custom = wp_count_posts('eat');
+                                $num = $count_custom->publish;
+                                echo $num; ?>
+                                )
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo home_url('/enjoy') ?>">遊ぶ(
+                                <?php
+                                $count_custom = wp_count_posts('enjoy');
+                                $num = $count_custom->publish;
+                                echo $num; ?>
+                                )
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo home_url('/tour') ?>">観光(
+                                <?php
+                                $count_custom = wp_count_posts('tour');
+                                $num = $count_custom->publish;
+                                echo $num; ?>
+                                )
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo home_url('/stay') ?>">宿泊(
+                                <?php
+                                $count_custom = wp_count_posts('stay');
+                                $num = $count_custom->publish;
+                                echo $num; ?>
+                                )
+                            </a>
+                        </li>
+                    </ul>
+                </aside><!-- aside_wrap aside_top-->
+            </div><!-- menu_wrap -->
+            <div class="archive_col">
+                <div class="card_3col">
+                    <!-- 記事がある分表示させる -->
+                    <?php if (have_posts()) : ?>
+                        <?php while (have_posts()) : the_post(); ?>
+                            <!-- ここに内容を表示させる -->
+                            <?php get_template_part('template-parts/loop', 'content'); ?>
+                            <?php
+                            $latitude = get_post_meta(get_the_ID(), 'latitude', true);
+                            $longitude = get_post_meta(get_the_ID(), 'longitude', true);
+                            $facilityName = get_the_title();
+
+                            $place[] = array(
+                                'lat' => $latitude,
+                                'lng' => $longitude,
+                                'facilityName' => $facilityName
+                            );
+                            ?>
+                        <?php endwhile; ?>
+                    <?php endif ?>
+                </div><!-- card_3col -->
+
+                <!-- ひとつ前のページに戻るボタン -->
+                <div class="close_btn">
+                    <a href="<?php echo home_url('/eat') ?>">
+                        <div class="close_link">
+                            <span class="close">back</span>
+                        </div><!-- close_link -->
+                    </a>
+                </div><!-- close_btn -->
+            </div><!-- archive_col -->
+            <!-- スマホ版カテゴリ別サイドバー -->
+            <aside class="aside_wrap aside_bottom">
                 <div class="aside_title">━━ カテゴリ別 ━━
-                </div><!-- aside_title-->
+                </div><!-- aside_title -->
                 <ul>
                     <li>
                         <a href="<?php echo home_url('/eat') ?>">食べる(
@@ -63,82 +139,8 @@
                         </a>
                     </li>
                 </ul>
-            </aside><!-- aside_wrap aside_top-->
-        </div><!-- menu_wrap -->
-        <div class="archive_col">
-            <div class="card_3col">
-                <!-- 記事がある分表示させる -->
-                <?php if (have_posts()) : ?>
-                    <?php while (have_posts()) : the_post(); ?>
-                        <!-- ここに内容を表示させる -->
-                        <?php get_template_part('template-parts/loop', 'content'); ?>
-                        <?php
-                        $latitude = get_post_meta(get_the_ID(), 'latitude', true);
-                        $longitude = get_post_meta(get_the_ID(), 'longitude', true);
-                        $facilityName = get_the_title();
-
-                        $place[] = array(
-                            'lat' => $latitude,
-                            'lng' => $longitude,
-                            'facilityName' => $facilityName
-                        );
-                        ?>
-                    <?php endwhile; ?>
-                <?php endif ?>
-            </div><!-- card_3col -->
-
-            <!-- ひとつ前のページに戻るボタン -->
-            <div class="close_btn">
-                <a href="<?php echo home_url('/eat') ?>">
-                    <div class="close_link">
-                        <span class="close">back</span>
-                    </div><!-- close_link -->
-                </a>
-            </div><!-- close_btn -->
-        </div><!-- archive_col -->
-        <!-- スマホ版カテゴリ別サイドバー -->
-        <aside class="aside_wrap aside_bottom">
-            <div class="aside_title">━━ カテゴリ別 ━━
-            </div><!-- aside_title -->
-            <ul>
-                <li>
-                    <a href="<?php echo home_url('/eat') ?>">食べる(
-                        <?php
-                        $count_custom = wp_count_posts('eat');
-                        $num = $count_custom->publish;
-                        echo $num; ?>
-                        )
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo home_url('/enjoy') ?>">遊ぶ(
-                        <?php
-                        $count_custom = wp_count_posts('enjoy');
-                        $num = $count_custom->publish;
-                        echo $num; ?>
-                        )
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo home_url('/tour') ?>">観光(
-                        <?php
-                        $count_custom = wp_count_posts('tour');
-                        $num = $count_custom->publish;
-                        echo $num; ?>
-                        )
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo home_url('/stay') ?>">宿泊(
-                        <?php
-                        $count_custom = wp_count_posts('stay');
-                        $num = $count_custom->publish;
-                        echo $num; ?>
-                        )
-                    </a>
-                </li>
-            </ul>
-        </aside><!-- aside_wrap aside_bottom -->
+            </aside><!-- aside_wrap aside_bottom -->
+        </div><!-- content_wrap -->
     </div><!-- main_wrap -->
 </main>
 
