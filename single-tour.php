@@ -348,7 +348,7 @@
                                         </div><!-- card1_img -->
 
                                         <!-- 店名の表示 -->
-                                        <h4><?php echo mb_substr(get_the_title(), 0, 10) . '…'; ?></h4>
+                                        <h4><?php echo (get_the_title()); ?></h4>
 
                                         <!-- 抜粋の表示 -->
                                         <div class="card1_text">
