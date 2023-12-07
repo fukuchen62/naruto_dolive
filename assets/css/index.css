@@ -517,13 +517,15 @@ h2.title_pickupcolumn {
 }
 
 .purpose_delaywrap {
-  max-width: 100%;
+  width: 100%;
   height: 150px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   flex-flow: row nowrap;
   overflow: hidden;
+  position: absolute;
+  left: 20px;
 }
 
 .purpose_delaywrap_box {
