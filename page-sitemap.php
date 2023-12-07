@@ -8,7 +8,8 @@ get_header();
 
 
 <main>
-    <h2>サイトマップ</h2>
+    <section id="toparea" class="toparea">
+        <h2>サイトマップ</h2>
     </section>
     <div class="main_wrap">
         <div class="breadcrumb"><?php get_template_part('template-parts/breadcrumb'); ?></div>
@@ -121,6 +122,9 @@ get_header();
         <li><a href="https://www.instagram.com/narutodolive/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank">インスタ</a></li>
         <li><a href="<?php echo home_url('/mypage') ?>">マイページ</a></li>
         <li><a href="<?php echo home_url('/q_a') ?>">Q &amp; A</a></li>
+        <li><a href="<?php echo home_url('naruto_dolive') ?>">このサイトについて</a></li>
+        <li><a href="<?php echo home_url('privacy-policy') ?>">プライバシーポリシー</a></li>
+
     </ul>
             </div>
 

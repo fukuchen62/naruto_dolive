@@ -101,6 +101,7 @@ h4 {
     .sitemap_list {
         display: flex;
         flex-wrap: wrap;
+        max-width: 56vw;
         margin: 20px 10%;
         gap: 20px;
         width: 100%;

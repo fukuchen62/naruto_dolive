@@ -3,6 +3,8 @@ const carWrapper = document.querySelector(".car_wrap");
 const course = document.querySelector('.course_wrap');
 const reqTime = document.querySelector(".req_time");
 const coordinate = document.querySelector(".coordinate");
+const title = document.querySelector(".course_title");
+const titleText = title.textContent;
 //   cardを全て取得し、変数に入れる
 const cards = document.querySelectorAll(".course_details_card");
 
@@ -31,19 +33,40 @@ window.addEventListener("scroll", ()=>{
             labelText =  "移動時間\n"+ move_time3;
         }
         if(car_x >= cardXValues[2] + 200){
-            labelText =  "移動時間\n"+ move_time4;
+            if(titleText === "キッズが主役旅"){
+                labelText =  "合計時間\n2時間30分"
+            }else{
+                labelText =  "移動時間\n"+ move_time4;
+            }
         }
         if(car_x >= cardXValues[3] + 200){
-            labelText = "移動時間\n"+ move_time5;
+            if(titleText === "鳴門海峡満喫旅"){
+                labelText =  "合計時間\n4時間30分"
+            }else{
+                labelText =  "移動時間\n"+ move_time5;
+            }
         }
         if(car_x >= cardXValues[4] + 200){
-            labelText = "移動時間\n"+ move_time6;
+            if(titleText === "ぐるっと一周鳴門旅"){
+                labelText =  "合計時間\n4時間"
+            }else{
+                labelText =  "移動時間\n"+ move_time6;
+            }
         }
         if(car_x >= cardXValues[5] + 200){
-            labelText = "移動時間\n"+ move_time7;
+            if(titleText === "歴史・文化の鳴門旅"){
+                labelText =  "合計時間\n3時間30分"
+            }else{
+                labelText =  "移動時間\n"+ move_time7;
+            }
         }
         if(car_x >= cardXValues[6] + 200){
-            labelText = "移動時間\n"+ move_time8;
+            if(titleText === "鳴門おおそと一周旅"){
+                labelText =  "合計時間\n6時間30分"
+            }else{
+                labelText =  "移動時間\n"+ move_time8;
+            }
+            
         }
         if(car_x >= cardXValues[7] + 200){
             labelText = "移動時間\n"+ move_time9;
