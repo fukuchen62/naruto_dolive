@@ -100,6 +100,9 @@ $(document).ready(function () {
         // 対応するリンクを取得し、現在のリンクを更新する
         const targetLink = $(this).data('link');
         currentLink = targetLink;
+
+        $('#detailButton').attr('href', currentLink);
+        
     });
 
     // 詳細ボタンクリック時の処理
