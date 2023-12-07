@@ -24,28 +24,28 @@ window.addEventListener("scroll", ()=>{
     let labelText = "スタート\n"+start_time;
 
     for (let i = 0; i < cardXValues.length - 1; i++) {
-        if (car_x >= cardXValues[0] + 50 ) {
+        if (car_x >= cardXValues[0] + 200 ) {
             labelText = "移動時間\n"+ move_time2;
         } 
-        if(car_x >= cardXValues[1] + 50){
+        if(car_x >= cardXValues[1] + 200){
             labelText =  "移動時間\n"+ move_time3;
         }
-        if(car_x >= cardXValues[2] + 50){
+        if(car_x >= cardXValues[2] + 200){
             labelText =  "移動時間\n"+ move_time4;
         }
-        if(car_x >= cardXValues[3] + 50){
+        if(car_x >= cardXValues[3] + 200){
             labelText = "移動時間\n"+ move_time5;
         }
-        if(car_x >= cardXValues[4] + 50){
+        if(car_x >= cardXValues[4] + 200){
             labelText = "移動時間\n"+ move_time6;
         }
-        if(car_x >= cardXValues[5] + 50){
+        if(car_x >= cardXValues[5] + 200){
             labelText = "移動時間\n"+ move_time7;
         }
-        if(car_x >= cardXValues[6] + 50){
+        if(car_x >= cardXValues[6] + 200){
             labelText = "移動時間\n"+ move_time8;
         }
-        if(car_x >= cardXValues[7] + 50){
+        if(car_x >= cardXValues[7] + 200){
             labelText = "移動時間\n"+ move_time9;
         }
 
@@ -70,11 +70,5 @@ window.addEventListener("scroll", ()=>{
         carWrapper.style.top = 0 + 'px';
     }
 
-    console.log(course.offsetTop);
-    console.log(window.pageYOffset + 200);
 });
-
-
-
-// 以下はPHPの変数
 
