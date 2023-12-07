@@ -69,9 +69,10 @@ h4 {
 /* 記事本文 */
 .card2_text a {
     padding: 10px;
+    word-break: break-all;
 }
 
-.card2_text a:hover{
+.card2_text a:hover {
     color: orange;
 }
 
