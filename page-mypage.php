@@ -19,7 +19,7 @@ get_header();
 
                 <p>3.ブックマークにはCookieを使用しています。</p>
 
-                <p>4.Cookieの削除に伴いブックマークした情報も削除されます</p>
+                <p>4.Cookieの削除に伴いブックマークした情報も削除されます。</p>
             </div>
 
             <section class="archive_col">

@@ -444,7 +444,7 @@ h2.title_pickupcolumn {
 
 .column-container {
   width: clamp(18.75rem, 6.718rem + 51.33vw, 50rem);
-  height: 190px;
+  height: 200px;
   display: flex;
   margin: auto;
   margin-bottom: 5%;
@@ -517,13 +517,15 @@ h2.title_pickupcolumn {
 }
 
 .purpose_delaywrap {
-  max-width: 100%;
+  width: 100%;
   height: 150px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   flex-flow: row nowrap;
   overflow: hidden;
+  position: absolute;
+  left: 20px;
 }
 
 .purpose_delaywrap_box {
@@ -547,6 +549,13 @@ h2.title_pickupcolumn {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
+}
+
+/* ~~~~~~~~~~~~小さいSP表示~~~~~~~~~~~~ */
+@media (max-width: 400px) {
+  .column-text h3 {
+    font-size: 16px;
+  }
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
