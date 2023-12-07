@@ -213,8 +213,9 @@ section {
 
     /* サムネイル画像設定 */
     .thumbnail_img img {
-        width: 240px;
+        width: 280px;
     }
+
 
     /* カード説明幅 */
     .card_text {

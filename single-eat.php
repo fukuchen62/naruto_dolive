@@ -129,7 +129,12 @@
                             <th>電話番号</th><!-- 必須 -->
                             <td><?php the_field('tel'); ?></td>
                         </tr>
-
+                        <?php if (get_field('chair')) : ?>
+                            <tr>
+                                <th>席数</th>
+                                <td><?php the_field('chair'); ?></td>
+                            </tr>
+                        <?php endif; ?>
 
 
 
@@ -138,7 +143,7 @@
                             <tr>
                                 <th>ホームページ</th>
                                 <td>
-                                    <a href="<?php the_field('url'); ?>">
+                                    <a href="<?php the_field('url'); ?>" target="_blank">
                                         <?php the_field('url'); ?>
                                     </a>
                                 </td>
@@ -340,7 +345,8 @@
                                             <?php endif; ?>
 
                                             <!-- 喫煙のアイコンの出力 -->
-                                            <?php if (get_field('smoking')) : ?>
+                                            <?php $smoking = get_field('smoking'); ?>
+                                            <?php if ($smoking !== '' && $smoking !== '喫煙スペースなし') : ?>
                                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/smoking_ico.png" />
                                             <?php endif; ?>
 

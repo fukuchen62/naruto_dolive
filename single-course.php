@@ -43,7 +43,7 @@
                 ?>
                 <a href="<?php echo get_field('page_link'); ?>">
                     <div class="course_details_card">
-                        <div>
+                        <div class="course_imgbox">
                             <?php
                             $pic1 = get_field('spot1_thum');
                             //大サイズ画像のURL
@@ -51,7 +51,7 @@
                             ?>
                             <img src="<?php echo $pic1_url ?>" alt="掲載写真">
                         </div>
-                        <div>
+                        <div class="course_textbox">
                             <p class="course_facility"><?php the_field('spot1_title'); ?></p>
                             <p class="course_facility_info"><?php the_field('spot1_excerpt'); ?></p>
                         </div>
@@ -65,7 +65,7 @@
                 ?>
                 <a href="<?php echo get_field('page_link2'); ?>">
                     <div class="course_details_card">
-                        <div>
+                        <div class="course_imgbox">
                             <?php
                             $pic2 = get_field('spot2_thum');
                             //大サイズ画像のURL
@@ -73,7 +73,7 @@
                             ?>
                             <img src="<?php echo $pic2_url ?>" alt="掲載写真">
                         </div>
-                        <div>
+                        <div class="course_textbox">
                             <p class="course_facility"><?php the_field('spot2_title');
                                                         echo '：' . $stay_time2; ?></p>
                             <p class="course_facility_info"><?php the_field('spot2_excerpt'); ?></p>
@@ -96,10 +96,10 @@
                 ?>
                     <a href="<?php echo $page_link3 ?>">
                         <div class="course_details_card">
-                            <div>
+                            <div class="course_imgbox">
                                 <img src="<?php echo $pic3_url ?>" alt="掲載写真">
                             </div>
-                            <div>
+                            <div class="course_textbox">
                                 <p class="course_facility"><?php the_field('spot3_title');
                                                             echo '：' . $stay_time3; ?></p>
                                 <p class="course_facility_info"><?php echo $spot3_excerpt ?></p>
@@ -124,10 +124,10 @@
                 ?>
                     <a href="<?php echo $page_link4 ?>">
                         <div class="course_details_card">
-                            <div>
+                            <div class="course_imgbox">
                                 <img src="<?php echo $pic1_url ?>" alt="掲載写真">
                             </div>
-                            <div>
+                            <div class="course_textbox">
                                 <p class="course_facility"><?php the_field('spot4_title');
                                                             echo '：' . $stay_time4; ?></p>
                                 <p class="course_facility_info"><?php echo $spot4_excerpt ?></p>
@@ -152,10 +152,10 @@
                 ?>
                     <a href="<?php echo $page_link5 ?>">
                         <div class="course_details_card">
-                            <div>
+                            <div class="course_imgbox">
                                 <img src="<?php echo $pic5_url ?>" alt="掲載写真">
                             </div>
-                            <div>
+                            <div class="course_textbox">
                                 <p class="course_facility"><?php the_field('spot5_title');
                                                             echo '：' . $stay_time5; ?></p>
                                 <p class="course_facility_info"><?php echo $spot5_excerpt ?></p>
@@ -180,10 +180,10 @@
                 ?>
                     <a href="<?php echo $page_link6 ?>">
                         <div class="course_details_card">
-                            <div>
+                            <div class="course_imgbox">
                                 <img src="<?php echo $pic6_url ?>" alt="掲載写真">
                             </div>
-                            <div>
+                            <div class="course_textbox">
                                 <p class="course_facility"><?php the_field('spot6_title');
                                                             echo '：' . $stay_time6; ?></p>
                                 <p class="course_facility_info"><?php echo $spot6_excerpt ?></p>
@@ -208,10 +208,10 @@
                 ?>
                     <a href="<?php echo $page_link7 ?>">
                         <div class="course_details_card">
-                            <div>
+                            <div class="course_imgbox">
                                 <img src="<?php echo $pic7_url ?>" alt="掲載写真">
                             </div>
-                            <div>
+                            <div class="course_textbox">
                                 <p class="course_facility"><?php the_field('spot7_title');
                                                             echo '：' . $stay_time7; ?></p>
                                 <p class="course_facility_info"><?php echo $spot7_excerpt ?></p>
@@ -235,10 +235,10 @@
                 ?>
                     <a href="<?php echo $page_link8 ?>">
                         <div class="course_details_card">
-                            <div>
+                            <div class="course_imgbox">
                                 <img src="<?php echo $pic8_url ?>" alt="掲載写真">
                             </div>
-                            <div>
+                            <div class="course_textbox">
                                 <p class="course_facility"><?php the_field('spot8_title');
                                                             echo '：' . $stay_time8; ?></p>
                                 <p class="course_facility_info"><?php echo $spot8_excerpt ?></p>
@@ -263,10 +263,10 @@
                 ?>
                     <a href="<?php echo $page_link9 ?>">
                         <div class="course_details_card">
-                            <div>
+                            <div class="course_imgbox">
                                 <img src="<?php echo $pic9_url ?>" alt="掲載写真">
                             </div>
-                            <div>
+                            <div class="course_textbox">
                                 <p class="course_facility"><?php the_field('spot9_title');
                                                             echo '：' . $stay_time9; ?></p>
                                 <p class="course_facility_info"><?php echo $spot9_excerpt ?></p>

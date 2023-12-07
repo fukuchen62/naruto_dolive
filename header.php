@@ -27,23 +27,6 @@
 <?php wp_head(); ?>
 
 <body>
-    <!-- カード型(1カラムver)テンプレートパーツ化しました
-    <div>
-        <a href="" class="card1">
-            <div class="card1_wrap">
-                <div class="card1_content">
-                    <div class="card1_img">
-                        <img src="" alt="サムネイル">
-                    </div>
-                    <h4></h4>
-                    <div class="card1_text"></div>
-                </div>
-            </div>
-        </a>
-    </div> -->
-    <!--
-        決定事項がまとまったパワポファイルが【https://docs.google.com/presentation/d/1UH-e8r4syRd-EFv8QS8rbK_M89gBjzaU/edit?usp=drive_link&ouid=114449549919721686995&rtpof=true&sd=true】にあるので参照してください！
-    -->
     <div id="stkr" class="sp_none">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/maincar_icon.png" alt="" class="car_img">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" alt="" class="gas">
@@ -70,9 +53,9 @@
                             <ul class="overlaymenu_list_course">
                                 <li><a href="<?php echo get_permalink(324); ?>">A:鳴門海峡満喫旅</a></li>
                                 <li><a href="<?php echo get_permalink(329); ?>">B:歴史・文化の鳴門旅</a></li>
-                                <li><a href="#">C:ぐるっと一周鳴門旅</a></li>
-                                <li><a href="#">D:鳴門おおそと一周旅</a></li>
-                                <li><a href="#">E:キッズが主役旅</a></li>
+                                <li><a href="<?php echo get_permalink(812); ?>">C:ぐるっと一周鳴門旅</a></li>
+                                <li><a href="<?php echo get_permalink(817); ?>">D:鳴門おおそと一周旅</a></li>
+                                <li><a href="<?php echo get_permalink(822); ?>">E:キッズが主役旅</a></li>
                             </ul>
                             <h3 class="overlaymenu_title_purpose">目的で探す</h3>
                             <ul class="overlaymenu_list_purpose">
@@ -88,6 +71,16 @@
                                 </div>
                                 <ul class="overlaymenu_list_icon_list">
                                     <li class="overlaymenu_list_icon_item">
+                                        <!-- 新着情報一覧へのリンク取得 -->
+                                        <?php
+                                        $news = get_term_by('slug', 'news', 'category');
+                                        $news_link = get_term_link($news, 'category');
+                                        ?>
+                                        <a href="<?php echo $news_link; ?>">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/news_icon.svg" width="45" height="45" alt="新着情報一覧へのリンク" decoding="async" loading="lazy" />
+                                        </a>
+                                    </li>
+                                    <li class="overlaymenu_list_icon_item">
                                         <a href="<?php echo home_url('/column'); ?>">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/column_icon.svg" width="45" height="45" alt="コラム一覧へのリンク" decoding="async" loading="lazy" />
                                         </a>
@@ -100,16 +93,6 @@
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="<?php echo get_permalink(239) ?>">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mypage_icon.svg" width="45" height="45" alt="マイページへのリンク" decoding="async" loading="lazy" />
-                                        </a>
-                                    </li>
-                                    <li class="overlaymenu_list_icon_item">
-                                        <!-- 新着情報一覧へのリンク取得 -->
-                                        <?php
-                                        $news = get_term_by('slug', 'news', 'category');
-                                        $news_link = get_term_link($news, 'category');
-                                        ?>
-                                        <a href="<?php echo $news_link; ?>">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/news_icon.svg" width="45" height="45" alt="新着情報一覧へのリンク" decoding="async" loading="lazy" />
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
@@ -150,24 +133,24 @@
                         <li><a href="<?php echo get_permalink(329); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_culture.jpg" alt="歴史・文化の鳴門旅"></dt>
-                                    <dd>歴史･文化の<br>鳴門旅</dd>
+                                    <dd>歴史･文化の鳴門旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="<?php echo get_permalink(812); ?>">
                                 <dl>
                                     <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_round.jpg" alt="ぐるっと一周鳴門旅"></dt>
-                                    <dd>ぐるっと一周<br>鳴門旅</dd>
+                                    <dd>ぐるっと一周鳴門旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="<?php echo get_permalink(817); ?>">
                                 <dl>
-                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_○○○○○.jpg" alt="○○○○○旅"></dt>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_largeround.jpg" alt="鳴門おおそと一周旅"></dt>
                                     <dd>鳴門おおそと一周旅</dd>
                                 </dl>
                             </a></li>
                         <li><a href="<?php echo get_permalink(822); ?>">
                                 <dl>
-                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_×××××.jpg" alt="×××××旅" alt=""></dt>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_kids.jpg" alt="キッズが主役旅"></dt>
                                     <dd>キッズが主役旅</dd>
                                 </dl>
                             </a></li>
@@ -202,7 +185,7 @@
                             </a></li>
                     </ul>
                 </li>
-                <li><a href="<?php echo $news_link; ?>">新着情報</a>
+                <li><a href="<?php echo $news_link; ?>">新着情報</a></li>
                 <li class="has_child"><a href="<?php echo home_url('/column'); ?>">コラム</a>
                     <ul class="child_wrap">
                         <li><a href="<?php echo get_term_link('about_naruto', 'column_type'); ?>">

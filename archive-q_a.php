@@ -13,7 +13,6 @@
                 <!-- <aside class="aside_wrap aside_top">
                 </aside> -->
             </section>
-
             <div class="center_title">
                 <h3 class="h3_center">よくある質問</h3>
             </div>
@@ -38,10 +37,15 @@
                                             </label>
 
                                             <div class="content">
+
                                                 <div class="answer_wrap">
                                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/a.png" alt="a" class="q_aimg">
-                                                    <p><?php the_field('answer'); ?></p>
+                                                    <div class="answer">
+                                                        <?php the_content(); ?>
+                                                    </div>
                                                 </div>
+
+
                                             </div>
                                         </div>
                                     </div>
