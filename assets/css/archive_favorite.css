@@ -155,3 +155,7 @@ section {
     margin-bottom: 100px;
     text-align: center;
 }
+
+.no_favorite{
+    border-left: none;
+}
