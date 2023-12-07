@@ -9,7 +9,7 @@ get_header();
         <h2>マイページ</h2>
     </section>
     <div class="main_wrap">
-        <div class="breadcrumb"><?php get_template_part('template-parts/breadcrumb'); ?></div>
+        <?php get_template_part('template-parts/breadcrumb'); ?>
         <div class="content_wrap">
 
             <div class="mypage_text">
