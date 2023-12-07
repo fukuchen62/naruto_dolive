@@ -72,15 +72,16 @@ h4 {
 
 /* アイコン欄 */
 .card_icon {
-    margin: 20px 0;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 50px;
     border: 1px solid #000;
-    line-height: 40px;
+    padding: 10px;
 }
 
 /* アイコンサイズ */
 .card_icon img {
-    width: 35px;
+    width: 30px;
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
@@ -98,11 +99,16 @@ h4 {
 
     /* サムネイル画像設定 */
     .thumbnail_img img {
-        width: 240px;
+        width: 280px;
     }
 
     .card_icon {
-        line-height: 35px;
-        height: 55px;
+        border: 1px solid #000;
+        height: 60px;
+    }
+
+    /* アイコンサイズ */
+    .card_icon img {
+        width: 35px;
     }
 }
