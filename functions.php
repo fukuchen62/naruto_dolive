@@ -449,3 +449,17 @@ function custom_search($search, $wp_query)
 
     return $search;
 }
+
+
+function empty_search_redirect($wp_query)
+{
+    if ($wp_query->is_main_query() && $wp_query->is_search && !$wp_query->is_admin) {
+        $s = $wp_query->get('s');
+        $s = trim($s);
+        if (empty($s)) {
+            wp_safe_redirect(home_url('/'));
+            exit;
+        }
+    }
+}
+add_action('parse_query', 'empty_search_redirect');
