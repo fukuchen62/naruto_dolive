@@ -190,7 +190,7 @@
                     <ul class="child_wrap">
                         <li><a href="<?php echo get_term_link('about_naruto', 'column_type'); ?>">
                                 <dl>
-                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_aboutnaruto.JPG" alt="鳴門について"></dt>
+                                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nav_aboutnaruto.jpg" alt="鳴門について"></dt>
                                     <dd>鳴門について</dd>
                                 </dl>
                             </a></li>
