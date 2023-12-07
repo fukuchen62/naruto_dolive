@@ -118,16 +118,16 @@ $(document).ready(function () {
     var duration = 1500; // アニメーションの持続時間（ミリ秒）
     var animationTriggered = false;
 
-    $(window).scroll(function () {
-        var purposeDelayOffsetTop = $(".purpose_delay").offset().top;
-        var windowHeight = $(window).height();
-        var scrollTop = $(window).scrollTop();
-
-        if (!animationTriggered && scrollTop + windowHeight >= purposeDelayOffsetTop) {
-            setTimeout(animateImages, 1500); // 1.5秒後にanimateImages関数を呼び出す
-            animationTriggered = true;
-        }
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting && !animationTriggered) {
+                animateImages();
+                animationTriggered = true;
+            }
+        });
     });
+
+    observer.observe(document.querySelector(".purpose_delay"));
 
     function animateImages() {
         var images = $(".purpose_delaywrap_box");

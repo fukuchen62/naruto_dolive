@@ -244,6 +244,7 @@ a.card1 {
 .card1_content>h4 {
     margin: 20px auto;
     padding: 0;
+    height: clamp(2.5rem, 1.529rem + 4.14vw, 6.5rem);
 }
 
 .card1_text {
@@ -271,7 +272,11 @@ a.card1 {
 @media only screen and (min-width:520px) {
     .card1_wrap {
         width: 350px;
-        height: 500px;
+        height: clamp(30.938rem, 29.73rem + 3.72vw, 34.375rem);
+    }
+
+    .card1_img img {
+        width: 300px;
     }
 
     .card1_text {

@@ -22,6 +22,7 @@ section {
 h4 {
     padding: 20px 0;
     border-left: none;
+    height: clamp(4.5rem, 3.577rem + 3.94vw, 8.5rem);
 }
 
 /* ------------------------------------------------------------------------
@@ -66,20 +67,21 @@ h4 {
 .card_text {
     border: 1px solid #000;
     padding: 10px;
+    height: 70px
 }
 
 /* アイコン欄 */
 .card_icon {
-    margin: 20px 0;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 50px;
     border: 1px solid #000;
-    text-align: center;
-    line-height: 45px;
+    padding: 10px;
 }
 
 /* アイコンサイズ */
 .card_icon img {
-    width: 35px;
+    width: 30px;
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
@@ -97,6 +99,16 @@ h4 {
 
     /* サムネイル画像設定 */
     .thumbnail_img img {
-        width: 240px;
+        width: 280px;
+    }
+
+    .card_icon {
+        border: 1px solid #000;
+        height: 60px;
+    }
+
+    /* アイコンサイズ */
+    .card_icon img {
+        width: 35px;
     }
 }

@@ -25,31 +25,45 @@ $(window).on('load', function () {
 
 
 // #page_topをクリックした際の設定
+var isAnimating = false; // アニメーション中かどうかを示すフラグ
+
 $('#page_top').click(function () {
-    var scroll = $(window).scrollTop(); //スクロール値を取得
-    if (scroll > 0) {
-        $(this).addClass('floatAnime');//クリックしたらfloatAnimeというクラス名が付与
-        $('body,html').animate({
-            scrollTop: 0
-        }, 2000, function () {//スクロールの速さ。数字が大きくなるほど遅くなる
-            $('#page_top').removeClass('floatAnime');//上までスクロールしたらfloatAnimeというクラス名を除く
-        });
+    if (!isAnimating) { // アニメーション中でない場合のみ処理を実行
+        isAnimating = true; // アニメーション開始
+        var scroll = $(window).scrollTop();
+        if (scroll > 0) {
+            $(this).addClass('floatAnime');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 2000, function () {
+                $('#page_top').removeClass('floatAnime');
+                isAnimating = false; // アニメーション終了
+            });
+        }
     }
-    return false;//リンク自体の無効化
+    return false;
 });
 // ▲トップへ戻るボタン▲
 
 // ▼sp_nav(ハンバーガーメニュー)▼
 // スマホ・タブレットサイズ時のみ表示されるメニューの開閉ボタンを変数に格納。
-const spMenuBtn = $("#spMenuBtn");
+$(document).ready(function () {
+    const spMenuBtn = $("#spMenuBtn");
+    const headerInner = $("#headerInner");
+    const headerMenu = $(".header_menu");
 
-// メニューや開閉ボタンをラップしている要素を変数に格納。
-const headerInner = $("#headerInner");
-
-// 開閉ボタンをクリックすると発火。
-spMenuBtn.click(function () {
-    // ラップ要素にactiveというクラスを付与する。
-    headerInner.toggleClass("active");
+    spMenuBtn.click(function () {
+        headerInner.toggleClass("active");
+        if (headerInner.hasClass("active")) {
+            // メニューが展開された状態でスクロールを制御する
+            $("body").css("overflow", "hidden");
+            headerMenu.css("overflow-y", "auto"); // メニュー内のコンテンツが表示領域に収まるようにスクロールする
+        } else {
+            // メニューが閉じられた状態でスクロールを許可する
+            $("body").css("overflow", "auto");
+            headerMenu.css("overflow-y", "hidden"); // メニューが閉じられた場合はスクロールを禁止する
+        }
+    });
 });
 // ▲sp_nav(ハンバーガーメニュー)▲
 

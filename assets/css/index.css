@@ -33,6 +33,7 @@ h2 {
   background-color: #fff;
   overflow: hidden;
 }
+
 .news_tab {
   text-align: center;
   border-bottom: double #87ceeb;
@@ -40,6 +41,7 @@ h2 {
   color: black;
   font-size: large;
 }
+
 .more_btn_container {
   padding-bottom: 10%;
 }
@@ -441,7 +443,7 @@ h2.title_pickupcolumn {
 }
 
 .column-container {
-  width: 80%;
+  width: clamp(18.75rem, 6.718rem + 51.33vw, 50rem);
   height: 190px;
   display: flex;
   margin: auto;
