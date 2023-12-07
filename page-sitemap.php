@@ -8,9 +8,7 @@ get_header();
 
 
 <main>
-    <div id="stkr" class="sp_none"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/maincar_icon.png" alt="" class="car_img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" alt="" class="gas"></div>
-    <section id="toparea" class="toparea">
-        <h2>サイトマップ</h2>
+    <h2>サイトマップ</h2>
     </section>
     <div class="main_wrap">
         <div class="breadcrumb"><?php get_template_part('template-parts/breadcrumb'); ?></div>
