@@ -752,7 +752,7 @@ h2.title_pickupcolumn {
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-@media (min-width: 1024px) {
+@media (min-width: 1350px) {
   .instagram_grid {
     grid-template-columns: repeat(4, 1fr);
     margin-left: calc(100% / 6);

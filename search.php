@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <body>
-    <div id="stkr" class="sp_none"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/maincar_icon.png" alt="" class="car_img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" alt="" class="gas"></div>
+
     <main>
         <?php $search_term = get_search_query(); ?>
         <section id="toparea" class="toparea">
