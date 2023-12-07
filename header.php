@@ -77,27 +77,27 @@
                                         $news_link = get_term_link($news, 'category');
                                         ?>
                                         <a href="<?php echo $news_link; ?>">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/news_icon.svg" width="45" height="45" alt="新着情報一覧へのリンク" decoding="async" loading="lazy" />
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/news_icon.svg" width="45" height="45" alt="新着情報一覧へのリンク" decoding="async" loading="lazy" />News
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="<?php echo home_url('/column'); ?>">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/column_icon.svg" width="45" height="45" alt="コラム一覧へのリンク" decoding="async" loading="lazy" />
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/column_icon.svg" width="45" height="45" alt="コラム一覧へのリンク" decoding="async" loading="lazy" />Column
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="<?php if (is_front_page()) : ?>#instagram<?php else : ?><?php echo esc_url(home_url('/')); ?>#instagram<?php endif; ?>">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram_icon.svg" width="45" height="45" alt="インスタへのリンク" decoding="async" loading="lazy" />
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram_icon.svg" width="45" height="45" alt="インスタへのリンク" decoding="async" loading="lazy" />Insta
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="<?php echo get_permalink(239) ?>">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mypage_icon.svg" width="45" height="45" alt="マイページへのリンク" decoding="async" loading="lazy" />
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mypage_icon.svg" width="45" height="45" alt="マイページへのリンク" decoding="async" loading="lazy" />MyPage
                                         </a>
                                     </li>
                                     <li class="overlaymenu_list_icon_item">
                                         <a href="<?php echo home_url('/q_a') ?>">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/q&a_icon.svg" width="45" height="45" alt="Q&Aへのリンク" decoding="async" loading="lazy" />
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/q&a_icon.svg" width="45" height="45" alt="Q&Aへのリンク" decoding="async" loading="lazy" />Q&A
                                         </a>
                                     </li>
                                 </ul>
