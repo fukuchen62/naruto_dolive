@@ -81,7 +81,7 @@ main:not(.section_kv):not(.teloparea) {
     padding: 0px 5.5% 14.5% 5.5%;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767.9px) {
     .sp_none {
         display: none !important;
         /* ※モバイル表示時のみ(PCでは表示させない) */
