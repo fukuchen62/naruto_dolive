@@ -611,6 +611,10 @@ h2.title_pickupcolumn {
   position: relative;
   height: 150px;
   overflow: hidden;
+  background-image: url(../img/animated.svg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 500px auto;
 }
 
 .moving_text {
