@@ -444,7 +444,7 @@ h2.title_pickupcolumn {
 
 .column-container {
   width: clamp(18.75rem, 6.718rem + 51.33vw, 50rem);
-  height: 190px;
+  height: 200px;
   display: flex;
   margin: auto;
   margin-bottom: 5%;
