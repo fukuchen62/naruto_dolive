@@ -549,6 +549,13 @@ h2.title_pickupcolumn {
   transform: translateX(0);
 }
 
+/* ~~~~~~~~~~~~小さいSP表示~~~~~~~~~~~~ */
+@media (max-width: 400px) {
+  .column-text h3 {
+    font-size: 16px;
+  }
+}
+
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:1350px) {
   .column-flexbox {
