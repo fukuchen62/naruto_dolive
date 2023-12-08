@@ -1189,6 +1189,32 @@ img {
 }
 
 /* ページネーション・改 */
+/* 前への矢印 */
+.nav-links a.prev:before {
+    content: "";
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #000;
+    margin-right: 5px;
+    margin-top: -10px; /*5pxのマージンを追加*/
+}
+
+/* 次への矢印 */
+.nav-links a.next:after {
+    content: "";
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #000;
+    margin-left: 5px;
+    margin-top: -10px; /* 5pxのマージンを追加 */
+}
+
 
 /* ~~~~~~~~~~~~ページネーションpc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
@@ -1235,9 +1261,8 @@ img {
         border-radius: 50%;
 
     }
-}
-/* 前への矢印 */
-.nav-links a.prev:before {
+    /* 前への矢印 */
+    .nav-links a.prev:before {
     content: "";
     display: inline-block;
     width: 10px;
@@ -1247,10 +1272,10 @@ img {
     border-right: 20px solid #000;
     margin-right: 5px;
     margin-top: 5px; /* 5pxのマージンを追加 */
-}
+    }
 
-/* 次への矢印 */
-.nav-links a.next:after {
+    /* 次への矢印 */
+    .nav-links a.next:after {
     content: "";
     display: inline-block;
     width: 10px;
@@ -1260,7 +1285,10 @@ img {
     border-left: 20px solid #000;
     margin-left: 5px;
     margin-top: 5px; /* 5pxのマージンを追加 */
+    }
+
 }
+
 
 
 /* ------------------------------------------------------------------------
