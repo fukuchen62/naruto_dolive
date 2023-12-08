@@ -455,6 +455,25 @@ ul.overlaymenu_list_icon_list {
         transition: all .3s;
     }
 
+    .pc_navmenu a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background-color: #FF9900;
+        bottom: 35px;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+    }
+
+    .pc_navmenu a:hover::after {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+
     .pc_nav>img {
         width: 70px;
         height: 70px;
@@ -1261,30 +1280,33 @@ img {
         border-radius: 50%;
 
     }
+
     /* 前への矢印 */
     .nav-links a.prev:before {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-right: 20px solid #000;
-    margin-right: 5px;
-    margin-top: 5px; /* 5pxのマージンを追加 */
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-right: 20px solid #000;
+        margin-right: 5px;
+        margin-top: 5px;
+        /* 5pxのマージンを追加 */
     }
 
     /* 次への矢印 */
     .nav-links a.next:after {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 20px solid #000;
-    margin-left: 5px;
-    margin-top: 5px; /* 5pxのマージンを追加 */
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid #000;
+        margin-left: 5px;
+        margin-top: 5px;
+        /* 5pxのマージンを追加 */
     }
 
 }
