@@ -1199,7 +1199,7 @@ img {
     border-bottom: 10px solid transparent;
     border-right: 10px solid #000;
     margin-right: 5px;
-    margin-top: -10px; /*5pxのマージンを追加*/
+    /* margin-top: -10px; -10pxのマージンを追加 */
 }
 
 /* 次への矢印 */
@@ -1212,7 +1212,7 @@ img {
     border-bottom: 10px solid transparent;
     border-left: 10px solid #000;
     margin-left: 5px;
-    margin-top: -10px; /* 5pxのマージンを追加 */
+    /* margin-top: -10px; -10pxのマージンを追加 */
 }
 
 
