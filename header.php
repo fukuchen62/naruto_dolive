@@ -4,29 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-
-
-    <style>
-        /* #map {
-            width: 400px;
-            height: 400px;
-            background-color: grey;
-        }
-
-        @media only screen and (min-width:768px) {
-            #map {
-                width: 60%;
-                height: 550px;
-            }
-
-        } */
-    </style>
+    <meta name="description" content="「鳴門DoLive！」は鳴門を走るドライバーたちに魅力あるスポットの提案を効率的に探すことができるサイトです。">
+    <meta name="keywords" content="徳島、鳴門、ドライブ、渦、四国、関西、観光、車、阿波踊り、食、グルメ、穴場、釣り場、大塚、デート、バイク、コース、地図">
+    <?php wp_head(); ?>
 </head>
-<?php wp_head(); ?>
 
 <body>
+    <?php wp_body_open(); ?>
     <div id="stkr" class="sp_none">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/maincar_icon.png" alt="" class="car_img">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" alt="" class="gas">
