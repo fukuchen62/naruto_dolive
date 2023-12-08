@@ -155,7 +155,7 @@ h2 {
 .kv_deco {
   width: 8%;
   position: absolute;
-  bottom: 9%;
+  top: 9%;
   right: 4%;
   overflow: hidden;
 }
