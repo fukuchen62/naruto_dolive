@@ -6,9 +6,8 @@
     <div>
         <p id="page_top"><a href="#"><span>Page Top</span></a></p>
     </div>
-    <?php wp_footer(); ?>
 </footer>
-
+<?php wp_footer(); ?>
 </body>
 
 </html>
