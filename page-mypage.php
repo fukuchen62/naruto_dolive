@@ -302,7 +302,7 @@ get_header();
     function initMap() {
         let map = new google.maps.Map(document.getElementById("map"), {
             // 地図表示のスーむレベル
-            zoom: 12,
+            zoom: 11,
             // 地図の初期値 これは緯度と経度を中心にしている。本番は鳴門を中心にする予定
             center: {
                 lat: 34.1848,
