@@ -299,7 +299,7 @@ function add_individual_scripts()
     //----------------------
     // プライバシーポリシーのcssの読み込み
     //----------------------
-    elseif (is_page('privacy-policy')) {
+    elseif (is_page('privacy_policy')) {
         wp_enqueue_style(
             'privacy_style',
             get_template_directory_uri() . '/assets/css/privacy_policy.css',
