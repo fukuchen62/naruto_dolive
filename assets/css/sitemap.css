@@ -130,7 +130,8 @@ h5 {
 
 /* 下部コンテンツ */
 .u_content li {
-    font-size: 1.8rem;
+    font-size: clamp(1.063rem, 0.883rem + 0.76vw, 1.8rem);
+    line-height: 1.5;
 }
 
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
