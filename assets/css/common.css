@@ -1188,6 +1188,8 @@ img {
     border: none;
 }
 
+/* ページネーション・改 */
+
 /* ~~~~~~~~~~~~ページネーションpc表示~~~~~~~~~~~~ */
 @media only screen and (min-width:768px) {
 
@@ -1234,6 +1236,32 @@ img {
 
     }
 }
+/* 前への矢印 */
+.nav-links a.prev:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #000;
+    margin-right: 5px;
+    margin-top: 5px; /* 5pxのマージンを追加 */
+}
+
+/* 次への矢印 */
+.nav-links a.next:after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #000;
+    margin-left: 5px;
+    margin-top: 5px; /* 5pxのマージンを追加 */
+}
+
 
 /* ------------------------------------------------------------------------
     マウスストーカー
