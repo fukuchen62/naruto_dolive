@@ -98,8 +98,6 @@ h2 {
 .logo {
   position: absolute;
   top: 1vh;
-  width: 90%;
-  left: 5%;
 }
 
 .logo.poyoyon.is-animated {
@@ -155,10 +153,10 @@ h2 {
 }
 
 .kv_deco {
-  width: 30%;
+  width: 8%;
   position: absolute;
-  bottom: 37%;
-  right: 2px;
+  bottom: 9%;
+  right: 4%;
   overflow: hidden;
 }
 
