@@ -30,15 +30,30 @@ $(".more01").on("click", function () {
     }
 })
 
+const  middleTitle = document.querySelector(".middle_title");
 // closeボタンがクリックされた時の処理
-$(".close01").click(function () {
+if(middleTitle.textContent === "遊ぶ"){
+    $(".close01").click(function () {
 
-    $(this).parent().find("a:gt(" + (init) + ")").slideUp();
+        $(this).parent().find("a:gt(" + (2) + ")").slideUp();
+    
+        // closeボタンを隠し、moreボタンを表示する
+        $(this).hide();
+        $(".more01").show();
+    });
+    
 
-    // closeボタンを隠し、moreボタンを表示する
-    $(this).hide();
-    $(".more01").show();
-});
+}else{
+    $(".close01").click(function () {
+
+        $(this).parent().find("a:gt(" + (3) + ")").slideUp();
+    
+        // closeボタンを隠し、moreボタンを表示する
+        $(this).hide();
+        $(".more01").show();
+    });
+}
+
 
 
 //2番目の記事
