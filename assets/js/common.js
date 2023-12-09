@@ -139,5 +139,74 @@ $(mouseTarget).hover(function (e) {
 });
 
 // ▼画面上を走行する車▼
+window.addEventListener('load', function () {
+    let runningCarContainer = document.querySelector('.runningcar_container');
+    let footer = document.querySelector('footer');
+    let startTimestamp = performance.now(); // ロード開始時のタイムスタンプを取得
+    let targetTime = startTimestamp + 10000; // 10秒後のタイムスタンプを計算
 
+    // イベントを発火する関数
+    function fireEvent() {
+        console.log('イベントが発火しました');
+        runningCarContainer.style.animationPlayState = 'running'; // アニメーションを再生
+
+        // アニメーションが開始した際に位置を更新
+        updatePosition();
+    }
+
+    // アニメーションが完了した時に呼ばれるコールバック
+    function onAnimationEnd() {
+        console.log('アニメーションが完了しました');
+        runningCarContainer.style.display = 'none'; // または visibility: hidden; で非表示にする
+
+        // Check if the footer is below the viewport
+        let viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        let footerPosition = footer.getBoundingClientRect().bottom;
+
+        if (footerPosition > viewportHeight) {
+            document.body.style.overflow = 'hidden'; // 隠れたコンテンツを非表示にする
+        }
+
+        // アニメーションが完了した際に位置を更新
+        updatePosition();
+    }
+
+    // タイミングを監視し、指定時間に達したらイベントを発火
+    function checkTime(currentTime) {
+        if (currentTime >= targetTime) {
+            fireEvent();
+        } else {
+            requestAnimationFrame(checkTime);
+        }
+    }
+
+    // アニメーションが終了した時に呼ばれるイベントリスナーを追加
+    runningCarContainer.addEventListener('animationend', onAnimationEnd);
+
+    // タイミングを監視を開始
+    requestAnimationFrame(checkTime);
+
+    // Get the user's current viewport position
+    let viewportTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+    let viewportLeft = window.scrollX || window.pageXOffset || document.documentElement.scrollLeft;
+
+    // Set initial position of the running car container
+    runningCarContainer.style.top = viewportTop + 'px';
+    runningCarContainer.style.left = viewportLeft + 'px';
+
+    // ページのスクロール時に要素の位置を更新する
+    window.addEventListener('scroll', updatePosition);
+
+    // ページのロード時にも一度要素の位置を更新する
+    window.addEventListener('load', updatePosition);
+
+    function updatePosition() {
+        // ユーザーの表示画面領域を取得し、アニメーションの開始位置を更新
+        let newViewportTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+        let newViewportLeft = window.scrollX || window.pageXOffset || document.documentElement.scrollLeft;
+
+        runningCarContainer.style.top = newViewportTop + 'px';
+        runningCarContainer.style.left = newViewportLeft + 'px';
+    }
+});
 // ▲画面上を走行する車▲

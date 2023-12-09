@@ -1347,6 +1347,44 @@ img {
     margin-left: -20px;
 }
 
+.runningcar_container {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    align-items: flex-start;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, -100%);
+    animation: running_car 10s infinite;
+    z-index: 99999;
+}
+
+.running_car {
+    position: relative;
+}
+
+.running_car_image1 {
+    width: 90px;
+}
+
+.running_car_image2 {
+    width: 3%;
+    position: relative;
+    top: -18.5%;
+    left: -2.5%;
+}
+
+@keyframes running_car {
+    0% {
+        transform: translate(-100%, -100%);
+    }
+
+    100% {
+        transform: translate(150%, 150%);
+    }
+}
+
 /* 非表示 fukushima add 2023/12/06 */
 .hide {
     display: none;

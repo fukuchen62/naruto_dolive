@@ -15,7 +15,10 @@
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/maincar_icon.png" alt="" class="car_img">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes.gif" alt="" class="gas">
     </div>
-
+    <div class="runningcar_container sp_none">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/exhaust_fumes2.gif" alt="排気ガス" class="running_car running_car_image2">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/running_around2.png" alt="車" class="running_car running_car_image1">
+    </div>
     <header>
         <nav class="sp_nav pc_none">
             <div class="container">
