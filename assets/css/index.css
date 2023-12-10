@@ -95,9 +95,14 @@ h2 {
   padding: 8vh 0;
 }
 
+.kv_img1, .kv_img2, .kv_img3 {
+  position: relative;
+}
+
 .logo {
   position: absolute;
   top: 1vh;
+  z-index: 3;
 }
 
 .logo.poyoyon.is-animated {
@@ -128,9 +133,10 @@ h2 {
 }
 
 .catchcopy {
-  width: 50%;
+  width: 100%;
   position: absolute;
-  bottom: 21%;
+  top: 0px;
+  z-index: 1;
 }
 
 .anim-box.slidein.is-animated {
@@ -155,9 +161,10 @@ h2 {
 .kv_deco {
   width: 8%;
   position: absolute;
-  top: 9%;
-  right: 4%;
+  top: -21%;
+  right: 0%;
   overflow: hidden;
+  z-index: 4;
 }
 
 .anim-box.slide-skew.is-animated {
@@ -217,7 +224,7 @@ h2 {
     width: 46%;
     min-width: 46%;
     position: relative;
-    padding: 12vh 0;
+    padding: 23vh 0;
   }
 
   .kv_left {
@@ -229,11 +236,12 @@ h2 {
   }
 
   .logo {
-    top: 3vh;
+    top: -22.5vh;
+    left: 2%;
   }
 
   .catchcopy {
-    bottom: 14%;
+    bottom: 0%;
   }
 
   .kv_img2 {

@@ -7,14 +7,12 @@ get_header();
         <div class="kv_img_wrap">
             <div class="kv_left sp_none">
                 <div class="kv_img1">
+                    <img id="mypic1" src="<?php echo get_template_directory_uri(); ?>/assets/img/mypic1.jpg" alt="キービジュアル">
                     <div class="logo poyoyon is-animated">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="鳴門DoLive">
                     </div>
-                    <div class="kv_img1">
-                        <img id="mypic1" src="<?php echo get_template_directory_uri(); ?>/assets/img/mypic1.jpg" alt="キービジュアル">
-                    </div>
                     <div class="catchcopy">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/catchcopy.png" alt="愛車で四国の右上攻略！" class="anim-box slidein is-animated">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/halftone.png" alt="愛車で四国の右上攻略！" class="anim-box slidein is-animated">
                     </div>
                     <div class="kv_deco">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/kv_deco.png" alt="車" class="anim-box slide-skew is-animated">
@@ -22,31 +20,31 @@ get_header();
                 </div>
             </div>
             <div class="kv_main">
-                <div class="logo poyoyon is-animated">
-                    <h1><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="鳴門DoLive"></h1>
-                </div>
                 <div class="kv_img2">
                     <img id="mypic2" src="<?php echo get_template_directory_uri(); ?>/assets/img/mypic1.jpg" alt="キービジュアル">
-                </div>
-                <div class="catchcopy">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/catchcopy.png" alt="愛車で四国の右上攻略！" class="anim-box slidein is-animated">
-                </div>
-                <div class="kv_deco">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/kv_deco.png" alt="車" class="anim-box slide-skew is-animated">
+                    <div class="logo poyoyon is-animated">
+                        <h1><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="鳴門DoLive"></h1>
+                    </div>
+                    <div class="catchcopy">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/halftone.png" alt="愛車で四国の右上攻略！" class="anim-box slidein is-animated">
+                    </div>
+                    <div class="kv_deco">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/kv_deco.png" alt="車" class="anim-box slide-skew is-animated">
+                    </div>
                 </div>
             </div>
             <div class="kv_right sp_none">
-                <div class="logo poyoyon is-animated">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="鳴門DoLive">
-                </div>
                 <div class="kv_img3">
                     <img id="mypic3" src="<?php echo get_template_directory_uri(); ?>/assets/img/mypic1.jpg" alt="キービジュアル">
-                </div>
-                <div class="catchcopy">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/catchcopy.png" alt="愛車で四国の右上攻略！" class="anim-box slidein is-animated">
-                </div>
-                <div class="kv_deco">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/kv_deco.png" alt="車" class="anim-box slide-skew is-animated">
+                    <div class="logo poyoyon is-animated">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="鳴門DoLive">
+                    </div>
+                    <div class="catchcopy">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/halftone.png" alt="愛車で四国の右上攻略！" class="anim-box slidein is-animated">
+                    </div>
+                    <div class="kv_deco">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/kv_deco.png" alt="車" class="anim-box slide-skew is-animated">
+                    </div>
                 </div>
             </div>
         </div>
