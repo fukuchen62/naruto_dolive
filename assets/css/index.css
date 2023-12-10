@@ -132,7 +132,7 @@ h2 {
   }
 }
 
-.catchcopy {
+.halftone {
   width: 100%;
   position: absolute;
   top: 0px;
@@ -240,7 +240,7 @@ h2 {
     left: 2%;
   }
 
-  .catchcopy {
+  .halftone {
     bottom: 0%;
   }
 
