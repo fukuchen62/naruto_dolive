@@ -101,7 +101,7 @@ h2 {
 
 .logo {
   position: absolute;
-  top: 1vh;
+  top: -7vh;
   z-index: 3;
 }
 
@@ -139,7 +139,7 @@ h2 {
   z-index: 1;
 }
 
-.anim-box.slidein.is-animated {
+.halftone.slideIn.is-animated {
   animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
@@ -161,13 +161,13 @@ h2 {
 .kv_deco {
   width: 8%;
   position: absolute;
-  top: -21%;
+  top: -15%;
   right: 0%;
   overflow: hidden;
   z-index: 4;
 }
 
-.anim-box.slide-skew.is-animated {
+.kv_deco.slide-skew.is-animated {
   animation: slide-skew 0.4s cubic-bezier(0.25, 1, 0.5, 1) 2s forwards;
   transform: skew(-30deg);
   visibility: collapse;
@@ -196,22 +196,48 @@ h2 {
   }
 }
 
+.catchcopy {
+  position: absolute;
+  bottom: -7%;
+  z-index: 1;
+}
 
-/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
-/* タブレット用スタイル */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .logo {
-    top: -1vh;
+.catchcopy.poyoyon2.is-animated {
+  animation: poyoyon2 0.5s cubic-bezier(0.12, 0, 0.39, 0) 1 forwards;
+}
+
+@keyframes poyoyon2 {
+  0% {
+    transform: translateX(-140px);
+    opacity: 0;
   }
 
-  .kv_left, .kv_main, .kv_right {
-    width: 46%;
-    min-width: 46%;
-    padding: 5vh 0;
+  50% {
+    transform: translateX(0);
+  }
+
+  65% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+
+  20%, 100% {
+    opacity: 1;
   }
 }
 
-@media only screen and (min-width:768px) {
+/* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
+@media (min-width: 490px) and (max-width: 767.9px) {
+  .kv_deco {
+    top: -5%;
+  }
+}
+
+/* タブレット用スタイル */
+@media (min-width: 768px) {
   .kv_img_wrap {
     position: relative;
     display: flex;
@@ -223,8 +249,7 @@ h2 {
   .kv_left, .kv_main, .kv_right {
     width: 46%;
     min-width: 46%;
-    position: relative;
-    padding: 23vh 0;
+    padding: 9vh 0;
   }
 
   .kv_left {
@@ -236,7 +261,46 @@ h2 {
   }
 
   .logo {
-    top: -22.5vh;
+    top: -10vh;
+  }
+
+  .halftone {
+    bottom: 0%;
+  }
+
+  .kv_deco {
+    top: -13%;
+  }
+
+  .kv_img2 {
+    text-align: center;
+  }
+
+  .kv_img_wrap img {
+    margin-top: 2rem;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .kv_left, .kv_main, .kv_right {
+    width: 46%;
+    min-width: 46%;
+    position: relative;
+    padding: 12vh 0;
+  }
+
+  .kv_left {
+    margin-left: -30%;
+  }
+
+  .kv_right {
+    margin-right: -30%;
+  }
+
+  .logo {
+    top: -10.5vh;
     left: 2%;
   }
 
@@ -252,6 +316,20 @@ h2 {
     margin-top: 2rem;
     object-fit: cover;
     width: 100%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .kv_left, .kv_main, .kv_right {
+    padding: 18vh 0;
+  }
+
+  .logo {
+    top: -18.5vh;
+  }
+
+  .kv_deco {
+    top: -18%;
   }
 }
 
