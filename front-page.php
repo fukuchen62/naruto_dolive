@@ -321,7 +321,7 @@ get_header();
         document.getElementById("mypic2").src = pics_src[num];
         document.getElementById("mypic3").src = pics_src[num];
         num++;
-        setTimeout(slideshow_timer, 600);
+        setTimeout(slideshow_timer, 800);
     }
     // ▲TOP-kvのフラッシュ画像表示▲
 
