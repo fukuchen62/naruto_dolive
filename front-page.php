@@ -271,16 +271,18 @@ get_header();
     <section id="pdf" class="section_pdf">
         <h2 class="toparea">PDF</h2>
         <div class="pdf_wrap_sp pc_none">
-            <div class="card1_wrap">
-                <div class="card1_content">
-                    <div class="card1_img">
-                        <img class="pdf_anim" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp_guruttonarutodedorive.jpg" alt="ぐるっと鳴門deドライブモデルコース">
-                    </div>
-                    <div class="card1_text">
-                        <a href="<?php echo get_template_directory_uri(); ?>/assets/img/guruttonarutodedorive.pdf" class="card1" rel="noopener" target="_blank"><i class="far fa-file-pdf"></i>&ensp;PDFはこちらをタップ</a>
+            <a href="<?php echo get_template_directory_uri(); ?>/assets/img/guruttonarutodedorive.pdf" class="card1" rel="noopener" target="_blank">
+                <div class="card1_wrap">
+                    <div class="card1_content">
+                        <div class="card1_img">
+                            <img class="pdf_anim" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp_guruttonarutodedorive.jpg" alt="ぐるっと鳴門deドライブモデルコース">
+                        </div>
+                        <div class="card1_text">
+                            <i class="far fa-file-pdf"></i>&ensp;PDFはこちらをタップ
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div class="pdf_wrap_pc sp_none">
