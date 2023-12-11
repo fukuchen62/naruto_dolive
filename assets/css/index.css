@@ -164,7 +164,7 @@ h2 {
   top: -15%;
   right: 0%;
   overflow: hidden;
-  z-index: 4;
+  z-index: 3;
 }
 
 .kv_deco.slide-skew.is-animated {
