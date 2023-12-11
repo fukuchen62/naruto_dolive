@@ -161,7 +161,7 @@ h2 {
 .kv_deco {
   width: 8%;
   position: absolute;
-  top: -15%;
+  top: -7%;
   right: 0%;
   overflow: hidden;
   z-index: 3;
@@ -234,7 +234,7 @@ h2 {
 /* ~~~~~~~~~~~~pc表示~~~~~~~~~~~~ */
 @media (min-width: 490px) and (max-width: 767.9px) {
   .kv_deco {
-    top: -5%;
+    top: 0%;
   }
 }
 
@@ -271,7 +271,7 @@ h2 {
   }
 
   .kv_deco {
-    top: -13%;
+    top: -10%;
   }
 
   .kv_img2 {
