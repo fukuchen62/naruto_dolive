@@ -1371,8 +1371,8 @@ img {
 .running_car_image2 {
     width: 3%;
     position: relative;
-    top: -18.5%;
-    left: -2.5%;
+    top: -7.5%;
+    left: -0.5%;
 }
 
 @keyframes running_car {
